@@ -3,7 +3,7 @@ import "./App.css";
 import { createEffect, on } from "solid-js";
 
 function App() {
-  const ws = createWS("ws://127.0.0.1:8000/ws/chat/lobby/");
+  const ws = createWS("ws://127.0.0.1:8000/ws/game/");
   const state = createWSState(ws);
   const states = ["Connecting", "Connected", "Disconnecting", "Disconnected"];
   const json = JSON.stringify({ "message": "it works" }); // Convert the JSON object to a string
