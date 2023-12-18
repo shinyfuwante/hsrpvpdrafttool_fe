@@ -1,35 +1,14 @@
-import { createSignal } from 'solid-js'
-import solidLogo from './assets/solid.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { createWS, createWSState } from "@solid-primitives/websocket";
+import "./App.css";
+import { createEffect, on } from "solid-js";
 
 function App() {
-  const [count, setCount] = createSignal(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} class="logo" alt="Vite logo" />
-        </a>
-        <a href="https://solidjs.com" target="_blank">
-          <img src={solidLogo} class="logo solid" alt="Solid logo" />
-        </a>
-      </div>
-      <h1>Vite + Solid</h1>
-      <div class="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count()}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p class="read-the-docs">
-        Click on the Vite and Solid logos to learn more
-      </p>
-    </>
-  )
+  const ws = createWS("ws://127.0.0.1:8000/ws/chat/lobby");
+  const state = createWSState(ws);
+  const states = ["Connecting", "Connected", "Disconnecting", "Disconnected"];
+  ws.send("it works");
+  createEffect(on(ws.message, (msg) => console.log(msg), { defer: true }));
+  return <p>Connection: {states[state()]}</p>;
 }
 
-export default App
+export default App;
