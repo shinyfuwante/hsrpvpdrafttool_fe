@@ -6,7 +6,6 @@ export default defineConfig({
   plugins: [
     solid({
       ssr: false,
-      ssr: true,
       experimental: {
         websocket: true,
       },

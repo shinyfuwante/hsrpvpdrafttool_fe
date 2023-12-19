@@ -2,6 +2,7 @@
   "name": "hsrpvpdrafttool_fe",
   "scripts": {
     "dev": "solid-start dev",
+    "redis": "docker run --rm -p 6379:6379 redis:7",
     "build": "solid-start build",
     "start": "solid-start start"
   },
