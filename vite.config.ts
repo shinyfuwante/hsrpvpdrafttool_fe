@@ -1,6 +1,19 @@
-import { defineConfig } from 'vite'
-import solid from 'vite-plugin-solid'
+import startCloudflareWorkers from "solid-start-cloudflare-workers";
+import solid from "solid-start/vite";
+import { defineConfig } from "vite";
 
 export default defineConfig({
-  plugins: [solid()],
-})
+  plugins: [
+    solid({
+      ssr: false,
+      ssr: true,
+      experimental: {
+        websocket: true,
+      },
+      adapter: startCloudflareWorkers({
+        durableObjectsPersist: true,
+        kvPersist: false,
+      }),
+    }),
+  ],
+});
