@@ -8,7 +8,7 @@ const MainMenu: Component<{}> = (props: any) => {
 
   const joinGame = () => {
     const game_id = props.game_id;
-    const url = `/game/${game_id}}`;
+    const url = `/game/${game_id}`;
     window.location.href = url;
   };
   return (

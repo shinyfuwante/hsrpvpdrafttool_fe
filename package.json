@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "solid-start dev",
     "build": "solid-start build",
-    "start": "solid-start start"
+    "start": "solid-start start",
+    "redis": "docker run --rm -p 6379:6379 redis:7"
   },
   "type": "module",
   "devDependencies": {
@@ -15,11 +16,13 @@
     "vite": "^4.4.9"
   },
   "dependencies": {
+    "@solid-primitives/websocket": "^1.2.0",
     "@solidjs/meta": "^0.29.1",
     "@solidjs/router": "^0.8.3",
     "solid-js": "^1.8.5",
     "solid-start": "^0.3.10",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "websocket": "^1.0.34"
   },
   "engines": {
     "node": ">=18"
