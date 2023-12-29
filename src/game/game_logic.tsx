@@ -1,6 +1,14 @@
 import { createSignal } from "solid-js";
 const [loading, setLoading] = createSignal(true);
-
+const [playerTurn, setPlayerTurn] = createSignal("blue_team");
+const [blueBans, setBlueBans] = createSignal([]);
+const [redBans, setRedBans] = createSignal([]);
+const [bluePicks, setBluePicks] = createSignal([]);
+const [redPicks, setRedPicks] = createSignal([]);
+const [blueTeam, setBlueTeam] = createSignal([]);
+const [redTeam, setRedTeam] = createSignal([]);
+const [selectedChars, setSelectedChars] = createSignal([]);
+const [gameSettings, setGameSettings] = createSignal("phd_standard");
 export const handleMsg = (data: string) => {
   const messageEnum = {
     INIT_GAME: "init_game",
@@ -26,4 +34,13 @@ export const handleMsg = (data: string) => {
 
 export {
     loading,
+    playerTurn,
+    blueBans,
+    redBans,
+    bluePicks,
+    redPicks,
+    blueTeam,
+    redTeam,
+    selectedChars,
+    gameSettings,
 }
