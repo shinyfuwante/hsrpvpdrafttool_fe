@@ -9,6 +9,7 @@
   "type": "module",
   "devDependencies": {
     "@types/node": "^18.17.5",
+    "@types/uuid": "^9.0.7",
     "@types/websocket": "^1.0.10",
     "esbuild": "^0.14.54",
     "postcss": "^8.4.28",
