@@ -1,5 +1,15 @@
 import { createSignal } from "solid-js";
-const [loading, setLoading] = createSignal(true);
+// Define the states
+const draft_states = {
+    LOADING: 'loading',
+    SIDE_SELECTION: 'sideSelection',
+    DRAFTING: 'drafting',
+  };
+  
+  // Create a signal for the current state
+const [draftState, setDraftState] = createSignal(draft_states.LOADING);
+const [cid, setCID] = createSignal("");
+const [sideSelector, setSideSelector] = createSignal(false);
 const [playerTurn, setPlayerTurn] = createSignal("blue_team");
 const [blueBans, setBlueBans] = createSignal([]);
 const [redBans, setRedBans] = createSignal([]);
@@ -27,13 +37,19 @@ export const handleMsg = (data: string) => {
   switch (msg.message.message_type) {
     case messageEnum.GAME_READY:
       console.log("Game Ready");
-      setLoading(false);
+      setCID(msg.message.cid);
+      setDraftState(draft_states.SIDE_SELECTION);
+      if (msg.message.selector == true) {
+        setSideSelector(true);
+      }
       break;
   }
 };
 
 export {
-    loading,
+    draft_states,
+    draftState,
+    cid,
     playerTurn,
     blueBans,
     redBans,
@@ -43,4 +59,5 @@ export {
     redTeam,
     selectedChars,
     gameSettings,
+    sideSelector
 }

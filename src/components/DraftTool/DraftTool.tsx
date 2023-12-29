@@ -1,7 +1,7 @@
 import { Component, createSignal, onMount } from "solid-js";
 import { w3cwebsocket as WebSocket } from "websocket";
 import { useParams } from "solid-start";
-import { handleMsg, loading } from "~/game/game_logic";
+import { draftState, handleMsg, draft_states, sideSelector } from "~/game/game_logic";
 
 const DraftTool: Component<{}> = (props) => {
   const params = useParams();
@@ -35,7 +35,8 @@ const DraftTool: Component<{}> = (props) => {
   return (
     <div>
       <div>Connection:</div>
-      {loading() && <LoadingMenu></LoadingMenu>}
+      {draftState() === draft_states.LOADING && <LoadingMenu></LoadingMenu>}
+      {draftState() === draft_states.SIDE_SELECTION && <div>Side Selection Selector = {sideSelector() ? 'you' : 'other player'} </div>}
       <button onClick={() => sendTest()}>Send Test</button>
     </div>
   );
