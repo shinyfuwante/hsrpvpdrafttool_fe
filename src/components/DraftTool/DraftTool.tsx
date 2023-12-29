@@ -1,13 +1,13 @@
 import { Component, createSignal, onMount } from "solid-js";
 import { w3cwebsocket as WebSocket } from "websocket";
 import { useParams } from "solid-start";
-import { draftState, handleMsg, draft_states, sideSelector } from "~/game/game_logic";
+import { gamePhase, handleMsg, game_phases, sideSelector, gameSettings } from "~/game/game_logic";
 
 const DraftTool: Component<{}> = (props) => {
   const params = useParams();
   const game_id = params.game_id;
   const backendUrl = `ws://localhost:8000/ws/game/${game_id}`;
-  const client = new WebSocket(backendUrl);
+  const client = new WebSocket(backendUrl, gameSettings());
   const LoadingMenu = () => {
     return (
       <div>
@@ -52,8 +52,9 @@ const DraftTool: Component<{}> = (props) => {
   });
   return (
     <div>
-      {draftState() === draft_states.LOADING && <LoadingMenu></LoadingMenu>}
-      {draftState() === draft_states.SIDE_SELECTION && <SideSelection></SideSelection>}
+      {gamePhase() === game_phases.LOADING && <LoadingMenu></LoadingMenu>}
+      {gamePhase() === game_phases.SIDE_SELECTION && <SideSelection></SideSelection>}
+      {gamePhase() == game_phases.DRAFTING && <div>drafting</div>}
     </div>
   );
 };

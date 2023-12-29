@@ -1,13 +1,13 @@
 import { createSignal } from "solid-js";
 // Define the states
-const draft_states = {
+const game_phases = {
     LOADING: 'loading',
     SIDE_SELECTION: 'sideSelection',
     DRAFTING: 'drafting',
   };
   
   // Create a signal for the current state
-const [draftState, setDraftState] = createSignal(draft_states.LOADING);
+const [gamePhase, setGamePhase] = createSignal(game_phases.LOADING);
 const [cid, setCID] = createSignal("");
 const [sideSelector, setSideSelector] = createSignal(false);
 const [playerTurn, setPlayerTurn] = createSignal("blue_team");
@@ -18,7 +18,7 @@ const [redPicks, setRedPicks] = createSignal([]);
 const [blueTeam, setBlueTeam] = createSignal([]);
 const [redTeam, setRedTeam] = createSignal([]);
 const [selectedChars, setSelectedChars] = createSignal([]);
-const [gameSettings, setGameSettings] = createSignal("phd_standard");
+const [ruleSet, setRuleSet] = createSignal("phd_standard");
 export const handleMsg = (data: string) => {
   const messageEnum = {
     INIT_GAME: "init_game",
@@ -39,15 +39,16 @@ export const handleMsg = (data: string) => {
     case messageEnum.GAME_READY:
       console.log("Game Ready");
       setCID(msg.message.cid);
-      setDraftState(draft_states.SIDE_SELECTION);
+      setGamePhase(game_phases.SIDE_SELECTION);
+      setRuleSet(msg.message.rule_set);
       setSideSelector(cid() == msg.message.selector);
       break;
   }
 };
 
 export {
-    draft_states,
-    draftState,
+    game_phases,
+    gamePhase,
     cid,
     playerTurn,
     blueBans,
@@ -57,6 +58,6 @@ export {
     blueTeam,
     redTeam,
     selectedChars,
-    gameSettings,
+    ruleSet,
     sideSelector
 }
