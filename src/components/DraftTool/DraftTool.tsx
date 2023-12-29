@@ -16,14 +16,32 @@ const DraftTool: Component<{}> = (props) => {
       </div>
     );
   }
-  const sendTest = () => {
-    console.log('Sending test');
-    const testObj = {
-      game_state: "test",
-      type: "testing",
-    };
-    client.send(JSON.stringify(testObj));
-  };
+  const SideSelection = () => {
+    // returns a modal with a button to select side, which will send a message to the backend to select side
+    const sendSideMessage = (side: string) => {
+      const message = {
+      'type': 'side_select',
+      'side': side,
+      }
+      client.send(JSON.stringify(message));
+    }
+    return (
+      // if side selector, show buttons, else show a message that we're waiting for the other player
+      <div>
+        {sideSelector() && (
+          <div>
+            <button onClick={() => sendSideMessage("blue")}>Blue Team</button>
+            <button onClick={() => sendSideMessage("red")}>Red Team</button>
+          </div>
+        )}
+        {!sideSelector() && (
+          <div>
+            Waiting for other player to select side...
+          </div>
+        )}
+      </div>
+    )
+  }
   onMount(async () => {
     client.onopen = () => {
       console.log("WebSocket Client Connected");
@@ -34,10 +52,8 @@ const DraftTool: Component<{}> = (props) => {
   });
   return (
     <div>
-      <div>Connection:</div>
       {draftState() === draft_states.LOADING && <LoadingMenu></LoadingMenu>}
-      {draftState() === draft_states.SIDE_SELECTION && <div>Side Selection Selector = {sideSelector() ? 'you' : 'other player'} </div>}
-      <button onClick={() => sendTest()}>Send Test</button>
+      {draftState() === draft_states.SIDE_SELECTION && <SideSelection></SideSelection>}
     </div>
   );
 };

@@ -34,14 +34,13 @@ export const handleMsg = (data: string) => {
     UNDO: "undo",
   };
   const msg = JSON.parse(data);
+  console.log(msg);
   switch (msg.message.message_type) {
     case messageEnum.GAME_READY:
       console.log("Game Ready");
       setCID(msg.message.cid);
       setDraftState(draft_states.SIDE_SELECTION);
-      if (msg.message.selector == true) {
-        setSideSelector(true);
-      }
+      setSideSelector(cid() == msg.message.selector);
       break;
   }
 };
