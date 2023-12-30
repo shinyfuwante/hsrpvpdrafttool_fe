@@ -11,12 +11,14 @@ def convert_and_move_images(src_dir, dest_dir, file_ext):
         if filename.endswith(file_ext):
             # Get the ID and name of the character
             id = filename.split('.')[0]
-            if id == '8000' or 'None': 
-                continue;
+            if id == '8000' or id == 'None': 
+                continue
             name = characters[id]['name']
+            if id == "1213":
+                name = "Dan Heng Imbibitor Lunae"
             if name == '{NICKNAME}':
                 name = characters[id]['tag']
-
+        
             # Check if the destination file already exists
             dest_file = f'{dest_dir}/{name}.webp'
             if os.path.exists(dest_file):
@@ -31,5 +33,6 @@ def convert_and_move_images(src_dir, dest_dir, file_ext):
 # Convert and move character preview images
 convert_and_move_images('./StarRailRes/image/character_preview', '../../public/character_images', '.png')
 
+print("getting icons")
 # Convert and move character icon images
 convert_and_move_images('./StarRailRes/icon/character', '../../public/character_icons', '.png')
