@@ -20,6 +20,8 @@ const [blueTeam, setBlueTeam] = createSignal("");
 const [redTeam, setRedTeam] = createSignal("");
 const [selectedChars, setSelectedChars] = createSignal([]);
 const [ruleSet, setRuleSet] = createSignal("phd_standard");
+const [charJson, setCharJson] = createSignal({});
+const [lcJson, setLcJson] = createSignal({});
 export const handleMsg = (data: string) => {
   const messageEnum = {
     INIT_GAME: "init_game",
@@ -42,6 +44,8 @@ export const handleMsg = (data: string) => {
       setCID(msg.message.cid);
       setGamePhase(game_phases.SIDE_SELECTION);
       setRuleSet(msg.message.rule_set);
+      setCharJson(msg.message.characters);
+      setLcJson(msg.message.light_cones);
       setSideSelector(cid() == msg.message.selector);
       break;
     case messageEnum.GAME_START:
@@ -74,5 +78,7 @@ export {
     redTeam,
     selectedChars,
     ruleSet,
-    sideSelector
+    sideSelector,
+    charJson,
+    lcJson,
 }
