@@ -46,8 +46,9 @@ export const handleMsg = (data: string) => {
       break;
     case messageEnum.GAME_START:
         console.log("Game Start");
+        console.log(msg);
         setGamePhase(game_phases.DRAFTING);
-        setPlayerTurn(msg.message.player_turn);
+        setPlayerTurn(msg.message.turn_player);
         setBlueTeam(msg.message.blue_team);
         setRedTeam(msg.message.red_team);
         if (msg.message.blue_team == cid()) {

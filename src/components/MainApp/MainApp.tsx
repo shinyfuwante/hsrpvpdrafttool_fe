@@ -2,6 +2,7 @@ import { Component, createSignal, onMount } from "solid-js";
 import { w3cwebsocket as WebSocket } from "websocket";
 import { useParams } from "solid-start";
 import { gamePhase, handleMsg, game_phases, sideSelector, ruleSet } from "~/game/game_logic";
+import DraftTool from "../DraftTool/DraftTool";
 
 const MainApp: Component<{}> = (props) => {
   const params = useParams();
@@ -57,7 +58,7 @@ const MainApp: Component<{}> = (props) => {
     <div>
       {gamePhase() === game_phases.LOADING && <LoadingMenu></LoadingMenu>}
       {gamePhase() === game_phases.SIDE_SELECTION && <SideSelection></SideSelection>}
-      {gamePhase() == game_phases.DRAFTING && <div>drafting</div>}
+      {gamePhase() == game_phases.DRAFTING && <DraftTool></DraftTool>}
     </div>
   );
 };
