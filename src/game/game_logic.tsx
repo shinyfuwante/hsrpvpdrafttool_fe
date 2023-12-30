@@ -81,4 +81,6 @@ export {
     sideSelector,
     charJson,
     lcJson,
+    setCharJson,
+    setLcJson
 }
