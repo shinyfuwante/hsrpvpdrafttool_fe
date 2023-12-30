@@ -1,0 +1,3 @@
+[submodule "src/data/StarRailRes"]
+	path = src/data/StarRailRes
+	url = https://github.com/Mar-7th/StarRailRes.git
