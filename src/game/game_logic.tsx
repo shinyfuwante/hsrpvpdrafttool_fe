@@ -11,12 +11,13 @@ const [gamePhase, setGamePhase] = createSignal(game_phases.LOADING);
 const [cid, setCID] = createSignal("");
 const [sideSelector, setSideSelector] = createSignal(false);
 const [playerTurn, setPlayerTurn] = createSignal("blue_team");
+const [ownTeam, setOwnTeam] = createSignal("blue_team");
 const [blueBans, setBlueBans] = createSignal([]);
 const [redBans, setRedBans] = createSignal([]);
 const [bluePicks, setBluePicks] = createSignal([]);
 const [redPicks, setRedPicks] = createSignal([]);
-const [blueTeam, setBlueTeam] = createSignal([]);
-const [redTeam, setRedTeam] = createSignal([]);
+const [blueTeam, setBlueTeam] = createSignal("");
+const [redTeam, setRedTeam] = createSignal("");
 const [selectedChars, setSelectedChars] = createSignal([]);
 const [ruleSet, setRuleSet] = createSignal("phd_standard");
 export const handleMsg = (data: string) => {
@@ -43,6 +44,19 @@ export const handleMsg = (data: string) => {
       setRuleSet(msg.message.rule_set);
       setSideSelector(cid() == msg.message.selector);
       break;
+    case messageEnum.GAME_START:
+        console.log("Game Start");
+        setGamePhase(game_phases.DRAFTING);
+        setPlayerTurn(msg.message.player_turn);
+        setBlueTeam(msg.message.blue_team);
+        setRedTeam(msg.message.red_team);
+        if (msg.message.blue_team == cid()) {
+            setOwnTeam("blue_team");
+        } else {
+            setOwnTeam("red_team");
+        }
+        console.log("You are on the " + ownTeam() + " team");
+        break;
   }
 };
 

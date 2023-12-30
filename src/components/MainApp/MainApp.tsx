@@ -1,13 +1,16 @@
 import { Component, createSignal, onMount } from "solid-js";
 import { w3cwebsocket as WebSocket } from "websocket";
 import { useParams } from "solid-start";
-import { gamePhase, handleMsg, game_phases, sideSelector, gameSettings } from "~/game/game_logic";
+import { gamePhase, handleMsg, game_phases, sideSelector, ruleSet } from "~/game/game_logic";
 
-const DraftTool: Component<{}> = (props) => {
+const MainApp: Component<{}> = (props) => {
   const params = useParams();
   const game_id = params.game_id;
-  const backendUrl = `ws://localhost:8000/ws/game/${game_id}`;
-  const client = new WebSocket(backendUrl, gameSettings());
+  const ruleSetString = ruleSet();
+  const backendUrl = `ws://localhost:8000/ws/game/${game_id}?ruleSet=${ruleSetString}`;
+  console.log(ruleSetString);
+  // const client = new WebSocket(backendUrl, [ruleSetString]);
+  const client = new WebSocket(backendUrl);
   const LoadingMenu = () => {
     return (
       <div>
@@ -59,4 +62,4 @@ const DraftTool: Component<{}> = (props) => {
   );
 };
 
-export default DraftTool;
+export default MainApp;
