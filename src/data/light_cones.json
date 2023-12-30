@@ -1,334 +1,915 @@
 {
     "Arrows": {
-        "rarity": 3,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "20000",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 3
     },
     "Cornucopia": {
-        "rarity": 3,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "20001",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 3
     },
     "Collapsing Sky": {
-        "rarity": 3,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "20002",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 3
     },
     "Amber": {
-        "rarity": 3,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "20003",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 3
     },
     "Void": {
-        "rarity": 3,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "20004",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 3
     },
     "Chorus": {
-        "rarity": 3,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "20005",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 3
     },
     "Data Bank": {
-        "rarity": 3,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "20006",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 3
     },
     "Darting Arrow": {
-        "rarity": 3,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "20007",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 3
     },
     "Fine Fruit": {
-        "rarity": 3,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "20008",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 3
     },
     "Shattered Home": {
-        "rarity": 3,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "20009",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 3
     },
     "Defense": {
-        "rarity": 3,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "20010",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 3
     },
     "Loop": {
-        "rarity": 3,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "20011",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 3
     },
     "Meshing Cogs": {
-        "rarity": 3,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "20012",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 3
     },
     "Passkey": {
-        "rarity": 3,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "20013",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 3
     },
     "Adversarial": {
-        "rarity": 3,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "20014",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 3
     },
     "Multiplication": {
-        "rarity": 3,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "20015",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 3
     },
     "Mutual Demise": {
-        "rarity": 3,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "20016",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 3
     },
     "Pioneering": {
-        "rarity": 3,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "20017",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 3
     },
     "Hidden Shadow": {
-        "rarity": 3,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "20018",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 3
     },
     "Mediation": {
-        "rarity": 3,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "20019",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 3
     },
     "Sagacity": {
-        "rarity": 3,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "20020",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 3
     },
     "Post-Op Conversation": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "21000",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
     },
     "Good Night and Sleep Well": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "21001",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
     },
     "Day One of My New Life": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "21002",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
     },
     "Only Silence Remains": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "21003",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
     },
     "Memories of the Past": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "21004",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
     },
     "The Moles Welcome You": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "21005",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
     },
     "The Birth of the Self": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Eyes of the Prey": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Landau's Choice": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Swordplay": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Planetary Rendezvous": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "A Secret Vow": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Make the World Clamor": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Perfect Timing": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Resolution Shines As Pearls of Sweat": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Trend of the Universal Market": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Subscribe for More!": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Dance! Dance! Dance!": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Under the Blue Sky": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Geniuses' Repose": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Quid Pro Quo": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Fermata": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "We Are Wildfire": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "River Flows in Spring": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Woof! Walk Time!": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "The Seriousness of Breakfast": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Warmth Shortens Cold Nights": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "We Will Meet Again": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "This Is Me!": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Return to Darkness": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Carve the Moon, Weave the Clouds": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Nowhere to Run": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Today Is Another Peaceful Day": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Before the Tutorial Mission Starts": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Night on the Milky Way": {
-        "rarity": 5,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "In the Night": {
-        "rarity": 5,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Something Irreplaceable": {
-        "rarity": 5,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "But the Battle Isn't Over": {
-        "rarity": 5,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "In the Name of the World": {
-        "rarity": 5,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Moment of Victory": {
-        "rarity": 5,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Patience Is All You Need": {
-        "rarity": 5,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Incessant Rain": {
-        "rarity": 5,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Echoes of the Coffin": {
-        "rarity": 5,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "The Unreachable Side": {
-        "rarity": 5,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Before Dawn": {
-        "rarity": 5,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "She Already Shut Her Eyes": {
-        "rarity": 5,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Sleep Like the Dead": {
-        "rarity": 5,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Time Waits for No One": {
-        "rarity": 5,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "I Shall Be My Own Sword": {
-        "rarity": 5,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Brighter Than the Sun": {
-        "rarity": 5,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Worrisome, Blissful": {
-        "rarity": 5,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "On the Fall of an Aeon": {
-        "rarity": 5,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Cruising in the Stellar Sea": {
-        "rarity": 5,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Texture of Memories": {
-        "rarity": 5,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Past and Future": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Night of Fright": {
-        "rarity": 5,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "An Instant Before A Gaze": {
-        "rarity": 5,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Past Self in Mirror": {
-        "rarity": 5,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Baptism of Pure Thought": {
-        "rarity": 5,
-        "point_costs": [1, 2, 3, 4, 5]
-    },
-    "Solitary Healing": {
-        "rarity": 5,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "21006",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
     },
     "Shared Feeling": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "21007",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "Eyes of the Prey": {
+        "id": "21008",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "Landau's Choice": {
+        "id": "21009",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "Swordplay": {
+        "id": "21010",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "Planetary Rendezvous": {
+        "id": "21011",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "A Secret Vow": {
+        "id": "21012",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "Make the World Clamor": {
+        "id": "21013",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "Perfect Timing": {
+        "id": "21014",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "Resolution Shines As Pearls of Sweat": {
+        "id": "21015",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "Trend of the Universal Market": {
+        "id": "21016",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "Subscribe for More!": {
+        "id": "21017",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "Dance! Dance! Dance!": {
+        "id": "21018",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "Under the Blue Sky": {
+        "id": "21019",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "Geniuses' Repose": {
+        "id": "21020",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "Quid Pro Quo": {
+        "id": "21021",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "Fermata": {
+        "id": "21022",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "We Are Wildfire": {
+        "id": "21023",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "River Flows in Spring": {
+        "id": "21024",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "Past and Future": {
+        "id": "21025",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "Woof! Walk Time!": {
+        "id": "21026",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "The Seriousness of Breakfast": {
+        "id": "21027",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "Warmth Shortens Cold Nights": {
+        "id": "21028",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "We Will Meet Again": {
+        "id": "21029",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "This Is Me!": {
+        "id": "21030",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "Return to Darkness": {
+        "id": "21031",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "Carve the Moon, Weave the Clouds": {
+        "id": "21032",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "Nowhere to Run": {
+        "id": "21033",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "Today Is Another Peaceful Day": {
+        "id": "21034",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "Before the Tutorial Mission Starts": {
+        "id": "22000",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
     },
     "Hey, Over Here": {
-        "rarity": 4,
-        "point_costs": [1, 2, 3, 4, 5]
+        "id": "22001",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
+    },
+    "Night on the Milky Way": {
+        "id": "23000",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 5
+    },
+    "In the Night": {
+        "id": "23001",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 5
+    },
+    "Something Irreplaceable": {
+        "id": "23002",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 5
+    },
+    "But the Battle Isn't Over": {
+        "id": "23003",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 5
+    },
+    "In the Name of the World": {
+        "id": "23004",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 5
+    },
+    "Moment of Victory": {
+        "id": "23005",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 5
+    },
+    "Patience Is All You Need": {
+        "id": "23006",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 5
+    },
+    "Incessant Rain": {
+        "id": "23007",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 5
+    },
+    "Echoes of the Coffin": {
+        "id": "23008",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 5
+    },
+    "The Unreachable Side": {
+        "id": "23009",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 5
+    },
+    "Before Dawn": {
+        "id": "23010",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 5
+    },
+    "She Already Shut Her Eyes": {
+        "id": "23011",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 5
+    },
+    "Sleep Like the Dead": {
+        "id": "23012",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 5
+    },
+    "Time Waits for No One": {
+        "id": "23013",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 5
+    },
+    "I Shall Be My Own Sword": {
+        "id": "23014",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 5
+    },
+    "Brighter Than the Sun": {
+        "id": "23015",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 5
+    },
+    "Worrisome, Blissful": {
+        "id": "23016",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 5
+    },
+    "Night of Fright": {
+        "id": "23017",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 5
+    },
+    "An Instant Before A Gaze": {
+        "id": "23018",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 5
+    },
+    "Past Self in Mirror": {
+        "id": "23019",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 5
+    },
+    "Baptism of Pure Thought": {
+        "id": "23020",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 5
+    },
+    "On the Fall of an Aeon": {
+        "id": "24000",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 5
+    },
+    "Cruising in the Stellar Sea": {
+        "id": "24001",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 5
+    },
+    "Texture of Memories": {
+        "id": "24002",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 5
+    },
+    "Solitary Healing": {
+        "id": "24003",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 5
     }
 }

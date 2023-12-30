@@ -557,5 +557,18 @@
             7
         ],
         "rarity": 5
+    },
+    "Dan Heng \u2022 Imbibitor Lunae": {
+        "id": "1213",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+        ],
+        "rarity": 5
     }
 }
