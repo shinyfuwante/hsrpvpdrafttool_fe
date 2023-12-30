@@ -10,7 +10,9 @@ import {
   selectedChars,
   ruleSet,
   charJson,
+  setCharJson,
   lcJson,
+  setLcJson,
 } from "~/game/game_logic";
 const DraftTool: Component<{}> = (props) => {
 

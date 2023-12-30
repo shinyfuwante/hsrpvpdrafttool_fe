@@ -44,8 +44,8 @@ export const handleMsg = (data: string) => {
       setCID(msg.message.cid);
       setGamePhase(game_phases.SIDE_SELECTION);
       setRuleSet(msg.message.rule_set);
-      setCharJson(msg.message.characters);
-      setLcJson(msg.message.light_cones);
+    //   setCharJson(msg.message.characters);
+    //   setLcJson(msg.message.light_cones);
       setSideSelector(cid() == msg.message.selector);
       break;
     case messageEnum.GAME_START:
