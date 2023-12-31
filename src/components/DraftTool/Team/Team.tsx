@@ -12,7 +12,6 @@ const Team: Component<TeamProps> = (props) => {
   const [cost, setCost] = createSignal(0);
   const costs = new Map();
   const handleCostChange = (id: string, newCost: number) => {
-    console.log("called hcc");
     const oldCost = costs.get(id) || 0;
     if (newCost !== oldCost) {
         costs.set(id, newCost);
@@ -52,10 +51,61 @@ const Team: Component<TeamProps> = (props) => {
             onCostChange={handleCostChange}
           ></CharacterCard>
         </div>
-        <div>Ban 2</div>
-        <div>Pick 3 Pick 4</div>
-        <div>Pick 5 Pick 6</div>
-        <div>Pick 7 Pick 8</div>
+        <CharacterCard
+          id="3"
+          isPick={false}
+          character={bans[1]}
+          light_cone=""
+          onCostChange={handleCostChange}
+        ></CharacterCard>
+        <div>
+          <CharacterCard
+            id="4"
+            isPick={true}
+            character={picks[2]}
+            light_cone=""
+            onCostChange={handleCostChange}
+          ></CharacterCard>
+          <CharacterCard
+            id="5"
+            isPick={true}
+            character={picks[3]}
+            light_cone=""
+            onCostChange={handleCostChange}
+          ></CharacterCard>
+        </div>
+        <div>
+            <CharacterCard
+                id="6"
+                isPick={true}
+                character={picks[4]}
+                light_cone=""
+                onCostChange={handleCostChange}
+            ></CharacterCard>
+            <CharacterCard
+                id="7"
+                isPick={true}
+                character={picks[5]}
+                light_cone=""
+                onCostChange={handleCostChange}
+            ></CharacterCard>
+        </div>
+        <div>
+            <CharacterCard
+                id="8"
+                isPick={true}
+                character={picks[6]}
+                light_cone=""
+                onCostChange={handleCostChange}
+            ></CharacterCard>
+            <CharacterCard
+                id="9"
+                isPick={true}
+                character={picks[7]}
+                light_cone=""
+                onCostChange={handleCostChange}
+            ></CharacterCard>
+        </div>
       </div>
     </div>
   );
