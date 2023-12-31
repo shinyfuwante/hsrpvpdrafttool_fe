@@ -1,26 +1,51 @@
 import { createSignal } from "solid-js";
-// Define the states
+import { CharJsonType } from "~/types";
 const game_phases = {
-    LOADING: 'loading',
-    SIDE_SELECTION: 'sideSelection',
-    DRAFTING: 'drafting',
-  };
-  
-  // Create a signal for the current state
+  LOADING: "loading",
+  SIDE_SELECTION: "sideSelection",
+  DRAFTING: "drafting",
+};
+
+const testBlueTeamPicks = [
+  "Kafka",
+  "Sampo",
+  "Luka",
+  "Asta",
+  "Luocha",
+  "Bailu",
+  "Seele",
+  "Bronya",
+];
+const testBlueBans = ["Arlan", "Herta"];
+const testRedBans = ["TrailBlazerPhysical", "TrailBlazerFire"];
+const testRedTeamPicks = [
+  "Tingyun",
+  "Pela",
+  "Jingliu",
+  "Lynx",
+  "Ruan Mei",
+  "Dan Heng • Imbibitor Lunae",
+  "Yukong",
+  "Huohuo",
+];
 const [gamePhase, setGamePhase] = createSignal(game_phases.LOADING);
 const [cid, setCID] = createSignal("");
 const [sideSelector, setSideSelector] = createSignal(false);
 const [playerTurn, setPlayerTurn] = createSignal("blue_team");
 const [ownTeam, setOwnTeam] = createSignal("blue_team");
-const [blueBans, setBlueBans] = createSignal([]);
-const [redBans, setRedBans] = createSignal([]);
-const [bluePicks, setBluePicks] = createSignal([]);
-const [redPicks, setRedPicks] = createSignal([]);
+const [blueBans, setBlueBans] = createSignal({});
+setBlueBans(testBlueBans);
+const [redBans, setRedBans] = createSignal({});
+setRedBans(testRedBans);
+const [bluePicks, setBluePicks] = createSignal({});
+setBluePicks(testBlueTeamPicks);
+const [redPicks, setRedPicks] = createSignal({});
+setRedPicks(testRedTeamPicks);
 const [blueTeam, setBlueTeam] = createSignal("");
 const [redTeam, setRedTeam] = createSignal("");
 const [selectedChars, setSelectedChars] = createSignal([]);
 const [ruleSet, setRuleSet] = createSignal("phd_standard");
-const [charJson, setCharJson] = createSignal({});
+const [charJson, setCharJson] = createSignal<CharJsonType>({});
 const [lcJson, setLcJson] = createSignal({});
 export const handleMsg = (data: string) => {
   const messageEnum = {
@@ -44,43 +69,43 @@ export const handleMsg = (data: string) => {
       setCID(msg.message.cid);
       setGamePhase(game_phases.SIDE_SELECTION);
       setRuleSet(msg.message.rule_set);
-    //   setCharJson(msg.message.characters);
-    //   setLcJson(msg.message.light_cones);
+      //   setCharJson(msg.message.characters);
+      //   setLcJson(msg.message.light_cones);
       setSideSelector(cid() == msg.message.selector);
       break;
     case messageEnum.GAME_START:
-        console.log("Game Start");
-        console.log(msg);
-        setGamePhase(game_phases.DRAFTING);
-        setPlayerTurn(msg.message.turn_player);
-        setBlueTeam(msg.message.blue_team);
-        setRedTeam(msg.message.red_team);
-        if (msg.message.blue_team == cid()) {
-            setOwnTeam("blue_team");
-        } else {
-            setOwnTeam("red_team");
-        }
-        console.log("You are on the " + ownTeam() + " team");
-        break;
+      console.log("Game Start");
+      console.log(msg);
+      setGamePhase(game_phases.DRAFTING);
+      setPlayerTurn(msg.message.turn_player);
+      setBlueTeam(msg.message.blue_team);
+      setRedTeam(msg.message.red_team);
+      if (msg.message.blue_team == cid()) {
+        setOwnTeam("blue_team");
+      } else {
+        setOwnTeam("red_team");
+      }
+      console.log("You are on the " + ownTeam() + " team");
+      break;
   }
 };
 
 export {
-    game_phases,
-    gamePhase,
-    cid,
-    playerTurn,
-    blueBans,
-    redBans,
-    bluePicks,
-    redPicks,
-    blueTeam,
-    redTeam,
-    selectedChars,
-    ruleSet,
-    sideSelector,
-    charJson,
-    lcJson,
-    setCharJson,
-    setLcJson
-}
+  game_phases,
+  gamePhase,
+  cid,
+  playerTurn,
+  blueBans,
+  redBans,
+  bluePicks,
+  redPicks,
+  blueTeam,
+  redTeam,
+  selectedChars,
+  ruleSet,
+  sideSelector,
+  charJson,
+  lcJson,
+  setCharJson,
+  setLcJson,
+};
