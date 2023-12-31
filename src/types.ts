@@ -6,3 +6,11 @@ export type CharacterDetails = {
 export type CharJsonType = {
     [key: string]: CharacterDetails;
 }
+export type LCDetails = {
+    id: string;
+    point_costs: number[];
+    rarity: number;
+};
+export type LCJsonType = {
+    [key: string]: LCDetails;
+}

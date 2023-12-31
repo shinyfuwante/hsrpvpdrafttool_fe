@@ -1,5 +1,5 @@
 import { createSignal } from "solid-js";
-import { CharJsonType } from "~/types";
+import { CharJsonType, LCJsonType } from "~/types";
 const game_phases = {
   LOADING: "loading",
   SIDE_SELECTION: "sideSelection",
@@ -46,7 +46,7 @@ const [redTeam, setRedTeam] = createSignal("");
 const [selectedChars, setSelectedChars] = createSignal([]);
 const [ruleSet, setRuleSet] = createSignal("phd_standard");
 const [charJson, setCharJson] = createSignal<CharJsonType>({});
-const [lcJson, setLcJson] = createSignal({});
+const [lcJson, setLcJson] = createSignal<LCJsonType>({});
 export const handleMsg = (data: string) => {
   const messageEnum = {
     INIT_GAME: "init_game",
