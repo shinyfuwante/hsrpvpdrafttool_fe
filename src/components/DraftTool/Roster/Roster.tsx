@@ -1,5 +1,5 @@
 import { Component, createSignal } from "solid-js";
-import { charJson } from "~/game/game_logic";
+import { charJson, bluePicks, blueBans, redBans, redPicks } from "~/game/game_logic";
 import { CharacterDetails } from "~/types";
 
 const Roster: Component<{}> = (props) => {

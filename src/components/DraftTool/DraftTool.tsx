@@ -44,14 +44,22 @@ const DraftTool: Component<{}> = (props) => {
   return (
     <>
       {ready() && (
-        <div>
+        <>
+        <div style={{ display: 'flex', width: '100%' }}>
+        <div style={{ flex: '25%', "max-width": '30%' }}>
           <div>Current Player Turn: {playerTurn()}</div>
           <Team bans={blueBans()} picks={bluePicks()} />
-          <Roster />
-          <Team bans={redBans()} picks={redPicks()} />
-          <button>Undo</button>
-          <button>Reset</button>
+
         </div>
+        <div style={{ flex: '50%', "max-width": '40%' }}>
+          <Roster />
+        </div>
+        <div style={{ flex: '25%', "max-width": '30%' }}>
+          <Team bans={redBans()} picks={redPicks()} />
+        </div>
+      </div>
+      <div>
+      </div></>
       )}
     </>
   );

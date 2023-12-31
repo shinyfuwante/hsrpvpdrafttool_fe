@@ -14,20 +14,24 @@ const Team: Component<TeamProps> = (props) => {
   const handleCostChange = (id: string, newCost: number) => {
     const oldCost = costs.get(id) || 0;
     if (newCost !== oldCost) {
-        costs.set(id, newCost);
-        const totalCost = Array.from(costs.values()).reduce((a, b) => a + b, 0);
-        if (totalCost !== cost()) {
-            setCost(totalCost);
-        }
-};
+      costs.set(id, newCost);
+      const totalCost = Array.from(costs.values()).reduce((a, b) => a + b, 0);
+      if (totalCost !== cost()) {
+        setCost(totalCost);
+      }
+    }
   };
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        "flex-direction": "column",
+      }}
+    >
       <div class="team-info">
-        <div>Team Name</div>
         <div>Points: {cost()}/30</div>
       </div>
-      <div>
+      <div style={{ flex: 1 }}>
         <CharacterCard
           id="0"
           isPick={false}
@@ -35,7 +39,13 @@ const Team: Component<TeamProps> = (props) => {
           light_cone=""
           onCostChange={handleCostChange}
         ></CharacterCard>
-        <div>
+      </div>
+      <div
+        style={{
+          display: "flex",
+        }}
+      >
+        <div style={{ flex: 1 }}>
           <CharacterCard
             id="1"
             isPick={true}
@@ -43,6 +53,8 @@ const Team: Component<TeamProps> = (props) => {
             light_cone=""
             onCostChange={handleCostChange}
           ></CharacterCard>
+        </div>
+        <div style={{ flex: 1 }}>
           <CharacterCard
             id="2"
             isPick={true}
@@ -51,6 +63,8 @@ const Team: Component<TeamProps> = (props) => {
             onCostChange={handleCostChange}
           ></CharacterCard>
         </div>
+      </div>
+      <div>
         <CharacterCard
           id="3"
           isPick={false}
@@ -58,7 +72,13 @@ const Team: Component<TeamProps> = (props) => {
           light_cone=""
           onCostChange={handleCostChange}
         ></CharacterCard>
-        <div>
+      </div>
+      <div
+        style={{
+          display: "flex",
+        }}
+      >
+        <div style={{ flex: 1 }}>
           <CharacterCard
             id="4"
             isPick={true}
@@ -66,6 +86,8 @@ const Team: Component<TeamProps> = (props) => {
             light_cone=""
             onCostChange={handleCostChange}
           ></CharacterCard>
+        </div>
+        <div style={{ flex: 1 }}>
           <CharacterCard
             id="5"
             isPick={true}
@@ -74,37 +96,53 @@ const Team: Component<TeamProps> = (props) => {
             onCostChange={handleCostChange}
           ></CharacterCard>
         </div>
-        <div>
-            <CharacterCard
-                id="6"
-                isPick={true}
-                character={picks[4]}
-                light_cone=""
-                onCostChange={handleCostChange}
-            ></CharacterCard>
-            <CharacterCard
-                id="7"
-                isPick={true}
-                character={picks[5]}
-                light_cone=""
-                onCostChange={handleCostChange}
-            ></CharacterCard>
+      </div>
+      <div
+        style={{
+          display: "flex",
+        }}
+      >
+        <div style={{ flex: 1 }}>
+          <CharacterCard
+            id="6"
+            isPick={true}
+            character={picks[4]}
+            light_cone=""
+            onCostChange={handleCostChange}
+          ></CharacterCard>
         </div>
-        <div>
-            <CharacterCard
-                id="8"
-                isPick={true}
-                character={picks[6]}
-                light_cone=""
-                onCostChange={handleCostChange}
-            ></CharacterCard>
-            <CharacterCard
-                id="9"
-                isPick={true}
-                character={picks[7]}
-                light_cone=""
-                onCostChange={handleCostChange}
-            ></CharacterCard>
+        <div style={{ flex: 1 }}>
+          <CharacterCard
+            id="7"
+            isPick={true}
+            character={picks[5]}
+            light_cone=""
+            onCostChange={handleCostChange}
+          ></CharacterCard>
+        </div>
+      </div>
+      <div
+        style={{
+          display: "flex",
+        }}
+      >
+        <div style={{ flex: 1 }}>
+          <CharacterCard
+            id="8"
+            isPick={true}
+            character={picks[6]}
+            light_cone=""
+            onCostChange={handleCostChange}
+          ></CharacterCard>
+        </div>
+        <div style={{ flex: 1 }}>
+          <CharacterCard
+            id="9"
+            isPick={true}
+            character={picks[7]}
+            light_cone=""
+            onCostChange={handleCostChange}
+          ></CharacterCard>
         </div>
       </div>
     </div>
