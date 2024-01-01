@@ -5,8 +5,6 @@ import { CharacterDetails } from "~/types";
 const Roster: Component<{}> = (props) => {
   const [searchTerm, setSearchTerm] = createSignal("");
 
-  // Given the characters in charJson, display them in a grid
-  // the display will use the images in /public/character_icons/ based on their id in charJson()
   return (
     <div>
       <div>Character Roster</div>
@@ -16,11 +14,18 @@ const Roster: Component<{}> = (props) => {
         onInput={(e) => setSearchTerm(e.target.value)}
         placeholder="Search characters"
       />
-      <div>
+      <div style= {{
+        "display": "flex",
+        "flex-wrap": "wrap",
+        "max-width": "100%",
+        "max-height": "100%",
+        "border": "2px solid grey",
+      }}>
         {Object.entries(charJson()).map(([characterName, characterDetails]) => {
           const characterId = (characterDetails as CharacterDetails).id;
           const characterImage = `/character_icons/${characterId}.webp`;
-          const isMatch = characterName
+          const isSelected = bluePicks().includes(characterName) || blueBans().includes(characterName) || redBans().includes(characterName) || redPicks().includes(characterName);
+          const isMatch = searchTerm() != "" && characterName
             .toLowerCase()
             .includes(searchTerm().toLowerCase());
 
@@ -28,13 +33,19 @@ const Roster: Component<{}> = (props) => {
             <div
               style={{
                 "background-color":
-                  characterDetails.rarity == 4 ? "purple" : "gold",
+                isMatch ? "green" : characterDetails.rarity == 4 ? "purple" : "orange",
+                filter: isMatch || searchTerm() || !isSelected ? "none" : "grayscale(100%)",
                 "display": "inline-block",
-                filter: isMatch ? "none" : "grayscale(100%)",
-
+                "width": "75px",
+                "height": "75px",
+                "margin": "2px",
+                "margin-top": "-1px",
               }}
             >
-              <img src={characterImage} alt={characterName} />
+              <img src={characterImage} alt={characterName} style= {{
+                "max-width": "100%",
+                "max-height": "100%",
+              }} />
             </div>
           );
         })}
