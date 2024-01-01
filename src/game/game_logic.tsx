@@ -36,19 +36,43 @@ const [sideSelector, setSideSelector] = createSignal(false);
 const [playerTurn, setPlayerTurn] = createSignal("blue_team");
 const [ownTeam, setOwnTeam] = createSignal("blue_team");
 const [blueBans, setBlueBans] = createSignal<any[]>([]);
-setBlueBans(testBlueBans);
+// setBlueBans(testBlueBans);
 const [redBans, setRedBans] = createSignal<any[]>([]);
-setRedBans(testRedBans);
+// setRedBans(testRedBans);
 const [bluePicks, setBluePicks] = createSignal<any[]>([]);
-setBluePicks(testBlueTeamPicks);
+// setBluePicks(testBlueTeamPicks);
 const [redPicks, setRedPicks] = createSignal<any[]>([]);
-setRedPicks(testRedTeamPicks);
+// setRedPicks(testRedTeamPicks);
 const [blueTeam, setBlueTeam] = createSignal("");
 const [redTeam, setRedTeam] = createSignal("");
 const [selectedChars, setSelectedChars] = createSignal([]);
 const [ruleSet, setRuleSet] = createSignal("phd_standard");
 const [charJson, setCharJson] = createSignal<CharJsonType>({});
 const [lcJson, setLcJson] = createSignal<LCJsonType>({});
+export const [turnIndex, setTurnIndex] = createSignal(0);
+export const turn_order = [
+    { team: "blue_team", action: 'ban' },
+    { team: "red_team", action: 'ban' },
+    { team: "blue_team", action: 'pick' },
+    { team: "red_team", action: 'pick' },
+    { team: "red_team", action: 'pick' },
+    { team: "blue_team", action: 'pick' },
+    { team: "red_team", action: 'ban' },
+    { team: "blue_team", action: 'ban' },
+    { team: "red_team", action: 'pick' },
+    { team: "blue_team", action: 'pick' },
+    { team: "blue_team", action: 'pick' },
+    { team: "red_team", action: 'pick' },
+    { team: "red_team", action: 'pick' },
+    { team: "blue_team", action: 'pick' },
+    { team: "blue_team", action: 'pick' },
+    { team: "red_team", action: 'pick' },
+    { team: "red_team", action: 'pick' },
+    { team: "blue_team", action: 'pick' },
+    { team: "blue_team", action: 'pick' },
+    { team: "red_team", action: 'pick' },
+    { team: "red_team", action: 'pick' },
+  ];
 export const handleMsg = (data: string) => {
   const messageEnum = {
     INIT_GAME: "init_game",
@@ -98,9 +122,13 @@ export {
   cid,
   playerTurn,
   blueBans,
+  setBlueBans,
   redBans,
+  setRedBans,
   bluePicks,
+  setBluePicks,
   redPicks,
+  setRedPicks,
   blueTeam,
   redTeam,
   selectedChars,

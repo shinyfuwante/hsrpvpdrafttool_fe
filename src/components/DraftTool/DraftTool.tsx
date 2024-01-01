@@ -47,7 +47,7 @@ const DraftTool: Component<{}> = (props) => {
         <>
           <div style={{ display: "flex", width: "100%" }}>
             <div style={{ flex: "25%", "max-width": "30%" }}>
-              <Team bans={blueBans()} picks={bluePicks()} color={"blue"} />
+              <Team bansSignal={blueBans} picksSignal={bluePicks} color={"blue"} />
             </div>
             <div
               style={{
@@ -63,7 +63,7 @@ const DraftTool: Component<{}> = (props) => {
               </div>
             </div>
             <div style={{ flex: "25%", "max-width": "30%" }}>
-              <Team bans={redBans()} picks={redPicks()} color={"red"} />
+              <Team bansSignal={redBans} picksSignal={redPicks} color={"red"} />
             </div>
           </div>
           <div></div>

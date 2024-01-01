@@ -2,14 +2,56 @@ import { Component, createSignal } from "solid-js";
 import {
   charJson,
   bluePicks,
+  setBluePicks,
   blueBans,
+  setBlueBans,
   redBans,
+  setRedBans,
   redPicks,
+  setRedPicks,
+  playerTurn,
+  turn_order,
+  turnIndex,
+  setTurnIndex,
 } from "~/game/game_logic";
 import { CharacterDetails } from "~/types";
 
 const Roster: Component<{}> = (props) => {
   const [searchTerm, setSearchTerm] = createSignal("");
+
+  const selectCharacter = (characterName: string) => {
+    // determine if ban or pick
+    // might have to move further out
+    if (turnIndex() >= turn_order.length) {
+        return;
+    }
+    const currentTurn = turn_order[turnIndex()];
+    const currentPlayer = currentTurn.team;
+    const currentAction = currentTurn.action;
+    if (currentAction == "ban") {
+        if (currentPlayer == "blue_team") {
+            if (blueBans().length < 2) {
+            setBlueBans([...blueBans(), characterName]);
+            console.log(blueBans())
+            }
+        } else {
+            if (redBans().length < 2) {
+            setRedBans([...redBans(), characterName]);
+            }
+        }
+    } else {
+        if (currentPlayer == "blue_team") {
+            if (bluePicks().length < 10) {
+            setBluePicks([...bluePicks(), characterName]);
+            }
+        } else {
+            if (redPicks().length < 10) {
+            setRedPicks([...redPicks(), characterName]);
+            }
+        }
+    }
+    setTurnIndex(turnIndex() + 1);
+  }
 
   return (
     <div
@@ -61,7 +103,9 @@ const Roster: Component<{}> = (props) => {
                   isMatch || searchTerm() == "" ? "inline-block" : "none",
                 width: "100px",
                 height: "100px",
+                cursor: "pointer",
               }}
+              onClick={() => selectCharacter(characterName)}
             >
               <img
                 src={characterImage}
