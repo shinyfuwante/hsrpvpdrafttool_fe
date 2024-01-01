@@ -45,21 +45,29 @@ const DraftTool: Component<{}> = (props) => {
     <>
       {ready() && (
         <>
-        <div style={{ display: 'flex', width: '100%' }}>
-        <div style={{ flex: '25%', "max-width": '30%' }}>
-          <div>Current Player Turn: {playerTurn()}</div>
-          <Team bans={blueBans()} picks={bluePicks()} />
-
-        </div>
-        <div style={{ flex: '50%', "max-width": '40%' }}>
-          <Roster />
-        </div>
-        <div style={{ flex: '25%', "max-width": '30%' }}>
-          <Team bans={redBans()} picks={redPicks()} />
-        </div>
-      </div>
-      <div>
-      </div></>
+          <div style={{ display: "flex", width: "100%" }}>
+            <div style={{ flex: "25%", "max-width": "30%" }}>
+              <Team bans={blueBans()} picks={bluePicks()} color={"blue"} />
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flex: "50%",
+                "max-width": "40%",
+                "flex-direction": "column",
+              }}
+            >
+              <Roster />
+              <div style={{ "align-self": "center" }}>
+                Current Player Turn: {playerTurn()}
+              </div>
+            </div>
+            <div style={{ flex: "25%", "max-width": "30%" }}>
+              <Team bans={redBans()} picks={redPicks()} color={"red"} />
+            </div>
+          </div>
+          <div></div>
+        </>
       )}
     </>
   );
