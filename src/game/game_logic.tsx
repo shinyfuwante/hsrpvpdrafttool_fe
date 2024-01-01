@@ -4,6 +4,8 @@ const game_phases = {
   LOADING: "loading",
   SIDE_SELECTION: "sideSelection",
   DRAFTING: "drafting",
+  LOCK_IN: "lock-in",
+  SCORING: "scoring",
 };
 
 const testBlueTeamPicks = [
