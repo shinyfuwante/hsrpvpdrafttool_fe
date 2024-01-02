@@ -32,7 +32,6 @@ const Roster: Component<{}> = (props) => {
         if (currentPlayer == "blue_team") {
             if (blueBans().length < 2) {
             setBlueBans([...blueBans(), characterName]);
-            console.log(blueBans())
             }
         } else {
             if (redBans().length < 2) {
