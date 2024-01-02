@@ -50,6 +50,7 @@ const Roster: Component<{}> = (props) => {
         }
     }
     setTurnIndex(turnIndex() + 1);
+    handleSelection(characterName);
   }
 
   return (
