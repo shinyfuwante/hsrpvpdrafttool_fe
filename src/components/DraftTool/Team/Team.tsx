@@ -8,8 +8,26 @@ export type TeamProps = {
   color: string;
 };
 
+const EmptyCharacterComponent = () => {
+  return (
+    <div
+      style={{
+        width: "100%",
+        height: "75%",
+        display: "flex",
+        "flex-direction": "column",
+        "min-height": "150px",
+        "background-color": "transparent",
+        border: "1px solid grey",
+      }}
+    >
+      <div></div>
+      <div></div>
+    </div>
+  );
+};
 const Team: Component<TeamProps> = (props) => {
-  const {bansSignal, picksSignal, color}  = props;
+  const { bansSignal, picksSignal, color } = props;
   const [cost, setCost] = createSignal(0);
   const costs = new Map();
   const handleCostChange = (id: string, newCost: number) => {
@@ -43,12 +61,14 @@ const Team: Component<TeamProps> = (props) => {
             onCostChange={handleCostChange}
           />
         ) : (
-          <div style={{ width: "75px", height: "75px" }}></div>
+          <EmptyCharacterComponent />
         )}
       </div>
       <div
         style={{
           display: "flex",
+          "flex-direction": "row",
+          border: "solid 2px grey",
         }}
       >
         <div style={{ flex: 1 }}>
@@ -61,7 +81,7 @@ const Team: Component<TeamProps> = (props) => {
               onCostChange={handleCostChange}
             />
           ) : (
-            <div style={{ width: "75px", height: "75px" }}></div>
+            <EmptyCharacterComponent />
           )}
         </div>
         <div style={{ flex: 1 }}>
@@ -74,7 +94,7 @@ const Team: Component<TeamProps> = (props) => {
               onCostChange={handleCostChange}
             />
           ) : (
-            <div style={{ width: "75px", height: "75px" }}></div>
+            <EmptyCharacterComponent />
           )}
         </div>
       </div>
@@ -88,7 +108,7 @@ const Team: Component<TeamProps> = (props) => {
             onCostChange={handleCostChange}
           />
         ) : (
-          <div style={{ width: "75px", height: "75px" }}></div>
+          <EmptyCharacterComponent />
         )}
       </div>
       <div
@@ -106,7 +126,7 @@ const Team: Component<TeamProps> = (props) => {
               onCostChange={handleCostChange}
             />
           ) : (
-            <div style={{ width: "75px", height: "75px" }}></div>
+            <EmptyCharacterComponent />
           )}
         </div>
         <div style={{ flex: 1 }}>
@@ -119,7 +139,7 @@ const Team: Component<TeamProps> = (props) => {
               onCostChange={handleCostChange}
             />
           ) : (
-            <div style={{ width: "75px", height: "75px" }}></div>
+            <EmptyCharacterComponent />
           )}
         </div>
       </div>
@@ -138,7 +158,7 @@ const Team: Component<TeamProps> = (props) => {
               onCostChange={handleCostChange}
             />
           ) : (
-            <div style={{ width: "75px", height: "75px" }}></div>
+            <EmptyCharacterComponent />
           )}
         </div>
         <div style={{ flex: 1 }}>
@@ -151,7 +171,7 @@ const Team: Component<TeamProps> = (props) => {
               onCostChange={handleCostChange}
             />
           ) : (
-            <div style={{ width: "75px", height: "75px" }}></div>
+            <EmptyCharacterComponent />
           )}
         </div>
       </div>
@@ -170,7 +190,7 @@ const Team: Component<TeamProps> = (props) => {
               onCostChange={handleCostChange}
             />
           ) : (
-            <div style={{ width: "75px", height: "75px" }}></div>
+            <EmptyCharacterComponent />
           )}
         </div>
         <div style={{ flex: 1 }}>
@@ -183,7 +203,7 @@ const Team: Component<TeamProps> = (props) => {
               onCostChange={handleCostChange}
             />
           ) : (
-            <div style={{ width: "75px", height: "75px" }}></div>
+            <EmptyCharacterComponent />
           )}
         </div>
       </div>

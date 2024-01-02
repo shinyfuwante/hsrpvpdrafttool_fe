@@ -39,7 +39,11 @@ export const CharacterCard: Component<CharacterCardProps> = ({
       const backgroundColor = char.rarity === 4 ? "purple" : "orange";
       // it's a pick
       return (
-        <>
+        <div style = {{
+            "min-height": "150px",
+            display: "flex",
+            "flex-direction": "column",
+        }}>
           <div
             style={{
               "background-image": `url(/character_images/${char.id}.webp)`,
@@ -48,6 +52,7 @@ export const CharacterCard: Component<CharacterCardProps> = ({
               width: "100%",
               height: "75%",
               "min-height": "125px",
+              flex: "1",
               "background-color": backgroundColor,
             }}
           ></div>
@@ -102,7 +107,7 @@ export const CharacterCard: Component<CharacterCardProps> = ({
               </select>
             </div>
           </div>
-        </>
+        </div>
       );
     } else {
       // it's a ban
@@ -116,7 +121,7 @@ export const CharacterCard: Component<CharacterCardProps> = ({
             "background-size": "cover",
             "background-position": "30% 30%",
             filter: "grayscale(100%)",
-            "min-height": "100px",
+            "min-height": "150px",
           }}
         ></div>
       );
@@ -125,7 +130,7 @@ export const CharacterCard: Component<CharacterCardProps> = ({
   return (
     <div
       style={{
-        border: "2px solid grey",
+        border: "1px solid grey",
       }}
     >
       {characterCard()}
