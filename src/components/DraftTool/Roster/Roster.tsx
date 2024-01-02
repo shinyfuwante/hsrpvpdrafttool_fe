@@ -103,9 +103,9 @@ const Roster: Component<{}> = (props) => {
                   isMatch || searchTerm() == "" ? "inline-block" : "none",
                 width: "100px",
                 height: "100px",
-                cursor: "pointer",
+                cursor: isSelected ? "default" : "pointer",
               }}
-              onClick={() => selectCharacter(characterName)}
+              onClick={isSelected ? undefined : () => selectCharacter(characterName)}
             >
               <img
                 src={characterImage}
