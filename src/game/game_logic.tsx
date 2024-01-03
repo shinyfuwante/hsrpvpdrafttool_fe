@@ -8,6 +8,15 @@ const game_phases = {
   SCORING: "scoring",
 };
 
+type CharacterPick = {
+    name: string,
+    light_cone: string,
+    eidolon: number,
+    superimposition: number,
+}
+type CharacterBan = {
+    name: string,
+}
 const testBlueTeamPicks = [
   "Kafka",
   "Sampo",
