@@ -15,6 +15,8 @@ import {
   setTurnIndex,
   CharacterPick,
   CharacterBan,
+  selectedChars,
+  setSelectedChars,
 } from "~/game/game_logic";
 import { CharacterDetails } from "~/types";
 
@@ -101,11 +103,7 @@ const Roster: Component<RosterProps> = (props) => {
         {Object.entries(charJson()).map(([characterName, characterDetails]) => {
           const characterId = (characterDetails as CharacterDetails).id;
           const characterImage = `/character_icons/${characterId}.webp`;
-          const isSelected =
-            bluePicks() && bluePicks().includes(characterName) ||
-            blueBans() && blueBans().includes(characterName) ||
-            redBans() && redBans().includes(characterName) ||
-            redPicks() && redPicks().includes(characterName);
+          const isSelected = selectedChars().includes(characterName);
           const isTurn =
             turnIndex() < turn_order.length &&
             turn_order[turnIndex()].team == playerTurn();

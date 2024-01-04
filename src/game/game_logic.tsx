@@ -1,4 +1,4 @@
-import { createSignal } from "solid-js";
+import { createSignal, createEffect } from "solid-js";
 import { CharJsonType, LCJsonType } from "~/types";
 const game_phases = {
   LOADING: "loading",
@@ -29,7 +29,11 @@ const [bluePicks, setBluePicks] = createSignal<CharacterPick[]>([]);
 const [redPicks, setRedPicks] = createSignal<CharacterPick[]>([]);
 const [blueTeam, setBlueTeam] = createSignal("");
 const [redTeam, setRedTeam] = createSignal("");
-const [selectedChars, setSelectedChars] = createSignal([]);
+const [selectedChars, setSelectedChars] = createSignal<string[]>([]);
+createEffect(() => {
+    const selected = [...blueBans(), ...redBans(), ...bluePicks(), ...redPicks()].map((char) => char.name);
+    setSelectedChars(selected);
+})
 const [ruleSet, setRuleSet] = createSignal("phd_standard");
 const [charJson, setCharJson] = createSignal<CharJsonType>({});
 const [lcJson, setLcJson] = createSignal<LCJsonType>({});
@@ -126,6 +130,7 @@ export {
   blueTeam,
   redTeam,
   selectedChars,
+  setSelectedChars,
   ruleSet,
   sideSelector,
   charJson,
