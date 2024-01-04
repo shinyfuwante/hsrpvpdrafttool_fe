@@ -107,10 +107,10 @@ const Roster: Component<RosterProps> = (props) => {
           const characterId = (characterDetails as CharacterDetails).id;
           const characterImage = `/character_icons/${characterId}.webp`;
           const isSelected =
-            bluePicks().includes(characterName) ||
-            blueBans().includes(characterName) ||
-            redBans().includes(characterName) ||
-            redPicks().includes(characterName);
+            bluePicks() && bluePicks().includes(characterName) ||
+            blueBans() && blueBans().includes(characterName) ||
+            redBans() && redBans().includes(characterName) ||
+            redPicks() && redPicks().includes(characterName);
           const isTurn =
             turnIndex() < turn_order.length &&
             turn_order[turnIndex()].team == playerTurn();

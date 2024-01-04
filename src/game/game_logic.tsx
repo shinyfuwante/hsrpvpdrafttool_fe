@@ -57,8 +57,7 @@ export const turn_order = [
     { team: "red_team", action: 'pick' },
     { team: "red_team", action: 'pick' },
   ];
-export const handleMsg = (data: string) => {
-  const messageEnum = {
+const MessageEnum = {
     INIT_GAME: "init_game",
     GAME_READY: "game_ready",
     GAME_START: "game_start",
@@ -71,10 +70,11 @@ export const handleMsg = (data: string) => {
     RESET_GAME: "reset_game",
     UNDO: "undo",
   };
+export const handleMsg = (data: string) => {
   const msg = JSON.parse(data);
   console.log(msg);
   switch (msg.message.message_type) {
-    case messageEnum.GAME_READY:
+    case MessageEnum.GAME_READY:
       console.log("Game Ready");
       setCID(msg.message.cid);
       setGamePhase(game_phases.SIDE_SELECTION);
@@ -83,7 +83,7 @@ export const handleMsg = (data: string) => {
       //   setLcJson(msg.message.light_cones);
       setSideSelector(cid() == msg.message.selector);
       break;
-    case messageEnum.GAME_START:
+    case MessageEnum.GAME_START:
       console.log("Game Start");
       console.log(msg);
       setGamePhase(game_phases.DRAFTING);
@@ -97,6 +97,15 @@ export const handleMsg = (data: string) => {
       }
       console.log("You are on the " + ownTeam() + " team");
       break;
+    case MessageEnum.GAME_STATE:
+        console.log("Game State");
+        console.log(msg);
+        setBlueBans(msg.message.game_state.bans.blue_team);
+        setRedBans(msg.message.game_state.bans.red_team);
+        setBluePicks(msg.message.game_state.picks.blue_team);
+        setRedPicks(msg.message.game_state.picks.red_team);
+        setPlayerTurn(msg.message.game_state.turn_player);
+        break;
   }
 };
 
@@ -124,5 +133,6 @@ export {
   setLcJson,
   CharacterBan,
   CharacterPick,
-  ownTeam
+  ownTeam,
+  MessageEnum
 };

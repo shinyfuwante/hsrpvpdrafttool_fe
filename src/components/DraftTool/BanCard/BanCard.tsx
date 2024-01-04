@@ -1,11 +1,12 @@
 import { Component} from "solid-js";
 import { charJson } from "~/game/game_logic";
+import { CharacterBan } from "~/game/game_logic";
 
 interface BanCardProps {
-  character: string;
+  character: CharacterBan;
 }
 export const BanCard: Component<BanCardProps> = ({ character }) => {
-  const char = charJson()[character];
+  const char = charJson()[character.name];
   return (
     <div
       style={{

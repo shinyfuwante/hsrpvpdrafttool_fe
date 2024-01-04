@@ -1,6 +1,6 @@
 import { useParams } from "solid-start";
 import { onMount } from "solid-js";
-import { ruleSet, sideSelector, handleMsg, CharacterPick, CharacterBan, ownTeam } from "~/game/game_logic";
+import { ruleSet, sideSelector, handleMsg, CharacterPick, CharacterBan, ownTeam, MessageEnum } from "~/game/game_logic";
 import { w3cwebsocket as WebSocket } from "websocket";
 import MainApp from "~/components/MainApp/MainApp"
 export default function GamePage() {
@@ -32,12 +32,11 @@ export default function GamePage() {
   }
   const handleBan = (character: CharacterBan) => {
     const message = {
-      'type': 'select_char',
+      'type': MessageEnum.BAN,
       'character': character,
+      'team': ownTeam(),
     }
-    console.log('made ban');
-    // need to make a character object for picks, with optional fields for bans? 
-    // not sure if that would make sense for optional fields or just two different types, one pick one ban (latter sounds better bc of diff message type)
+    client.send(JSON.stringify(message));
 
   }
   const handleSigEidChange = (character: CharacterPick) => {
