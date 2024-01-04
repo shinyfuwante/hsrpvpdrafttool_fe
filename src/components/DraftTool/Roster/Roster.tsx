@@ -99,6 +99,7 @@ const Roster: Component<RosterProps> = (props) => {
             blueBans().includes(characterName) ||
             redBans().includes(characterName) ||
             redPicks().includes(characterName);
+            const isTurn = turnIndex() < turn_order.length && turn_order[turnIndex()].team == playerTurn();
           const isMatch =
             searchTerm() != "" &&
             characterName.toLowerCase().includes(searchTerm().toLowerCase());
@@ -113,10 +114,10 @@ const Roster: Component<RosterProps> = (props) => {
                   isMatch || searchTerm() == "" ? "inline-block" : "none",
                 width: "100px",
                 height: "100px",
-                cursor: isSelected ? "default" : "pointer",
+                cursor: !isSelected ? isTurn ? "pointer" : "default" : "default",
               }}
               onClick={
-                isSelected ? undefined : () => selectCharacter(characterName)
+                !isSelected ? isTurn ? () => selectCharacter(characterName) : undefined : undefined
               }
             >
               <img
