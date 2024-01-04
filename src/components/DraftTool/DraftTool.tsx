@@ -15,8 +15,16 @@ import {
   setCharJson,
   lcJson,
   setLcJson,
+  CharacterBan,
+  CharacterPick,
 } from "~/game/game_logic";
-const DraftTool: Component<{}> = (props) => {
+
+interface DraftToolProps {
+  handlePick: (character: CharacterPick) => {};
+  handleBan: (character: CharacterBan) => {};
+}
+const DraftTool: Component<DraftToolProps> = (props) => {
+  const { handlePick, handleBan } = props;
   const [ready, setReady] = createSignal(false);
   onMount(async () => {
     let response1 = await fetch(`/rule_sets/${ruleSet()}/characters.json`);
@@ -47,7 +55,11 @@ const DraftTool: Component<{}> = (props) => {
         <>
           <div style={{ display: "flex", width: "100%" }}>
             <div style={{ flex: "25%", "max-width": "30%" }}>
-              <Team bansSignal={blueBans} picksSignal={bluePicks} color={"blue"} />
+              <Team
+                bansSignal={blueBans}
+                picksSignal={bluePicks}
+                color={"blue"}
+              />
             </div>
             <div
               style={{
@@ -57,7 +69,7 @@ const DraftTool: Component<{}> = (props) => {
                 "flex-direction": "column",
               }}
             >
-              <Roster />
+              <Roster handleBan={handleBan} handlePick={handlePick}/>
               <div style={{ "align-self": "center" }}>
                 Current Player Turn: {playerTurn()}
               </div>

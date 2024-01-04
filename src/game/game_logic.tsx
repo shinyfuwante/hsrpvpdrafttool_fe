@@ -147,4 +147,6 @@ export {
   lcJson,
   setCharJson,
   setLcJson,
+  CharacterBan,
+  CharacterPick
 };

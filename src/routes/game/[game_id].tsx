@@ -1,6 +1,6 @@
 import { useParams } from "solid-start";
 import { onMount } from "solid-js";
-import { ruleSet, sideSelector, handleMsg } from "~/game/game_logic";
+import { ruleSet, sideSelector, handleMsg, CharacterPick, CharacterBan } from "~/game/game_logic";
 import { w3cwebsocket as WebSocket } from "websocket";
 import MainApp from "~/components/MainApp/MainApp"
 export default function GamePage() {
@@ -16,6 +16,26 @@ export default function GamePage() {
         <a href={window.location.href}>{window.location.href}</a>
       </div>
     );
+  }
+  const handlePick = (character: CharacterPick) => {
+    const message = {
+      'type': 'select_char',
+      'character': character,
+    }
+    client.send(JSON.stringify(message));
+    // need to make a character object for picks, with optional fields for bans? 
+    // not sure if that would make sense for optional fields or just two different types, one pick one ban (latter sounds better bc of diff message type)
+
+  }
+  const handleBan = (character: CharacterBan) => {
+    const message = {
+      'type': 'select_char',
+      'character': character,
+    }
+    client.send(JSON.stringify(message));
+    // need to make a character object for picks, with optional fields for bans? 
+    // not sure if that would make sense for optional fields or just two different types, one pick one ban (latter sounds better bc of diff message type)
+
   }
   const SideSelection = () => {
     // returns a modal with a button to select side, which will send a message to the backend to select side
@@ -53,7 +73,7 @@ export default function GamePage() {
   });
     return (
         <div>
-            <MainApp LoadingMenu={LoadingMenu} SideSelection={SideSelection}/>
+            <MainApp LoadingMenu={LoadingMenu} SideSelection={SideSelection} HandleBan={handleBan} HandlePick={handlePick}/>
         </div>
     )
 }

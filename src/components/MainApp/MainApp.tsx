@@ -1,10 +1,12 @@
-import { gamePhase, handleMsg, game_phases, sideSelector, ruleSet } from "~/game/game_logic";
+import { gamePhase, CharacterPick, game_phases, CharacterBan } from "~/game/game_logic";
 import DraftTool from "../DraftTool/DraftTool";
 import { Component } from "solid-js";
 
 interface MainAppProps {
   LoadingMenu: Component<{}>;
   SideSelection: Component<{}>;
+  HandlePick: (character: CharacterPick) => void; 
+  HandleBan: (character: CharacterBan) => void; 
 }
 
 const MainApp: Component<MainAppProps> = (props) => {
