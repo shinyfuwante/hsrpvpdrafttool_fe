@@ -18,41 +18,15 @@ type CharacterPick = {
 type CharacterBan = {
     name: string,
 }
-const testBlueTeamPicks = [
-  "Kafka",
-  "Sampo",
-  "Luka",
-  "Asta",
-  "Luocha",
-  "Bailu",
-  "Seele",
-  "Bronya",
-];
-const testBlueBans = ["Arlan", "Herta"];
-const testRedBans = ["TrailBlazerPhysical", "TrailBlazerFire"];
-const testRedTeamPicks = [
-  "Tingyun",
-  "Pela",
-  "Jingliu",
-  "Lynx",
-  "Ruan Mei",
-  "Dan Heng • Imbibitor Lunae",
-  "Yukong",
-  "Huohuo",
-];
 const [gamePhase, setGamePhase] = createSignal(game_phases.LOADING);
 const [cid, setCID] = createSignal("");
 const [sideSelector, setSideSelector] = createSignal(false);
 const [playerTurn, setPlayerTurn] = createSignal("blue_team");
 const [ownTeam, setOwnTeam] = createSignal("blue_team");
 const [blueBans, setBlueBans] = createSignal<any[]>([]);
-// setBlueBans(testBlueBans);
 const [redBans, setRedBans] = createSignal<any[]>([]);
-// setRedBans(testRedBans);
 const [bluePicks, setBluePicks] = createSignal<any[]>([]);
-// setBluePicks(testBlueTeamPicks);
 const [redPicks, setRedPicks] = createSignal<any[]>([]);
-// setRedPicks(testRedTeamPicks);
 const [blueTeam, setBlueTeam] = createSignal("");
 const [redTeam, setRedTeam] = createSignal("");
 const [selectedChars, setSelectedChars] = createSignal([]);

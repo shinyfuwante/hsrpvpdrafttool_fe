@@ -23,7 +23,7 @@ export interface RosterProps {
   handleBan: (character: CharacterBan) => void;
 }
 const Roster: Component<RosterProps> = (props) => {
-  const {handleBan, handlePick} = props;
+  const { handleBan, handlePick } = props;
   const [searchTerm, setSearchTerm] = createSignal("");
 
   const selectCharacter = (characterName: string) => {
@@ -40,23 +40,35 @@ const Roster: Component<RosterProps> = (props) => {
         if (blueBans().length < 2) {
           setBlueBans([...blueBans(), characterName]);
         }
-        handleBan({ name: characterName});
+        handleBan({ name: characterName });
       } else {
         if (redBans().length < 2) {
           setRedBans([...redBans(), characterName]);
-          handleBan({ name: characterName});
+          handleBan({ name: characterName });
         }
       }
     } else {
       if (currentPlayer == "blue_team") {
         if (bluePicks().length < 10) {
           setBluePicks([...bluePicks(), characterName]);
-          handlePick({ name: characterName, light_cone: "", eidolon: 0, superimposition: 0, index: bluePicks().length - 1});
+          handlePick({
+            name: characterName,
+            light_cone: "",
+            eidolon: 0,
+            superimposition: 0,
+            index: bluePicks().length - 1,
+          });
         }
       } else {
         if (redPicks().length < 10) {
           setRedPicks([...redPicks(), characterName]);
-          handlePick({ name: characterName, light_cone: "", eidolon: 0, superimposition: 0, index: redPicks().length - 1});
+          handlePick({
+            name: characterName,
+            light_cone: "",
+            eidolon: 0,
+            superimposition: 0,
+            index: redPicks().length - 1,
+          });
         }
       }
     }
@@ -99,7 +111,9 @@ const Roster: Component<RosterProps> = (props) => {
             blueBans().includes(characterName) ||
             redBans().includes(characterName) ||
             redPicks().includes(characterName);
-            const isTurn = turnIndex() < turn_order.length && turn_order[turnIndex()].team == playerTurn();
+          const isTurn =
+            turnIndex() < turn_order.length &&
+            turn_order[turnIndex()].team == playerTurn();
           const isMatch =
             searchTerm() != "" &&
             characterName.toLowerCase().includes(searchTerm().toLowerCase());
@@ -114,10 +128,18 @@ const Roster: Component<RosterProps> = (props) => {
                   isMatch || searchTerm() == "" ? "inline-block" : "none",
                 width: "100px",
                 height: "100px",
-                cursor: !isSelected ? isTurn ? "pointer" : "default" : "default",
+                cursor: !isSelected
+                  ? isTurn
+                    ? "pointer"
+                    : "default"
+                  : "default",
               }}
               onClick={
-                !isSelected ? isTurn ? () => selectCharacter(characterName) : undefined : undefined
+                !isSelected
+                  ? isTurn
+                    ? () => selectCharacter(characterName)
+                    : undefined
+                  : undefined
               }
             >
               <img

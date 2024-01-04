@@ -1,11 +1,13 @@
 import { Component, createSignal, Accessor, createEffect } from "solid-js";
 import { CharacterCard } from "../CharacterCard/CharacterCard";
 import { BanCard } from "../BanCard/BanCard";
+import { CharacterPick } from "~/game/game_logic";
 
 export type TeamProps = {
   bansSignal: Accessor<any[]>;
   picksSignal: Accessor<any[]>;
   team: string;
+  handleSigEid: (character: CharacterPick) => void;
 };
 
 const EmptyCharacterComponent = () => {
@@ -26,8 +28,7 @@ const EmptyCharacterComponent = () => {
     </div>
   );
 };
-const Team: Component<TeamProps> = (props) => {
-  const { bansSignal, picksSignal, team } = props;
+const Team: Component<TeamProps> = ({bansSignal, picksSignal, team, handleSigEid}) => {
   const [cost, setCost] = createSignal(0);
   const costs = new Map();
   const handleCostChange = (id: number, newCost: number) => {
@@ -72,6 +73,7 @@ const Team: Component<TeamProps> = (props) => {
               character={picksSignal()[0]}
               light_cone=""
               onCostChange={handleCostChange}
+              handleSigEid={handleSigEid}
             />
           ) : (
             <EmptyCharacterComponent />
@@ -84,6 +86,7 @@ const Team: Component<TeamProps> = (props) => {
               character={picksSignal()[1]}
               light_cone=""
               onCostChange={handleCostChange}
+              handleSigEid={handleSigEid}
             />
           ) : (
             <EmptyCharacterComponent />
@@ -109,6 +112,7 @@ const Team: Component<TeamProps> = (props) => {
               character={picksSignal()[2]}
               light_cone=""
               onCostChange={handleCostChange}
+              handleSigEid={handleSigEid}
             />
           ) : (
             <EmptyCharacterComponent />
@@ -121,6 +125,7 @@ const Team: Component<TeamProps> = (props) => {
               character={picksSignal()[3]}
               light_cone=""
               onCostChange={handleCostChange}
+              handleSigEid={handleSigEid}
             />
           ) : (
             <EmptyCharacterComponent />
@@ -139,6 +144,7 @@ const Team: Component<TeamProps> = (props) => {
               character={picksSignal()[4]}
               light_cone=""
               onCostChange={handleCostChange}
+              handleSigEid={handleSigEid}
             />
           ) : (
             <EmptyCharacterComponent />
@@ -151,6 +157,7 @@ const Team: Component<TeamProps> = (props) => {
               character={picksSignal()[5]}
               light_cone=""
               onCostChange={handleCostChange}
+              handleSigEid={handleSigEid}
             />
           ) : (
             <EmptyCharacterComponent />
@@ -169,6 +176,7 @@ const Team: Component<TeamProps> = (props) => {
               character={picksSignal()[6]}
               light_cone=""
               onCostChange={handleCostChange}
+              handleSigEid={handleSigEid}
             />
           ) : (
             <EmptyCharacterComponent />
@@ -181,6 +189,7 @@ const Team: Component<TeamProps> = (props) => {
               character={picksSignal()[7]}
               light_cone=""
               onCostChange={handleCostChange}
+              handleSigEid={handleSigEid}
             />
           ) : (
             <EmptyCharacterComponent />

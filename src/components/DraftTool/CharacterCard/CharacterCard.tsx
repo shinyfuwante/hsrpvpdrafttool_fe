@@ -6,6 +6,7 @@ interface CharacterCardProps {
   character: string;
   light_cone: string;
   onCostChange: (id: number, cost: number) => void;
+  handleSigEid: (character: CharacterPick) => void;
 }
 
 export const CharacterCard: Component<CharacterCardProps> = ({
@@ -13,6 +14,7 @@ export const CharacterCard: Component<CharacterCardProps> = ({
   character,
   light_cone = "",
   onCostChange,
+  handleSigEid
 }) => {
   const char = charJson()[character];
   const lcs = lcJson();

@@ -83,7 +83,7 @@ export default function GamePage() {
   });
     return (
         <div>
-            <MainApp LoadingMenu={LoadingMenu} SideSelection={SideSelection} HandleBan={handleBan} HandlePick={handlePick}/>
+            <MainApp LoadingMenu={LoadingMenu} SideSelection={SideSelection} HandleBan={handleBan} HandlePick={handlePick} HandleSigEid={handleSigEidChange}/>
         </div>
     )
 }
