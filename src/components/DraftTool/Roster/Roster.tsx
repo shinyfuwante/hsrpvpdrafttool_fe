@@ -38,37 +38,32 @@ const Roster: Component<RosterProps> = (props) => {
     if (currentAction == "ban") {
       if (currentPlayer == "blue_team") {
         if (blueBans().length < 2) {
-          setBlueBans([...blueBans(), characterName]);
+          setBlueBans([...blueBans(), {name: characterName}]);
         }
         handleBan({ name: characterName });
       } else {
         if (redBans().length < 2) {
-          setRedBans([...redBans(), characterName]);
+          setRedBans([...redBans(), {name: characterName}]);
           handleBan({ name: characterName });
         }
       }
     } else {
-      if (currentPlayer == "blue_team") {
-        if (bluePicks().length < 10) {
-          setBluePicks([...bluePicks(), characterName]);
-          handlePick({
+        const pick = {
             name: characterName,
             light_cone: "",
             eidolon: 0,
             superimposition: 0,
             index: bluePicks().length - 1,
-          });
+        }
+      if (currentPlayer == "blue_team") {
+        if (bluePicks().length < 10) {
+          setBluePicks([...bluePicks(), pick]);
+          handlePick(pick);
         }
       } else {
         if (redPicks().length < 10) {
-          setRedPicks([...redPicks(), characterName]);
-          handlePick({
-            name: characterName,
-            light_cone: "",
-            eidolon: 0,
-            superimposition: 0,
-            index: redPicks().length - 1,
-          });
+          setRedPicks([...redPicks(), pick]);
+          handlePick(pick);
         }
       }
     }

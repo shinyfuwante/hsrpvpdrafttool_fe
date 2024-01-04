@@ -23,10 +23,10 @@ const [cid, setCID] = createSignal("");
 const [sideSelector, setSideSelector] = createSignal(false);
 const [playerTurn, setPlayerTurn] = createSignal("blue_team");
 const [ownTeam, setOwnTeam] = createSignal("blue_team");
-const [blueBans, setBlueBans] = createSignal<any[]>([]);
-const [redBans, setRedBans] = createSignal<any[]>([]);
-const [bluePicks, setBluePicks] = createSignal<any[]>([]);
-const [redPicks, setRedPicks] = createSignal<any[]>([]);
+const [blueBans, setBlueBans] = createSignal<CharacterBan[]>([]);
+const [redBans, setRedBans] = createSignal<CharacterBan[]>([]);
+const [bluePicks, setBluePicks] = createSignal<CharacterPick[]>([]);
+const [redPicks, setRedPicks] = createSignal<CharacterPick[]>([]);
 const [blueTeam, setBlueTeam] = createSignal("");
 const [redTeam, setRedTeam] = createSignal("");
 const [selectedChars, setSelectedChars] = createSignal([]);
@@ -104,7 +104,8 @@ export const handleMsg = (data: string) => {
         setRedBans(msg.message.game_state.bans.red_team);
         setBluePicks(msg.message.game_state.picks.blue_team);
         setRedPicks(msg.message.game_state.picks.red_team);
-        setPlayerTurn(msg.message.game_state.turn_player);
+        setPlayerTurn(msg.message.turn_player);
+        console.log(playerTurn() == ownTeam());
         break;
   }
 };
