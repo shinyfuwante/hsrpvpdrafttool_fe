@@ -51,12 +51,12 @@ const Roster: Component<RosterProps> = (props) => {
       if (currentPlayer == "blue_team") {
         if (bluePicks().length < 10) {
           setBluePicks([...bluePicks(), characterName]);
-          handlePick({ name: characterName, light_cone: "", eidolon: 0, superimposition: 0});
+          handlePick({ name: characterName, light_cone: "", eidolon: 0, superimposition: 0, index: bluePicks().length - 1});
         }
       } else {
         if (redPicks().length < 10) {
           setRedPicks([...redPicks(), characterName]);
-          handlePick({ name: characterName, light_cone: "", eidolon: 0, superimposition: 0});
+          handlePick({ name: characterName, light_cone: "", eidolon: 0, superimposition: 0, index: redPicks().length - 1});
         }
       }
     }

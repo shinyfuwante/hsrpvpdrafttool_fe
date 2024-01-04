@@ -13,6 +13,7 @@ type CharacterPick = {
     light_cone: string,
     eidolon: number,
     superimposition: number,
+    index: number,
 }
 type CharacterBan = {
     name: string,
@@ -148,5 +149,6 @@ export {
   setCharJson,
   setLcJson,
   CharacterBan,
-  CharacterPick
+  CharacterPick,
+  ownTeam
 };

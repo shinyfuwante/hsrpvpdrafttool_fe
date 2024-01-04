@@ -37,6 +37,7 @@ export const CharacterCard: Component<CharacterCardProps> = ({
         light_cone: lightCone(),
         eidolon: eidolon(),
         superimposition: superimposition(),
+        index: id,
       };
       calculateCost();
     };
