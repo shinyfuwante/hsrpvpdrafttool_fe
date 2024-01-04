@@ -19,8 +19,8 @@ import {
 import { CharacterDetails } from "~/types";
 
 export interface RosterProps {
-  handlePick: (character: CharacterPick) => {};
-  handleBan: (character: CharacterBan) => {};
+  handlePick: (character: CharacterPick) => void;
+  handleBan: (character: CharacterBan) => void;
 }
 const Roster: Component<RosterProps> = (props) => {
   const {handleBan, handlePick} = props;

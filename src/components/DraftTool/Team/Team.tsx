@@ -1,7 +1,6 @@
 import { Component, createSignal, Accessor, createEffect } from "solid-js";
 import { CharacterCard } from "../CharacterCard/CharacterCard";
 import { BanCard } from "../BanCard/BanCard";
-import { charJson } from "~/game/game_logic";
 
 export type TeamProps = {
   bansSignal: Accessor<any[]>;

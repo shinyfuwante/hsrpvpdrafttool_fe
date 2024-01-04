@@ -22,7 +22,8 @@ export default function GamePage() {
       'type': 'select_char',
       'character': character,
     }
-    client.send(JSON.stringify(message));
+    console.log('made pick');
+    // client.send(JSON.stringify(message));
     // need to make a character object for picks, with optional fields for bans? 
     // not sure if that would make sense for optional fields or just two different types, one pick one ban (latter sounds better bc of diff message type)
 
@@ -32,7 +33,7 @@ export default function GamePage() {
       'type': 'select_char',
       'character': character,
     }
-    client.send(JSON.stringify(message));
+    console.log('made ban');
     // need to make a character object for picks, with optional fields for bans? 
     // not sure if that would make sense for optional fields or just two different types, one pick one ban (latter sounds better bc of diff message type)
 

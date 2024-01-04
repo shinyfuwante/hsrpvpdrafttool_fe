@@ -9,14 +9,12 @@ interface MainAppProps {
   HandleBan: (character: CharacterBan) => void; 
 }
 
-const MainApp: Component<MainAppProps> = (props) => {
-  const LoadingMenu = props.LoadingMenu;
-  const SideSelection = props.SideSelection;
+const MainApp: Component<MainAppProps> = ({LoadingMenu, SideSelection, HandlePick, HandleBan}) => {
   return (
     <div>
       {gamePhase() === game_phases.LOADING && <LoadingMenu></LoadingMenu>}
       {gamePhase() === game_phases.SIDE_SELECTION && <SideSelection></SideSelection>}
-      {gamePhase() == game_phases.DRAFTING && <DraftTool></DraftTool>}
+      {gamePhase() == game_phases.DRAFTING && <DraftTool handlePick={HandlePick} handleBan={HandleBan}></DraftTool>}
     </div>
   );
 };

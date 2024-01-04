@@ -20,8 +20,8 @@ import {
 } from "~/game/game_logic";
 
 interface DraftToolProps {
-  handlePick: (character: CharacterPick) => {};
-  handleBan: (character: CharacterBan) => {};
+  handlePick: (character: CharacterPick) => void;
+  handleBan: (character: CharacterBan) => void;
 }
 const DraftTool: Component<DraftToolProps> = (props) => {
   const { handlePick, handleBan } = props;
