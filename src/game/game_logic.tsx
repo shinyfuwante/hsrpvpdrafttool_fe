@@ -30,10 +30,6 @@ const [redPicks, setRedPicks] = createSignal<CharacterPick[]>([]);
 const [blueTeam, setBlueTeam] = createSignal("");
 const [redTeam, setRedTeam] = createSignal("");
 const [selectedChars, setSelectedChars] = createSignal<string[]>([]);
-createEffect(() => {
-    const selected = [...blueBans(), ...redBans(), ...bluePicks(), ...redPicks()].map((char) => char.name);
-    setSelectedChars(selected);
-})
 const [ruleSet, setRuleSet] = createSignal("phd_standard");
 const [charJson, setCharJson] = createSignal<CharJsonType>({});
 const [lcJson, setLcJson] = createSignal<LCJsonType>({});
@@ -108,7 +104,8 @@ export const handleMsg = (data: string) => {
         setRedBans(msg.message.game_state.bans.red_team);
         setBluePicks(msg.message.game_state.picks.blue_team);
         setRedPicks(msg.message.game_state.picks.red_team);
-        setPlayerTurn(msg.message.turn_player);
+        setTurnIndex(msg.message.turn_index);
+        setPlayerTurn(turn_order[turnIndex()].team);
         console.log(playerTurn() == ownTeam());
         break;
   }

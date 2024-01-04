@@ -1,4 +1,4 @@
-import { Component, createSignal } from "solid-js";
+import { Component, createSignal, createEffect } from "solid-js";
 import {
   charJson,
   bluePicks,
@@ -17,6 +17,7 @@ import {
   CharacterBan,
   selectedChars,
   setSelectedChars,
+  ownTeam,
 } from "~/game/game_logic";
 import { CharacterDetails } from "~/types";
 
@@ -27,36 +28,49 @@ export interface RosterProps {
 const Roster: Component<RosterProps> = (props) => {
   const { handleBan, handlePick } = props;
   const [searchTerm, setSearchTerm] = createSignal("");
-
+  const [currentTurn, setCurrentTurn] = createSignal(turn_order[turnIndex()]);
+  const [isTurn, setIsTurn] = createSignal(false);
+  createEffect(() => {
+    setCurrentTurn(turn_order[turnIndex()]);
+    setIsTurn(ownTeam() == currentTurn().team);
+  });
+  createEffect(() => {
+    const selected = [
+      ...blueBans(),
+      ...redBans(),
+      ...bluePicks(),
+      ...redPicks(),
+    ].map((char) => char.name);
+    setSelectedChars(selected);
+  });
   const selectCharacter = (characterName: string) => {
     // determine if ban or pick
     // might have to move further out
+    const currentPlayer = currentTurn().team;
+    const currentAction = currentTurn().action;
     if (turnIndex() >= turn_order.length) {
       return;
     }
-    const currentTurn = turn_order[turnIndex()];
-    const currentPlayer = currentTurn.team;
-    const currentAction = currentTurn.action;
     if (currentAction == "ban") {
       if (currentPlayer == "blue_team") {
         if (blueBans().length < 2) {
-          setBlueBans([...blueBans(), {name: characterName}]);
+          setBlueBans([...blueBans(), { name: characterName }]);
         }
         handleBan({ name: characterName });
       } else {
         if (redBans().length < 2) {
-          setRedBans([...redBans(), {name: characterName}]);
+          setRedBans([...redBans(), { name: characterName }]);
           handleBan({ name: characterName });
         }
       }
     } else {
-        const pick = {
-            name: characterName,
-            light_cone: "",
-            eidolon: 0,
-            superimposition: 0,
-            index: bluePicks().length - 1,
-        }
+      const pick = {
+        name: characterName,
+        light_cone: "",
+        eidolon: 0,
+        superimposition: 0,
+        index: bluePicks().length - 1,
+      };
       if (currentPlayer == "blue_team") {
         if (bluePicks().length < 10) {
           setBluePicks([...bluePicks(), pick]);
@@ -104,9 +118,6 @@ const Roster: Component<RosterProps> = (props) => {
           const characterId = (characterDetails as CharacterDetails).id;
           const characterImage = `/character_icons/${characterId}.webp`;
           const isSelected = selectedChars().includes(characterName);
-          const isTurn =
-            turnIndex() < turn_order.length &&
-            turn_order[turnIndex()].team == playerTurn();
           const isMatch =
             searchTerm() != "" &&
             characterName.toLowerCase().includes(searchTerm().toLowerCase());
@@ -121,15 +132,11 @@ const Roster: Component<RosterProps> = (props) => {
                   isMatch || searchTerm() == "" ? "inline-block" : "none",
                 width: "100px",
                 height: "100px",
-                cursor: !isSelected
-                  ? isTurn
-                    ? "pointer"
-                    : "default"
-                  : "default",
+                cursor: !isSelected && isTurn() ? "pointer" : "default",
               }}
               onClick={
                 !isSelected
-                  ? isTurn
+                  ? isTurn()
                     ? () => selectCharacter(characterName)
                     : undefined
                   : undefined
