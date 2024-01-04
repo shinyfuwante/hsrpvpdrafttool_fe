@@ -1,11 +1,12 @@
 import { Component } from "solid-js";
 import { Title } from "solid-start";
 
-// TODO fix any props?
-const MainMenu: Component<{}> = (props: any) => {
-  // game_id
-  const create_game: boolean = props.create || true;
-
+interface MainMenuProps {
+  game_id: string;
+  create_game: boolean;
+  children: any;
+}
+const MainMenu: Component<MainMenuProps> = (props: any) => {
   const joinGame = () => {
     const game_id = props.game_id;
     const url = `/game/${game_id}`;
