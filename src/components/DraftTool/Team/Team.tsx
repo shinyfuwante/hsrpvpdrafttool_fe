@@ -5,7 +5,7 @@ import { BanCard } from "../BanCard/BanCard";
 export type TeamProps = {
   bansSignal: Accessor<any[]>;
   picksSignal: Accessor<any[]>;
-  color: string;
+  team: string;
 };
 
 const EmptyCharacterComponent = () => {
@@ -27,10 +27,10 @@ const EmptyCharacterComponent = () => {
   );
 };
 const Team: Component<TeamProps> = (props) => {
-  const { bansSignal, picksSignal, color } = props;
+  const { bansSignal, picksSignal, team } = props;
   const [cost, setCost] = createSignal(0);
   const costs = new Map();
-  const handleCostChange = (id: string, newCost: number) => {
+  const handleCostChange = (id: number, newCost: number) => {
     const oldCost = costs.get(id) || 0;
     if (newCost !== oldCost) {
       costs.set(id, newCost);
@@ -45,7 +45,7 @@ const Team: Component<TeamProps> = (props) => {
       style={{
         display: "flex",
         "flex-direction": "column",
-        "background-color": color,
+        "background-color": team === "blue_team" ? "#0000FF" : "#FF0000",
       }}
     >
       <div class="team-info">
@@ -68,7 +68,7 @@ const Team: Component<TeamProps> = (props) => {
         <div style={{ flex: 1 }}>
           {picksSignal()[0] ? (
             <CharacterCard
-              id="0"
+              id={0}
               character={picksSignal()[0]}
               light_cone=""
               onCostChange={handleCostChange}
@@ -80,7 +80,7 @@ const Team: Component<TeamProps> = (props) => {
         <div style={{ flex: 1 }}>
           {picksSignal()[1] ? (
             <CharacterCard
-              id="1"
+              id={1}
               character={picksSignal()[1]}
               light_cone=""
               onCostChange={handleCostChange}
@@ -105,7 +105,7 @@ const Team: Component<TeamProps> = (props) => {
         <div style={{ flex: 1 }}>
           {picksSignal()[2] ? (
             <CharacterCard
-              id="2"
+              id={2}
               character={picksSignal()[2]}
               light_cone=""
               onCostChange={handleCostChange}
@@ -117,7 +117,7 @@ const Team: Component<TeamProps> = (props) => {
         <div style={{ flex: 1 }}>
           {picksSignal()[3] ? (
             <CharacterCard
-              id="3"
+              id={3}
               character={picksSignal()[3]}
               light_cone=""
               onCostChange={handleCostChange}
@@ -135,7 +135,7 @@ const Team: Component<TeamProps> = (props) => {
         <div style={{ flex: 1 }}>
           {picksSignal()[4] ? (
             <CharacterCard
-              id="4"
+              id={4}
               character={picksSignal()[4]}
               light_cone=""
               onCostChange={handleCostChange}
@@ -147,7 +147,7 @@ const Team: Component<TeamProps> = (props) => {
         <div style={{ flex: 1 }}>
           {picksSignal()[5] ? (
             <CharacterCard
-              id="5"
+              id={5}
               character={picksSignal()[5]}
               light_cone=""
               onCostChange={handleCostChange}
@@ -165,7 +165,7 @@ const Team: Component<TeamProps> = (props) => {
         <div style={{ flex: 1 }}>
           {picksSignal()[6] ? (
             <CharacterCard
-              id="6"
+              id={6}
               character={picksSignal()[6]}
               light_cone=""
               onCostChange={handleCostChange}
@@ -177,7 +177,7 @@ const Team: Component<TeamProps> = (props) => {
         <div style={{ flex: 1 }}>
           {picksSignal()[7] ? (
             <CharacterCard
-              id="7"
+              id={7}
               character={picksSignal()[7]}
               light_cone=""
               onCostChange={handleCostChange}

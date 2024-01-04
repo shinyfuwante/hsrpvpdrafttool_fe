@@ -58,7 +58,7 @@ const DraftTool: Component<DraftToolProps> = (props) => {
               <Team
                 bansSignal={blueBans}
                 picksSignal={bluePicks}
-                color={"blue"}
+                team={"blue_team"}
               />
             </div>
             <div
@@ -69,13 +69,17 @@ const DraftTool: Component<DraftToolProps> = (props) => {
                 "flex-direction": "column",
               }}
             >
-              <Roster handleBan={handleBan} handlePick={handlePick}/>
+              <Roster handleBan={handleBan} handlePick={handlePick} />
               <div style={{ "align-self": "center" }}>
                 Current Player Turn: {playerTurn()}
               </div>
             </div>
             <div style={{ flex: "25%", "max-width": "30%" }}>
-              <Team bansSignal={redBans} picksSignal={redPicks} color={"red"} />
+              <Team
+                bansSignal={redBans}
+                picksSignal={redPicks}
+                team={"red_team"}
+              />
             </div>
           </div>
           <div></div>

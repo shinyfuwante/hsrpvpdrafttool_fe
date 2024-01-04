@@ -1,11 +1,11 @@
 import { Component, createSignal, createEffect, createMemo } from "solid-js";
-import { charJson, lcJson } from "~/game/game_logic";
+import { charJson, lcJson, CharacterPick } from "~/game/game_logic";
 
 interface CharacterCardProps {
-  id: string;
+  id: number;
   character: string;
   light_cone: string;
-  onCostChange: (id: string, cost: number) => void;
+  onCostChange: (id: number, cost: number) => void;
 }
 
 export const CharacterCard: Component<CharacterCardProps> = ({
@@ -31,7 +31,17 @@ export const CharacterCard: Component<CharacterCardProps> = ({
       }
       onCostChange(id, cost);
     };
+    const handleSuperimpositionEidolonChange = () => {
+      const pick: CharacterPick = {
+        name: character,
+        light_cone: lightCone(),
+        eidolon: eidolon(),
+        superimposition: superimposition(),
+      };
+      calculateCost();
+    };
     createEffect(calculateCost);
+    createEffect;
 
     const backgroundColor = char.rarity === 4 ? "purple" : "orange";
     // it's a pick
