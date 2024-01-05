@@ -14,14 +14,19 @@ export const CharacterCard: Component<CharacterCardProps> = ({
   character,
   onCostChange,
   handleSigEid,
-  team
+  team,
 }) => {
   const char = charJson()[character.name];
   const lcs = lcJson();
   const characterCard = createMemo(() => {
     const [eidolon, setEidolon] = createSignal(character.eidolon);
-    const [superimposition, setSuperimposition] = createSignal(character.superimposition);
+    const [superimposition, setSuperimposition] = createSignal(
+      character.superimposition
+    );
     const [lightCone, setLightCone] = createSignal(character.light_cone);
+    const initialEidolon = character.eidolon;
+    const initialSuperimposition = character.superimposition;
+    const initialLightCone = character.light_cone;
     const calculateCost = () => {
       const lc = lcs[lightCone()];
       let cost;
@@ -42,9 +47,18 @@ export const CharacterCard: Component<CharacterCardProps> = ({
         index: id,
       };
       calculateCost();
+      handleSigEid(pick);
     };
     createEffect(calculateCost);
-    createEffect;
+    createEffect(() => {
+      if (
+        eidolon() !== initialEidolon ||
+        superimposition() !== initialSuperimposition ||
+        lightCone() !== initialLightCone
+      ) {
+        handleSuperimpositionEidolonChange();
+      }
+    });
 
     const backgroundColor = char.rarity === 4 ? "purple" : "orange";
     // it's a pick

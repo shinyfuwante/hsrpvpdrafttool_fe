@@ -48,6 +48,7 @@ export default function GamePage() {
       character: character,
       team: ownTeam(),
     };
+    client.send(JSON.stringify(message));
   };
   const SideSelection = () => {
     // returns a modal with a button to select side, which will send a message to the backend to select side
