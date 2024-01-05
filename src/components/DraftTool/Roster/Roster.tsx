@@ -2,13 +2,11 @@ import { Component, createSignal, createEffect } from "solid-js";
 import {
   charJson,
   bluePicks,
-  setBluePicks,
   blueBans,
   setBlueBans,
   redBans,
   setRedBans,
   redPicks,
-  setRedPicks,
   playerTurn,
   turn_order,
   turnIndex,
@@ -66,21 +64,20 @@ const Roster: Component<RosterProps> = (props) => {
         }
       }
     } else {
+        const pickSignal = currentPlayer == "blue_team" ? bluePicks : redPicks;
       const pick = {
         name: characterName,
         light_cone: "",
         eidolon: 0,
         superimposition: 0,
-        index: bluePicks().length - 1,
+        index: Math.max(0, pickSignal().length - 1),
       };
       if (currentPlayer == "blue_team") {
-        if (bluePicks().length < 10) {
-          setBluePicks([...bluePicks(), pick]);
+        if (bluePicks().length < 8) {
           handlePick(pick);
         }
       } else {
-        if (redPicks().length < 10) {
-          setRedPicks([...redPicks(), pick]);
+        if (redPicks().length < 8) {
           handlePick(pick);
         }
       }
