@@ -18,6 +18,7 @@
     "vite": "^4.4.9"
   },
   "dependencies": {
+    "@solid-primitives/scheduled": "^1.4.1",
     "@solid-primitives/websocket": "^1.2.0",
     "@solidjs/meta": "^0.29.1",
     "@solidjs/router": "^0.8.3",

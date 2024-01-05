@@ -1,4 +1,5 @@
 import { Component, createSignal, createEffect, createMemo } from "solid-js";
+import { debounce } from "@solid-primitives/scheduled";
 import { charJson, lcJson, CharacterPick, ownTeam } from "~/game/game_logic";
 
 interface CharacterCardProps {
@@ -38,7 +39,7 @@ export const CharacterCard: Component<CharacterCardProps> = ({
       }
       onCostChange(id, cost);
     };
-    const handleSuperimpositionEidolonChange = () => {
+    const handleSuperimpositionEidolonChange = debounce(() => {
       const pick: CharacterPick = {
         name: character.name,
         light_cone: lightCone(),
@@ -48,7 +49,7 @@ export const CharacterCard: Component<CharacterCardProps> = ({
       };
       calculateCost();
       handleSigEid(pick);
-    };
+    }, 50);
     createEffect(calculateCost);
     createEffect(() => {
       if (
@@ -92,7 +93,7 @@ export const CharacterCard: Component<CharacterCardProps> = ({
         >
           <select
             value={eidolon()}
-            onInput={(e) => setEidolon(Number(e.target.value))}
+            onChange={(e) => setEidolon(Number(e.target.value))}
             style={{ "max-width": "25%" }}
             disabled={team !== ownTeam()}
           >
@@ -109,7 +110,7 @@ export const CharacterCard: Component<CharacterCardProps> = ({
             <input
               list="light-cones"
               value={lightCone()}
-              onInput={(e) => {
+              onChange={(e) => {
                 if (e.target.value !== lightCone()) {
                   setLightCone(e.target.value);
                 }
@@ -126,7 +127,7 @@ export const CharacterCard: Component<CharacterCardProps> = ({
             </datalist>
             <select
               value={superimposition()}
-              onInput={(e) => setSuperimposition(Number(e.target.value))}
+              onChange={(e) => setSuperimposition(Number(e.target.value))}
               style={{ flex: 1 }}
               disabled={team !== ownTeam()}
             >

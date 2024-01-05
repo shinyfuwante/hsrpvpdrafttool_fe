@@ -105,7 +105,9 @@ export const handleMsg = (data: string) => {
         setBluePicks(msg.message.game_state.picks.blue_team);
         setRedPicks(msg.message.game_state.picks.red_team);
         setTurnIndex(msg.message.turn_index);
-        setPlayerTurn(turn_order[turnIndex()].team);
+        if (msg.message.turn_index < turn_order.length) {
+            setPlayerTurn(turn_order[turnIndex()].team);
+        }
         console.log(playerTurn() == ownTeam());
         break;
   }
