@@ -46,10 +46,6 @@ const Team: Component<TeamProps> = ({
       }
     }
   };
-  const [picks, setPicks] = createSignal(picksSignal());
-  createEffect(() => {
-    setPicks(picksSignal());
-  })
   return (
     <div
       style={{
@@ -76,10 +72,10 @@ const Team: Component<TeamProps> = ({
         }}
       >
         <div style={{ flex: 1 }}>
-          {picks()[0] ? (
+          {picksSignal()[0] ? (
             <CharacterCard
               id={0}
-              character={picks()[0]}
+              character={picksSignal()[0]}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
               team={team}
@@ -89,10 +85,10 @@ const Team: Component<TeamProps> = ({
           )}
         </div>
         <div style={{ flex: 1 }}>
-          {picks()[1] ? (
+          {picksSignal()[1] ? (
             <CharacterCard
               id={1}
-              character={picks()[1]}
+              character={picksSignal()[1]}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
               team={team}
@@ -115,10 +111,10 @@ const Team: Component<TeamProps> = ({
         }}
       >
         <div style={{ flex: 1 }}>
-          {picks()[2] ? (
+          {picksSignal()[2] ? (
             <CharacterCard
               id={2}
-              character={picks()[2]}
+              character={picksSignal()[2]}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
               team={team}
@@ -128,10 +124,10 @@ const Team: Component<TeamProps> = ({
           )}
         </div>
         <div style={{ flex: 1 }}>
-          {picks()[3] ? (
+          {picksSignal()[3] ? (
             <CharacterCard
               id={3}
-              character={picks()[3]}
+              character={picksSignal()[3]}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
               team={team}
@@ -147,10 +143,10 @@ const Team: Component<TeamProps> = ({
         }}
       >
         <div style={{ flex: 1 }}>
-          {picks()[4] ? (
+          {picksSignal()[4] ? (
             <CharacterCard
               id={4}
-              character={picks()[4]}
+              character={picksSignal()[4]}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
               team={team}
@@ -160,10 +156,10 @@ const Team: Component<TeamProps> = ({
           )}
         </div>
         <div style={{ flex: 1 }}>
-          {picks()[5] ? (
+          {picksSignal()[5] ? (
             <CharacterCard
               id={5}
-              character={picks()[5]}
+              character={picksSignal()[5]}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
               team={team}
@@ -179,10 +175,10 @@ const Team: Component<TeamProps> = ({
         }}
       >
         <div style={{ flex: 1 }}>
-          {picks()[6] ? (
+          {picksSignal()[6] ? (
             <CharacterCard
               id={6}
-              character={picks()[6]}
+              character={picksSignal()[6]}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
               team={team}
@@ -192,10 +188,10 @@ const Team: Component<TeamProps> = ({
           )}
         </div>
         <div style={{ flex: 1 }}>
-          {picks()[7] ? (
+          {picksSignal()[7] ? (
             <CharacterCard
               id={7}
-              character={picks()[7]}
+              character={picksSignal()[7]}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
               team={team}
