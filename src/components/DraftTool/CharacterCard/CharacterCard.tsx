@@ -52,11 +52,7 @@ export const CharacterCard: Component<CharacterCardProps> = ({
     }, 50);
     createEffect(calculateCost);
     createEffect(() => {
-      if (
-        eidolon() !== initialEidolon ||
-        superimposition() !== initialSuperimposition ||
-        lightCone() !== initialLightCone
-      ) {
+      if (eidolon() !== 0 || superimposition() !== 0 || lightCone() !== "") {
         handleSuperimpositionEidolonChange();
       }
     });
