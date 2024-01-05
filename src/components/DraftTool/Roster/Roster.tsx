@@ -31,8 +31,10 @@ const Roster: Component<RosterProps> = (props) => {
   const [currentTurn, setCurrentTurn] = createSignal(turn_order[turnIndex()]);
   const [isTurn, setIsTurn] = createSignal(false);
   createEffect(() => {
-    setCurrentTurn(turn_order[turnIndex()]);
-    setIsTurn(ownTeam() == currentTurn().team);
+    if (turnIndex() < turn_order.length) {
+      setCurrentTurn(turn_order[turnIndex()]);
+      setIsTurn(ownTeam() == currentTurn().team);
+    }
   });
   createEffect(() => {
     const selected = [
@@ -46,11 +48,11 @@ const Roster: Component<RosterProps> = (props) => {
   const selectCharacter = (characterName: string) => {
     // determine if ban or pick
     // might have to move further out
-    const currentPlayer = currentTurn().team;
-    const currentAction = currentTurn().action;
     if (turnIndex() >= turn_order.length) {
       return;
     }
+    const currentPlayer = currentTurn().team;
+    const currentAction = currentTurn().action;
     if (currentAction == "ban") {
       if (currentPlayer == "blue_team") {
         if (blueBans().length < 2) {

@@ -55,7 +55,6 @@ export const turn_order = [
     { team: "blue_team", action: 'pick' },
     { team: "blue_team", action: 'pick' },
     { team: "red_team", action: 'pick' },
-    { team: "red_team", action: 'pick' },
   ];
 const MessageEnum = {
     INIT_GAME: "init_game",
