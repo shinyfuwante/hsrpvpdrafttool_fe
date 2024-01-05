@@ -3,8 +3,7 @@ import { charJson, lcJson, CharacterPick } from "~/game/game_logic";
 
 interface CharacterCardProps {
   id: number;
-  character: string;
-  light_cone: string;
+  character: CharacterPick;
   onCostChange: (id: number, cost: number) => void;
   handleSigEid: (character: CharacterPick) => void;
 }
@@ -12,16 +11,15 @@ interface CharacterCardProps {
 export const CharacterCard: Component<CharacterCardProps> = ({
   id,
   character,
-  light_cone = "",
   onCostChange,
   handleSigEid
 }) => {
-  const char = charJson()[character];
+  const char = charJson()[character.name];
   const lcs = lcJson();
   const characterCard = createMemo(() => {
-    const [eidolon, setEidolon] = createSignal(0);
-    const [superimposition, setSuperimposition] = createSignal(1);
-    const [lightCone, setLightCone] = createSignal(light_cone);
+    const [eidolon, setEidolon] = createSignal(character.eidolon);
+    const [superimposition, setSuperimposition] = createSignal(character.superimposition);
+    const [lightCone, setLightCone] = createSignal(character.light_cone);
     const calculateCost = () => {
       const lc = lcs[lightCone()];
       let cost;
@@ -35,7 +33,7 @@ export const CharacterCard: Component<CharacterCardProps> = ({
     };
     const handleSuperimpositionEidolonChange = () => {
       const pick: CharacterPick = {
-        name: character,
+        name: character.name,
         light_cone: lightCone(),
         eidolon: eidolon(),
         superimposition: superimposition(),

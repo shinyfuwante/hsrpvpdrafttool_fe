@@ -28,7 +28,12 @@ const EmptyCharacterComponent = () => {
     </div>
   );
 };
-const Team: Component<TeamProps> = ({bansSignal, picksSignal, team, handleSigEid}) => {
+const Team: Component<TeamProps> = ({
+  bansSignal,
+  picksSignal,
+  team,
+  handleSigEid,
+}) => {
   const [cost, setCost] = createSignal(0);
   const costs = new Map();
   const handleCostChange = (id: number, newCost: number) => {
@@ -54,7 +59,7 @@ const Team: Component<TeamProps> = ({bansSignal, picksSignal, team, handleSigEid
       </div>
       <div style={{ flex: 1 }}>
         {bansSignal()[0] ? (
-          <BanCard character={bansSignal()[0]}/>
+          <BanCard character={bansSignal()[0]} />
         ) : (
           <EmptyCharacterComponent />
         )}
@@ -71,7 +76,6 @@ const Team: Component<TeamProps> = ({bansSignal, picksSignal, team, handleSigEid
             <CharacterCard
               id={0}
               character={picksSignal()[0]}
-              light_cone=""
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
             />
@@ -84,7 +88,6 @@ const Team: Component<TeamProps> = ({bansSignal, picksSignal, team, handleSigEid
             <CharacterCard
               id={1}
               character={picksSignal()[1]}
-              light_cone=""
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
             />
@@ -95,7 +98,7 @@ const Team: Component<TeamProps> = ({bansSignal, picksSignal, team, handleSigEid
       </div>
       <div style={{ flex: 1 }}>
         {bansSignal()[1] ? (
-          <BanCard character={bansSignal()[1]}/>
+          <BanCard character={bansSignal()[1]} />
         ) : (
           <EmptyCharacterComponent />
         )}
@@ -110,7 +113,6 @@ const Team: Component<TeamProps> = ({bansSignal, picksSignal, team, handleSigEid
             <CharacterCard
               id={2}
               character={picksSignal()[2]}
-              light_cone=""
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
             />
@@ -123,7 +125,6 @@ const Team: Component<TeamProps> = ({bansSignal, picksSignal, team, handleSigEid
             <CharacterCard
               id={3}
               character={picksSignal()[3]}
-              light_cone=""
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
             />
@@ -142,7 +143,6 @@ const Team: Component<TeamProps> = ({bansSignal, picksSignal, team, handleSigEid
             <CharacterCard
               id={4}
               character={picksSignal()[4]}
-              light_cone=""
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
             />
@@ -155,7 +155,6 @@ const Team: Component<TeamProps> = ({bansSignal, picksSignal, team, handleSigEid
             <CharacterCard
               id={5}
               character={picksSignal()[5]}
-              light_cone=""
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
             />
@@ -174,7 +173,6 @@ const Team: Component<TeamProps> = ({bansSignal, picksSignal, team, handleSigEid
             <CharacterCard
               id={6}
               character={picksSignal()[6]}
-              light_cone=""
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
             />
@@ -187,7 +185,6 @@ const Team: Component<TeamProps> = ({bansSignal, picksSignal, team, handleSigEid
             <CharacterCard
               id={7}
               character={picksSignal()[7]}
-              light_cone=""
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
             />

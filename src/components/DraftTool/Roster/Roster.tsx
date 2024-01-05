@@ -84,6 +84,7 @@ const Roster: Component<RosterProps> = (props) => {
       }
     }
     setTurnIndex(turnIndex() + 1);
+    setSearchTerm("");
   };
 
   return (
@@ -122,6 +123,9 @@ const Roster: Component<RosterProps> = (props) => {
             searchTerm() != "" &&
             characterName.toLowerCase().includes(searchTerm().toLowerCase());
 
+          const canPick =
+            !isSelected && isTurn() && turnIndex() < turn_order.length;
+
           return (
             <div
               style={{
@@ -135,11 +139,7 @@ const Roster: Component<RosterProps> = (props) => {
                 cursor: !isSelected && isTurn() ? "pointer" : "default",
               }}
               onClick={
-                !isSelected
-                  ? isTurn()
-                    ? () => selectCharacter(characterName)
-                    : undefined
-                  : undefined
+                canPick ? () => selectCharacter(characterName) : undefined
               }
             >
               <img
