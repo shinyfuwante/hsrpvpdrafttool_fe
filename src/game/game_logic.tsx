@@ -68,6 +68,7 @@ const MessageEnum = {
     PICK: "draft_pick",
     RESET_GAME: "reset_game",
     UNDO: "undo",
+    SigEidChange: "sig_eid_change"
   };
 export const handleMsg = (data: string) => {
   const msg = JSON.parse(data);

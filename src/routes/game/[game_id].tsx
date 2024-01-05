@@ -44,7 +44,7 @@ export default function GamePage() {
   };
   const handleSigEidChange = (character: CharacterPick) => {
     const message = {
-      type: "select_char",
+      type: MessageEnum.SigEidChange,
       character: character,
       team: ownTeam(),
     };
