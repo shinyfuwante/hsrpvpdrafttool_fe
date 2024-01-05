@@ -31,7 +31,7 @@ export const CharacterCard: Component<CharacterCardProps> = ({
     const calculateCost = () => {
       const lc = lcs[lightCone()];
       let cost;
-      if (lc) {
+      if (lc && (superimposition() > 0)) {
         cost =
           char.point_costs[eidolon()] + lc.point_costs[superimposition() - 1];
       } else {
@@ -93,7 +93,7 @@ export const CharacterCard: Component<CharacterCardProps> = ({
         >
           <select
             value={eidolon()}
-            onChange={(e) => setEidolon(Number(e.target.value))}
+            onBlur={(e) => setEidolon(Number(e.target.value))}
             style={{ "max-width": "25%" }}
             disabled={team !== ownTeam()}
           >
@@ -110,7 +110,7 @@ export const CharacterCard: Component<CharacterCardProps> = ({
             <input
               list="light-cones"
               value={lightCone()}
-              onChange={(e) => {
+              onBlur={(e) => {
                 if (e.target.value !== lightCone()) {
                   setLightCone(e.target.value);
                 }
@@ -127,7 +127,7 @@ export const CharacterCard: Component<CharacterCardProps> = ({
             </datalist>
             <select
               value={superimposition()}
-              onChange={(e) => setSuperimposition(Number(e.target.value))}
+              onBlur={(e) => setSuperimposition(Number(e.target.value))}
               style={{ flex: 1 }}
               disabled={team !== ownTeam()}
             >
