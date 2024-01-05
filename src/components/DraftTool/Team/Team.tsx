@@ -78,6 +78,7 @@ const Team: Component<TeamProps> = ({
               character={picksSignal()[0]}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
+              team={team}
             />
           ) : (
             <EmptyCharacterComponent />
@@ -90,6 +91,7 @@ const Team: Component<TeamProps> = ({
               character={picksSignal()[1]}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
+              team={team}
             />
           ) : (
             <EmptyCharacterComponent />
@@ -115,6 +117,7 @@ const Team: Component<TeamProps> = ({
               character={picksSignal()[2]}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
+              team={team}
             />
           ) : (
             <EmptyCharacterComponent />
@@ -127,6 +130,7 @@ const Team: Component<TeamProps> = ({
               character={picksSignal()[3]}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
+              team={team}
             />
           ) : (
             <EmptyCharacterComponent />
@@ -145,6 +149,7 @@ const Team: Component<TeamProps> = ({
               character={picksSignal()[4]}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
+              team={team}
             />
           ) : (
             <EmptyCharacterComponent />
@@ -157,6 +162,7 @@ const Team: Component<TeamProps> = ({
               character={picksSignal()[5]}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
+              team={team}
             />
           ) : (
             <EmptyCharacterComponent />
@@ -175,6 +181,7 @@ const Team: Component<TeamProps> = ({
               character={picksSignal()[6]}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
+              team={team}
             />
           ) : (
             <EmptyCharacterComponent />
@@ -187,6 +194,7 @@ const Team: Component<TeamProps> = ({
               character={picksSignal()[7]}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
+              team={team}
             />
           ) : (
             <EmptyCharacterComponent />

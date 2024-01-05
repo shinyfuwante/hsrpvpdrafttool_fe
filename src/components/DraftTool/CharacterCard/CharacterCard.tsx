@@ -1,18 +1,20 @@
 import { Component, createSignal, createEffect, createMemo } from "solid-js";
-import { charJson, lcJson, CharacterPick } from "~/game/game_logic";
+import { charJson, lcJson, CharacterPick, ownTeam } from "~/game/game_logic";
 
 interface CharacterCardProps {
   id: number;
   character: CharacterPick;
   onCostChange: (id: number, cost: number) => void;
   handleSigEid: (character: CharacterPick) => void;
+  team: string;
 }
 
 export const CharacterCard: Component<CharacterCardProps> = ({
   id,
   character,
   onCostChange,
-  handleSigEid
+  handleSigEid,
+  team
 }) => {
   const char = charJson()[character.name];
   const lcs = lcJson();
@@ -78,6 +80,7 @@ export const CharacterCard: Component<CharacterCardProps> = ({
             value={eidolon()}
             onInput={(e) => setEidolon(Number(e.target.value))}
             style={{ "max-width": "25%" }}
+            disabled={team !== ownTeam()}
           >
             {[...Array(7).keys()].map((value) => (
               <option value={value}>E{value}</option>
@@ -99,6 +102,7 @@ export const CharacterCard: Component<CharacterCardProps> = ({
               }}
               placeholder="LC"
               style={{ flex: 1 }}
+              disabled={team !== ownTeam()}
             />
 
             <datalist id="light-cones">
@@ -110,6 +114,7 @@ export const CharacterCard: Component<CharacterCardProps> = ({
               value={superimposition()}
               onInput={(e) => setSuperimposition(Number(e.target.value))}
               style={{ flex: 1 }}
+              disabled={team !== ownTeam()}
             >
               {[...Array(5).keys()].map((value) => (
                 <option value={value + 1}>S{value + 1}</option>
