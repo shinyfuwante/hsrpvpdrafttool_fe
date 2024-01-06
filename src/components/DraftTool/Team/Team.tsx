@@ -1,14 +1,17 @@
 import { Component, createSignal, Accessor, createEffect } from "solid-js";
 import { CharacterCard } from "../CharacterCard/CharacterCard";
 import { BanCard } from "../BanCard/BanCard";
-import { CharacterPick } from "~/game/game_logic";
+import { CharacterBan, CharacterPick } from "~/game/game_logic";
 
 export type TeamProps = {
-  bansSignal: Accessor<any[]>;
-  picksSignal: Accessor<any[]>;
+  bansSignal: Accessor<CharacterBan[]>;
+  picksSignal: Accessor<CharacterPick[]>;
   team: string;
   handleSigEid: (character: CharacterPick) => void;
 };
+
+// TODO: try just mapping per picks signal, combining the ban and picks signal then mapping the entire thing out?
+// is that expensive?
 
 const EmptyCharacterComponent = () => {
   return (
@@ -28,12 +31,11 @@ const EmptyCharacterComponent = () => {
     </div>
   );
 };
-const Team: Component<TeamProps> = ({
-  bansSignal,
-  picksSignal,
-  team,
-  handleSigEid,
-}) => {
+const Team: Component<TeamProps> = (props) => {
+  const bansSignal = props.bansSignal;
+  const picksSignal = props.picksSignal;
+  const team = props.team;
+  const handleSigEid = props.handleSigEid;
   const [cost, setCost] = createSignal(0);
   const costs = new Map();
   const handleCostChange = (id: number, newCost: number) => {
@@ -76,6 +78,7 @@ const Team: Component<TeamProps> = ({
             <CharacterCard
               id={0}
               character={picksSignal()[0]}
+              picksSignal={picksSignal}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
               team={team}
@@ -89,6 +92,7 @@ const Team: Component<TeamProps> = ({
             <CharacterCard
               id={1}
               character={picksSignal()[1]}
+              picksSignal={picksSignal}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
               team={team}
@@ -115,6 +119,7 @@ const Team: Component<TeamProps> = ({
             <CharacterCard
               id={2}
               character={picksSignal()[2]}
+              picksSignal={picksSignal}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
               team={team}
@@ -128,6 +133,7 @@ const Team: Component<TeamProps> = ({
             <CharacterCard
               id={3}
               character={picksSignal()[3]}
+              picksSignal={picksSignal}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
               team={team}
@@ -147,6 +153,7 @@ const Team: Component<TeamProps> = ({
             <CharacterCard
               id={4}
               character={picksSignal()[4]}
+              picksSignal={picksSignal}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
               team={team}
@@ -160,6 +167,7 @@ const Team: Component<TeamProps> = ({
             <CharacterCard
               id={5}
               character={picksSignal()[5]}
+              picksSignal={picksSignal}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
               team={team}
@@ -179,6 +187,7 @@ const Team: Component<TeamProps> = ({
             <CharacterCard
               id={6}
               character={picksSignal()[6]}
+              picksSignal={picksSignal}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
               team={team}
@@ -192,6 +201,7 @@ const Team: Component<TeamProps> = ({
             <CharacterCard
               id={7}
               character={picksSignal()[7]}
+              picksSignal={picksSignal}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
               team={team}
