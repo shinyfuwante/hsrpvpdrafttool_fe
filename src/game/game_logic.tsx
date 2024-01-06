@@ -9,15 +9,15 @@ const game_phases = {
 };
 
 type CharacterPick = {
-    name: string,
-    light_cone: string,
-    eidolon: number,
-    superimposition: number,
-    index: number,
-}
+  name: string;
+  light_cone: string;
+  eidolon: number;
+  superimposition: number;
+  index: number;
+};
 type CharacterBan = {
-    name: string,
-}
+  name: string;
+};
 const [gamePhase, setGamePhase] = createSignal(game_phases.LOADING);
 const [cid, setCID] = createSignal("");
 const [sideSelector, setSideSelector] = createSignal(false);
@@ -35,41 +35,41 @@ const [charJson, setCharJson] = createSignal<CharJsonType>({});
 const [lcJson, setLcJson] = createSignal<LCJsonType>({});
 export const [turnIndex, setTurnIndex] = createSignal(0);
 export const turn_order = [
-    { team: "blue_team", action: 'ban' },
-    { team: "red_team", action: 'ban' },
-    { team: "blue_team", action: 'pick' },
-    { team: "red_team", action: 'pick' },
-    { team: "red_team", action: 'pick' },
-    { team: "blue_team", action: 'pick' },
-    { team: "red_team", action: 'ban' },
-    { team: "blue_team", action: 'ban' },
-    { team: "red_team", action: 'pick' },
-    { team: "blue_team", action: 'pick' },
-    { team: "blue_team", action: 'pick' },
-    { team: "red_team", action: 'pick' },
-    { team: "red_team", action: 'pick' },
-    { team: "blue_team", action: 'pick' },
-    { team: "blue_team", action: 'pick' },
-    { team: "red_team", action: 'pick' },
-    { team: "red_team", action: 'pick' },
-    { team: "blue_team", action: 'pick' },
-    { team: "blue_team", action: 'pick' },
-    { team: "red_team", action: 'pick' },
-  ];
+  { team: "blue_team", action: "ban" },
+  { team: "red_team", action: "ban" },
+  { team: "blue_team", action: "pick" },
+  { team: "red_team", action: "pick" },
+  { team: "red_team", action: "pick" },
+  { team: "blue_team", action: "pick" },
+  { team: "red_team", action: "ban" },
+  { team: "blue_team", action: "ban" },
+  { team: "red_team", action: "pick" },
+  { team: "blue_team", action: "pick" },
+  { team: "blue_team", action: "pick" },
+  { team: "red_team", action: "pick" },
+  { team: "red_team", action: "pick" },
+  { team: "blue_team", action: "pick" },
+  { team: "blue_team", action: "pick" },
+  { team: "red_team", action: "pick" },
+  { team: "red_team", action: "pick" },
+  { team: "blue_team", action: "pick" },
+  { team: "blue_team", action: "pick" },
+  { team: "red_team", action: "pick" },
+];
 const MessageEnum = {
-    INIT_GAME: "init_game",
-    GAME_READY: "game_ready",
-    GAME_START: "game_start",
-    GAME_STATE: "game_state",
-    SIDE_SELECT: "side_select",
-    SIDE_SELECT_WAITER: "side_select_waiter",
-    FRONT_END_MESSAGE: "front_end_message",
-    BAN: "draft_ban",
-    PICK: "draft_pick",
-    RESET_GAME: "reset_game",
-    UNDO: "undo",
-    SigEidChange: "sig_eid_change"
-  };
+  INIT_GAME: "init_game",
+  GAME_READY: "game_ready",
+  GAME_START: "game_start",
+  GAME_STATE: "game_state",
+  SIDE_SELECT: "side_select",
+  SIDE_SELECT_WAITER: "side_select_waiter",
+  FRONT_END_MESSAGE: "front_end_message",
+  BAN: "draft_ban",
+  PICK: "draft_pick",
+  RESET_GAME: "reset_game",
+  UNDO: "undo",
+  SigEidChange: "sig_eid_change",
+};
 export const handleMsg = (data: string) => {
   const msg = JSON.parse(data);
   console.log(msg);
@@ -98,18 +98,18 @@ export const handleMsg = (data: string) => {
       console.log("You are on the " + ownTeam() + " team");
       break;
     case MessageEnum.GAME_STATE:
-        console.log("Game State");
-        console.log(msg);
-        setBlueBans(msg.message.game_state.bans.blue_team);
-        setRedBans(msg.message.game_state.bans.red_team);
-        setBluePicks(msg.message.game_state.picks.blue_team);
-        setRedPicks(msg.message.game_state.picks.red_team);
-        setTurnIndex(msg.message.turn_index);
-        if (msg.message.turn_index < turn_order.length) {
-            setPlayerTurn(turn_order[turnIndex()].team);
-        }
-        console.log(playerTurn() == ownTeam());
-        break;
+      console.log("Game State");
+      console.log(msg);
+      setBlueBans(msg.message.game_state.bans.blue_team);
+      setRedBans(msg.message.game_state.bans.red_team);
+      setBluePicks([...msg.message.game_state.picks.blue_team]);
+      setRedPicks([...msg.message.game_state.picks.red_team]);
+      setTurnIndex(msg.message.turn_index);
+      if (msg.message.turn_index < turn_order.length) {
+        setPlayerTurn(turn_order[turnIndex()].team);
+      }
+      console.log(playerTurn() == ownTeam());
+      break;
   }
 };
 
@@ -139,5 +139,5 @@ export {
   CharacterBan,
   CharacterPick,
   ownTeam,
-  MessageEnum
+  MessageEnum,
 };
