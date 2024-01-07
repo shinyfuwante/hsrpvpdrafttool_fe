@@ -1,4 +1,4 @@
-import { Component, createSignal, Accessor, createEffect } from "solid-js";
+import { Component, createSignal, Accessor, createMemo, Show } from "solid-js";
 import { CharacterCard } from "../CharacterCard/CharacterCard";
 import { BanCard } from "../BanCard/BanCard";
 import { CharacterBan, CharacterPick } from "~/game/game_logic";
@@ -9,9 +9,6 @@ export type TeamProps = {
   team: string;
   handleSigEid: (character: CharacterPick) => void;
 };
-
-// TODO: try just mapping per picks signal, combining the ban and picks signal then mapping the entire thing out?
-// is that expensive?
 
 const EmptyCharacterComponent = () => {
   return (
@@ -38,6 +35,10 @@ const Team: Component<TeamProps> = (props) => {
   const handleSigEid = props.handleSigEid;
   const [cost, setCost] = createSignal(0);
   const costs = new Map();
+  const picksSignalMemo = createMemo(() => {
+    console.log("picks changed");
+    return props.picksSignal();
+  });
   const handleCostChange = (id: number, newCost: number) => {
     const oldCost = costs.get(id) || 0;
     if (newCost !== oldCost) {
@@ -60,11 +61,9 @@ const Team: Component<TeamProps> = (props) => {
         <div>Points: {cost()}/30</div>
       </div>
       <div style={{ flex: 1 }}>
-        {bansSignal()[0] ? (
+        <Show when={bansSignal()[0]} fallback={<EmptyCharacterComponent />}>
           <BanCard character={bansSignal()[0]} />
-        ) : (
-          <EmptyCharacterComponent />
-        )}
+        </Show>
       </div>
       <div
         style={{
@@ -74,40 +73,40 @@ const Team: Component<TeamProps> = (props) => {
         }}
       >
         <div style={{ flex: 1 }}>
-          {picksSignal()[0] ? (
+          <Show
+            when={picksSignalMemo()[0]}
+            fallback={<EmptyCharacterComponent />}
+          >
             <CharacterCard
               id={0}
-              character={picksSignal()[0]}
+              character={picksSignalMemo()[0]}
               picksSignal={picksSignal}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
               team={team}
             />
-          ) : (
-            <EmptyCharacterComponent />
-          )}
+          </Show>
         </div>
         <div style={{ flex: 1 }}>
-          {picksSignal()[1] ? (
+          <Show
+            when={picksSignalMemo()[1]}
+            fallback={<EmptyCharacterComponent />}
+          >
             <CharacterCard
               id={1}
-              character={picksSignal()[1]}
+              character={picksSignalMemo()[1]}
               picksSignal={picksSignal}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
               team={team}
             />
-          ) : (
-            <EmptyCharacterComponent />
-          )}
+          </Show>
         </div>
       </div>
       <div style={{ flex: 1 }}>
-        {bansSignal()[1] ? (
+        <Show when={bansSignal()[1]} fallback={<EmptyCharacterComponent />}>
           <BanCard character={bansSignal()[1]} />
-        ) : (
-          <EmptyCharacterComponent />
-        )}
+        </Show>
       </div>
       <div
         style={{
@@ -115,32 +114,34 @@ const Team: Component<TeamProps> = (props) => {
         }}
       >
         <div style={{ flex: 1 }}>
-          {picksSignal()[2] ? (
+          <Show
+            when={picksSignalMemo()[2]}
+            fallback={<EmptyCharacterComponent />}
+          >
             <CharacterCard
               id={2}
-              character={picksSignal()[2]}
+              character={picksSignalMemo()[2]}
               picksSignal={picksSignal}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
               team={team}
             />
-          ) : (
-            <EmptyCharacterComponent />
-          )}
+          </Show>
         </div>
         <div style={{ flex: 1 }}>
-          {picksSignal()[3] ? (
+          <Show
+            when={picksSignalMemo()[3]}
+            fallback={<EmptyCharacterComponent />}
+          >
             <CharacterCard
               id={3}
-              character={picksSignal()[3]}
+              character={picksSignalMemo()[3]}
               picksSignal={picksSignal}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
               team={team}
             />
-          ) : (
-            <EmptyCharacterComponent />
-          )}
+          </Show>
         </div>
       </div>
       <div
@@ -149,32 +150,34 @@ const Team: Component<TeamProps> = (props) => {
         }}
       >
         <div style={{ flex: 1 }}>
-          {picksSignal()[4] ? (
+          <Show
+            when={picksSignalMemo()[4]}
+            fallback={<EmptyCharacterComponent />}
+          >
             <CharacterCard
               id={4}
-              character={picksSignal()[4]}
+              character={picksSignalMemo()[4]}
               picksSignal={picksSignal}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
               team={team}
             />
-          ) : (
-            <EmptyCharacterComponent />
-          )}
+          </Show>
         </div>
         <div style={{ flex: 1 }}>
-          {picksSignal()[5] ? (
+          <Show
+            when={picksSignalMemo()[5]}
+            fallback={<EmptyCharacterComponent />}
+          >
             <CharacterCard
               id={5}
-              character={picksSignal()[5]}
+              character={picksSignalMemo()[5]}
               picksSignal={picksSignal}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
               team={team}
             />
-          ) : (
-            <EmptyCharacterComponent />
-          )}
+          </Show>
         </div>
       </div>
       <div
@@ -183,32 +186,34 @@ const Team: Component<TeamProps> = (props) => {
         }}
       >
         <div style={{ flex: 1 }}>
-          {picksSignal()[6] ? (
+          <Show
+            when={picksSignalMemo()[6]}
+            fallback={<EmptyCharacterComponent />}
+          >
             <CharacterCard
               id={6}
-              character={picksSignal()[6]}
+              character={picksSignalMemo()[6]}
               picksSignal={picksSignal}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
               team={team}
             />
-          ) : (
-            <EmptyCharacterComponent />
-          )}
+          </Show>
         </div>
         <div style={{ flex: 1 }}>
-          {picksSignal()[7] ? (
+          <Show
+            when={picksSignalMemo()[7]}
+            fallback={<EmptyCharacterComponent />}
+          >
             <CharacterCard
               id={7}
-              character={picksSignal()[7]}
+              character={picksSignalMemo()[7]}
               picksSignal={picksSignal}
               onCostChange={handleCostChange}
               handleSigEid={handleSigEid}
               team={team}
             />
-          ) : (
-            <EmptyCharacterComponent />
-          )}
+          </Show>
         </div>
       </div>
     </div>
