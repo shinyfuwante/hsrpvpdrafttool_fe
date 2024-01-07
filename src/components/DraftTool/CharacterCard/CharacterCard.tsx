@@ -1,5 +1,10 @@
-import { Component, createSignal, createEffect, createMemo } from "solid-js";
-import { debounce } from "@solid-primitives/scheduled";
+import {
+  Component,
+  createSignal,
+  createEffect,
+  createMemo,
+  Accessor,
+} from "solid-js";
 import { charJson, lcJson, CharacterPick, ownTeam } from "~/game/game_logic";
 
 interface CharacterCardProps {
@@ -7,39 +12,41 @@ interface CharacterCardProps {
   character: CharacterPick;
   onCostChange: (id: number, cost: number) => void;
   handleSigEid: (character: CharacterPick) => void;
+  signal: Accessor<CharacterPick[]>;
   team: string;
 }
 
-export const CharacterCard: Component<CharacterCardProps> = ({
-  id,
-  character,
-  onCostChange,
-  handleSigEid,
-  team,
-}) => {
+export const CharacterCard: Component<CharacterCardProps> = (props) => {
+  const id = props.id;
+  const onCostChange = props.onCostChange;
+  const handleSigEid = props.handleSigEid;
+  const team = props.team;
+  const character = props.character;
+  const [eidolon, setEidolon] = createSignal(character.eidolon);
+  const [superimposition, setSuperimposition] = createSignal(character.superimposition);
+  const [lightCone, setLightCone] = createSignal(character.light_cone);
+    
   const char = charJson()[character.name];
   const lcs = lcJson();
-  const characterCard = createMemo(() => {
-    const [eidolon, setEidolon] = createSignal(character.eidolon);
-    const [superimposition, setSuperimposition] = createSignal(
-      character.superimposition
-    );
-    const [lightCone, setLightCone] = createSignal(character.light_cone);
-    const initialEidolon = character.eidolon;
-    const initialSuperimposition = character.superimposition;
-    const initialLightCone = character.light_cone;
-    const calculateCost = () => {
-      const lc = lcs[lightCone()];
-      let cost;
-      if (lc && (superimposition() > 0)) {
-        cost =
-          char.point_costs[eidolon()] + lc.point_costs[superimposition() - 1];
-      } else {
-        cost = char.point_costs[eidolon()];
-      }
-      onCostChange(id, cost);
-    };
-    const handleSuperimpositionEidolonChange = debounce(() => {
+  const calculateCost = createMemo(() => {
+    const lc = lcs[props.signal()[id].light_cone];
+    let cost;
+    if (lc && props.signal()[id].superimposition > 0) {
+      cost =
+        char.point_costs[props.signal()[id].eidolon] +
+        lc.point_costs[props.signal()[id].superimposition - 1];
+    } else {
+      cost = char.point_costs[props.signal()[id].eidolon];
+    }
+    onCostChange(id, cost);
+  });
+
+  const handleSuperimpositionEidolonChange = () => {
+    if (
+      character.eidolon !== eidolon() ||
+      character.superimposition !== superimposition() ||
+      character.light_cone !== lightCone()
+    ) {
       const pick: CharacterPick = {
         name: character.name,
         light_cone: lightCone(),
@@ -47,18 +54,15 @@ export const CharacterCard: Component<CharacterCardProps> = ({
         superimposition: superimposition(),
         index: id,
       };
-      calculateCost();
       handleSigEid(pick);
-    }, 50);
-    createEffect(calculateCost);
-    createEffect(() => {
-      if (eidolon() !== 0 || superimposition() !== 0 || lightCone() !== "") {
-        handleSuperimpositionEidolonChange();
-      }
-    });
-
+    }
+  };
+  createEffect(() => {
+    handleSuperimpositionEidolonChange();
+    calculateCost();
+  });
+  const characterCard = createMemo(() => {
     const backgroundColor = char.rarity === 4 ? "purple" : "orange";
-    // it's a pick
     return (
       <div
         style={{
@@ -78,6 +82,7 @@ export const CharacterCard: Component<CharacterCardProps> = ({
             flex: "1",
             "background-color": backgroundColor,
           }}
+          
         ></div>
         <div
           style={{
@@ -88,8 +93,10 @@ export const CharacterCard: Component<CharacterCardProps> = ({
           }}
         >
           <select
-            value={eidolon()}
-            onBlur={(e) => setEidolon(Number(e.target.value))}
+            value={props.signal()[id].eidolon}
+            onChange={(e) => {
+              setEidolon(Number(e.target.value));
+            }}
             style={{ "max-width": "25%" }}
             disabled={team !== ownTeam()}
           >
@@ -105,7 +112,7 @@ export const CharacterCard: Component<CharacterCardProps> = ({
           >
             <input
               list="light-cones"
-              value={lightCone()}
+              value={props.signal()[id].light_cone}
               onBlur={(e) => {
                 if (e.target.value !== lightCone()) {
                   setLightCone(e.target.value);
@@ -122,8 +129,10 @@ export const CharacterCard: Component<CharacterCardProps> = ({
               ))}
             </datalist>
             <select
-              value={superimposition()}
-              onBlur={(e) => setSuperimposition(Number(e.target.value))}
+              value={props.signal()[id].superimposition}
+              onChange={(e) => {
+                setSuperimposition(Number(e.target.value));
+              }}
               style={{ flex: 1 }}
               disabled={team !== ownTeam()}
             >
@@ -136,13 +145,5 @@ export const CharacterCard: Component<CharacterCardProps> = ({
       </div>
     );
   });
-  return (
-    <div
-      style={{
-        border: "1px solid grey",
-      }}
-    >
-      {characterCard()}
-    </div>
-  );
+  return characterCard();
 };
