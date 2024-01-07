@@ -1,4 +1,4 @@
-import { createSignal, createEffect } from "solid-js";
+import { createSignal} from "solid-js";
 import { CharJsonType, LCJsonType } from "~/types";
 const game_phases = {
   LOADING: "loading",
