@@ -51,7 +51,6 @@ export default function GamePage() {
     client.send(JSON.stringify(message));
   };
   const SideSelection = () => {
-    // returns a modal with a button to select side, which will send a message to the backend to select side
     const sendSideMessage = (side: string) => {
       const message = {
         type: "side_select",
@@ -60,7 +59,6 @@ export default function GamePage() {
       client.send(JSON.stringify(message));
     };
     return (
-      // if side selector, show buttons, else show a message that we're waiting for the other player
       <div>
         {sideSelector() && (
           <div>
