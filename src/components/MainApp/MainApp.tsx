@@ -1,21 +1,24 @@
 import { gamePhase, CharacterPick, game_phases, CharacterBan } from "~/game/game_logic";
 import DraftTool from "../DraftTool/DraftTool";
-import { Component } from "solid-js";
+import { Component, splitProps } from "solid-js";
 
 interface MainAppProps {
   LoadingMenu: Component<{}>;
   SideSelection: Component<{}>;
-  HandlePick: (character: CharacterPick) => void; 
-  HandleBan: (character: CharacterBan) => void; 
-  HandleSigEid: (character: CharacterPick) => void;
+  handlePick: (character: CharacterPick) => void; 
+  handleBan: (character: CharacterBan) => void; 
+  handleSigEid: (character: CharacterPick) => void;
+  handleUndo: () => void;
+  handleReset: () => void;
 }
 
-const MainApp: Component<MainAppProps> = ({LoadingMenu, SideSelection, HandlePick, HandleBan, HandleSigEid}) => {
+const MainApp: Component<MainAppProps> = (props) => {
+  const [components, ...others] = splitProps(props, ["LoadingMenu", "SideSelection"]);
   return (
     <div>
-      {gamePhase() === game_phases.LOADING && <LoadingMenu></LoadingMenu>}
-      {gamePhase() === game_phases.SIDE_SELECTION && <SideSelection></SideSelection>}
-      {gamePhase() == game_phases.DRAFTING && <DraftTool handlePick={HandlePick} handleBan={HandleBan} HandleSigEid={HandleSigEid}></DraftTool>}
+      {gamePhase() === game_phases.LOADING && <components.LoadingMenu />}
+  {gamePhase() === game_phases.SIDE_SELECTION && <components.SideSelection />}
+  {gamePhase() === game_phases.DRAFTING && <DraftTool {...others[0]} />}
     </div>
   );
 };

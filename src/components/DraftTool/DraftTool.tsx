@@ -22,9 +22,11 @@ import {
 interface DraftToolProps {
   handlePick: (character: CharacterPick) => void;
   handleBan: (character: CharacterBan) => void;
-  HandleSigEid: (character: CharacterPick) => void;
+  handleSigEid: (character: CharacterPick) => void;
+  handleUndo: () => void;
+  handleReset: () => void;
 }
-const DraftTool: Component<DraftToolProps> = ({handlePick, handleBan, HandleSigEid}) => {
+const DraftTool: Component<DraftToolProps> = ({handlePick, handleBan, handleSigEid}) => {
   const [ready, setReady] = createSignal(false);
   onMount(async () => {
     let response1 = await fetch(`/rule_sets/${ruleSet()}/characters.json`);
@@ -59,7 +61,7 @@ const DraftTool: Component<DraftToolProps> = ({handlePick, handleBan, HandleSigE
                 bansSignal={blueBans}
                 picksSignal={bluePicks}
                 team={"blue_team"}
-                handleSigEid={HandleSigEid}
+                handleSigEid={handleSigEid}
               />
             </div>
             <div
@@ -80,7 +82,7 @@ const DraftTool: Component<DraftToolProps> = ({handlePick, handleBan, HandleSigE
                 bansSignal={redBans}
                 picksSignal={redPicks}
                 team={"red_team"}
-                handleSigEid={HandleSigEid}
+                handleSigEid={handleSigEid}
               />
             </div>
           </div>

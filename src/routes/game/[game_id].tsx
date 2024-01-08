@@ -97,9 +97,11 @@ export default function GamePage() {
       <MainApp
         LoadingMenu={LoadingMenu}
         SideSelection={SideSelection}
-        HandleBan={handleBan}
-        HandlePick={handlePick}
-        HandleSigEid={handleSigEidChange}
+        handleBan={handleBan}
+        handlePick={handlePick}
+        handleSigEid={handleSigEidChange}
+        handleUndo={handleUndo}
+        handleReset={handleReset}
       />
     </div>
   );
