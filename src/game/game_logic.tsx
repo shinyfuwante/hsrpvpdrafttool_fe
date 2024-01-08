@@ -140,6 +140,4 @@ export {
   CharacterPick,
   ownTeam,
   MessageEnum,
-  bluePicksStore,
-  redPicksStore
 };
