@@ -22,6 +22,8 @@ import { CharacterDetails } from "~/types";
 export interface RosterProps {
   handlePick: (character: CharacterPick) => void;
   handleBan: (character: CharacterBan) => void;
+  handleReset: () => void;
+  handleUndo: () => void;
 }
 const Roster: Component<RosterProps> = (props) => {
   const { handleBan, handlePick } = props;
@@ -44,8 +46,6 @@ const Roster: Component<RosterProps> = (props) => {
     setSelectedChars(selected);
   });
   const selectCharacter = (characterName: string) => {
-    // determine if ban or pick
-    // might have to move further out
     if (turnIndex() >= turn_order.length) {
       return;
     }
@@ -64,7 +64,7 @@ const Roster: Component<RosterProps> = (props) => {
         }
       }
     } else {
-        const pickSignal = currentPlayer == "blue_team" ? bluePicks : redPicks;
+      const pickSignal = currentPlayer == "blue_team" ? bluePicks : redPicks;
       const pick = {
         name: characterName,
         light_cone: "",
@@ -156,6 +156,8 @@ const Roster: Component<RosterProps> = (props) => {
           );
         })}
       </div>
+      <button onClick={props.handleUndo}>Undo</button>
+      <button onClick={props.handleReset}>Reset</button>
     </div>
   );
 };

@@ -8,6 +8,7 @@ import {
   CharacterBan,
   ownTeam,
   MessageEnum,
+  turnIndex,
 } from "~/game/game_logic";
 import { w3cwebsocket as WebSocket } from "websocket";
 import MainApp from "~/components/MainApp/MainApp";
@@ -51,12 +52,18 @@ export default function GamePage() {
     client.send(JSON.stringify(message));
   };
   const handleReset = () => {
+    if (turnIndex() <= 0) {
+        return;
+    }
     const message = {
       type: MessageEnum.RESET_GAME,
     };
     client.send(JSON.stringify(message));
   }
   const handleUndo = () => {
+    if (turnIndex() <= 0) {
+        return;
+    }
     const message = {
       type: MessageEnum.UNDO,
     };
