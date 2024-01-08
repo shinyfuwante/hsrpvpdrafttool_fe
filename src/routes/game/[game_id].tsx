@@ -50,6 +50,18 @@ export default function GamePage() {
     };
     client.send(JSON.stringify(message));
   };
+  const handleReset = () => {
+    const message = {
+      type: MessageEnum.RESET_GAME,
+    };
+    client.send(JSON.stringify(message));
+  }
+  const handleUndo = () => {
+    const message = {
+      type: MessageEnum.UNDO,
+    };
+    client.send(JSON.stringify(message));
+  }
   const SideSelection = () => {
     const sendSideMessage = (side: string) => {
       const message = {
