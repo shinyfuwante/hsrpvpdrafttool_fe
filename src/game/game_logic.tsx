@@ -102,8 +102,8 @@ export const handleMsg = (data: string) => {
       console.log(msg);
       setBlueBans(msg.message.game_state.bans.blue_team);
       setRedBans(msg.message.game_state.bans.red_team);
-      setBluePicks([...msg.message.game_state.picks.blue_team]);
-      setRedPicks([...msg.message.game_state.picks.red_team]);
+      setBluePicks(msg.message.game_state.picks.blue_team);
+      setRedPicks(msg.message.game_state.picks.red_team);
       setTurnIndex(msg.message.turn_index);
       if (msg.message.turn_index < turn_order.length) {
         setPlayerTurn(turn_order[turnIndex()].team);
@@ -140,4 +140,6 @@ export {
   CharacterPick,
   ownTeam,
   MessageEnum,
+  bluePicksStore,
+  redPicksStore
 };
