@@ -25,7 +25,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
   const [eidolon, setEidolon] = createSignal(character.eidolon);
   const [superimposition, setSuperimposition] = createSignal(character.superimposition);
   const [lightCone, setLightCone] = createSignal(character.light_cone);
-    
+
   const char = charJson()[character.name];
   const lcs = lcJson();
   const calculateCost = createMemo(() => {
@@ -66,7 +66,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
     return (
       <div
         style={{
-          "min-height": "150px",
+          "min-height": "125px",
           display: "flex",
           "flex-direction": "column",
         }}

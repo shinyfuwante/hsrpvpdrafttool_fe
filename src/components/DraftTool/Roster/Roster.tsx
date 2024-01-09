@@ -112,7 +112,7 @@ const Roster: Component<RosterProps> = (props) => {
           "grid-template-columns": "repeat(auto-fill, 100px)",
           "max-width": "100%",
           "max-height": "100%",
-          border: "2px solid grey",
+          border: "1px solid grey",
           "place-content": "center",
           gap: "5px",
         }}

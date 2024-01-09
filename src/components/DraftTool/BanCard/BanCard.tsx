@@ -17,7 +17,7 @@ export const BanCard: Component<BanCardProps> = ({ character }) => {
         "background-size": "cover",
         "background-position": "30% 30%",
         filter: "grayscale(100%)",
-        "min-height": "150px",
+        "min-height": "125px",
         border: "1px solid grey",
       }}
     ></div>

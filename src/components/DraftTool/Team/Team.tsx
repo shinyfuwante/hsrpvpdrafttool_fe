@@ -1,4 +1,4 @@
-import { Component, createSignal, Accessor, Show, } from "solid-js";
+import { Component, createSignal, Accessor, Show } from "solid-js";
 import { CharacterCard } from "../CharacterCard/CharacterCard";
 import { BanCard } from "../BanCard/BanCard";
 import {
@@ -60,8 +60,12 @@ const Team: Component<TeamProps> = (props) => {
         "background-color": team === "blue_team" ? "#0000FF" : "#FF0000",
       }}
     >
-      <div class="team-info">
-        <div>Points: {cost()}/30</div>
+      <div class="team-info"
+      style = {{
+        "text-align": "right",
+        "font-size": "20pt",
+      }}>
+        <div> {cost()}/30</div>
       </div>
       <div style={{ flex: 1 }}>
         <Show when={bansSignal()[0]} fallback={<EmptyCharacterComponent />}>
