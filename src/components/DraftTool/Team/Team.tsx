@@ -8,6 +8,8 @@ import {
   redPicks,
   bluePicks,
   blueBans,
+  setBlueCost,
+  setRedCost
 } from "~/game/game_logic";
 
 export type TeamProps = {
@@ -39,6 +41,7 @@ const Team: Component<TeamProps> = (props) => {
   const team = props.team;
   const bansSignal = props.team === "blue_team" ? blueBans : redBans;
   const picksSignal = props.team === "blue_team" ? bluePicks : redPicks;
+  const setCostSignal = props.team === "blue_team" ? setBlueCost : setRedCost;
   const handleSigEid = props.handleSigEid;
   const [cost, setCost] = createSignal(0);
   const costs = new Map();
@@ -49,6 +52,7 @@ const Team: Component<TeamProps> = (props) => {
       const totalCost = Array.from(costs.values()).reduce((a, b) => a + b, 0);
       if (totalCost !== cost()) {
         setCost(totalCost);
+        setCostSignal(totalCost);
       }
     }
   };

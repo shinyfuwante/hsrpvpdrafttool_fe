@@ -78,7 +78,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
             "background-position": "25% 25%",
             width: "100%",
             height: "75%",
-            "min-height": "125px",
+            "min-height": "100px",
             flex: "1",
             "background-color": backgroundColor,
             position: "relative",

@@ -18,6 +18,7 @@ import {
   ownTeam,
 } from "~/game/game_logic";
 import { CharacterDetails } from "~/types";
+import Results from "~/components/Results/Results";
 
 export interface RosterProps {
   handlePick: (character: CharacterPick) => void;
@@ -99,65 +100,91 @@ const Roster: Component<RosterProps> = (props) => {
         "padding-right": "2px",
       }}
     >
-      <input
-        type="text"
-        value={searchTerm()}
-        onInput={(e) => setSearchTerm(e.target.value)}
-        placeholder="Search characters"
-      />
       <div
         style={{
-          display: "grid",
-          "grid-auto-rows": "100px",
-          "grid-template-columns": "repeat(auto-fill, 100px)",
-          "max-width": "100%",
-          "max-height": "100%",
-          border: "1px solid grey",
-          "place-content": "center",
-          gap: "5px",
+          display: redPicks().length == 8 ? "none" : "flex",
+          "flex-direction": "column",
         }}
       >
-        {Object.entries(charJson()).map(([characterName, characterDetails]) => {
-          const characterId = (characterDetails as CharacterDetails).id;
-          const characterImage = `/character_icons/${characterId}.webp`;
-          const isSelected = selectedChars().includes(characterName);
-          const isMatch =
-            searchTerm() != "" &&
-            characterName.toLowerCase().includes(searchTerm().toLowerCase());
+        <input
+          type="text"
+          value={searchTerm()}
+          onInput={(e) => setSearchTerm(e.target.value)}
+          placeholder="Search characters"
+        />
+        <div
+          style={{
+            display: "grid",
+            "grid-auto-rows": "100px",
+            "grid-template-columns": "repeat(auto-fill, 100px)",
+            "max-width": "100%",
+            "max-height": "100%",
+            border: "1px solid grey",
+            "place-content": "center",
+            gap: "5px",
+          }}
+        >
+          {Object.entries(charJson()).map(
+            ([characterName, characterDetails]) => {
+              const characterId = (characterDetails as CharacterDetails).id;
+              const characterImage = `/character_icons/${characterId}.webp`;
+              const isSelected = selectedChars().includes(characterName);
+              const isMatch =
+                searchTerm() != "" &&
+                characterName
+                  .toLowerCase()
+                  .includes(searchTerm().toLowerCase());
 
-          const canPick =
-            !isSelected && isTurn() && turnIndex() < turn_order.length;
+              const canPick =
+                !isSelected && isTurn() && turnIndex() < turn_order.length;
 
-          return (
-            <div
-              style={{
-                "background-color":
-                  characterDetails.rarity == 4 ? "purple" : "orange",
-                filter: !isSelected ? "none" : "grayscale(100%)",
-                display:
-                  isMatch || searchTerm() == "" ? "inline-block" : "none",
-                width: "100px",
-                height: "100px",
-                cursor: !isSelected && isTurn() ? "pointer" : "default",
-              }}
-              onClick={
-                canPick ? () => selectCharacter(characterName) : undefined
-              }
-            >
-              <img
-                src={characterImage}
-                alt={characterName}
-                style={{
-                  "max-width": "100%",
-                  "max-height": "100%",
-                }}
-              />
-            </div>
-          );
-        })}
+              return (
+                <div
+                  style={{
+                    "background-color":
+                      characterDetails.rarity == 4 ? "purple" : "orange",
+                    filter: !isSelected ? "none" : "grayscale(100%)",
+                    display:
+                      isMatch || searchTerm() == "" ? "inline-block" : "none",
+                    width: "100px",
+                    height: "100px",
+                    cursor: !isSelected && isTurn() ? "pointer" : "default",
+                  }}
+                  onClick={
+                    canPick ? () => selectCharacter(characterName) : undefined
+                  }
+                >
+                  <img
+                    src={characterImage}
+                    alt={characterName}
+                    style={{
+                      "max-width": "100%",
+                      "max-height": "100%",
+                    }}
+                  />
+                </div>
+              );
+            }
+          )}
+        </div>
       </div>
-      <button onClick={props.handleUndo}>Undo</button>
-      <button onClick={props.handleReset}>Reset</button>
+      <div
+        style={{
+          display: redPicks().length == 8 ? "inline-block" : "none",
+        }}
+      >
+        <Results></Results>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          "flex-direction": "row",
+          "justify-content": "space-between",
+        }}
+      >
+        <button onClick={props.handleUndo}>Undo</button>
+        <button onClick={props.handleReset}>Reset</button>
+      </div>
     </div>
   );
 };
