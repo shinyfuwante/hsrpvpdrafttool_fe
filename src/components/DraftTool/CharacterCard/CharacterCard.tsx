@@ -25,20 +25,20 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
   const [eidolon, setEidolon] = createSignal(character.eidolon);
   const [superimposition, setSuperimposition] = createSignal(character.superimposition);
   const [lightCone, setLightCone] = createSignal(character.light_cone);
+  const [cost, setCost] = createSignal(0);
 
   const char = charJson()[character.name];
   const lcs = lcJson();
   const calculateCost = createMemo(() => {
     const lc = lcs[props.signal()[id].light_cone];
-    let cost;
     if (lc && props.signal()[id].superimposition > 0) {
-      cost =
+        setCost(
         char.point_costs[props.signal()[id].eidolon] +
-        lc.point_costs[props.signal()[id].superimposition - 1];
+        lc.point_costs[props.signal()[id].superimposition - 1]);
     } else {
-      cost = char.point_costs[props.signal()[id].eidolon];
+      setCost(char.point_costs[props.signal()[id].eidolon]);
     }
-    onCostChange(id, cost);
+    onCostChange(id, cost());
   });
 
   const handleSuperimpositionEidolonChange = () => {
@@ -81,9 +81,24 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
             "min-height": "125px",
             flex: "1",
             "background-color": backgroundColor,
+            position: "relative",
           }}
-          
-        ></div>
+        >
+            <div
+                style={{
+                "text-align": "center",
+                "font-size": "20pt",
+                color: "white",
+                background: "rgba(0, 0, 0, 0.5)",
+                "font-weight": "bold",
+                position: "absolute",
+                top: "0",
+                right: "0",
+                }}
+            >
+                +{cost()}
+            </div>
+        </div>
         <div
           style={{
             display: "flex",

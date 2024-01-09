@@ -25,7 +25,7 @@ const EmptyCharacterComponent = () => {
         height: "75%",
         display: "flex",
         "flex-direction": "column",
-        "min-height": "150px",
+        "min-height": "125px",
         "background-color": "transparent",
         border: "1px solid grey",
       }}
