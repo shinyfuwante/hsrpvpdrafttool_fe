@@ -1,4 +1,4 @@
-import { Component } from "solid-js";
+import { Component, onMount } from "solid-js";
 import DraftTool from "~/components/DraftTool/DraftTool";
 import {
   setTurnIndex,
@@ -16,6 +16,10 @@ import {
   blueBans,
   setRedBans,
   redBans,
+  setCharJson,
+  setLcJson,
+  ruleSet,
+  setIsSinglePlayer,
 } from "~/game/game_logic";
 
 // interface DraftToolProps {
@@ -71,6 +75,29 @@ const handleUndo = () => {
   return;
 };
 const game: Component<{}> = (props) => {
+  onMount(async () => {
+    let response1 = await fetch(`/rule_sets/${ruleSet()}/characters.json`);
+    // if response fails, fetch phd_standard characters.json
+    if (!response1.ok) {
+      try {
+        response1 = await fetch(`/rule_sets/phd_standard/characters.json`);
+      } catch (e) {
+        console.log(e);
+      }
+    }
+    setCharJson(await response1.json());
+
+    let response2 = await fetch(`/rule_sets/${ruleSet()}/light_cones.json`);
+    if (!response2.ok) {
+      try {
+        response1 = await fetch(`/rule_sets/phd_standard/characters.json`);
+      } catch (e) {
+        console.log(e);
+      }
+    }
+    setLcJson(await response2.json());
+    setIsSinglePlayer(true);
+  });
   return (
     <DraftTool
       handlePick={handlePick}
@@ -78,7 +105,6 @@ const game: Component<{}> = (props) => {
       handleSigEid={handleSigEid}
       handleReset={handleReset}
       handleUndo={handleUndo}
-      isSinglePlayer={true}
     />
   );
 };

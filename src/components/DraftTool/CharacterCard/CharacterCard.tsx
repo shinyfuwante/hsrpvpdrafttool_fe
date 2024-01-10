@@ -5,7 +5,7 @@ import {
   createMemo,
   Accessor,
 } from "solid-js";
-import { charJson, lcJson, CharacterPick, ownTeam } from "~/game/game_logic";
+import { charJson, lcJson, CharacterPick, ownTeam, isSinglePlayer } from "~/game/game_logic";
 
 interface CharacterCardProps {
   id: number;
@@ -113,7 +113,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
               setEidolon(Number(e.target.value));
             }}
             style={{ "max-width": "25%" }}
-            disabled={team !== ownTeam()}
+            disabled={isSinglePlayer() ? false : team !== ownTeam()}
           >
             {[...Array(7).keys()].map((value) => (
               <option value={value}>E{value}</option>
@@ -135,7 +135,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
               }}
               placeholder="LC"
               style={{ flex: 1 }}
-              disabled={team !== ownTeam()}
+              disabled={(isSinglePlayer()) ? false : team !== ownTeam()  }
             />
 
             <datalist id="light-cones">
@@ -149,7 +149,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
                 setSuperimposition(Number(e.target.value));
               }}
               style={{ flex: 1 }}
-              disabled={team !== ownTeam()}
+              disabled={isSinglePlayer() ? false : team !== ownTeam()}
             >
               {[...Array(5).keys()].map((value) => (
                 <option value={value + 1}>S{value + 1}</option>

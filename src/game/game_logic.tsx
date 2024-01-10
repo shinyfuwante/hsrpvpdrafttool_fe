@@ -37,6 +37,7 @@ const [charJson, setCharJson] = createSignal<CharJsonType>({});
 const [lcJson, setLcJson] = createSignal<LCJsonType>({});
 const [redCost, setRedCost] = createSignal(0);
 const [blueCost, setBlueCost] = createSignal(0);
+const [isSinglePlayer, setIsSinglePlayer] = createSignal(false);
 export const [turnIndex, setTurnIndex] = createSignal(0);
 export const turn_order = [
   { team: "blue_team", action: "ban" },
@@ -148,5 +149,7 @@ export {
   redCost,
   setRedCost,
   blueCost,
-  setBlueCost
+  setBlueCost,
+  isSinglePlayer,
+  setIsSinglePlayer
 };

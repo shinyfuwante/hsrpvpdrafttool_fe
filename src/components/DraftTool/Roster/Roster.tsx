@@ -16,6 +16,7 @@ import {
   selectedChars,
   setSelectedChars,
   ownTeam,
+  isSinglePlayer
 } from "~/game/game_logic";
 import { CharacterDetails } from "~/types";
 import Results from "~/components/Results/Results";
@@ -25,18 +26,16 @@ export interface RosterProps {
   handleBan: (character: CharacterBan) => void;
   handleReset: () => void;
   handleUndo: () => void;
-  isSinglePlayer: boolean;
 }
 const Roster: Component<RosterProps> = (props) => {
   const { handleBan, handlePick } = props;
   const [searchTerm, setSearchTerm] = createSignal("");
-  const isSinglePlayer = props.isSinglePlayer;
   const [currentTurn, setCurrentTurn] = createSignal(turn_order[turnIndex()]);
   const [isTurn, setIsTurn] = createSignal(false);
   createEffect(() => {
     if (turnIndex() < turn_order.length) {
       setCurrentTurn(turn_order[turnIndex()]);
-      setIsTurn(ownTeam() == currentTurn().team || isSinglePlayer);
+      setIsTurn(ownTeam() == currentTurn().team || isSinglePlayer());
     }
   });
   createEffect(() => {

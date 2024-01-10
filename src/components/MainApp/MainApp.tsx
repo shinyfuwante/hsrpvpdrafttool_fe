@@ -28,7 +28,7 @@ const MainApp: Component<MainAppProps> = (props) => {
       {gamePhase() === game_phases.SIDE_SELECTION && (
         <components.SideSelection />
       )}
-      {gamePhase() === game_phases.DRAFTING && <DraftTool {...others[0]} isSinglePlayer={false}/>}
+      {gamePhase() === game_phases.DRAFTING && <DraftTool {...others[0]}/>}
     </div>
   );
 };
