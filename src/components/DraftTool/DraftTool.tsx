@@ -25,8 +25,9 @@ interface DraftToolProps {
   handleSigEid: (character: CharacterPick) => void;
   handleUndo: () => void;
   handleReset: () => void;
+  isSinglePlayer: boolean;
 }
-const DraftTool: Component<DraftToolProps> = ({handlePick, handleBan, handleSigEid, handleUndo, handleReset}) => {
+const DraftTool: Component<DraftToolProps> = ({handlePick, handleBan, handleSigEid, handleUndo, handleReset, isSinglePlayer}) => {
   const [ready, setReady] = createSignal(false);
   onMount(async () => {
     let response1 = await fetch(`/rule_sets/${ruleSet()}/characters.json`);
@@ -72,7 +73,7 @@ const DraftTool: Component<DraftToolProps> = ({handlePick, handleBan, handleSigE
                 "flex-direction": "column",
               }}
             >
-              <Roster handleBan={handleBan} handlePick={handlePick} handleUndo={handleUndo} handleReset={handleReset} />
+              <Roster handleBan={handleBan} handlePick={handlePick} handleUndo={handleUndo} handleReset={handleReset} isSinglePlayer={isSinglePlayer} />
               <div style={{ "align-self": "center" }}>
                 Current Player Turn: {playerTurn()}
               </div>

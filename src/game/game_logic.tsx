@@ -29,6 +29,8 @@ const [bluePicks, setBluePicks] = createSignal<CharacterPick[]>([]);
 const [redPicks, setRedPicks] = createSignal<CharacterPick[]>([]);
 const [blueTeam, setBlueTeam] = createSignal("");
 const [redTeam, setRedTeam] = createSignal("");
+const [blueTeamName, setBlueTeamName] = createSignal("Blue Team");
+const [redTeamName, setRedTeamName] = createSignal("Red Team");
 const [selectedChars, setSelectedChars] = createSignal<string[]>([]);
 const [ruleSet, setRuleSet] = createSignal("phd_standard");
 const [charJson, setCharJson] = createSignal<CharJsonType>({});
@@ -119,6 +121,7 @@ export {
   game_phases,
   gamePhase,
   cid,
+  setPlayerTurn,
   playerTurn,
   blueBans,
   setBlueBans,

@@ -25,16 +25,18 @@ export interface RosterProps {
   handleBan: (character: CharacterBan) => void;
   handleReset: () => void;
   handleUndo: () => void;
+  isSinglePlayer: boolean;
 }
 const Roster: Component<RosterProps> = (props) => {
   const { handleBan, handlePick } = props;
   const [searchTerm, setSearchTerm] = createSignal("");
+  const isSinglePlayer = props.isSinglePlayer;
   const [currentTurn, setCurrentTurn] = createSignal(turn_order[turnIndex()]);
   const [isTurn, setIsTurn] = createSignal(false);
   createEffect(() => {
     if (turnIndex() < turn_order.length) {
       setCurrentTurn(turn_order[turnIndex()]);
-      setIsTurn(ownTeam() == currentTurn().team);
+      setIsTurn(ownTeam() == currentTurn().team || isSinglePlayer);
     }
   });
   createEffect(() => {
@@ -50,14 +52,15 @@ const Roster: Component<RosterProps> = (props) => {
     if (turnIndex() >= turn_order.length) {
       return;
     }
+    console.log("current action: " + currentTurn().action);
     const currentPlayer = currentTurn().team;
     const currentAction = currentTurn().action;
     if (currentAction == "ban") {
       if (currentPlayer == "blue_team") {
         if (blueBans().length < 2) {
           setBlueBans([...blueBans(), { name: characterName }]);
+          handleBan({ name: characterName });
         }
-        handleBan({ name: characterName });
       } else {
         if (redBans().length < 2) {
           setRedBans([...redBans(), { name: characterName }]);
@@ -83,7 +86,7 @@ const Roster: Component<RosterProps> = (props) => {
         }
       }
     }
-    setTurnIndex(turnIndex() + 1);
+    // setTurnIndex(turnIndex() + 1);
     setSearchTerm("");
     if (turnIndex() == turn_order.length) {
       // draft end probably
@@ -151,7 +154,7 @@ const Roster: Component<RosterProps> = (props) => {
                     cursor: !isSelected && isTurn() ? "pointer" : "default",
                   }}
                   onClick={
-                    canPick ? () => selectCharacter(characterName) : undefined
+                    canPick || isSinglePlayer ? () => selectCharacter(characterName) : undefined
                   }
                 >
                   <img
