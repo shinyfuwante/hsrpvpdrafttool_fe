@@ -9,7 +9,9 @@ import {
   bluePicks,
   blueBans,
   setBlueCost,
-  setRedCost
+  setRedCost,
+  blueTeamName,
+  redTeamName
 } from "~/game/game_logic";
 
 export type TeamProps = {
@@ -42,6 +44,7 @@ const Team: Component<TeamProps> = (props) => {
   const bansSignal = props.team === "blue_team" ? blueBans : redBans;
   const picksSignal = props.team === "blue_team" ? bluePicks : redPicks;
   const setCostSignal = props.team === "blue_team" ? setBlueCost : setRedCost;
+  const teamName = props.team === "blue_team" ? blueTeamName : redTeamName;
   const handleSigEid = props.handleSigEid;
   const [cost, setCost] = createSignal(0);
   const costs = new Map();
@@ -68,8 +71,12 @@ const Team: Component<TeamProps> = (props) => {
       style = {{
         "text-align": "right",
         "font-size": "20pt",
+        "display": "flex",
+        "flex-direction": "row",
+        "justify-content": "space-between",
       }}>
-        <div> {cost()}/30</div>
+        <div>{teamName()} </div>
+        <div>{cost()}/30</div>
       </div>
       <div style={{ flex: 1 }}>
         <Show when={bansSignal()[0]} fallback={<EmptyCharacterComponent />}>

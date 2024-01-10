@@ -1,6 +1,7 @@
-import { Component, onMount, createSignal } from "solid-js";
+import { Component, onMount, createSignal, Show } from "solid-js";
 import Team from "./Team/Team";
 import Roster from "./Roster/Roster";
+import SoloSettings from "../SoloSettings/SoloSettings";
 import {
   playerTurn,
   blueBans,
@@ -17,6 +18,7 @@ import {
   setLcJson,
   CharacterBan,
   CharacterPick,
+  isSinglePlayer,
 } from "~/game/game_logic";
 
 interface DraftToolProps {
@@ -55,6 +57,9 @@ const DraftTool: Component<DraftToolProps> = ({handlePick, handleBan, handleSigE
     <>
       {ready() && (
         <>
+        <Show when={isSinglePlayer()}>
+            <SoloSettings />
+        </Show>
           <div style={{ display: "flex", width: "100%" }}>
             <div style={{ flex: "25%", "max-width": "30%" }}>
               <Team

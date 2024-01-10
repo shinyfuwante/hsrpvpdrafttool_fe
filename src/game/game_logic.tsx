@@ -144,5 +144,9 @@ export {
   blueCost,
   setBlueCost,
   isSinglePlayer,
-  setIsSinglePlayer
+  setIsSinglePlayer,
+  blueTeamName,
+  setBlueTeamName,
+  redTeamName,
+  setRedTeamName,
 };
