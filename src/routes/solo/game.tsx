@@ -34,6 +34,14 @@ const incrementTurn = () => {
   }
 };
 const handleSigEid = (character: CharacterPick) => {
+  const team = character.team;
+  const picksSignal = team == "blue_team" ? bluePicks : redPicks;
+  const setPicksSignal = team == "blue_team" ? setBluePicks : setRedPicks;
+  const picksArray = [...picksSignal()];
+  if (picksArray[character.index] != character) {
+    picksArray[character.index] = character;
+    setPicksSignal(picksArray);
+  } 
   return;
 };
 const handlePick = (character: CharacterPick) => {

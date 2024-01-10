@@ -51,7 +51,6 @@ const Roster: Component<RosterProps> = (props) => {
     if (turnIndex() >= turn_order.length) {
       return;
     }
-    console.log("current action: " + currentTurn().action);
     const currentPlayer = currentTurn().team;
     const currentAction = currentTurn().action;
     if (currentAction == "ban") {
@@ -74,6 +73,7 @@ const Roster: Component<RosterProps> = (props) => {
         eidolon: 0,
         superimposition: 0,
         index: Math.max(0, pickSignal().length - 1),
+        team: currentPlayer,
       };
       if (currentPlayer == "blue_team") {
         if (bluePicks().length < 8) {

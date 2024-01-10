@@ -14,6 +14,7 @@ type CharacterPick = {
   eidolon: number;
   superimposition: number;
   index: number;
+  team: string;
 };
 type CharacterBan = {
   name: string;
@@ -77,10 +78,8 @@ const MessageEnum = {
 };
 export const handleMsg = (data: string) => {
   const msg = JSON.parse(data);
-  console.log(msg);
   switch (msg.message.message_type) {
     case MessageEnum.GAME_READY:
-      console.log("Game Ready");
       setCID(msg.message.cid);
       setGamePhase(game_phases.SIDE_SELECTION);
       setRuleSet(msg.message.rule_set);
@@ -89,8 +88,6 @@ export const handleMsg = (data: string) => {
       setSideSelector(cid() == msg.message.selector);
       break;
     case MessageEnum.GAME_START:
-      console.log("Game Start");
-      console.log(msg);
       setGamePhase(game_phases.DRAFTING);
       setPlayerTurn(msg.message.turn_player);
       setBlueTeam(msg.message.blue_team);
@@ -100,11 +97,8 @@ export const handleMsg = (data: string) => {
       } else {
         setOwnTeam("red_team");
       }
-      console.log("You are on the " + ownTeam() + " team");
       break;
     case MessageEnum.GAME_STATE:
-      console.log("Game State");
-      console.log(msg);
       setBlueBans(msg.message.game_state.bans.blue_team);
       setRedBans(msg.message.game_state.bans.red_team);
       setBluePicks(msg.message.game_state.picks.blue_team);
@@ -113,7 +107,6 @@ export const handleMsg = (data: string) => {
       if (msg.message.turn_index < turn_order.length) {
         setPlayerTurn(turn_order[turnIndex()].team);
       }
-      console.log(playerTurn() == ownTeam());
       break;
   }
 };
