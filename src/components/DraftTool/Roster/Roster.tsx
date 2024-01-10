@@ -154,7 +154,7 @@ const Roster: Component<RosterProps> = (props) => {
                     cursor: !isSelected && isTurn() ? "pointer" : "default",
                   }}
                   onClick={
-                    canPick || isSinglePlayer ? () => selectCharacter(characterName) : undefined
+                    canPick ? () => selectCharacter(characterName) : undefined
                   }
                 >
                   <img
