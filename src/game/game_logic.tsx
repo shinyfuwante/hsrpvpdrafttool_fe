@@ -1,5 +1,6 @@
-import { createSignal} from "solid-js";
+import { createSignal } from "solid-js";
 import { CharJsonType, LCJsonType } from "~/types";
+import { v4 } from "uuid";
 const game_phases = {
   LOADING: "loading",
   SIDE_SELECTION: "sideSelection",
@@ -20,10 +21,21 @@ type CharacterBan = {
   name: string;
 };
 const [gamePhase, setGamePhase] = createSignal(game_phases.LOADING);
-const [cid, setCID] = createSignal("");
+const getCID = () => {
+  let cid;
+  cid = localStorage.getItem("cid");
+
+  if (cid == null) {
+    let gen_cid = v4();
+    localStorage.setItem("cid", gen_cid);
+    return gen_cid;
+  }
+  return cid;
+};
 const [sideSelector, setSideSelector] = createSignal(false);
 const [playerTurn, setPlayerTurn] = createSignal("blue_team");
 const [ownTeam, setOwnTeam] = createSignal("blue_team");
+const [sessionId, setSessionId] = createSignal("");
 const [blueBans, setBlueBans] = createSignal<CharacterBan[]>([]);
 const [redBans, setRedBans] = createSignal<CharacterBan[]>([]);
 const [bluePicks, setBluePicks] = createSignal<CharacterPick[]>([]);
@@ -80,19 +92,19 @@ export const handleMsg = (data: string) => {
   const msg = JSON.parse(data);
   switch (msg.message.message_type) {
     case MessageEnum.GAME_READY:
-      setCID(msg.message.cid);
+      setSessionId(msg.message.cid);
       setGamePhase(game_phases.SIDE_SELECTION);
       setRuleSet(msg.message.rule_set);
       //   setCharJson(msg.message.characters);
       //   setLcJson(msg.message.light_cones);
-      setSideSelector(cid() == msg.message.selector);
+      setSideSelector(sessionId() == msg.message.selector);
       break;
     case MessageEnum.GAME_START:
       setGamePhase(game_phases.DRAFTING);
       setPlayerTurn(msg.message.turn_player);
       setBlueTeam(msg.message.blue_team);
       setRedTeam(msg.message.red_team);
-      if (msg.message.blue_team == cid()) {
+      if (msg.message.blue_team == sessionId()) {
         setOwnTeam("blue_team");
       } else {
         setOwnTeam("red_team");
@@ -114,7 +126,6 @@ export const handleMsg = (data: string) => {
 export {
   game_phases,
   gamePhase,
-  cid,
   setPlayerTurn,
   playerTurn,
   blueBans,
@@ -149,4 +160,5 @@ export {
   setBlueTeamName,
   redTeamName,
   setRedTeamName,
+  getCID,
 };

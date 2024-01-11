@@ -9,6 +9,7 @@ import {
   ownTeam,
   MessageEnum,
   turnIndex,
+  getCID,
 } from "~/game/game_logic";
 import { w3cwebsocket as WebSocket } from "websocket";
 import MainApp from "~/components/MainApp/MainApp";
@@ -16,7 +17,7 @@ export default function GamePage() {
   const params = useParams();
   const game_id = params.game_id;
   const ruleSetString = ruleSet();
-  const backendUrl = `ws://localhost:8000/ws/game/${game_id}?ruleSet=${ruleSetString}`;
+  const backendUrl = `ws://localhost:8000/ws/game/${game_id}?ruleSet=${ruleSetString}&cid=${getCID()}`;
   const client = new WebSocket(backendUrl);
   const LoadingMenu = () => {
     return (
