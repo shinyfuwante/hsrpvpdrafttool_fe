@@ -90,6 +90,7 @@ const MessageEnum = {
 };
 export const handleMsg = (data: string) => {
   const msg = JSON.parse(data);
+  console.log(msg.message);
   switch (msg.message.message_type) {
     case MessageEnum.GAME_READY:
       setSessionId(msg.message.cid);
