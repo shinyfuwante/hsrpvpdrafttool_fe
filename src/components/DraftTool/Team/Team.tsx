@@ -13,6 +13,7 @@ import {
   blueTeamName,
   redTeamName
 } from "~/game/game_logic";
+import styles from "./Team.module.css";
 
 export type TeamProps = {
   bansSignal: Accessor<CharacterBan[]>;
@@ -24,15 +25,7 @@ export type TeamProps = {
 const EmptyCharacterComponent = () => {
   return (
     <div
-      style={{
-        width: "100%",
-        height: "75%",
-        display: "flex",
-        "flex-direction": "column",
-        "min-height": "125px",
-        "background-color": "transparent",
-        border: "1px solid grey",
-      }}
+      class={styles.empty_card}
     >
       <div></div>
       <div></div>
@@ -67,14 +60,7 @@ const Team: Component<TeamProps> = (props) => {
         "background-color": team === "blue_team" ? "#0000FF" : "#FF0000",
       }}
     >
-      <div class="team-info"
-      style = {{
-        "text-align": "right",
-        "font-size": "20pt",
-        "display": "flex",
-        "flex-direction": "row",
-        "justify-content": "space-between",
-      }}>
+      <div class={styles.team_header}>
         <div>{teamName()} </div>
         <div>{cost()}/30</div>
       </div>
@@ -86,8 +72,6 @@ const Team: Component<TeamProps> = (props) => {
       <div
         style={{
           display: "flex",
-          "flex-direction": "row",
-          border: "solid 2px grey",
         }}
       >
         <div style={{ flex: 1 }}>
