@@ -13,6 +13,8 @@ import {
   isSinglePlayer,
 } from "~/game/game_logic";
 
+import styles from "./CharacterCard.module.css";
+
 interface CharacterCardProps {
   id: number;
   character: CharacterPick;
@@ -80,14 +82,9 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
   const characterCard = createMemo(() => {
     const backgroundColor = char.rarity === 4 ? "purple" : "orange";
     return (
-      <div
-        style={{
-          "min-height": "125px",
-          display: "flex",
-          "flex-direction": "column",
-        }}
-      >
+      <div class={styles.card_container}>
         <div
+          class={styles.character_card}
           style={{
             "background-image": `url(/character_images/${char.id}.webp)`,
             "background-size": "cover",
@@ -100,29 +97,9 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
             position: "relative",
           }}
         >
-          <div
-            style={{
-              "text-align": "center",
-              "font-size": "20pt",
-              color: "white",
-              background: "rgba(0, 0, 0, 0.5)",
-              "font-weight": "bold",
-              position: "absolute",
-              top: "0",
-              right: "0",
-            }}
-          >
-            +{cost()}
-          </div>
+          <div class={styles.cost}>+{cost()}</div>
         </div>
-        <div
-          style={{
-            display: "flex",
-            width: "100%",
-            "justify-content": "space-between",
-            "background-color": "darkgrey",
-          }}
-        >
+        <div class={styles.eidolon_sig}>
           <select
             value={props.signal()[id].eidolon}
             onChange={(e) => {
