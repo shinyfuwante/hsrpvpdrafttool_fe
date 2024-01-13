@@ -21,6 +21,8 @@ import {
   isSinglePlayer,
 } from "~/game/game_logic";
 
+import styles from "./DraftTool.module.css"
+
 interface DraftToolProps {
   handlePick: (character: CharacterPick) => void;
   handleBan: (character: CharacterBan) => void;
@@ -61,7 +63,7 @@ const DraftTool: Component<DraftToolProps> = ({handlePick, handleBan, handleSigE
             <SoloSettings />
         </Show>
           <div style={{ display: "flex", width: "100%" }}>
-            <div style={{ flex: "25%", "max-width": "30%" }}>
+            <div class={styles.team}>
               <Team
                 bansSignal={blueBans}
                 picksSignal={bluePicks}
@@ -69,20 +71,13 @@ const DraftTool: Component<DraftToolProps> = ({handlePick, handleBan, handleSigE
                 handleSigEid={handleSigEid}
               />
             </div>
-            <div
-              style={{
-                display: "flex",
-                flex: "50%",
-                "max-width": "40%",
-                "flex-direction": "column",
-              }}
-            >
+            <div class={styles.roster}>
               <Roster handleBan={handleBan} handlePick={handlePick} handleUndo={handleUndo} handleReset={handleReset} />
               <div style={{ "align-self": "center" }}>
                 Current Player Turn: {playerTurn()}
               </div>
             </div>
-            <div style={{ flex: "25%", "max-width": "30%" }}>
+            <div class={styles.team}>
               <Team
                 bansSignal={redBans}
                 picksSignal={redPicks}
