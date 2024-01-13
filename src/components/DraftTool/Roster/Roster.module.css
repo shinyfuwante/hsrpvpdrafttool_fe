@@ -1,0 +1,17 @@
+.roster_container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.selector {
+  display: grid;
+  grid-auto-rows: 100px;
+  grid-template-columns: repeat(auto-fill, 100px);
+  max-width: 100%;
+  max-height: 100%;
+  border: 1px solid grey;
+  place-content: center;
+  gap: 5px;
+}

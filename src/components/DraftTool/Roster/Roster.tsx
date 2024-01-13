@@ -20,6 +20,7 @@ import {
 } from "~/game/game_logic";
 import { CharacterDetails } from "~/types";
 import Results from "~/components/Results/Results";
+import styles from './Roster.module.css';
 
 export interface RosterProps {
   handlePick: (character: CharacterPick) => void;
@@ -94,13 +95,7 @@ const Roster: Component<RosterProps> = (props) => {
 
   return (
     <div
-      style={{
-        display: "flex",
-        "flex-direction": "column",
-        gap: "2px",
-        "padding-left": "2px",
-        "padding-right": "2px",
-      }}
+      class = {styles.roster_container}
     >
       <div
         style={{
@@ -115,16 +110,7 @@ const Roster: Component<RosterProps> = (props) => {
           placeholder="Search characters"
         />
         <div
-          style={{
-            display: "grid",
-            "grid-auto-rows": "100px",
-            "grid-template-columns": "repeat(auto-fill, 100px)",
-            "max-width": "100%",
-            "max-height": "100%",
-            border: "1px solid grey",
-            "place-content": "center",
-            gap: "5px",
-          }}
+          class={styles.selector}
         >
           {Object.entries(charJson()).map(
             ([characterName, characterDetails]) => {
