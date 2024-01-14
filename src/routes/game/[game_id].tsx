@@ -1,5 +1,5 @@
 import { useParams } from "solid-start";
-import { onMount } from "solid-js";
+import { onMount, Show } from "solid-js";
 import {
   ruleSet,
   sideSelector,
@@ -10,6 +10,7 @@ import {
   MessageEnum,
   turnIndex,
   getCID,
+  error,
 } from "~/game/game_logic";
 import { w3cwebsocket as WebSocket } from "websocket";
 import MainApp from "~/components/MainApp/MainApp";
@@ -22,8 +23,11 @@ export default function GamePage() {
   const LoadingMenu = () => {
     return (
       <div>
-        Send this link to your friend to join the game:
-        <a href={window.location.href}>{window.location.href}</a>
+        <Show when={error() != ""}>{error()}</Show>
+        <div>
+          Send this link to your friend to join the game:
+          <a href={window.location.href}>{window.location.href}</a>
+        </div>
       </div>
     );
   };
@@ -46,7 +50,7 @@ export default function GamePage() {
   };
   const handleSigEidChange = (character: CharacterPick) => {
     const message = {
-      type: MessageEnum.SigEidChange,
+      type: MessageEnum.SIG_EID_CHANGE,
       character: character,
       team: ownTeam(),
     };
@@ -54,22 +58,22 @@ export default function GamePage() {
   };
   const handleReset = () => {
     if (turnIndex() <= 0) {
-        return;
+      return;
     }
     const message = {
       type: MessageEnum.RESET_GAME,
     };
     client.send(JSON.stringify(message));
-  }
+  };
   const handleUndo = () => {
     if (turnIndex() <= 0) {
-        return;
+      return;
     }
     const message = {
       type: MessageEnum.UNDO,
     };
     client.send(JSON.stringify(message));
-  }
+  };
   const SideSelection = () => {
     const sendSideMessage = (side: string) => {
       const message = {

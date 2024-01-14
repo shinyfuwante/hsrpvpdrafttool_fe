@@ -7,6 +7,7 @@ const game_phases = {
   DRAFTING: "drafting",
   LOCK_IN: "lock-in",
   SCORING: "scoring",
+  ERROR: "error",
 };
 
 type CharacterPick = {
@@ -51,6 +52,7 @@ const [lcJson, setLcJson] = createSignal<LCJsonType>({});
 const [redCost, setRedCost] = createSignal(0);
 const [blueCost, setBlueCost] = createSignal(0);
 const [isSinglePlayer, setIsSinglePlayer] = createSignal(false);
+const [error, setError] = createSignal("");
 export const [turnIndex, setTurnIndex] = createSignal(0);
 export const turn_order = [
   { team: "blue_team", action: "ban" },
@@ -86,11 +88,13 @@ const MessageEnum = {
   PICK: "draft_pick",
   RESET_GAME: "reset_game",
   UNDO: "undo",
-  SigEidChange: "sig_eid_change",
+  SIG_EID_CHANGE: "sig_eid_change",
+  ERROR: "error",
 };
 export const handleMsg = (data: string) => {
   const msg = JSON.parse(data);
   console.log(msg.message);
+  setError("");
   switch (msg.message.message_type) {
     case MessageEnum.GAME_READY:
       setSessionId(msg.message.cid);
@@ -120,6 +124,10 @@ export const handleMsg = (data: string) => {
       if (msg.message.turn_index < turn_order.length) {
         setPlayerTurn(turn_order[turnIndex()].team);
       }
+      break;
+    case MessageEnum.ERROR:
+    //   setGamePhase(game_phases.ERROR);
+      setError(msg.message.error);
       break;
   }
 };
@@ -162,4 +170,5 @@ export {
   redTeamName,
   setRedTeamName,
   getCID,
+  error,
 };
