@@ -15,7 +15,7 @@ def process_items(items, new_data_file):
         rarity = item['rarity']
 
         # Skip if the key already exists
-        if name in new_data:
+        if name in new_data or name == '{NICKNAME}':
             continue
 
         # Add the item to the new dictionary
