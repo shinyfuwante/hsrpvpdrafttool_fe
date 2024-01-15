@@ -11,6 +11,7 @@ import {
   CharacterPick,
   ownTeam,
   isSinglePlayer,
+  calcCost
 } from "~/game/game_logic";
 
 import styles from "./CharacterCard.module.css";
@@ -38,20 +39,6 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
   const [cost, setCost] = createSignal(0);
 
   const char = charJson()[character.name];
-  const lcs = lcJson();
-  const calculateCost = createMemo(() => {
-    const lc = lcs[props.signal()[id].light_cone];
-    if (lc && props.signal()[id].superimposition > 0) {
-      setCost(
-        char.point_costs[props.signal()[id].eidolon] +
-          lc.point_costs[props.signal()[id].superimposition - 1]
-      );
-    } else {
-      setCost(char.point_costs[props.signal()[id].eidolon]);
-    }
-    onCostChange(id, cost());
-  });
-
   const handleSuperimpositionEidolonChange = () => {
     if (
       character.eidolon !== eidolon() ||
@@ -77,7 +64,8 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
   };
   createEffect(() => {
     handleSuperimpositionEidolonChange();
-    calculateCost();
+    setCost(calcCost(props.signal()[id]));
+    onCostChange(id, cost());
   });
   const characterCard = createMemo(() => {
     const backgroundColor = char.rarity === 4 ? "purple" : "orange";

@@ -34,6 +34,20 @@ const getCID = () => {
   }
   return cid;
 };
+const calcCost = (character: CharacterPick) => {
+  const char = charJson()[character.name];
+  const lcs = lcJson();
+  const lc = lcs[character.light_cone];
+  let cost = 0;
+  if (lc && character.superimposition > 0) {
+    cost +=
+      char.point_costs[character.eidolon] +
+      lc.point_costs[character.superimposition - 1];
+  } else {
+    cost += char.point_costs[character.eidolon];
+  }
+  return cost;
+};
 const [sideSelector, setSideSelector] = createSignal(false);
 const [playerTurn, setPlayerTurn] = createSignal("blue_team");
 const [ownTeam, setOwnTeam] = createSignal("blue_team");
@@ -124,6 +138,24 @@ export const handleMsg = (data: string) => {
       setBluePicks(msg.message.game_state.picks.blue_team);
       setRedPicks(msg.message.game_state.picks.red_team);
       setTurnIndex(msg.message.turn_index);
+      if (turnIndex() == 0) {
+        // reset happened
+        console.log("new game");
+        setBlueCost(0);
+        setRedCost(0);
+      } else {
+        // calc cost for every character in picks()
+        let blueCost = 0;
+        let redCost = 0;
+        bluePicks().forEach((pick) => {
+          blueCost += calcCost(pick);
+        });
+        redPicks().forEach((pick) => {
+          redCost += calcCost(pick);
+        });
+        setBlueCost(blueCost);
+        setRedCost(redCost);
+      }
       if (msg.message.turn_index < turn_order.length) {
         setPlayerTurn(turn_order[turnIndex()].team);
       }
@@ -136,8 +168,8 @@ export const handleMsg = (data: string) => {
       setError(msg.message.error);
       break;
     case MessageEnum.RECONNECT:
-        setGamePhase(game_phases.RECONNECT);
-        break;
+      setGamePhase(game_phases.RECONNECT);
+      break;
   }
 };
 
@@ -180,4 +212,5 @@ export {
   setRedTeamName,
   getCID,
   error,
+  calcCost
 };

@@ -8,6 +8,8 @@ import {
   redPicks,
   bluePicks,
   blueBans,
+  blueCost,
+  redCost,
   setBlueCost,
   setRedCost,
   blueTeamName,
@@ -38,8 +40,8 @@ const Team: Component<TeamProps> = (props) => {
   const picksSignal = props.team === "blue_team" ? bluePicks : redPicks;
   const setCostSignal = props.team === "blue_team" ? setBlueCost : setRedCost;
   const teamName = props.team === "blue_team" ? blueTeamName : redTeamName;
+  const cost = props.team === "blue_team" ? blueCost : redCost;
   const handleSigEid = props.handleSigEid;
-  const [cost, setCost] = createSignal(0);
   const costs = new Map();
   const handleCostChange = (id: number, newCost: number) => {
     const oldCost = costs.get(id) || 0;
@@ -47,7 +49,6 @@ const Team: Component<TeamProps> = (props) => {
       costs.set(id, newCost);
       const totalCost = Array.from(costs.values()).reduce((a, b) => a + b, 0);
       if (totalCost !== cost()) {
-        setCost(totalCost);
         setCostSignal(totalCost);
       }
     }

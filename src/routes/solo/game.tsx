@@ -20,6 +20,11 @@ import {
   setLcJson,
   ruleSet,
   setIsSinglePlayer,
+  setBlueCost,
+  blueCost,
+  setRedCost,
+  redCost,
+  calcCost,
 } from "~/game/game_logic";
 
 // interface DraftToolProps {
@@ -41,7 +46,7 @@ const handleSigEid = (character: CharacterPick) => {
   if (picksArray[character.index] != character) {
     picksArray[character.index] = character;
     setPicksSignal(picksArray);
-  } 
+  }
   return;
 };
 const handlePick = (character: CharacterPick) => {
@@ -61,6 +66,8 @@ const handleReset = () => {
   setBluePicks([]);
   setRedPicks([]);
   setTurnIndex(0);
+  setBlueCost(0);
+  setRedCost(0);
   setPlayerTurn(turn_order[0].team);
 };
 const handleUndo = () => {
@@ -71,13 +78,17 @@ const handleUndo = () => {
     if (currentTurn.action == "ban") {
       setBlueBans(blueBans().slice(0, -1));
     } else {
+      const char = bluePicks()[bluePicks().length - 1];
       setBluePicks(bluePicks().slice(0, -1));
+      setBlueCost(blueCost() - calcCost(char));
     }
   } else {
     if (currentTurn.action == "ban") {
       setRedBans(redBans().slice(0, -1));
     } else {
+      const char = redPicks()[redPicks().length - 1];
       setRedPicks(redPicks().slice(0, -1));
+      setRedCost(redCost() - calcCost(char));
     }
   }
   return;
