@@ -31,6 +31,17 @@ export default function GamePage() {
       </div>
     );
   };
+  const ReconnectScreen = () => {
+    return (
+      <div>
+        <div>
+          Other player has disconnected. Send this link to your friend to join
+          the game:
+          <a href={window.location.href}>{window.location.href}</a>
+        </div>
+      </div>
+    );
+  };
   const handlePick = (character: CharacterPick) => {
     const message = {
       type: MessageEnum.PICK,
@@ -107,6 +118,7 @@ export default function GamePage() {
   return (
     <div>
       <MainApp
+        ReconnectScreen={ReconnectScreen}
         LoadingMenu={LoadingMenu}
         SideSelection={SideSelection}
         handleBan={handleBan}

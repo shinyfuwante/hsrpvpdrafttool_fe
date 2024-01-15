@@ -8,6 +8,7 @@ const game_phases = {
   LOCK_IN: "lock-in",
   SCORING: "scoring",
   ERROR: "error",
+  RECONNECT: "reconnect",
 };
 
 type CharacterPick = {
@@ -90,6 +91,7 @@ const MessageEnum = {
   UNDO: "undo",
   SIG_EID_CHANGE: "sig_eid_change",
   ERROR: "error",
+  RECONNECT: "reconnect",
 };
 export const handleMsg = (data: string) => {
   const msg = JSON.parse(data);
@@ -116,6 +118,7 @@ export const handleMsg = (data: string) => {
       }
       break;
     case MessageEnum.GAME_STATE:
+      setGamePhase(game_phases.DRAFTING);
       setBlueBans(msg.message.game_state.bans.blue_team);
       setRedBans(msg.message.game_state.bans.red_team);
       setBluePicks(msg.message.game_state.picks.blue_team);
@@ -124,11 +127,17 @@ export const handleMsg = (data: string) => {
       if (msg.message.turn_index < turn_order.length) {
         setPlayerTurn(turn_order[turnIndex()].team);
       }
+      if (msg.message.team && msg.message.team != "") {
+        setOwnTeam(msg.message.team);
+      }
       break;
     case MessageEnum.ERROR:
-    //   setGamePhase(game_phases.ERROR);
+      //   setGamePhase(game_phases.ERROR);
       setError(msg.message.error);
       break;
+    case MessageEnum.RECONNECT:
+        setGamePhase(game_phases.RECONNECT);
+        break;
   }
 };
 

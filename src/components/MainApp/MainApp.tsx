@@ -9,6 +9,7 @@ import { Component, splitProps } from "solid-js";
 
 interface MainAppProps {
   LoadingMenu: Component<{}>;
+  ReconnectScreen: Component<{}>;
   SideSelection: Component<{}>;
   handlePick: (character: CharacterPick) => void;
   handleBan: (character: CharacterBan) => void;
@@ -21,9 +22,11 @@ const MainApp: Component<MainAppProps> = (props) => {
   const [components, ...others] = splitProps(props, [
     "LoadingMenu",
     "SideSelection",
+    "ReconnectScreen"
   ]);
   return (
     <div>
+      {gamePhase() === game_phases.RECONNECT && <components.ReconnectScreen />}
       {gamePhase() === game_phases.LOADING && <components.LoadingMenu />}
       {gamePhase() === game_phases.SIDE_SELECTION && (
         <components.SideSelection />
