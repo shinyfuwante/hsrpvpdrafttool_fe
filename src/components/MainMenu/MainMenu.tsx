@@ -1,5 +1,5 @@
 import { Component } from "solid-js";
-import { Title } from "solid-start";
+import styles from "./MainMenu.module.css";
 
 interface MainMenuProps {
   game_id: string;
@@ -19,25 +19,18 @@ const MainMenu: Component<MainMenuProps> = (props: any) => {
   return (
     <div>
       {props.children}
-      <div 
-      style = {{
-        "display": "flex",
-        "flex-direction": "row",
-        "justify-content": "space-evenly",
-        "align-content": "center",
-      }}>
-        <div>
+      <div class={styles.select_container}>
+        <div 
+        class = {styles.game_mode_select}>
           <div>
-            To create a game for Screen-Share drafting (e.g. Discord, etc):
+            Create a game for Screen-Share drafting (e.g. Discord, etc):
           </div>
-          <button onClick={() => soloGame()}>Create Solo Draft Game</button>
+          {/* <button onClick={() => soloGame()}>Create Solo Draft Game</button> */}
         </div>
-        <div>
-          <div>To create a game for multiplayer lobby-style drafting:</div>
-          <button onClick={() => joinGame()}>Create Lobby Draft Game</button>
-          <div>
-            (Note: the player who selects side will be randomly selected.)
-          </div>
+        <div
+        class = {styles.game_mode_select}>
+          <div>Create a game for multiplayer lobby-style drafting:</div>
+          {/* <button onClick={() => joinGame()}>Create Lobby Draft Game</button> */}
         </div>
       </div>
     </div>
