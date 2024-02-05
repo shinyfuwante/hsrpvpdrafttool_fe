@@ -1,5 +1,10 @@
 import { Component, createSignal } from "solid-js";
-import { setBlueTeamName, setRedTeamName } from "~/game/game_logic";
+import {
+  blueTeamName,
+  redTeamName,
+  setBlueTeamName,
+  setRedTeamName,
+} from "~/game/game_logic";
 
 const SoloSettings: Component<{}> = (props) => {
   const roll = () => {
@@ -9,6 +14,24 @@ const SoloSettings: Component<{}> = (props) => {
   const [player2Name, setPlayer2Name] = createSignal("Team 2");
   const [player1Roll, setPlayer1Roll] = createSignal(0);
   const [player2Roll, setPlayer2Roll] = createSignal(0);
+  const updatePlayer1Name = (name: string) => {
+    const old_name = player1Name();
+    if (old_name == blueTeamName()) {
+      setBlueTeamName(name);
+    } else {
+      setRedTeamName(name);
+    }
+    setPlayer1Name(name);
+  };
+  const updatePlayer2Name = (name: string) => {
+    const old_name = player2Name();
+    if (old_name == blueTeamName()) {
+      setBlueTeamName(name);
+    } else {
+      setRedTeamName(name);
+    }
+    setPlayer2Name(name);
+  }
   const determineBlueTeam = (name: string) => {
     if (player1Name() === name) {
       setBlueTeamName(player1Name());
@@ -26,14 +49,14 @@ const SoloSettings: Component<{}> = (props) => {
           <input
             type="text"
             placeholder="Team 1 Name"
-            onChange={(e) => setPlayer1Name(e.target.value)}
+            onChange={(e) => updatePlayer1Name(e.target.value)}
           ></input>
         </div>
         <div>
           <input
             type="text"
             placeholder="Team 2 Name"
-            onChange={(e) => setPlayer2Name(e.target.value)}
+            onChange={(e) => updatePlayer2Name(e.target.value)}
           ></input>
         </div>
         <div>
@@ -57,12 +80,14 @@ const SoloSettings: Component<{}> = (props) => {
           <div>Team 2 Roll: {player2Roll()}</div>
         </div>
         <div>
+          Blue Team is:
           <input
             type="radio"
             id="player1"
             name="team"
             value={player1Name()}
-            onChange={(e) => determineBlueTeam(e.target.value)}
+            checked={true}
+            onChange={(e) => determineBlueTeam(player1Name())}
           />
           <label for="player1">{player1Name()}</label>
           <input
@@ -70,7 +95,7 @@ const SoloSettings: Component<{}> = (props) => {
             id="player2"
             name="team"
             value={player2Name()}
-            onChange={(e) => determineBlueTeam(e.target.value)}
+            onChange={(e) => determineBlueTeam(player2Name())}
           />
           <label for="player2">{player2Name()}</label>
         </div>
