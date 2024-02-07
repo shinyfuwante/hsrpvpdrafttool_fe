@@ -20,17 +20,13 @@ const MainMenu: Component<MainMenuProps> = (props: any) => {
     <div>
       {props.children}
       <div class={styles.select_container}>
-        <div 
-        class = {styles.game_mode_select}>
+        <div onClick={() => soloGame()} class={styles.game_mode_select}>
           <div>
             Create a game for Screen-Share drafting (e.g. Discord, etc):
           </div>
-          {/* <button onClick={() => soloGame()}>Create Solo Draft Game</button> */}
         </div>
-        <div
-        class = {styles.game_mode_select}>
+        <div onClick={() => joinGame()} class={styles.game_mode_select}>
           <div>Create a game for multiplayer lobby-style drafting:</div>
-          {/* <button onClick={() => joinGame()}>Create Lobby Draft Game</button> */}
         </div>
       </div>
     </div>

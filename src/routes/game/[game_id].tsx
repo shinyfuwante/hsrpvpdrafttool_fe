@@ -14,6 +14,7 @@ import {
 } from "~/game/game_logic";
 import { w3cwebsocket as WebSocket } from "websocket";
 import MainApp from "~/components/MainApp/MainApp";
+import styles from "./game.module.css";
 export default function GamePage() {
   const params = useParams();
   const game_id = params.game_id;
@@ -22,19 +23,21 @@ export default function GamePage() {
   const client = new WebSocket(backendUrl);
   const LoadingMenu = () => {
     return (
-      <div>
-        <Show when={error() != ""}>{error()}</Show>
-        <div>
-          Send this link to your friend to join the game:
-          <a href={window.location.href}>{window.location.href}</a>
+      <div class={styles.loading_screen}>
+        <div class={styles.loading_message}>
+          <Show when={error() != ""}>{error()}</Show>
+          <div>
+            Send this link to your friend to join the game:
+            <a href={window.location.href}>{window.location.href}</a>
+          </div>
         </div>
       </div>
     );
   };
   const ReconnectScreen = () => {
     return (
-      <div>
-        <div>
+      <div class={styles.loading_screen}>
+        <div class={styles.loading_message}>
           Other player has disconnected. Send this link to your friend to join
           the game:
           <a href={window.location.href}>{window.location.href}</a>
@@ -96,13 +99,15 @@ export default function GamePage() {
     return (
       <div>
         {sideSelector() && (
-          <div>
+          <div >
             <button onClick={() => sendSideMessage("blue")}>Blue Team</button>
             <button onClick={() => sendSideMessage("red")}>Red Team</button>
           </div>
         )}
         {!sideSelector() && (
-          <div>Waiting for other player to select side...</div>
+          <div class={styles.loading_screen}>
+            <div class={styles.loading_message}>Waiting for other player to select side...</div>
+            </div>
         )}
       </div>
     );

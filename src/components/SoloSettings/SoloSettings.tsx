@@ -5,6 +5,7 @@ import {
   setBlueTeamName,
   setRedTeamName,
 } from "~/game/game_logic";
+import styles from "./SoloSettings.module.css";
 
 const SoloSettings: Component<{}> = (props) => {
   const roll = () => {
@@ -43,7 +44,8 @@ const SoloSettings: Component<{}> = (props) => {
   };
 
   return (
-    <div>
+    <div class={styles.settings_menu}>
+        <h3>Settings: </h3>
       <div>
         <div>
           <input

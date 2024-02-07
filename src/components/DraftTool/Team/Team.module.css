@@ -4,8 +4,10 @@
     display: flex;
     flex-direction: column;
     min-height: 125px;
-    background-color: transparent;
-    border: 1px solid grey;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    justify-content: center;
 }
 
 .team_header {
@@ -15,7 +17,34 @@
     flex-direction: row;
     justify-content: space-between;
 }
+.blue_team {
+    background-color: #5C7AFF;
+}
 
-.current_pick { 
-    border: 2px solid purple;
+.red_team {
+    background-color: #C83E4D;
+}
+
+.team_row {
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.current_pick {
+    border: 2px solid rgb(253, 79, 253);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(253, 79, 253, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(128, 0, 128, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(128, 0, 128, 0);
+    }
 }
