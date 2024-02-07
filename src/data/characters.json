@@ -557,5 +557,38 @@
             7
         ],
         "rarity": 5
+    },
+    "Sparkle": {
+        "id": "1306",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 5
+    },
+    "Black Swan": {
+        "id": "1307",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 5
+    },
+    "Misha": {
+        "id": "1312",
+        "point_costs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "rarity": 4
     }
 }
