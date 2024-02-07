@@ -65,12 +65,9 @@ const Team: Component<TeamProps> = (props) => {
   return (
     <div
       style={{
-        display: "flex",
-        "flex-direction": "column",
-        // "background-color": team === "blue_team" ? "#5C7AFF" : "#C83E4D",
-        "background-color": "#000000",
         "border": team === ownTeam() && !isSinglePlayer ? "10px solid yellow" : "none",
       }}
+      class = {`${styles.team}`}
     >
       <div class={`${styles.team_header} ${team === "blue_team" ? styles.blue_team : styles.red_team }`}>
         <div>{teamName()} </div>
