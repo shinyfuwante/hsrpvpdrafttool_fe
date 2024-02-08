@@ -16,11 +16,11 @@ import {
   selectedChars,
   setSelectedChars,
   ownTeam,
-  isSinglePlayer
+  isSinglePlayer,
 } from "~/game/game_logic";
 import { CharacterDetails } from "~/types";
 import Results from "~/components/Results/Results";
-import styles from './Roster.module.css';
+import styles from "./Roster.module.css";
 
 export interface RosterProps {
   handlePick: (character: CharacterPick) => void;
@@ -94,9 +94,7 @@ const Roster: Component<RosterProps> = (props) => {
   };
 
   return (
-    <div
-      class = {styles.roster_container}
-    >
+    <div class={styles.roster_container}>
       <div
         style={{
           display: redPicks().length == 8 ? "none" : "flex",
@@ -108,10 +106,9 @@ const Roster: Component<RosterProps> = (props) => {
           value={searchTerm()}
           onInput={(e) => setSearchTerm(e.target.value)}
           placeholder="Search characters"
+          class={styles.search_bar}
         />
-        <div
-          class={styles.selector}
-        >
+        <div class={styles.selector}>
           {Object.entries(charJson()).map(
             ([characterName, characterDetails]) => {
               const characterId = (characterDetails as CharacterDetails).id;
@@ -134,10 +131,11 @@ const Roster: Component<RosterProps> = (props) => {
                     filter: !isSelected ? "none" : "grayscale(100%)",
                     display:
                       isMatch || searchTerm() == "" ? "inline-block" : "none",
-                    width: "100px",
-                    height: "100px",
+                    width: "75px",
+                    height: "75px",
                     cursor: !isSelected && isTurn() ? "pointer" : "default",
                   }}
+                  class={`${styles.character} ${isSelected ? "" : "not-selected"}`}
                   onClick={
                     canPick ? () => selectCharacter(characterName) : undefined
                   }
