@@ -127,7 +127,7 @@ const Roster: Component<RosterProps> = (props) => {
                 <div
                   style={{
                     "background-color":
-                      characterDetails.rarity == 4 ? "purple" : "orange",
+                      characterDetails.rarity == 4 ? "#702985" : "#EFA00B",
                     filter: !isSelected ? "none" : "grayscale(100%)",
                     display:
                       isMatch || searchTerm() == "" ? "inline-block" : "none",
@@ -168,8 +168,8 @@ const Roster: Component<RosterProps> = (props) => {
           "justify-content": "space-between",
         }}
       >
-        <button onClick={props.handleUndo}>Undo</button>
-        <button onClick={props.handleReset}>Reset</button>
+        <button onClick={props.handleUndo} class={styles.roster_button}>Undo</button>
+        <button onClick={props.handleReset} class={styles.roster_button}>Reset</button>
       </div>
     </div>
   );

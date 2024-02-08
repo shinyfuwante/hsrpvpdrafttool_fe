@@ -11,7 +11,6 @@
   grid-template-columns: repeat(auto-fill, 75px);
   max-width: 100%;
   max-height: 100%;
-  border: 1px solid grey;
   place-content: center;
   gap: 3px;
 }
@@ -34,4 +33,19 @@
 
 .character:hover {
     transform: scale(1.1); /* Adjust this value to your liking */
+}
+
+.roster_button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    /* background-color: #EFF7F6;
+    color: black; */
+    color: #EFF7F6;
+    font-size: 1em;
+    background-color: black;
+    border: 3px solid #353b3cff;
+    cursor: pointer;
 }
