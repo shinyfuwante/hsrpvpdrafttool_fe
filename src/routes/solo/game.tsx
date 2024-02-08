@@ -33,7 +33,7 @@ import {
 //   }
 
 const incrementTurn = () => {
-  if (turnIndex() < turn_order.length - 1) {
+  if (turnIndex() < turn_order.length) {
     setTurnIndex(turnIndex() + 1);
     setPlayerTurn(turn_order[turnIndex()].team);
   }
@@ -74,13 +74,13 @@ const handleUndo = () => {
   setTurnIndex(turnIndex() - 1);
   setPlayerTurn(turn_order[turnIndex()].team);
   const currentTurn = turn_order[turnIndex()];
-  if (currentTurn.team == "blue_team") {
+  if (playerTurn() == "blue_team") {
     if (currentTurn.action == "ban") {
       setBlueBans(blueBans().slice(0, -1));
     } else {
       const char = bluePicks()[bluePicks().length - 1];
       setBluePicks(bluePicks().slice(0, -1));
-      setBlueCost(blueCost() - calcCost(char));
+      setBlueCost(Math.max(blueCost() - calcCost(char), 0));
     }
   } else {
     if (currentTurn.action == "ban") {
@@ -88,7 +88,7 @@ const handleUndo = () => {
     } else {
       const char = redPicks()[redPicks().length - 1];
       setRedPicks(redPicks().slice(0, -1));
-      setRedCost(redCost() - calcCost(char));
+      setRedCost(Math.max(redCost() - calcCost(char), 0));
     }
   }
   return;
