@@ -20,7 +20,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+results_button:hover {
     background-color: #353b3cff;
     transform: scale(1.1);
 }
@@ -51,17 +51,4 @@ button:hover {
     gap: 0.3em;
     padding: 0.2em;
     justify-content: space-between;
-}
-
-input{
-    background-color: #fff; 
-    color: #000; 
-    border: none;
-    margin: 5px; 
-}
-select {
-    background-color: #fff;
-    color: #000;
-    border: none;
-    margin: 5px;
 }

@@ -27,7 +27,7 @@ export default function GamePage() {
         <div class={styles.loading_message}>
           <Show when={error() != ""}>{error()}</Show>
           <div>
-            Send this link to your friend to join the game:
+            Send this link to your friend to join the game: 
             <a href={window.location.href}>{window.location.href}</a>
           </div>
         </div>
@@ -99,9 +99,9 @@ export default function GamePage() {
     return (
       <div>
         {sideSelector() && (
-          <div >
-            <button onClick={() => sendSideMessage("blue")}>Blue Team</button>
-            <button onClick={() => sendSideMessage("red")}>Red Team</button>
+          <div class={styles.side_selector}>
+            <button class={styles.blue_team} onClick={() => sendSideMessage("blue")}>Blue Team</button>
+            <button class={styles.red_team} onClick={() => sendSideMessage("red")}>Red Team</button>
           </div>
         )}
         {!sideSelector() && (

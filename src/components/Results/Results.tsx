@@ -80,7 +80,7 @@ const Results: Component<{}> = (props) => {
           </input>
         </div>
       </div>
-      <button onClick={() => calculateScores()}>Calculate Score</button>
+      <button class={styles.results_button} onClick={() => calculateScores()}>Calculate Score</button>
       <Show fallback={null} when={scoreCalced() == true}>
         <div class={styles.winning_string}>
           {winnerString()}

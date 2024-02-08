@@ -14,15 +14,16 @@
   box-sizing: border-box;
   text-align: center;
   font-size: 1.2rem;
-  color: var(--periwinkle);
+  color: white;
   text-shadow: 0 0 5px #000;
-  background: var(--chinese-violet);
   border-radius: 10px;
+  background-color: #424B54;
+  transition: all 0.3s ease;
   /* box-shadow: 0 0 10px var(--periwinkle); */
   overflow: hidden;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 .game_mode_select:hover {
-  box-shadow: 0 0 20px #000;
+  transform: scale(1.1);
 }

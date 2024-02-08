@@ -8,7 +8,7 @@ export default function Home() {
     <main>
       <Title>HSR PVP Draft Tool</Title>
       <MainMenu game_id={game_id} create_game={true}>
-        <h1>Welcome to the HSR PVP Draft Tool!</h1>
+        <h1>HSR PVP Draft Tool!</h1>
       </MainMenu>
     </main>
   );

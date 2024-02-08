@@ -62,7 +62,7 @@ const DraftTool: Component<DraftToolProps> = ({handlePick, handleBan, handleSigE
         <Show when={isSinglePlayer()}>
             <SoloSettings />
         </Show>
-          <div style={{ display: "flex", width: "100%" }}>
+          <div style={{ display: "flex", width: "100%", height: "100vh" }}>
             <div class={styles.team}>
               <Team
                 bansSignal={blueBans}

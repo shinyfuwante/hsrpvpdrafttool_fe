@@ -16,8 +16,8 @@
   box-sizing: border-box;
   text-align: center;
   font-size: 1.2rem;
-  color: var(--periwinkle);
-  background: var(--chinese-violet);
+  color: white;
+  background: #424B54;
   border-radius: 10px;
   /* box-shadow: 0 0 10px var(--periwinkle); */
   overflow: hidden;
@@ -30,3 +30,28 @@
     justify-content: space-evenly;
     height: 100vh;
   }
+
+.side_selector {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.blue_team {
+    background-color: #5C7AFF;
+}
+
+.red_team {
+    background-color: #C83E4D;
+}
+
+.blue_team:hover {
+    transform: scale(1.1);
+}
+
+.red_team:hover {
+    transform: scale(1.1);
+}
