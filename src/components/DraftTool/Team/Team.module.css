@@ -41,9 +41,7 @@
     align-items: center;
     justify-content: space-between;
 }
-.ban_row {
-    padding: 100px;
-}
+
 .current_pick {
     border: 2px solid rgb(253, 79, 253);
     animation: pulse 2s infinite;
