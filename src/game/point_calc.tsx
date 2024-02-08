@@ -2,7 +2,7 @@ export const calculateBonusCycles = (points: number) => {
   if (points < 30) {
     return (points - 30) / 6;
   } else {
-    return (points - 30) / 2;
+    return (points - 30) / 4;
   }
 };
 

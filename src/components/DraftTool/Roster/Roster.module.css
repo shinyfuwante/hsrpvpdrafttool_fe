@@ -45,7 +45,12 @@
     color: black; */
     color: #EFF7F6;
     font-size: 1em;
-    background-color: black;
+    background-color: #424B54;
     border: 3px solid #353b3cff;
     cursor: pointer;
+}
+
+.roster_button:hover {
+    background-color: #353b3cff;
+    transform: scale(1.1);
 }

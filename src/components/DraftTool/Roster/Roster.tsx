@@ -72,7 +72,7 @@ const Roster: Component<RosterProps> = (props) => {
         name: characterName,
         light_cone: "",
         eidolon: 0,
-        superimposition: 0,
+        superimposition: 1,
         index: Math.max(0, pickSignal().length - 1),
         team: currentPlayer,
       };
@@ -127,7 +127,7 @@ const Roster: Component<RosterProps> = (props) => {
                 <div
                   style={{
                     "background-color":
-                      characterDetails.rarity == 4 ? "#702985" : "#EFA00B",
+                      characterDetails.rarity == 4 ? "#702985" : "#EFAF0B",
                     filter: !isSelected ? "none" : "grayscale(100%)",
                     display:
                       isMatch || searchTerm() == "" ? "inline-block" : "none",

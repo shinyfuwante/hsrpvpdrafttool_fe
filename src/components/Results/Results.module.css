@@ -1,0 +1,67 @@
+.results {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    /* background-color: #EFF7F6;
+    color: black; */
+    color: #EFF7F6;
+    font-size: 1em;
+    background-color: #424B54;
+    border: 3px solid #353b3cff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #353b3cff;
+    transform: scale(1.1);
+}
+
+.blue_team {
+    background-color: #5C7AFF;
+    text-align: center;
+}
+
+.red_team {
+    background-color: #C83E4D;
+    text-align: center;
+}
+
+.winning_string {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: #353b3cff;
+    color: white;
+    margin: 0.3em;
+}
+.score_display {
+    display: flex;
+    flex-direction: row;
+    gap: 0.3em;
+    padding: 0.2em;
+    justify-content: space-between;
+}
+
+input{
+    background-color: #fff; 
+    color: #000; 
+    border: none;
+    margin: 5px; 
+}
+select {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    margin: 5px;
+}

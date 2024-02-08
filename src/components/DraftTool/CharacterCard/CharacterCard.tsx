@@ -68,7 +68,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
     onCostChange(id, cost());
   });
   const characterCard = createMemo(() => {
-    const backgroundColor = char.rarity === 4 ? "purple" : "orange";
+    const backgroundColor = char.rarity === 4 ? "#702985" : "#EFAF0B";
     return (
       <div class={styles.card_container}>
         <div
@@ -114,7 +114,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
                   setLightCone(e.target.value);
                 }
               }}
-              placeholder="LC"
+              placeholder="Light Cone"
               style={{ flex: 1 }}
               disabled={isSinglePlayer() ? false : team !== ownTeam()}
             />
@@ -125,7 +125,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
               ))}
             </datalist>
             <select
-              value={props.signal()[id].superimposition}
+              value={props.signal()[id].superimposition || 1}
               onChange={(e) => {
                 setSuperimposition(Number(e.target.value));
               }}
