@@ -19,9 +19,10 @@ import {
   CharacterBan,
   CharacterPick,
   isSinglePlayer,
+  ownTeam,
 } from "~/game/game_logic";
 
-import styles from "./DraftTool.module.css"
+import styles from "./DraftTool.module.css";
 
 interface DraftToolProps {
   handlePick: (character: CharacterPick) => void;
@@ -30,7 +31,13 @@ interface DraftToolProps {
   handleUndo: () => void;
   handleReset: () => void;
 }
-const DraftTool: Component<DraftToolProps> = ({handlePick, handleBan, handleSigEid, handleUndo, handleReset}) => {
+const DraftTool: Component<DraftToolProps> = ({
+  handlePick,
+  handleBan,
+  handleSigEid,
+  handleUndo,
+  handleReset,
+}) => {
   const [ready, setReady] = createSignal(false);
   onMount(async () => {
     let response1 = await fetch(`/rule_sets/${ruleSet()}/characters.json`);
@@ -59,9 +66,9 @@ const DraftTool: Component<DraftToolProps> = ({handlePick, handleBan, handleSigE
     <>
       {ready() && (
         <>
-        <Show when={isSinglePlayer()}>
+          <Show when={isSinglePlayer()}>
             <SoloSettings />
-        </Show>
+          </Show>
           <div style={{ display: "flex", width: "100%", height: "100vh" }}>
             <div class={styles.team}>
               <Team
@@ -72,10 +79,17 @@ const DraftTool: Component<DraftToolProps> = ({handlePick, handleBan, handleSigE
               />
             </div>
             <div class={styles.roster}>
-              <Roster handleBan={handleBan} handlePick={handlePick} handleUndo={handleUndo} handleReset={handleReset} />
-              <div style={{ "align-self": "center" }}>
-                Current Player Turn: {playerTurn()}
-              </div>
+              <Roster
+                handleBan={handleBan}
+                handlePick={handlePick}
+                handleUndo={handleUndo}
+                handleReset={handleReset}
+              />
+              <Show when={!isSinglePlayer()}>
+                <div class={styles.team_notifier}>
+                  You are on the {ownTeam() == "blue_team" ? "Blue" : "Red"} Team
+                </div>
+              </Show>
             </div>
             <div class={styles.team}>
               <Team

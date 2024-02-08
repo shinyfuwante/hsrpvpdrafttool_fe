@@ -9,3 +9,8 @@
   max-width: 40%;
   flex-direction: column;
 }
+
+.team_notifier {
+    color: white;
+    align-self: center;
+}

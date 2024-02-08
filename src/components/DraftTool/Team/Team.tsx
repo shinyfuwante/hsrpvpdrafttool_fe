@@ -71,7 +71,7 @@ const Team: Component<TeamProps> = (props) => {
     >
       <div class={`${styles.team_header} ${team === "blue_team" ? styles.blue_team : styles.red_team }`}>
         <div>{teamName()} </div>
-        <div>{cost()}/30</div>
+        <div class={`${cost() >= 30 ? styles.over_30    : ""}`}>{cost()}/30</div>
       </div>
       <div style={{ flex: 1 }}>
         <Show when={bansSignal()[0]} fallback={<EmptyCharacterComponent id={0} type={"ban"}/>}>
