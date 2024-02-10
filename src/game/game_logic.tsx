@@ -109,7 +109,6 @@ const MessageEnum = {
 };
 export const handleMsg = (data: string) => {
   const msg = JSON.parse(data);
-  console.log(msg.message);
   setError("");
   switch (msg.message.message_type) {
     case MessageEnum.GAME_READY:
