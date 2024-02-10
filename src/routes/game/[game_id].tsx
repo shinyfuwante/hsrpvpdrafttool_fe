@@ -19,7 +19,7 @@ export default function GamePage() {
   const params = useParams();
   const game_id = params.game_id;
   const ruleSetString = ruleSet();
-  const backendUrl = `wss://hsrpvpdrafttoolbe.railway.internal/ws/game/${game_id}?ruleSet=${ruleSetString}&cid=${getCID()}`;
+  const backendUrl = `wss://hsrpvpdrafttoolbe.railway.internal:8000/ws/game/${game_id}?ruleSet=${ruleSetString}&cid=${getCID()}`;
   const client = new WebSocket(backendUrl);
   const LoadingMenu = () => {
     return (
