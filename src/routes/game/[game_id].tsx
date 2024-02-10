@@ -20,7 +20,9 @@ export default function GamePage() {
   const params = useParams();
   const game_id = params.game_id;
   const ruleSetString = ruleSet();
-  const backendUrl = `${import.meta.env.VITE_BACKEND_URL}/${game_id}?ruleSet=${ruleSetString}&cid=${getCID()}`;
+  const backendBase = import.meta.env.VITE_BACKEND_URL;
+  console.log(backendBase);
+  const backendUrl = `${backendBase}/${game_id}?ruleSet=${ruleSetString}&cid=${getCID()}`;
   const client = new WebSocket(backendUrl);
   const LoadingMenu = () => {
     return (
