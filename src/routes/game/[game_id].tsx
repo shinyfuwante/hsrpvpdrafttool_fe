@@ -15,12 +15,11 @@ import {
 import { w3cwebsocket as WebSocket } from "websocket";
 import MainApp from "~/components/MainApp/MainApp";
 import styles from "./game.module.css";
-
 export default function GamePage() {
   const params = useParams();
   const game_id = params.game_id;
   const ruleSetString = ruleSet();
-  const backendUrl = `${import.meta.env.VITE_BACKEND_URL}/${game_id}?ruleSet=${ruleSetString}&cid=${getCID()}`;
+  const backendUrl = `ws://hsrpvpdrafttoolbe.railway.internal/ws/game/${game_id}?ruleSet=${ruleSetString}&cid=${getCID()}`;
   const client = new WebSocket(backendUrl);
   const LoadingMenu = () => {
     return (
