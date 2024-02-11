@@ -11,7 +11,7 @@ import {
   CharacterPick,
   ownTeam,
   isSinglePlayer,
-  calcCost
+  calcCost,
 } from "~/game/game_logic";
 
 import styles from "./CharacterCard.module.css";
@@ -75,14 +75,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
           class={styles.character_card}
           style={{
             "background-image": `url(/character_images/${char.id}.webp)`,
-            "background-size": "cover",
-            "background-position": "25% 25%",
-            width: "100%",
-            height: "75%",
-            "min-height": "100px",
-            flex: "1",
             "background-color": backgroundColor,
-            position: "relative",
           }}
         >
           <div class={styles.cost}>+{cost()}</div>
@@ -93,7 +86,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
             onChange={(e) => {
               setEidolon(Number(e.target.value));
             }}
-            style={{ "max-width": "25%" }}
+            style={{ "max-width": "100%" }}
             disabled={isSinglePlayer() ? false : team !== ownTeam()}
           >
             {[...Array(7).keys()].map((value) => (
@@ -102,7 +95,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
           </select>
           <div
             style={{
-              "max-width": "75%",
+              "max-width": "100%",
               display: "flex",
             }}
           >
@@ -129,7 +122,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
               onChange={(e) => {
                 setSuperimposition(Number(e.target.value));
               }}
-              style={{ flex: 1 }}
+              style={{ "max-width": "30%" }}
               disabled={isSinglePlayer() ? false : team !== ownTeam()}
             >
               {[...Array(5).keys()].map((value) => (

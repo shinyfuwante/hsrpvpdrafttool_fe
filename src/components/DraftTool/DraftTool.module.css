@@ -1,16 +1,21 @@
 .team {
   flex: 25%;
-  max-width: 30%;
 }
 
 .roster {
   display: flex;
   flex: 50%;
-  max-width: 40%;
   flex-direction: column;
 }
 
 .team_notifier {
     color: white;
     align-self: center;
+}
+
+.draft_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100vw;
+  height: 100vh;
 }
