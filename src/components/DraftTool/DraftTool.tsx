@@ -69,35 +69,38 @@ const DraftTool: Component<DraftToolProps> = ({
           <Show when={isSinglePlayer()}>
             <SoloSettings />
           </Show>
-          <div class={styles.draft_container}>
-            <div class={styles.team}>
-              <Team
-                bansSignal={blueBans}
-                picksSignal={bluePicks}
-                team={"blue_team"}
-                handleSigEid={handleSigEid}
-              />
-            </div>
-            <div class={styles.roster}>
-              <Roster
-                handleBan={handleBan}
-                handlePick={handlePick}
-                handleUndo={handleUndo}
-                handleReset={handleReset}
-              />
-              <Show when={!isSinglePlayer()}>
-                <div class={styles.team_notifier}>
-                  You are on the {ownTeam() == "blue_team" ? "Blue" : "Red"} Team
-                </div>
-              </Show>
-            </div>
-            <div class={styles.team}>
-              <Team
-                bansSignal={redBans}
-                picksSignal={redPicks}
-                team={"red_team"}
-                handleSigEid={handleSigEid}
-              />
+          <div class={styles.overall_container}>
+            <div class={styles.draft_container}>
+              <div class={styles.team}>
+                <Team
+                  bansSignal={blueBans}
+                  picksSignal={bluePicks}
+                  team={"blue_team"}
+                  handleSigEid={handleSigEid}
+                />
+              </div>
+              <div class={styles.roster}>
+                <Roster
+                  handleBan={handleBan}
+                  handlePick={handlePick}
+                  handleUndo={handleUndo}
+                  handleReset={handleReset}
+                />
+                <Show when={!isSinglePlayer()}>
+                  <div class={styles.team_notifier}>
+                    You are on the {ownTeam() == "blue_team" ? "Blue" : "Red"}{" "}
+                    Team
+                  </div>
+                </Show>
+              </div>
+              <div class={styles.team}>
+                <Team
+                  bansSignal={redBans}
+                  picksSignal={redPicks}
+                  team={"red_team"}
+                  handleSigEid={handleSigEid}
+                />
+              </div>
             </div>
           </div>
         </>
