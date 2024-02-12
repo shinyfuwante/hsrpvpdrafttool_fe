@@ -41,37 +41,45 @@ const DraftTool: Component<DraftToolProps> = ({
 }) => {
   const [ready, setReady] = createSignal(false);
   const fetchData = async () => {
-    let response1 = await fetch(`/rule_sets/${ruleSet()}/characters.json?version=${version()}`);
+    let response1 = await fetch(
+      `/rule_sets/${ruleSet()}/characters.json?version=${version()}`
+    );
     // if response fails, fetch phd_standard characters.json
     if (!response1.ok) {
       try {
-        response1 = await fetch(`/rule_sets/phd_standard/characters.json?version=${version()}`);
+        response1 = await fetch(
+          `/rule_sets/phd_standard/characters.json?version=${version()}`
+        );
       } catch (e) {
         console.log(e);
       }
     }
     setCharJson(await response1.json());
 
-    let response2 = await fetch(`/rule_sets/${ruleSet()}/light_cones.json?version=${version()}`);
+    let response2 = await fetch(
+      `/rule_sets/${ruleSet()}/light_cones.json?version=${version()}`
+    );
     if (!response2.ok) {
       try {
-        response1 = await fetch(`/rule_sets/phd_standard/characters.json?version=${version()}`);
+        response1 = await fetch(
+          `/rule_sets/phd_standard/characters.json?version=${version()}`
+        );
       } catch (e) {
         console.log(e);
       }
     }
     setLcJson(await response2.json());
     setReady(true);
-  }
+  };
   fetchData();
   return (
     <>
       {ready() && (
         <>
-          <Show when={isSinglePlayer()}>
-            <SoloSettings />
-          </Show>
           <div class={styles.overall_container}>
+            <Show when={isSinglePlayer()}>
+              <SoloSettings />
+            </Show>
             <div class={styles.draft_container}>
               <div class={styles.team}>
                 <Team
