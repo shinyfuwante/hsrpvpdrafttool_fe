@@ -109,7 +109,7 @@ const Roster: Component<RosterProps> = (props) => {
           class={styles.search_bar}
         />
         <div class={styles.selector}>
-          {Object.entries(charJson()).map(
+          {Object.entries(charJson()).sort(([a],[b]) => a.localeCompare(b)).map(
             ([characterName, characterDetails]) => {
               const characterId = (characterDetails as CharacterDetails).id;
               const characterImage = `/character_icons/${characterId}.webp`;
