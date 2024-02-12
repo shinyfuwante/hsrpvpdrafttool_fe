@@ -36,7 +36,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
     character.superimposition
   );
   const [lightCone, setLightCone] = createSignal(character.light_cone);
-  const [cost, setCost] = createSignal(0);
+  const [cost, setCost] = createSignal(calcCost(props.signal()[id]));
 
   const char = charJson()[character.name];
   const handleSuperimpositionEidolonChange = () => {
@@ -61,11 +61,11 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
         handleSigEid(pick);
       }
     }
+    setCost(calcCost(props.signal()[id]));
+    onCostChange(id, cost());
   };
   createEffect(() => {
     handleSuperimpositionEidolonChange();
-    setCost(calcCost(props.signal()[id]));
-    onCostChange(id, cost());
   });
   const characterCard = createMemo(() => {
     const backgroundColor = char.rarity === 4 ? "#702985" : "#EFAF0B";
@@ -83,8 +83,9 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
         <div class={styles.eidolon_sig}>
           <select
             value={props.signal()[id].eidolon}
-            onChange={(e) => {
+            onInput={(e) => {
               setEidolon(Number(e.target.value));
+              handleSuperimpositionEidolonChange();
             }}
             style={{ "max-width": "100%" }}
             disabled={isSinglePlayer() ? false : team !== ownTeam()}
@@ -105,6 +106,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
               onBlur={(e) => {
                 if (e.target.value !== lightCone()) {
                   setLightCone(e.target.value);
+                  handleSuperimpositionEidolonChange();
                 }
               }}
               placeholder="Light Cone"
@@ -119,8 +121,9 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
             </datalist>
             <select
               value={props.signal()[id].superimposition || 1}
-              onChange={(e) => {
+              onInput={(e) => {
                 setSuperimposition(Number(e.target.value));
+                handleSuperimpositionEidolonChange();
               }}
               style={{ "max-width": "30%" }}
               disabled={isSinglePlayer() ? false : team !== ownTeam()}

@@ -40,7 +40,7 @@ const DraftTool: Component<DraftToolProps> = ({
   handleReset,
 }) => {
   const [ready, setReady] = createSignal(false);
-  onMount(async () => {
+  const fetchData = async () => {
     let response1 = await fetch(`/rule_sets/${ruleSet()}/characters.json?version=${version()}`);
     // if response fails, fetch phd_standard characters.json
     if (!response1.ok) {
@@ -62,7 +62,8 @@ const DraftTool: Component<DraftToolProps> = ({
     }
     setLcJson(await response2.json());
     setReady(true);
-  });
+  }
+  fetchData();
   return (
     <>
       {ready() && (
