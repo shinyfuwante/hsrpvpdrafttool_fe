@@ -20,6 +20,7 @@ import {
   CharacterPick,
   isSinglePlayer,
   ownTeam,
+  version,
 } from "~/game/game_logic";
 
 import styles from "./DraftTool.module.css";
@@ -40,21 +41,21 @@ const DraftTool: Component<DraftToolProps> = ({
 }) => {
   const [ready, setReady] = createSignal(false);
   onMount(async () => {
-    let response1 = await fetch(`/rule_sets/${ruleSet()}/characters.json`);
+    let response1 = await fetch(`/rule_sets/${ruleSet()}/characters.json?version=${version()}`);
     // if response fails, fetch phd_standard characters.json
     if (!response1.ok) {
       try {
-        response1 = await fetch(`/rule_sets/phd_standard/characters.json`);
+        response1 = await fetch(`/rule_sets/phd_standard/characters.json?version=${version()}`);
       } catch (e) {
         console.log(e);
       }
     }
     setCharJson(await response1.json());
 
-    let response2 = await fetch(`/rule_sets/${ruleSet()}/light_cones.json`);
+    let response2 = await fetch(`/rule_sets/${ruleSet()}/light_cones.json?version=${version()}`);
     if (!response2.ok) {
       try {
-        response1 = await fetch(`/rule_sets/phd_standard/characters.json`);
+        response1 = await fetch(`/rule_sets/phd_standard/characters.json?version=${version()}`);
       } catch (e) {
         console.log(e);
       }

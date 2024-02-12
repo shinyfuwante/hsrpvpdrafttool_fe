@@ -1,6 +1,11 @@
 import { createSignal } from "solid-js";
 import { CharJsonType, LCJsonType } from "~/types";
 import { v4 } from "uuid";
+
+export const version = () => {
+  // version of tool.version of game.subversion of game.subversion of rules
+  return "1.2.0.0";
+}
 const game_phases = {
   LOADING: "loading",
   SIDE_SELECTION: "sideSelection",
