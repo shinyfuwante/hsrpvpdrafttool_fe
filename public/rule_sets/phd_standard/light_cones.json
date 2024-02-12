@@ -331,117 +331,117 @@
   },
   "Night on the Milky Way": {
     "id": "23000",
-    "point_costs": [0, 0, 0, 0, 0],
+    "point_costs": [0, 2, 3, 4, 5],
     "rarity": 5
   },
   "In the Night": {
     "id": "23001",
-    "point_costs": [0, 0, 0, 0, 0],
+    "point_costs": [2, 3, 4, 5, 6],
     "rarity": 5
   },
   "Something Irreplaceable": {
     "id": "23002",
-    "point_costs": [0, 0, 0, 0, 0],
+    "point_costs": [0, 2, 3, 4, 5],
     "rarity": 5
   },
   "But the Battle Isn't Over": {
     "id": "23003",
-    "point_costs": [0, 0, 0, 0, 0],
+    "point_costs": [2, 3, 4, 5, 6],
     "rarity": 5
   },
   "In the Name of the World": {
     "id": "23004",
-    "point_costs": [0, 0, 0, 0, 0],
+    "point_costs": [0, 2, 3, 4, 5],
     "rarity": 5
   },
   "Moment of Victory": {
     "id": "23005",
-    "point_costs": [0, 0, 0, 0, 0],
+    "point_costs": [0, 2, 3, 4, 5],
     "rarity": 5
   },
   "Patience Is All You Need": {
     "id": "23006",
-    "point_costs": [0, 0, 0, 0, 0],
+    "point_costs": [2, 3, 4, 5, 6],
     "rarity": 5
   },
   "Incessant Rain": {
     "id": "23007",
-    "point_costs": [0, 0, 0, 0, 0],
+    "point_costs": [2, 3, 4, 5, 6],
     "rarity": 5
   },
   "Echoes of the Coffin": {
     "id": "23008",
-    "point_costs": [0, 0, 0, 0, 0],
+    "point_costs": [2, 3, 4, 5, 6],
     "rarity": 5
   },
   "The Unreachable Side": {
     "id": "23009",
-    "point_costs": [0, 0, 0, 0, 0],
+    "point_costs": [2, 3, 4, 5, 6],
     "rarity": 5
   },
   "Before Dawn": {
     "id": "23010",
-    "point_costs": [0, 0, 0, 0, 0],
+    "point_costs": [2, 3, 4, 5, 6],
     "rarity": 5
   },
   "She Already Shut Her Eyes": {
     "id": "23011",
-    "point_costs": [0, 0, 0, 0, 0],
+    "point_costs": [2, 3, 4, 5, 6],
     "rarity": 5
   },
   "Sleep Like the Dead": {
     "id": "23012",
-    "point_costs": [0, 0, 0, 0, 0],
+    "point_costs": [0, 2, 3, 4, 5],
     "rarity": 5
   },
   "Time Waits for No One": {
     "id": "23013",
-    "point_costs": [0, 0, 0, 0, 0],
+    "point_costs": [0, 2, 3, 4, 5],
     "rarity": 5
   },
   "I Shall Be My Own Sword": {
     "id": "23014",
-    "point_costs": [0, 0, 0, 0, 0],
+    "point_costs": [2, 3, 4, 5, 6],
     "rarity": 5
   },
   "Brighter Than the Sun": {
     "id": "23015",
-    "point_costs": [0, 0, 0, 0, 0],
+    "point_costs": [2, 3, 4, 5, 6],
     "rarity": 5
   },
   "Worrisome, Blissful": {
     "id": "23016",
-    "point_costs": [0, 0, 0, 0, 0],
+    "point_costs": [2, 3, 4, 5, 6],
     "rarity": 5
   },
   "Night of Fright": {
     "id": "23017",
-    "point_costs": [0, 0, 0, 0, 0],
+    "point_costs": [2, 3, 4, 5, 6],
     "rarity": 5
   },
   "An Instant Before A Gaze": {
     "id": "23018",
-    "point_costs": [0, 0, 0, 0, 0],
+    "point_costs": [2, 3, 4, 5, 6],
     "rarity": 5
   },
   "Past Self in Mirror": {
     "id": "23019",
-    "point_costs": [0, 0, 0, 0, 0],
+    "point_costs": [2, 3, 4, 5, 6],
     "rarity": 5
   },
   "Baptism of Pure Thought": {
     "id": "23020",
-    "point_costs": [0, 0, 0, 0, 0],
+    "point_costs": [2, 3, 4, 5, 6],
     "rarity": 5
   },
   "Earthly Escapade": {
     "id": "23021",
-    "point_costs": [0, 0, 0, 0, 0],
+    "point_costs": [2, 3, 4, 5, 6],
     "rarity": 5
   },
   "Reforged Remembrance": {
     "id": "23022",
-    "point_costs": [0, 0, 0, 0, 0],
+    "point_costs": [2, 3, 4, 5, 6],
     "rarity": 5
   },
   "On the Fall of an Aeon": {
