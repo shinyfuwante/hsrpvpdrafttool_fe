@@ -37,13 +37,17 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
   );
   const [lightCone, setLightCone] = createSignal(character.light_cone);
   const [cost, setCost] = createSignal(calcCost(props.signal()[id]));
+  
+  let prevEid = character.eidolon;
+  let prevLightCone = character.light_cone;
+  let prevSuper = character.superimposition;
 
   const char = charJson()[character.name];
   const handleSuperimpositionEidolonChange = () => {
     if (
-      character.eidolon !== eidolon() ||
-      character.superimposition !== superimposition() ||
-      character.light_cone !== lightCone()
+      prevEid !== eidolon() ||
+      prevSuper !== superimposition() ||
+      prevLightCone !== lightCone()
     ) {
       const pick: CharacterPick = {
         name: character.name,
@@ -84,6 +88,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
           <select
             value={props.signal()[id].eidolon}
             onInput={(e) => {
+              prevEid = eidolon();
               setEidolon(Number(e.target.value));
               handleSuperimpositionEidolonChange();
             }}
@@ -105,6 +110,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
               value={props.signal()[id].light_cone}
               onBlur={(e) => {
                 if (e.target.value !== lightCone()) {
+                  prevLightCone = lightCone();
                   setLightCone(e.target.value);
                   handleSuperimpositionEidolonChange();
                 }
@@ -122,6 +128,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
             <select
               value={props.signal()[id].superimposition || 1}
               onInput={(e) => {
+                prevSuper = superimposition();
                 setSuperimposition(Number(e.target.value));
                 handleSuperimpositionEidolonChange();
               }}
