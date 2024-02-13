@@ -61,8 +61,8 @@ const DraftTool: Component<DraftToolProps> = ({
     );
     if (!response2.ok) {
       try {
-        response1 = await fetch(
-          `/rule_sets/phd_standard/characters.json?version=${version()}`
+        response2 = await fetch(
+          `/rule_sets/phd_standard/light_cones.json?version=${version()}`
         );
       } catch (e) {
         console.log(e);
