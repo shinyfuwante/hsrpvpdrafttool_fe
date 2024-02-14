@@ -85,8 +85,8 @@ const Results: Component<{}> = (props) => {
         <div class={styles.winning_string}>
           {winnerString()}
           <div class={styles.score_display}>
-            <div class={styles.blue_team}> {blueScore().toFixed(2)}</div>{" "}
-            <div class={styles.red_team}>{redScore().toFixed(2)}</div>    
+            <div class={styles.blue_team}> {blueScore().toFixed(4)}</div>{" "}
+            <div class={styles.red_team}>{redScore().toFixed(4)}</div>    
           </div>
         </div>
       </Show>

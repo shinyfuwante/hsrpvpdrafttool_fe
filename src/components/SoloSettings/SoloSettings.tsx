@@ -19,7 +19,7 @@ const SoloSettings: Component<{}> = (props) => {
     const old_name = player1Name();
     if (old_name == blueTeamName()) {
       setBlueTeamName(name);
-    } else {
+    } else if (old_name == redTeamName()) {
       setRedTeamName(name);
     }
     setPlayer1Name(name);
@@ -28,7 +28,7 @@ const SoloSettings: Component<{}> = (props) => {
     const old_name = player2Name();
     if (old_name == blueTeamName()) {
       setBlueTeamName(name);
-    } else {
+    } else if (old_name == redTeamName()) {
       setRedTeamName(name);
     }
     setPlayer2Name(name);
@@ -89,7 +89,6 @@ const SoloSettings: Component<{}> = (props) => {
               id="player1"
               name="team"
               value={player1Name()}
-              checked={true}
               onChange={(e) => determineBlueTeam(player1Name())}
             />
             <label for="player1">{player1Name()}</label>
