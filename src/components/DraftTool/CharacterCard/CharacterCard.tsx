@@ -122,7 +122,10 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
 
             <datalist id="light-cones">
               {Object.keys(lcJson()).map((key) => (
-                <option value={key}>{key}</option>
+                <>
+                {/* <option value={key}>{key}</option> */}
+                <option value={key}>{lcJson()[key].character || key}</option>
+                </>
               ))}
             </datalist>
             <select

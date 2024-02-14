@@ -9,6 +9,7 @@ export type CharJsonType = {
 export type LCDetails = {
     id: string;
     point_costs: number[];
+    character?: string;
     rarity: number;
 };
 export type LCJsonType = {
