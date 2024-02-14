@@ -1,7 +1,7 @@
 # starrailpb.dev frontend
 https://starrailpb.dev/
 
-This is the front end for the Star Rail Pick Ban project, which uses SolidJS as its framework. 
+This is the front end for the Star Rail Pick Ban project, which uses SolidJS as its framework. This app is dockerized and hosted on Railway. 
 
 This front end serves as a tool for players who enjoy the community-made Player vs Player (PvP) game mode for Honkai: Star Rail, which is a single player gacha game. The goal of PvP is to clear a certain stage of content faster than the opposing team. This game mode introduces a drafting phase where players can pick and ban characters, as well as declare equipment or duplicates (Extra copies of a character to increase their strength). Some equipment is penalized in points, which will overall slow down their final score. 
 
