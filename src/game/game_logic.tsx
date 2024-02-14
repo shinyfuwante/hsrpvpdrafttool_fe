@@ -4,7 +4,7 @@ import { v4 } from "uuid";
 
 export const version = () => {
   // version of tool.version of game.subversion of game.subversion of rules
-  return "1.2.0.1.2";
+  return "1.2.0.1.3";
 }
 const game_phases = {
   LOADING: "loading",

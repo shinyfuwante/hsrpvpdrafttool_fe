@@ -367,7 +367,7 @@
   },
   "Patience Is All You Need": {
     "id": "23006",
-    "point_costs": [1, 1.5, 2, 2.5, 3],
+    "point_costs": [1.5, 2, 2.5, 3, 3.5],
     "character": "Kafka",
     "rarity": 5
   },
@@ -415,7 +415,7 @@
   },
   "I Shall Be My Own Sword": {
     "id": "23014",
-    "point_costs": [4, 4.5, 5, 5.5, 6],
+    "point_costs": [3.5, 4, 4.5, 5, 5.5],
     "character": "Jingliu JL",
     "rarity": 5
   },
@@ -439,7 +439,7 @@
   },
   "An Instant Before A Gaze": {
     "id": "23018",
-    "point_costs": [2, 2.5, 3, 3.5, 4],
+    "point_costs": [1.5, 2, 2.5, 3, 3.5],
     "character": "Argenti",
     "rarity": 5
   },
@@ -451,7 +451,7 @@
   },
   "Baptism of Pure Thought": {
     "id": "23020",
-    "point_costs": [4, 4.5, 5, 5.5, 6],
+    "point_costs": [3.5, 4, 4.5, 5, 5.5],
     "character": "Dr. Ratio",
     "rarity": 5
   },
