@@ -65,7 +65,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
         handleSigEid(pick);
       }
     }
-    setCost(calcCost(props.signal()[id]));
+    setCost(calcCost(props.signal()[id]) || 0);
     onCostChange(id, cost());
   };
   createEffect(() => {
@@ -123,7 +123,6 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
             <datalist id="light-cones">
               {Object.keys(lcJson()).map((key) => (
                 <>
-                {/* <option value={key}>{key}</option> */}
                 <option value={key}>{lcJson()[key].character || key}</option>
                 </>
               ))}
