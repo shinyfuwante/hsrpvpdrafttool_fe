@@ -144,7 +144,7 @@ const Roster: Component<RosterProps> = (props) => {
                       height: "75px",
                       cursor: !isSelected && isTurn() ? "pointer" : "default",
                     }}
-                    class={`${styles.character} ${
+                    class={`${isSelected ? styles.character : styles.not_selected} ${
                       onceSelected
                         ? styles.once
                         : isSelected

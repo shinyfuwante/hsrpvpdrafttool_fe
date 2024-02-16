@@ -24,7 +24,7 @@
     margin-bottom: 0.5em;
 }
 
-.character {
+.not_selected {
     transition: transform 0.3s ease;
 }
 
@@ -42,7 +42,7 @@
     filter: grayscale(100%);
 }
 
-.character:hover {
+.not_selected:hover {
     transform: scale(1.1); /* Adjust this value to your liking */
 }
 
