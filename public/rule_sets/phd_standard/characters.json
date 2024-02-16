@@ -534,6 +534,7 @@
     },
     "Black Swan": {
         "id": "1307",
+        "special": true,
         "point_costs": [
             2,
             5,
@@ -547,6 +548,7 @@
     },
     "Misha": {
         "id": "1312",
+        "special": true,
         "point_costs": [
             0.5,
             0.5,

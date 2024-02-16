@@ -28,6 +28,20 @@
     transition: transform 0.3s ease;
 }
 
+.once {
+    content: '';
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    filter: grayscale(100%);
+}
+
+.selected {
+    filter: grayscale(100%);
+}
+
 .character:hover {
     transform: scale(1.1); /* Adjust this value to your liking */
 }

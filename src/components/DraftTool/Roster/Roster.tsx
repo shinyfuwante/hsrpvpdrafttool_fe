@@ -1,4 +1,4 @@
-import { Component, createSignal, createEffect } from "solid-js";
+import { Component, createSignal, createEffect, Show } from "solid-js";
 import {
   charJson,
   bluePicks,
@@ -17,6 +17,7 @@ import {
   setSelectedChars,
   ownTeam,
   isSinglePlayer,
+  isEvent,
 } from "~/game/game_logic";
 import { CharacterDetails } from "~/types";
 import Results from "~/components/Results/Results";
@@ -109,11 +110,18 @@ const Roster: Component<RosterProps> = (props) => {
           class={styles.search_bar}
         />
         <div class={styles.selector}>
-          {Object.entries(charJson()).sort(([a],[b]) => a.localeCompare(b)).map(
-            ([characterName, characterDetails]) => {
+          {Object.entries(charJson())
+            .sort(([a], [b]) => a.localeCompare(b))
+            .map(([characterName, characterDetails]) => {
               const characterId = (characterDetails as CharacterDetails).id;
               const characterImage = `/character_icons/${characterId}.webp`;
-              const isSelected = selectedChars().includes(characterName);
+              const isSpecial = characterDetails.special == true && isEvent();
+              const isSelected = isSpecial
+                ? selectedChars().filter((x) => x == characterName).length == 2
+                : selectedChars().includes(characterName);
+              const onceSelected =
+                isSpecial &&
+                selectedChars().filter((x) => x == characterName).length == 1;
               const isMatch =
                 searchTerm() != "" &&
                 characterName
@@ -123,35 +131,43 @@ const Roster: Component<RosterProps> = (props) => {
               const canPick =
                 !isSelected && isTurn() && turnIndex() < turn_order.length;
 
-              return (
-                <div
-                  style={{
-                    "background-color":
-                      characterDetails.rarity == 4 ? "#702985" : "#EFAF0B",
-                    filter: !isSelected ? "none" : "grayscale(100%)",
-                    display:
-                      isMatch || searchTerm() == "" ? "inline-block" : "none",
-                    width: "75px",
-                    height: "75px",
-                    cursor: !isSelected && isTurn() ? "pointer" : "default",
-                  }}
-                  class={`${styles.character} ${isSelected ? "" : "not-selected"}`}
-                  onClick={
-                    canPick ? () => selectCharacter(characterName) : undefined
-                  }
-                >
-                  <img
-                    src={characterImage}
-                    alt={characterName}
+              const renderChar = () => {
+                return (
+                  <div
                     style={{
-                      "max-width": "100%",
-                      "max-height": "100%",
+                      "background-color":
+                        characterDetails.rarity == 4 ? "#702985" : "#EFAF0B",
+                      filter: !isSelected ? "none" : "grayscale(100%)",
+                      display:
+                        isMatch || searchTerm() == "" ? "inline-block" : "none",
+                      width: "75px",
+                      height: "75px",
+                      cursor: !isSelected && isTurn() ? "pointer" : "default",
                     }}
-                  />
-                </div>
-              );
-            }
-          )}
+                    class={`${styles.character} ${
+                      onceSelected
+                        ? styles.once
+                        : isSelected
+                        ? styles.selected
+                        : "not-selected"
+                    }`}
+                    onClick={
+                      canPick ? () => selectCharacter(characterName) : undefined
+                    }
+                  >
+                    <img
+                      src={characterImage}
+                      alt={characterName}
+                      style={{
+                        "max-width": "100%",
+                        "max-height": "100%",
+                      }}
+                    />
+                  </div>
+                );
+              };
+              return <>{renderChar()}</>;
+            })}
         </div>
       </div>
       <div
@@ -168,8 +184,12 @@ const Roster: Component<RosterProps> = (props) => {
           "justify-content": "space-between",
         }}
       >
-        <button onClick={props.handleUndo} class={styles.roster_button}>Undo</button>
-        <button onClick={props.handleReset} class={styles.roster_button}>Reset</button>
+        <button onClick={props.handleUndo} class={styles.roster_button}>
+          Undo
+        </button>
+        <button onClick={props.handleReset} class={styles.roster_button}>
+          Reset
+        </button>
       </div>
     </div>
   );

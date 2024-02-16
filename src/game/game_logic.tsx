@@ -4,7 +4,7 @@ import { v4 } from "uuid";
 
 export const version = () => {
   // version of tool.version of game.subversion of game.subversion of rules
-  return "1.2.0.1.4";
+  return "1.2.0.1.5";
 }
 const game_phases = {
   LOADING: "loading",
@@ -72,6 +72,7 @@ const [lcJson, setLcJson] = createSignal<LCJsonType>({});
 const [redCost, setRedCost] = createSignal(0);
 const [blueCost, setBlueCost] = createSignal(0);
 const [isSinglePlayer, setIsSinglePlayer] = createSignal(false);
+const [isEvent, setIsEvent] = createSignal(false);
 const [error, setError] = createSignal("");
 export const [turnIndex, setTurnIndex] = createSignal(0);
 export const turn_order = [
@@ -216,5 +217,7 @@ export {
   setRedTeamName,
   getCID,
   error,
-  calcCost
+  calcCost,
+  isEvent,
+  setIsEvent
 };
