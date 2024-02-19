@@ -1,11 +1,3 @@
-.loading_screen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
 .loading_message {
   display: flex;
   flex-direction: column;
@@ -28,7 +20,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    height: 100vh;
   }
 
 .side_selector {
@@ -54,4 +45,33 @@
 
 .red_team:hover {
     transform: scale(1.1);
+}
+
+.link_to_copy {
+  cursor: pointer;
+  color: #5C7AFF;
+}
+
+.copied_modal {
+  padding: 1em;
+  text-align: center;
+  background-color: #424B54;
+  color: #fff;
+  animation: fade 0.2s linear;
+  bottom: 30%;
+  position: absolute;
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.loading_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  height: 100vh;
 }
