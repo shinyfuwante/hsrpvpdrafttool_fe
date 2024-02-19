@@ -80,6 +80,11 @@ const DraftTool: Component<DraftToolProps> = ({
             <Show when={isSinglePlayer()}>
               <SoloSettings />
             </Show>
+            <Show when={!isSinglePlayer()}>
+              <div class={styles.team_notifier}>
+                You are on the {ownTeam() == "blue_team" ? "Blue" : "Red"} Team
+              </div>
+            </Show>
             <div class={styles.draft_container}>
               <div class={styles.team}>
                 <Team
@@ -96,12 +101,6 @@ const DraftTool: Component<DraftToolProps> = ({
                   handleUndo={handleUndo}
                   handleReset={handleReset}
                 />
-                <Show when={!isSinglePlayer()}>
-                  <div class={styles.team_notifier}>
-                    You are on the {ownTeam() == "blue_team" ? "Blue" : "Red"}{" "}
-                    Team
-                  </div>
-                </Show>
               </div>
               <div class={styles.team}>
                 <Team

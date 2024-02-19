@@ -70,7 +70,7 @@ const Team: Component<TeamProps> = (props) => {
       class = {`${styles.team}`}
     >
       <div class={`${styles.team_header} ${team === "blue_team" ? styles.blue_team : styles.red_team }`}>
-        <div>{teamName()} </div>
+        <div>{isSinglePlayer() ? teamName() : team == ownTeam() ? "Your Team" : teamName()} </div>
         <div class={`${cost() >= 30 ? styles.over_30    : ""}`}>{cost()}/30</div>
       </div>
       <div style={{ flex: 1 }}>
