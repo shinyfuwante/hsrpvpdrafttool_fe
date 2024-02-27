@@ -6,6 +6,8 @@ export const version = () => {
   // version of tool.version of game.subversion of game.subversion of rules
   return "1.2.0.1.6";
 }
+
+const POINTS_PER_SUPERIMPOSITION = 0.5;
 const game_phases = {
   LOADING: "loading",
   SIDE_SELECTION: "sideSelection",
@@ -44,12 +46,11 @@ const calcCost = (character: CharacterPick) => {
   const lcs = lcJson();
   const lc = lcs[character.light_cone];
   let cost = 0;
+  for (let i = 0; i <= character.eidolon; i++) {
+    cost += char.point_costs[i];
+  }
   if (lc && character.superimposition > 0) {
-    cost +=
-      char.point_costs[character.eidolon] +
-      lc.point_costs[character.superimposition - 1];
-  } else {
-    cost += char.point_costs[character.eidolon];
+    cost += lc.point_costs[0] + (POINTS_PER_SUPERIMPOSITION * (character.superimposition - 1));
   }
   return cost;
 };
