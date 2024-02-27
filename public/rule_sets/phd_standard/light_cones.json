@@ -457,7 +457,7 @@
   },
   "Earthly Escapade": {
     "id": "23021",
-    "point_costs": [2, 2.5, 3, 3.5, 4],
+    "point_costs": [1.5, 2.5, 3, 3.5, 4],
     "character": "Sparkle Hanabi",
     "rarity": 5
   },
