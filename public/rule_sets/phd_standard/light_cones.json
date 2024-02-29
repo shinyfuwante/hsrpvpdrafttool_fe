@@ -473,21 +473,25 @@
   "On the Fall of an Aeon": {
     "id": "24000",
     "point_costs": [0, 0, 0, 0, 0],
-    "rarity": 5
+    "rarity": 5,
+    "free": true
   },
   "Cruising in the Stellar Sea": {
     "id": "24001",
     "point_costs": [0, 0, 0, 0, 0],
-    "rarity": 5
+    "rarity": 5,
+    "free": true
   },
   "Texture of Memories": {
     "id": "24002",
     "point_costs": [0, 0, 0, 0, 0],
-    "rarity": 5
+    "rarity": 5,
+    "free": true
   },
   "Solitary Healing": {
     "id": "24003",
     "point_costs": [0, 0, 0, 0, 0],
-    "rarity": 5
+    "rarity": 5,
+    "free": true
   }
 }
