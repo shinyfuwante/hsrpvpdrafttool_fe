@@ -4,7 +4,7 @@ import { v4 } from "uuid";
 
 export const version = () => {
   // version of tool.version of game.subversion of game.subversion of rules
-  return "1.2.0.2.0";
+  return "1.2.0.2.1";
 }
 
 const POINTS_PER_SUPERIMPOSITION = 0.5;
@@ -50,7 +50,10 @@ const calcCost = (character: CharacterPick) => {
     cost += char.point_costs[i];
   }
   if (lc && character.superimposition > 0) {
-    cost += lc.point_costs[0] + (POINTS_PER_SUPERIMPOSITION * (character.superimposition - 1));
+    cost += lc.point_costs[0];
+    if (lc.rarity == 5 && !lc.free) {
+      cost += (POINTS_PER_SUPERIMPOSITION * (character.superimposition - 1));
+    }
   }
   return cost;
 };

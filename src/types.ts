@@ -12,6 +12,7 @@ export type LCDetails = {
     point_costs: number[];
     character?: string;
     rarity: number;
+    free?: boolean;
 };
 export type LCJsonType = {
     [key: string]: LCDetails;
