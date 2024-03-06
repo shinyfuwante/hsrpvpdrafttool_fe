@@ -313,6 +313,7 @@
     },
     "Jing Yuan": {
         "id": "1204",
+        "special": true,
         "point_costs": [
             1,
             1,
@@ -521,6 +522,7 @@
     },
     "Sparkle": {
         "id": "1306",
+        "special": true,
         "point_costs": [
             4,
             2,
@@ -534,7 +536,6 @@
     },
     "Black Swan": {
         "id": "1307",
-        "special": true,
         "point_costs": [
             2,
             3.5,
@@ -548,7 +549,6 @@
     },
     "Misha": {
         "id": "1312",
-        "special": true,
         "point_costs": [
             0.5,
             0,
