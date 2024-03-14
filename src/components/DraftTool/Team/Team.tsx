@@ -47,7 +47,10 @@ const Team: Component<TeamProps> = (props) => {
       }
     }
   };
+  const blue_pick_index = [1, 3, 6, 8, 10, 11, 14, 15, 18, 19];
+  const red_pick_index = [2, 4, 5, 7, 9, 12, 13, 16, 17, 20];
   const EmptyCharacterComponent = ({id = 0, type = ""}) => {
+    const order = team === "blue_team" ? blue_pick_index[id] : red_pick_index[id];
     let text = "";
     if (type == "ban") {
         text = "Banning...";
@@ -58,7 +61,7 @@ const Team: Component<TeamProps> = (props) => {
       <div
         class={`${styles.empty_card} ${turn_order[turnIndex()].id == id && turn_order[turnIndex()].action == type && turn_order[turnIndex()].team == team ? styles.current_pick : ""}`}
       >
-        {text}
+        {text} ({order}) 
       </div>
     );
   };
@@ -82,7 +85,7 @@ const Team: Component<TeamProps> = (props) => {
         class={styles.team_row}
       >
         <div style={{ flex: 1 }}>
-          <Show when={picksSignal()[0]} fallback={<EmptyCharacterComponent id={0} type={"pick"}/>}>
+          <Show when={picksSignal()[0]} fallback={<EmptyCharacterComponent id={1} type={"pick"}/>}>
             <CharacterCard
               id={0}
               character={picksSignal()[0]}
@@ -94,7 +97,7 @@ const Team: Component<TeamProps> = (props) => {
           </Show>
         </div>
         <div style={{ flex: 1 }}>
-          <Show when={picksSignal()[1]} fallback={<EmptyCharacterComponent id={1} type={"pick"}/>}>
+          <Show when={picksSignal()[1]} fallback={<EmptyCharacterComponent id={2} type={"pick"}/>}>
             <CharacterCard
               id={1}
               character={picksSignal()[1]}
@@ -107,7 +110,7 @@ const Team: Component<TeamProps> = (props) => {
         </div>
       </div>
       <div style={{ flex: 1 }}>
-        <Show when={bansSignal()[1]} fallback={<EmptyCharacterComponent id={1} type={"ban"}/>}>
+        <Show when={bansSignal()[1]} fallback={<EmptyCharacterComponent id={3} type={"ban"}/>}>
           <BanCard character={bansSignal()[1]}/>
         </Show>
       </div>
@@ -115,7 +118,7 @@ const Team: Component<TeamProps> = (props) => {
         class={styles.team_row}
       >
         <div style={{ flex: 1 }}>
-          <Show when={picksSignal()[2]} fallback={<EmptyCharacterComponent id={2} type={"pick"} />}>
+          <Show when={picksSignal()[2]} fallback={<EmptyCharacterComponent id={4} type={"pick"} />}>
             <CharacterCard
               id={2}
               character={picksSignal()[2]}
@@ -127,7 +130,7 @@ const Team: Component<TeamProps> = (props) => {
           </Show>
         </div>
         <div style={{ flex: 1 }}>
-          <Show when={picksSignal()[3]} fallback={<EmptyCharacterComponent id={3} type={"pick"}/>}>
+          <Show when={picksSignal()[3]} fallback={<EmptyCharacterComponent id={5} type={"pick"}/>}>
             <CharacterCard
               id={3}
               character={picksSignal()[3]}
@@ -143,7 +146,7 @@ const Team: Component<TeamProps> = (props) => {
         class={styles.team_row}
       >
         <div style={{ flex: 1 }}>
-          <Show when={picksSignal()[4]} fallback={<EmptyCharacterComponent id={4} type={"pick"}/>}>
+          <Show when={picksSignal()[4]} fallback={<EmptyCharacterComponent id={6} type={"pick"}/>}>
             <CharacterCard
               id={4}
               character={picksSignal()[4]}
@@ -155,7 +158,7 @@ const Team: Component<TeamProps> = (props) => {
           </Show>
         </div>
         <div style={{ flex: 1 }}>
-          <Show when={picksSignal()[5]} fallback={<EmptyCharacterComponent id={5} type={"pick"}/>}>
+          <Show when={picksSignal()[5]} fallback={<EmptyCharacterComponent id={7} type={"pick"}/>}>
             <CharacterCard
               id={5}
               character={picksSignal()[5]}
@@ -171,7 +174,7 @@ const Team: Component<TeamProps> = (props) => {
         class={styles.team_row}
       >
         <div style={{ flex: 1 }}>
-          <Show when={picksSignal()[6]} fallback={<EmptyCharacterComponent id={6} type={"pick"}/>}>
+          <Show when={picksSignal()[6]} fallback={<EmptyCharacterComponent id={8} type={"pick"}/>}>
             <CharacterCard
               id={6}
               character={picksSignal()[6]}
@@ -183,7 +186,7 @@ const Team: Component<TeamProps> = (props) => {
           </Show>
         </div>
         <div style={{ flex: 1 }}>
-          <Show when={picksSignal()[7]} fallback={<EmptyCharacterComponent id={7} type={"pick"}/>}>
+          <Show when={picksSignal()[7]} fallback={<EmptyCharacterComponent id={9} type={"pick"}/>}>
             <CharacterCard
               id={7}
               character={picksSignal()[7]}
