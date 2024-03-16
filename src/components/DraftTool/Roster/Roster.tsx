@@ -184,7 +184,7 @@ const Roster: Component<RosterProps> = (props) => {
           "justify-content": "space-between",
         }}
       >
-        <button onClick={props.handleUndo} class={styles.roster_button}>
+        <button onClick={turnIndex() == 0 ? undefined : props.handleUndo} class={`${styles.roster_button} ${turnIndex() == 0 ? styles.disabled : ""}`}>
           Undo
         </button>
         <button onClick={props.handleReset} class={styles.roster_button}>

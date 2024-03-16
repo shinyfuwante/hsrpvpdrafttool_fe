@@ -17,7 +17,9 @@ import {
   ownTeam,
   turn_order,
   turnIndex,
-  isSinglePlayer
+  isSinglePlayer,
+  blueCostsMap,
+  redCostsMap,
 } from "~/game/game_logic";
 import styles from "./Team.module.css";
 
@@ -36,12 +38,12 @@ const Team: Component<TeamProps> = (props) => {
   const teamName = props.team === "blue_team" ? blueTeamName : redTeamName;
   const cost = props.team === "blue_team" ? blueCost : redCost;
   const handleSigEid = props.handleSigEid;
-  const costs = new Map();
+  const costs = props.team === "blue_team" ? blueCostsMap : redCostsMap;
   const handleCostChange = (id: number, newCost: number) => {
-    const oldCost = costs.get(id) || 0;
+    const oldCost = costs().get(id) || 0;
     if (newCost !== oldCost) {
-      costs.set(id, newCost);
-      const totalCost = Array.from(costs.values()).reduce((a, b) => a + b, 0);
+      costs().set(id, newCost);
+      const totalCost = Array.from(costs().values()).reduce((a, b) => a + b, 0);
       if (totalCost !== cost()) {
         setCostSignal(totalCost);
       }
@@ -59,7 +61,7 @@ const Team: Component<TeamProps> = (props) => {
     }
     return (
       <div
-        class={`${styles.empty_card} ${turn_order[turnIndex()].id == id && turn_order[turnIndex()].action == type && turn_order[turnIndex()].team == team ? styles.current_pick : ""}`}
+        class={`${styles.empty_card} ${turn_order[turnIndex()] && turn_order[turnIndex()].id == id && turn_order[turnIndex()].action == type && turn_order[turnIndex()].team == team ? styles.current_pick : ""}`}
       >
         {text} ({order}) 
       </div>

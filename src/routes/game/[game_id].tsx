@@ -11,6 +11,8 @@ import {
   turnIndex,
   getCID,
   error,
+  setBlueCostsMap,
+  setRedCostsMap,
 } from "~/game/game_logic";
 import { w3cwebsocket as WebSocket } from "websocket";
 import MainApp from "~/components/MainApp/MainApp";
@@ -109,6 +111,8 @@ export default function GamePage() {
       type: MessageEnum.RESET_GAME,
     };
     client.send(JSON.stringify(message));
+    setBlueCostsMap(new Map());
+    setRedCostsMap(new Map());
   };
   const handleUndo = () => {
     if (turnIndex() <= 0) {

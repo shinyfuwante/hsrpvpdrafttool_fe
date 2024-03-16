@@ -26,6 +26,8 @@ import {
   redCost,
   calcCost,
   setIsEvent,
+  setBlueCostsMap,
+  setRedCostsMap,
 } from "~/game/game_logic";
 
 // interface DraftToolProps {
@@ -70,6 +72,8 @@ const handleReset = () => {
   setBlueCost(0);
   setRedCost(0);
   setPlayerTurn(turn_order[0].team);
+  setBlueCostsMap(new Map());
+  setRedCostsMap(new Map());
 };
 const handleUndo = () => {
   setTurnIndex(turnIndex() - 1);

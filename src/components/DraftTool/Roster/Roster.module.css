@@ -66,3 +66,6 @@
     background-color: #353b3cff;
     transform: scale(1.1);
 }
+.disabled {
+    cursor: not-allowed;
+}
