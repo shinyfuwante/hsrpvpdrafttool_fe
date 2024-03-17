@@ -76,6 +76,9 @@ const handleReset = () => {
   setRedCostsMap(new Map());
 };
 const handleUndo = () => {
+  if (turnIndex() <= 0) {
+    return;
+  }
   setTurnIndex(turnIndex() - 1);
   setPlayerTurn(turn_order[turnIndex()].team);
   const currentTurn = turn_order[turnIndex()];

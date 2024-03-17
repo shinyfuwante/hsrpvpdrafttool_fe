@@ -35,7 +35,7 @@ const Roster: Component<RosterProps> = (props) => {
   const [currentTurn, setCurrentTurn] = createSignal(turn_order[turnIndex()]);
   const [isTurn, setIsTurn] = createSignal(false);
   createEffect(() => {
-    if (turnIndex() < turn_order.length) {
+    if (turnIndex() < turn_order.length && turnIndex() >= 0) {
       setCurrentTurn(turn_order[turnIndex()]);
       setIsTurn(ownTeam() == currentTurn().team || isSinglePlayer());
     }
@@ -184,7 +184,7 @@ const Roster: Component<RosterProps> = (props) => {
           "justify-content": "space-between",
         }}
       >
-        <button onClick={turnIndex() == 0 ? undefined : props.handleUndo} class={`${styles.roster_button} ${turnIndex() == 0 ? styles.disabled : ""}`}>
+        <button onClick={props.handleUndo} class={`${styles.roster_button}`}>
           Undo
         </button>
         <button onClick={props.handleReset} class={styles.roster_button}>
