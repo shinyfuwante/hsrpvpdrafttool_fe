@@ -493,5 +493,11 @@
     "point_costs": [0, 0, 0, 0, 0],
     "rarity": 5,
     "free": true
+  },
+  "Along the Passing Shore": {
+    "id": "23204",
+    "point_costs": [3, 0, 0, 0, 0],
+    "rarity": 5,
+    "character": "Acheron"
   }
 }
