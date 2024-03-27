@@ -36,10 +36,22 @@ import {
 //   }
 
 const incrementTurn = () => {
+  console.log(turnIndex());
+  if (turnIndex() > turn_order.length - 1) {
+    return;
+  }
+  setTurnIndex(turnIndex() + 1);
   if (turnIndex() < turn_order.length) {
-    setTurnIndex(turnIndex() + 1);
     setPlayerTurn(turn_order[turnIndex()].team);
   }
+};
+
+const decrementTurn = () => {
+  if (turnIndex() <= 0) {
+    return;
+  }
+  setTurnIndex(turnIndex() - 1);
+  setPlayerTurn(turn_order[turnIndex()].team);
 };
 const handleSigEid = (character: CharacterPick) => {
   const team = character.team;
@@ -79,10 +91,9 @@ const handleUndo = () => {
   if (turnIndex() <= 0) {
     return;
   }
-  setTurnIndex(turnIndex() - 1);
-  setPlayerTurn(turn_order[turnIndex()].team);
+  decrementTurn();
   const currentTurn = turn_order[turnIndex()];
-  if (playerTurn() == "blue_team") {
+  if (currentTurn.team == "blue_team") {
     if (currentTurn.action == "ban") {
       setBlueBans(blueBans().slice(0, -1));
     } else {

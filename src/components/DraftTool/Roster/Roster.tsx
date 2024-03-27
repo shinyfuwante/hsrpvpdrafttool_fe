@@ -89,9 +89,6 @@ const Roster: Component<RosterProps> = (props) => {
     }
     // setTurnIndex(turnIndex() + 1);
     setSearchTerm("");
-    if (turnIndex() == turn_order.length) {
-      // draft end probably
-    }
   };
 
   return (
