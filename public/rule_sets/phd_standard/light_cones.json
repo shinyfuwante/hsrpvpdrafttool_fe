@@ -499,5 +499,15 @@
     "point_costs": [3, 0, 0, 0, 0],
     "rarity": 5,
     "character": "Acheron"
+  },
+  "Concert for Two": {
+    "id": "21043",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0]
+  },
+  "Inherently Unjust Destiny": {
+    "id": "23023",
+    "rarity": 5,
+    "point_costs": [2, 0, 0, 0, 0, 0, 0]
   }
 }

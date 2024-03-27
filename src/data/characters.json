@@ -583,5 +583,44 @@
             7
         ],
         "rarity": 5
+    },
+    "Gallagher": {
+        "id": "1301",
+        "rarity": 4,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    "Aventurine": {
+        "id": "1304",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    "Acheron": {
+        "id": "1308",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
     }
 }

@@ -1207,5 +1207,44 @@
             7
         ],
         "rarity": 5
+    },
+    "Concert for Two": {
+        "id": "21043",
+        "rarity": 4,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    "Inherently Unjust Destiny": {
+        "id": "23023",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    "Along the Passing Shore": {
+        "id": "23024",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
     }
 }
