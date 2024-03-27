@@ -338,7 +338,7 @@
   },
   "In the Night": {
     "id": "23001",
-    "point_costs": [2, 2.5, 3, 3.5, 4],
+    "point_costs": [2.5, 2.5, 3, 3.5, 4],
     "character": "Seele",
     "rarity": 5
   },
