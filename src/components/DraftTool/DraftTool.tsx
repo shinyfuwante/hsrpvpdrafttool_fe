@@ -41,6 +41,7 @@ const DraftTool: Component<DraftToolProps> = ({
 }) => {
   const [ready, setReady] = createSignal(false);
   const fetchData = async () => {
+    console.log(ruleSet());
     let response1 = await fetch(
       `/rule_sets/${ruleSet()}/characters.json?version=${version()}`
     );

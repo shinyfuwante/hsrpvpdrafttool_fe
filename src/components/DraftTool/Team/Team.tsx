@@ -20,6 +20,7 @@ import {
   isSinglePlayer,
   blueCostsMap,
   redCostsMap,
+  totalCost, 
 } from "~/game/game_logic";
 import styles from "./Team.module.css";
 
@@ -76,7 +77,7 @@ const Team: Component<TeamProps> = (props) => {
     >
       <div class={`${styles.team_header} ${team === "blue_team" ? styles.blue_team : styles.red_team }`}>
         <div>{isSinglePlayer() ? teamName() : team == ownTeam() ? "Your Team" : teamName()} </div>
-        <div class={`${cost() >= 30 ? styles.over_30    : ""}`}>{cost()}/30</div>
+        <div class={`${cost() >= totalCost() ? styles.over_30    : ""}`}>{cost()}/{totalCost()}</div>
       </div>
       <div style={{ flex: 1 }}>
         <Show when={bansSignal()[0]} fallback={<EmptyCharacterComponent id={0} type={"ban"}/>}>

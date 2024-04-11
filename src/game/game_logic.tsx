@@ -49,6 +49,9 @@ const calcCost = (character: CharacterPick) => {
   for (let i = 0; i <= character.eidolon; i++) {
     cost += char.point_costs[i];
   }
+  if (ruleSet() == "pokke") {
+    return cost;
+  }
   if (lc && character.superimposition > 0) {
     cost += lc.point_costs[0];
     if (lc.rarity == 5 && !lc.free) {
@@ -58,6 +61,7 @@ const calcCost = (character: CharacterPick) => {
   return cost;
 };
 const [sideSelector, setSideSelector] = createSignal(false);
+const [totalCost, setTotalCost] = createSignal(30);
 const [playerTurn, setPlayerTurn] = createSignal("blue_team");
 const [ownTeam, setOwnTeam] = createSignal("blue_team");
 const [sessionId, setSessionId] = createSignal("");
@@ -202,6 +206,7 @@ export {
   selectedChars,
   setSelectedChars,
   ruleSet,
+  setRuleSet,
   sideSelector,
   charJson,
   lcJson,
@@ -230,4 +235,6 @@ export {
   setBlueCostsMap,
   redCostsMap,
   setRedCostsMap,
+  totalCost,
+  setTotalCost,
 };
