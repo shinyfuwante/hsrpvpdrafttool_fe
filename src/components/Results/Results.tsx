@@ -56,6 +56,13 @@ const Results: Component<{}> = (props) => {
             placeholder={"Blue Player 2 Cycles"}
             onChange={(e) => (blueTwoCycles = Number(e.target.value))}
           ></input>
+          <input
+            type="number"
+            placeholder={"Blue Team Deaths"}
+            onChange={(e) => (blueDeaths = Number(e.target.value))}
+          >
+            Blue Team Deaths:{" "}
+          </input>
         </div>
         <div
           style={{
@@ -77,6 +84,13 @@ const Results: Component<{}> = (props) => {
             onChange={(e) => (redTwoCycles = Number(e.target.value))}
           >
             Player 2 Cycles:{" "}
+          </input>
+          <input
+            type="number"
+            placeholder={"Red Team Deaths"}
+            onChange={(e) => (redDeaths = Number(e.target.value))}
+          >
+            Red Team Deaths:{" "}
           </input>
         </div>
       </div>
