@@ -40,7 +40,7 @@ export default function Root() {
         <Title>Ditto's Star Rail PVP Draft Tool</Title>
         <Meta charset="utf-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="shortcut icon" type="image/ico" href="/favicon.ico?v=1.0.0"/>
+        <link rel="shortcut icon" type="image/ico" href="/favicon.ico?v=1.0.1"/>
       </Head>
       <Body>
         <Suspense>
