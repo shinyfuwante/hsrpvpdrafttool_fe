@@ -26,9 +26,9 @@ const Results: Component<{}> = (props) => {
       if (blueCost() == redCost()) {
         setWinnerString("Tie! Refer to tiebreaker rules!");
       } else if (blueCost() < redCost()) {
-        setWinnerString("Blue Team Wins!");
+        setWinnerString("Blue Team Wins! (By Cost)");
       } else {
-        setWinnerString("Red Team Wins!");
+        setWinnerString("Red Team Wins! (By Cost)");
       }
     } else if (blueScore() < redScore()) {
       setWinnerString("Blue Team Wins!");
