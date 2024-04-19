@@ -300,6 +300,7 @@
     },
     "Luocha": {
         "id": "1203",
+        "special": true,
         "point_costs": [
             1.5,
             1,
@@ -313,7 +314,7 @@
     },
     "Jing Yuan": {
         "id": "1204",
-        "special": true,
+        "special": false,
         "point_costs": [
             1,
             1,
@@ -522,7 +523,7 @@
     },
     "Sparkle": {
         "id": "1306",
-        "special": true,
+        "special": false,
         "point_costs": [
             5,
             2,
@@ -588,7 +589,7 @@
     },
     "Acheron": {
         "id": "1308",
-        "special": false,
+        "special": true,
         "point_costs": [
             6,
             1.5,
@@ -602,7 +603,7 @@
     },
     "Gallagher": {
         "id": "1301",
-        "special": false,
+        "special": true,
         "point_costs": [
             0.5,
             0,
