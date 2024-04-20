@@ -1,5 +1,6 @@
 import { player1Name, player2Name } from "~/components/SoloSettings/SoloSettings";
 import { ruleSet, blueCost, redCost, initiativeWinner, draftOrder, CharacterBan, CharacterPick, charJson, lcJson, player1Roll, player2Roll, setInitiativeWinner, blueTeamName, redTeamName } from "./game_logic";
+import { Setter } from "solid-js";
 
 export const calculateBonusCycles = (points: number) => {
   if (points < 30) {
@@ -35,7 +36,7 @@ export const calculateScore = (points: number, deaths: number, p1Cycles: number,
     return score;
 } 
 
-export const encodeString = (blue1Cycles: number, blue2Cycles: number, red1Cycles: number, red2Cycles: number, blueDeaths: number, redDeaths: number) => {
+export const encodeString = async (blue1Cycles: number, blue2Cycles: number, red1Cycles: number, red2Cycles: number, blueDeaths: number, redDeaths: number, setCopied: Setter<boolean>) => {
   let encodedString = "";
   const cjson = charJson();
   const lcjson = lcJson()
@@ -60,7 +61,11 @@ export const encodeString = (blue1Cycles: number, blue2Cycles: number, red1Cycle
   // add deaths
   encodedString += String(blueDeaths);
   encodedString += String(redDeaths);
-  console.log(initiativeWinner());
   encodedString += initiativeWinner() == "blue_team" ? "b" : "r";
-  console.log(encodedString);
+  try {
+    await navigator.clipboard.writeText(encodedString);
+    setCopied(true);
+  } catch (err) {
+    console.error("Failed to copy: ", err);
+  }
 }

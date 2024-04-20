@@ -36,7 +36,6 @@ import {
 //   }
 
 const incrementTurn = () => {
-  console.log(turnIndex());
   if (turnIndex() > turn_order.length - 1) {
     return;
   }

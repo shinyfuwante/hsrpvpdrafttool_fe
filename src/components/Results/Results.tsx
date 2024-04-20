@@ -1,6 +1,10 @@
 import { Component, createSignal } from "solid-js";
 import { Show } from "solid-js";
-import { calculateBonusCycles, calculateScore, encodeString } from "~/game/point_calc";
+import {
+  calculateBonusCycles,
+  calculateScore,
+  encodeString,
+} from "~/game/point_calc";
 import { blueCost, redCost } from "~/game/game_logic";
 import styles from "./Results.module.css";
 import { blueTeamName, redTeamName } from "~/game/game_logic";
@@ -10,6 +14,7 @@ const Results: Component<{}> = (props) => {
   const [redScore, setRedScore] = createSignal(0);
   const [scoreCalced, setScoreCalced] = createSignal(false);
   const [winnerString, setWinnerString] = createSignal("");
+  const [copied, setCopied] = createSignal(false);
 
   let [blueOneCycles, blueTwoCycles, blueDeaths] = [0, 0, 0];
   let [redOneCycles, redTwoCycles, redDeaths] = [0, 0, 0];
@@ -94,16 +99,52 @@ const Results: Component<{}> = (props) => {
           </input>
         </div>
       </div>
-      <button class={styles.results_button} onClick={() => calculateScores()}>Calculate Score</button>
+      <button class={styles.results_button} onClick={() => calculateScores()}>
+        Calculate Score
+      </button>
       <Show fallback={null} when={scoreCalced() == true}>
         <div class={styles.winning_string}>
           {winnerString()}
           <div class={styles.score_display}>
             <div class={styles.blue_team}> {blueScore().toFixed(4)}</div>{" "}
-            <div class={styles.red_team}>{redScore().toFixed(4)}</div>    
+            <div class={styles.red_team}>{redScore().toFixed(4)}</div>
           </div>
         </div>
-        <button onClick={() => encodeString(blueOneCycles, blueTwoCycles, redOneCycles, redTwoCycles, blueDeaths, redDeaths)}>Get Submission String</button>
+        <Show fallback={null} when={copied() == false}>
+          {" "}
+          <button
+            onClick={() =>
+              encodeString(
+                blueOneCycles,
+                blueTwoCycles,
+                redOneCycles,
+                redTwoCycles,
+                blueDeaths,
+                redDeaths,
+                setCopied
+              )
+            }
+          >
+            Copy Submission String to Clipboard
+          </button>
+        </Show>
+        <Show fallback={null} when={copied() == true}>
+          <button
+            onClick={() =>
+              encodeString(
+                blueOneCycles,
+                blueTwoCycles,
+                redOneCycles,
+                redTwoCycles,
+                blueDeaths,
+                redDeaths,
+                setCopied
+              )
+            }
+          >
+            Submission String Copied!
+          </button>
+        </Show>
       </Show>
     </div>
   );
