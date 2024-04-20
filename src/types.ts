@@ -3,6 +3,7 @@ export type CharacterDetails = {
     point_costs: number[];
     rarity: number;
     special?: boolean;
+    code: string;
 };
 export type CharJsonType = {
     [key: string]: CharacterDetails;

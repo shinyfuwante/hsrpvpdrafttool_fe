@@ -1,6 +1,6 @@
 import { Component, createSignal } from "solid-js";
 import { Show } from "solid-js";
-import { calculateBonusCycles, calculateScore } from "~/game/point_calc";
+import { calculateBonusCycles, calculateScore, encodeString } from "~/game/point_calc";
 import { blueCost, redCost } from "~/game/game_logic";
 import styles from "./Results.module.css";
 import { blueTeamName, redTeamName } from "~/game/game_logic";
@@ -103,6 +103,7 @@ const Results: Component<{}> = (props) => {
             <div class={styles.red_team}>{redScore().toFixed(4)}</div>    
           </div>
         </div>
+        <button onClick={() => encodeString(blueOneCycles, blueTwoCycles, redOneCycles, redTwoCycles, blueDeaths, redDeaths)}>Get Submission String</button>
       </Show>
     </div>
   );

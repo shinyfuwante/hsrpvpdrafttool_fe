@@ -4,7 +4,7 @@ import { v4 } from "uuid";
 
 export const version = () => {
   // version of tool.version of game.subversion of game.subversion of rules
-  return "1.2.1.1.3.2";
+  return "1.2.1.1.3.3";
 }
 
 const POINTS_PER_SUPERIMPOSITION = 0.5;
@@ -60,6 +60,7 @@ const calcCost = (character: CharacterPick) => {
   }
   return cost;
 };
+const [initiativeWinner, setInitiativeWinner] = createSignal("default");
 const [sideSelector, setSideSelector] = createSignal(false);
 const [totalCost, setTotalCost] = createSignal(30);
 const [playerTurn, setPlayerTurn] = createSignal("blue_team");
@@ -84,7 +85,10 @@ const [isEvent, setIsEvent] = createSignal(false);
 const [error, setError] = createSignal("");
 const [blueCostsMap, setBlueCostsMap] = createSignal(new Map());
 const [redCostsMap, setRedCostsMap] = createSignal(new Map());
+const [draftOrder, setDraftOrder] = createSignal<(CharacterBan | CharacterPick)[]>([]);
 export const [turnIndex, setTurnIndex] = createSignal(0);
+const [player1Roll, setPlayer1Roll] = createSignal(0);
+const [player2Roll, setPlayer2Roll] = createSignal(0);
 export const turn_order = [
   { team: "blue_team", action: "ban", id: 0 },
   { team: "red_team", action: "ban", id: 0 },
@@ -141,8 +145,14 @@ export const handleMsg = (data: string) => {
       setBlueTeam(msg.message.blue_team);
       setRedTeam(msg.message.red_team);
       if (msg.message.blue_team == sessionId()) {
+        if (sideSelector()) {
+          setInitiativeWinner("blue_team");
+        }
         setOwnTeam("blue_team");
       } else {
+        if (sideSelector()) {
+          setInitiativeWinner("red_team");
+        }
         setOwnTeam("red_team");
       }
       break;
@@ -237,4 +247,12 @@ export {
   setRedCostsMap,
   totalCost,
   setTotalCost,
+  initiativeWinner,
+  setInitiativeWinner,
+  draftOrder,
+  setDraftOrder,
+  player1Roll,
+  setPlayer1Roll,
+  player2Roll,
+  setPlayer2Roll,
 };

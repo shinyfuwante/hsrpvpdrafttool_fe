@@ -29,6 +29,8 @@ import {
   calcCost,
   setBlueCostsMap,
   setRedCostsMap,
+  draftOrder,
+  setDraftOrder
 } from "~/game/game_logic";
 
 // interface DraftToolProps {
@@ -59,9 +61,14 @@ const handleSigEid = (character: CharacterPick) => {
   const picksSignal = team == "blue_team" ? bluePicks : redPicks;
   const setPicksSignal = team == "blue_team" ? setBluePicks : setRedPicks;
   const picksArray = [...picksSignal()];
+  const draftArray = [...draftOrder()];
+  let draftIndex = draftArray.findIndex((char) => char.name == character.name);
   if (picksArray[character.index] != character) {
     picksArray[character.index] = character;
+    draftArray[draftIndex] = character;
     setPicksSignal(picksArray);
+    setDraftOrder(draftArray);
+    
   }
   return;
 };
@@ -71,10 +78,12 @@ const handlePick = (character: CharacterPick) => {
   } else {
     setRedPicks([...redPicks(), character]);
   }
+  setDraftOrder([...draftOrder(), character]);
   incrementTurn();
 };
 const handleBan = (character: CharacterBan) => {
   incrementTurn();
+  setDraftOrder([...draftOrder(), character]);
 };
 const handleReset = () => {
   setBlueBans([]);

@@ -508,6 +508,7 @@
   "Inherently Unjust Destiny": {
     "id": "23023",
     "rarity": 5,
-    "point_costs": [0, 0, 0, 0, 0]
+    "point_costs": [0, 0, 0, 0, 0],
+    "character": "Aventurine"
   }
 }
