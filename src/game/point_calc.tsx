@@ -61,6 +61,8 @@ export const encodeString = async (blue1Cycles: number, blue2Cycles: number, red
   // add deaths
   encodedString += String(blueDeaths);
   encodedString += String(redDeaths);
+  encodedString += String(blueCost()).padStart(2, '0');
+  encodedString += String(redCost()).padStart(2, '0');
   encodedString += initiativeWinner() == "blue_team" ? "b" : "r";
   try {
     await navigator.clipboard.writeText(encodedString);
