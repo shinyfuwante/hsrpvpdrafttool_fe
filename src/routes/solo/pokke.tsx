@@ -125,7 +125,7 @@ const game: Component<{}> = (props) => {
   onMount(async () => {
     setIsSinglePlayer(true);
     setRuleSet("pokke");
-    setTotalCost(8);
+    setTotalCost(10);
   });
   setIsSinglePlayer(true);
   setRuleSet("pokke");
