@@ -56,6 +56,8 @@
     color: black; */
     color: #EFF7F6;
     font-size: 1em;
+    background-color: #764585;
+    background-color: #e6b741;
     background-color: #48305f;
     border: 3px solid var(--buttons);
     cursor: pointer;
