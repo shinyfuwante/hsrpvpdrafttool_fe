@@ -15,13 +15,13 @@ button {
     color: black; */
     color: #EFF7F6;
     font-size: 1em;
-    background-color: #424B54;
-    border: 3px solid #353b3cff;
+    background-color: var(--buttons);
+    border: 3px solid #9D4EDD;
     cursor: pointer;
 }
 
 results_button:hover {
-    background-color: #353b3cff;
+    background-color: var(--buttons);
     transform: scale(1.1);
 }
 
@@ -41,7 +41,7 @@ results_button:hover {
     justify-content: center;
     align-items: center;
     padding: 5px;
-    background-color: #353b3cff;
+    background-color: #5A189A;
     color: white;
     margin: 0.3em;
 }

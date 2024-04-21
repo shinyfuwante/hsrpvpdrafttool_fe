@@ -20,7 +20,7 @@
     background-color: #EFF7F6;
     padding: 0.2em;
     color: black;
-    border: 3px solid #6e7675;
+    border: 3px solid #9D4EDD;
     margin-bottom: 0.5em;
 }
 
@@ -56,14 +56,14 @@
     color: black; */
     color: #EFF7F6;
     font-size: 1em;
-    background-color: #424B54;
-    border: 3px solid #353b3cff;
+    background-color: var(--buttons);
+    border: 3px solid #9D4EDD;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
 .roster_button:hover {
-    background-color: #353b3cff;
+    background-color: #9D4EDD;
     transform: scale(1.1);
 }
 .disabled {
