@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     color: white;
-    background: #3C096C;
+    background: #48305f;
     margin-bottom: 2em;
     align-items: center;
     padding: 1em;
@@ -28,7 +28,7 @@
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    border: 2px solid #9D4EDD;
+    border: 2px solid #64477c;
     padding: 0.5em;
 }
 
