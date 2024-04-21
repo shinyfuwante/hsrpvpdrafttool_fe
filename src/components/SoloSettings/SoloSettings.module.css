@@ -30,6 +30,7 @@
     cursor: pointer;
     border: 2px solid #64477c;
     padding: 0.5em;
+    transition: transform 0.3s ease;
 }
 
 .roll_buttons:hover {
