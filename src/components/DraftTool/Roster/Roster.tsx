@@ -133,7 +133,7 @@ const Roster: Component<RosterProps> = (props) => {
                   <div
                     style={{
                       "background-color":
-                        characterDetails.rarity == 4 ? "#702985" : "#EFAF0B",
+                        characterDetails.rarity == 4 ? "#764585" : "#e6b741",
                       filter: !isSelected ? "none" : "grayscale(100%)",
                       display:
                         isMatch || searchTerm() == "" ? "inline-block" : "none",

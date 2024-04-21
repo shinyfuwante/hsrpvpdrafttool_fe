@@ -1,3 +1,4 @@
+/* https://coolors.co/palette/10002b-240046-3c096c-5a189a-7b2cbf-9d4edd-c77dff-e0aaff */
 * {
   --walnut-brown: #594f3bff;
   --umber: #776258ff;
@@ -7,12 +8,14 @@
   --onyx: #353b3cff;
   --violet-blue: #314CB6ff;
   --cardinal: #C42847ff;
+  --background: #221a2f;
+  --buttons: #64477c;
   box-sizing: border-box;
 }
 body {
   font-family: Gordita, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
     "Helvetica Neue", sans-serif;
-  background-color: black;
+  background-color: var(--background);
 }
 
 a {
