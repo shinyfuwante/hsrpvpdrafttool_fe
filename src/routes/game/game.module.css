@@ -9,7 +9,7 @@
   text-align: center;
   font-size: 1.2rem;
   color: white;
-  background: #9D4EDD;
+  background: #a261d8;
   border-radius: 10px;
   /* box-shadow: 0 0 10px var(--periwinkle); */
   overflow: hidden;
@@ -32,11 +32,11 @@
 }
 
 .blue_team {
-    background-color: #5C7AFF;
+    background-color: #6d86f9;
 }
 
 .red_team {
-    background-color: #C83E4D;
+    background-color: #ca515f;
 }
 
 .blue_team:hover {
@@ -49,7 +49,7 @@
 
 .link_to_copy {
   cursor: pointer;
-  color: #5C7AFF;
+  color: #6d86f9;
 }
 
 .copied_modal {

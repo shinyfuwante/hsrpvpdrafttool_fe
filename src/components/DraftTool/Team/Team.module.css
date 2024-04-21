@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100px;
-    background-color: #240046;
+    background-color: #48305f;
     color: white;
     text-align: center;
     justify-content: center;
@@ -36,11 +36,11 @@
     color: white;
 }
 .blue_team {
-    background-color: #5C7AFF;
+    background-color: #6d86f9;
 }
 
 .red_team {
-    background-color: #C83E4D;
+    background-color: #ca515f;
 }
 
 .team_row {
@@ -51,13 +51,13 @@
 }
 
 .current_pick {
-    border: 2px solid rgb(247, 236, 247);
+    border: 2px solid rgb(213, 176, 234);
     animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
     0% {
-        box-shadow: 0 0 0 0 rgb(247, 236, 247);
+        box-shadow: 0 0 0 0 rgb(213, 176, 234);
     }
     70% {
         box-shadow: 0 0 0 10px rgba(128, 0, 128, 0);
