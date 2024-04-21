@@ -72,7 +72,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
     handleSuperimpositionEidolonChange();
   });
   const characterCard = createMemo(() => {
-    const backgroundColor = char.rarity === 4 ? "#702985" : "#EFAF0B";
+    const backgroundColor = char.rarity === 4 ? "#764585" : "#e6b741";
     return (
       <div class={styles.card_container}>
         <div
