@@ -5,6 +5,9 @@ from PIL import Image
 # Load the JSON file into a dictionary
 with open('./StarRailRes/index_min/en/characters.json', 'r') as f:
     characters = json.load(f)
+
+with open('./StarRailRes/index_min/en/light_cones.json', 'r') as f:
+    light_cones = json.load(f)
     
 def convert_and_move_images(src_dir, dest_dir, file_ext):
     for filename in os.listdir(src_dir):
@@ -31,3 +34,4 @@ convert_and_move_images('./StarRailRes/image/character_preview', '../../public/c
 print("getting icons")
 # Convert and move character icon images
 convert_and_move_images('./StarRailRes/icon/character', '../../public/character_icons', '.png')
+convert_and_move_images('./StarRailRes/image/light_cone_preview', '../../public/light_cone_images', '.png')
