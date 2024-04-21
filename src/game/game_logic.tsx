@@ -29,6 +29,9 @@ type CharacterPick = {
 type CharacterBan = {
   name: string;
 };
+type LightConeBan = {
+  name: string;
+};
 const [gamePhase, setGamePhase] = createSignal(game_phases.LOADING);
 const getCID = () => {
   let cid;
@@ -66,6 +69,9 @@ const [playerTurn, setPlayerTurn] = createSignal("blue_team");
 const [ownTeam, setOwnTeam] = createSignal("blue_team");
 const [sessionId, setSessionId] = createSignal("");
 const [blueBans, setBlueBans] = createSignal<CharacterBan[]>([]);
+const [blueLcBan, setBlueLcBan] = createSignal<LightConeBan[]>([]);
+const [redLcBan, setRedLcBan] = createSignal<LightConeBan[]>([]);
+const [hasLcBan, setHasLcBan] = createSignal(false);
 const [redBans, setRedBans] = createSignal<CharacterBan[]>([]);
 const [bluePicks, setBluePicks] = createSignal<CharacterPick[]>([]);
 const [redPicks, setRedPicks] = createSignal<CharacterPick[]>([]);
@@ -106,6 +112,31 @@ export const turn_order = [
   { team: "blue_team", action: "pick", id: 8 },
   { team: "blue_team", action: "pick", id: 9 },
   { team: "red_team", action: "pick", id: 9 },
+];
+
+export const turn_order_light_cone_ban = [
+  { team: "blue_team", action: "ban", type: "character", id: 0 },
+  { team: "red_team", action: "ban", type: "character", id: 0 },
+  { team: "blue_team", action: "pick", type: "character", id: 1 },
+  { team: "red_team", action: "pick", type: "character", id: 1 },
+  { team: "red_team", action: "pick", type: "character", id: 2 },
+  { team: "blue_team", action: "pick", type: "character", id: 2 },
+  { team: "red_team", action: "ban", type: "character", id: 3 },
+  { team: "blue_team", action: "ban", type: "character", id: 3 },
+  { team: "red_team", action: "ban", type: "light_cone", id: 4 },
+  { team: "blue_team", action: "ban", type: "light_cone", id: 4 },
+  { team: "red_team", action: "pick", type: "character", id: 5 },
+  { team: "blue_team", action: "pick", type: "character", id: 5 },
+  { team: "blue_team", action: "pick", type: "character", id: 6 },
+  { team: "red_team", action: "pick", type: "character", id: 6 },
+  { team: "red_team", action: "pick", type: "character", id: 7 },
+  { team: "blue_team", action: "pick", type: "character", id: 7 },
+  { team: "blue_team", action: "pick", type: "character", id: 8 },
+  { team: "red_team", action: "pick", type: "character", id: 8 },
+  { team: "red_team", action: "pick", type: "character", id: 9 },
+  { team: "blue_team", action: "pick", type: "character", id: 9 },
+  { team: "blue_team", action: "pick", type: "character", id: 10 },
+  { team: "red_team", action: "pick", type: "character", id: 10 },
 ];
 const MessageEnum = {
   INIT_GAME: "init_game",
@@ -214,6 +245,7 @@ export {
   setLcJson,
   CharacterBan,
   CharacterPick,
+  LightConeBan,
   ownTeam,
   MessageEnum,
   redCost,
@@ -237,4 +269,10 @@ export {
   setRedCostsMap,
   totalCost,
   setTotalCost,
+  hasLcBan,
+  setHasLcBan,
+  blueLcBan,
+  setBlueLcBan,
+  redLcBan,
+  setRedLcBan
 };

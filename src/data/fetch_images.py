@@ -30,8 +30,9 @@ def convert_and_move_images(src_dir, dest_dir, file_ext):
 
 # Convert and move character preview images
 convert_and_move_images('./StarRailRes/image/character_preview', '../../public/character_images', '.png')
+convert_and_move_images('./StarRailRes/image/light_cone_preview', '../../public/light_cone_images', '.png')
 
 print("getting icons")
 # Convert and move character icon images
 convert_and_move_images('./StarRailRes/icon/character', '../../public/character_icons', '.png')
-convert_and_move_images('./StarRailRes/image/light_cone_preview', '../../public/light_cone_images', '.png')
+convert_and_move_images('./StarRailRes/icon/light_cone', '../../public/light_cone_icons', '.png')
