@@ -6,21 +6,23 @@
 }
 
 button {
+    margin: 0.3em;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 5px;
+    padding: 0.5em;
     /* background-color: #EFF7F6;
     color: black; */
     color: #EFF7F6;
     font-size: 1em;
-    background-color: var(--buttons);
-    border: 3px solid #9D4EDD;
+    background-color: #48305f;
+    border: 3px solid var(--buttons);
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-results_button:hover {
+.results_button:hover {
     background-color: var(--buttons);
     transform: scale(1.1);
 }
@@ -41,9 +43,8 @@ results_button:hover {
     justify-content: center;
     align-items: center;
     padding: 5px;
-    background-color: #5A189A;
+    background-color: var(--buttons);
     color: white;
-    margin: 0.3em;
 }
 .score_display {
     display: flex;
