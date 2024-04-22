@@ -71,7 +71,7 @@ const [sessionId, setSessionId] = createSignal("");
 const [blueBans, setBlueBans] = createSignal<CharacterBan[]>([]);
 const [blueLcBan, setBlueLcBan] = createSignal<LightConeBan[]>([]);
 const [redLcBan, setRedLcBan] = createSignal<LightConeBan[]>([]);
-const [hasLcBan, setHasLcBan] = createSignal(false);
+const [lcBanPhase, setLcBanPhase] = createSignal(false);
 const [redBans, setRedBans] = createSignal<CharacterBan[]>([]);
 const [bluePicks, setBluePicks] = createSignal<CharacterPick[]>([]);
 const [redPicks, setRedPicks] = createSignal<CharacterPick[]>([]);
@@ -269,8 +269,8 @@ export {
   setRedCostsMap,
   totalCost,
   setTotalCost,
-  hasLcBan,
-  setHasLcBan,
+  lcBanPhase,
+  setLcBanPhase,
   blueLcBan,
   setBlueLcBan,
   redLcBan,

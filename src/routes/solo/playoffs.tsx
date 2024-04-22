@@ -1,5 +1,5 @@
 import { Component, onMount } from "solid-js";
-import DraftTool from "~/components/DraftTool/DraftTool";
+import DraftToolWithLCBan from "~/components/DraftToolLcBan/DraftToolWithLCBan";
 import {
   setTurnIndex,
   turnIndex,
@@ -27,7 +27,6 @@ import {
   calcCost,
   setBlueCostsMap,
   setRedCostsMap,
-  setHasLcBan,
   turn_order_light_cone_ban
 } from "~/game/game_logic";
 
@@ -116,10 +115,9 @@ const handleUndo = () => {
 const game: Component<{}> = (props) => {
   onMount(async () => {
     setIsSinglePlayer(true);
-    setHasLcBan(true);
   });
   return (
-    <DraftTool
+    <DraftToolWithLCBan
       handlePick={handlePick}
       handleBan={handleBan}
       handleSigEid={handleSigEid}

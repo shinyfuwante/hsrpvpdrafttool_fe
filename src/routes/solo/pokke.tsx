@@ -45,6 +45,8 @@ const incrementTurn = () => {
   if (turnIndex() < turn_order.length) {
     setPlayerTurn(turn_order[turnIndex()].team);
   }
+  // if turnIndex() is into light cone phase, set lightcone ban
+  // if it leaves, unset it
 };
 
 const decrementTurn = () => {

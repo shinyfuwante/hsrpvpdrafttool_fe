@@ -22,19 +22,19 @@ import {
   isSinglePlayer,
   ownTeam,
   version,
-  hasLcBan,
+  lcBanPhase,
 } from "~/game/game_logic";
 
 import styles from "./DraftTool.module.css";
 
-interface DraftToolProps {
+interface DraftToolWithLCBanProps {
   handlePick: (character: CharacterPick) => void;
   handleBan: (character: CharacterBan) => void;
   handleSigEid: (character: CharacterPick) => void;
   handleUndo: () => void;
   handleReset: () => void;
 }
-const DraftTool: Component<DraftToolProps> = ({
+const DraftToolWithLCBan: Component<DraftToolWithLCBanProps> = ({
   handlePick,
   handleBan,
   handleSigEid,
@@ -43,7 +43,6 @@ const DraftTool: Component<DraftToolProps> = ({
 }) => {
   const [ready, setReady] = createSignal(false);
   const fetchData = async () => {
-    console.log(ruleSet());
     let response1 = await fetch(
       `/rule_sets/${ruleSet()}/characters.json?version=${version()}`
     );
@@ -80,62 +79,35 @@ const DraftTool: Component<DraftToolProps> = ({
       {ready() && (
         <>
           <div class={styles.overall_container}>
-            <Show when={isSinglePlayer()}>
-              <SoloSettings />
-            </Show>
-            <Show when={!isSinglePlayer()}>
-              <div class={styles.team_notifier}>
-                You are on the {ownTeam() == "blue_team" ? "Blue" : "Red"} Team
-              </div>
-            </Show>
+            <SoloSettings />
             <div class={styles.draft_container}>
               <div class={styles.team}>
-                <Show
-                  when={hasLcBan()}
-                  fallback={
-                    <Team
-                      bansSignal={blueBans}
-                      picksSignal={bluePicks}
-                      team={"blue_team"}
-                      handleSigEid={handleSigEid}
-                    />
-                  }
-                >
-                  <TeamWithLCBan
-                    bansSignal={blueBans}
-                    picksSignal={bluePicks}
-                    team={"blue_team"}
-                    handleSigEid={handleSigEid}
-                  />
-                </Show>
-              </div>
-              <div class={styles.roster}>
-                <Roster
-                  handleBan={handleBan}
-                  handlePick={handlePick}
-                  handleUndo={handleUndo}
-                  handleReset={handleReset}
+                <TeamWithLCBan
+                  bansSignal={blueBans}
+                  picksSignal={bluePicks}
+                  team={"blue_team"}
+                  handleSigEid={handleSigEid}
                 />
               </div>
-              <div class={styles.team}>
-                <Show
-                  when={hasLcBan()}
-                  fallback={
-                    <Team
-                      bansSignal={redBans}
-                      picksSignal={redPicks}
-                      team={"red_team"}
-                      handleSigEid={handleSigEid}
-                    />
-                  }
-                >
-                  <TeamWithLCBan
-                    bansSignal={redBans}
-                    picksSignal={redPicks}
-                    team={"red_team"}
-                    handleSigEid={handleSigEid}
+              <Show when={!lcBanPhase()} fallback ={
+                <div>LC Ban Phase</div>
+              }>
+                <div class={styles.roster}>
+                  <Roster
+                    handleBan={handleBan}
+                    handlePick={handlePick}
+                    handleUndo={handleUndo}
+                    handleReset={handleReset}
                   />
-                </Show>
+                </div>
+              </Show>
+              <div class={styles.team}>
+                <TeamWithLCBan
+                  bansSignal={redBans}
+                  picksSignal={redPicks}
+                  team={"red_team"}
+                  handleSigEid={handleSigEid}
+                />
               </div>
             </div>
           </div>
@@ -145,4 +117,4 @@ const DraftTool: Component<DraftToolProps> = ({
   );
 };
 
-export default DraftTool;
+export default DraftToolWithLCBan;
