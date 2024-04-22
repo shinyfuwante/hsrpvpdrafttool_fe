@@ -28,7 +28,9 @@ import {
   setBlueCostsMap,
   setRedCostsMap,
   setDraftOrder,
-  draftOrder
+  draftOrder,
+  blueCostsMap,
+  redCostsMap,
 } from "~/game/game_logic";
 
 // interface DraftToolProps {
@@ -105,6 +107,7 @@ const handleUndo = () => {
       setBlueBans(blueBans().slice(0, -1));
     } else {
       const char = bluePicks()[bluePicks().length - 1];
+      blueCostsMap().set(bluePicks().length - 1, 0);
       setBluePicks(bluePicks().slice(0, -1));
       setBlueCost(Math.max(blueCost() - calcCost(char), 0));
     }
@@ -113,6 +116,7 @@ const handleUndo = () => {
       setRedBans(redBans().slice(0, -1));
     } else {
       const char = redPicks()[redPicks().length - 1];
+      redCostsMap().set(redPicks().length - 1, 0);
       setRedPicks(redPicks().slice(0, -1));
       setRedCost(Math.max(redCost() - calcCost(char), 0));
     }
