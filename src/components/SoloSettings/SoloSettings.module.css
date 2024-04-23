@@ -37,7 +37,7 @@
     margin: 0.5em;
 }
 .roll_buttons {
-    display: flex;
+    display: flex;  
     flex-direction: column;
     align-items: center;
     cursor: pointer;
