@@ -51,7 +51,7 @@ input.light_cone_input {
   border-width: 1px;
 }
 .light_cone_input::placeholder {
-  color: white;
+  color: #b8a5c6;
 }
 .superimposition_select {
   max-width: 30%;
