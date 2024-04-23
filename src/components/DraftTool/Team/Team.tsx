@@ -79,7 +79,7 @@ const Team: Component<TeamProps> = (props) => {
         <div>{isSinglePlayer() ? teamName() : team == ownTeam() ? "Your Team" : teamName()} </div>
         <div class={`${cost() >= totalCost() ? styles.over_30    : ""}`}>{cost()}/{totalCost()}</div>
       </div>
-      <div style={{ flex: 1 }}>
+      <div class={styles.ban_row}>
         <Show when={bansSignal()[0]} fallback={<EmptyCharacterComponent id={0} type={"ban"}/>}>
           <BanCard character={bansSignal()[0]}/>
         </Show>
@@ -112,7 +112,7 @@ const Team: Component<TeamProps> = (props) => {
           </Show>
         </div>
       </div>
-      <div style={{ flex: 1 }}>
+      <div class={styles.ban_row}>
         <Show when={bansSignal()[1]} fallback={<EmptyCharacterComponent id={3} type={"ban"}/>}>
           <BanCard character={bansSignal()[1]}/>
         </Show>
