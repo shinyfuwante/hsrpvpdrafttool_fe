@@ -38,43 +38,34 @@ const Results: Component<{}> = (props) => {
   };
   return (
     <div class={styles.results}>
-      <div
-        style={{
-          display: "flex",
-          "flex-direction": "row",
-        }}
-      >
-        <div style={{ display: "flex", "flex-direction": "column" }}>
-          {blueTeamName()}
+      <div class={styles.results_container}>
+        <div class={styles.team_result}>
+          <div class={styles.team_name}>{blueTeamName()}</div>
           <input
-            type="number"
             placeholder={"Blue Player 1 Cycles"}
             onChange={(e) => (blueOneCycles = Number(e.target.value))}
+            class={styles.results_input}
           ></input>
           <input
-            type="number"
             placeholder={"Blue Player 2 Cycles"}
             onChange={(e) => (blueTwoCycles = Number(e.target.value))}
+            class={styles.results_input}
           ></input>
           <input
-            type="number"
             placeholder={"Blue Team Deaths"}
             onChange={(e) => (blueDeaths = Number(e.target.value))}
+            class={styles.results_input}
           >
             Blue Team Deaths:{" "}
           </input>
         </div>
-        <div
-          style={{
-            display: "flex",
-            "flex-direction": "column",
-          }}
-        >
-          {redTeamName()}
+        <div class={styles.team_result}>
+          <div class={styles.team_name}>{redTeamName()}</div>
           <input
             type="number"
             placeholder={"Red Player 1 Cycles"}
             onChange={(e) => (redOneCycles = Number(e.target.value))}
+            class={styles.results_input}
           >
             Player 1 Cycles:{" "}
           </input>
@@ -82,6 +73,7 @@ const Results: Component<{}> = (props) => {
             type="number"
             placeholder={"Red Player 2 Cycles"}
             onChange={(e) => (redTwoCycles = Number(e.target.value))}
+            class={styles.results_input}
           >
             Player 2 Cycles:{" "}
           </input>
@@ -89,18 +81,24 @@ const Results: Component<{}> = (props) => {
             type="number"
             placeholder={"Red Team Deaths"}
             onChange={(e) => (redDeaths = Number(e.target.value))}
+            class={styles.results_input}
           >
             Red Team Deaths:{" "}
           </input>
         </div>
       </div>
-      <button class={styles.results_button} onClick={() => calculateScores()}>Calculate Score</button>
+      <button
+        class={`${styles.results_button}`}
+        onClick={() => calculateScores()}
+      >
+        Calculate Score
+      </button>
       <Show fallback={null} when={scoreCalced() == true}>
         <div class={styles.winning_string}>
           {winnerString()}
           <div class={styles.score_display}>
             <div class={styles.blue_team}> {blueScore().toFixed(4)}</div>{" "}
-            <div class={styles.red_team}>{redScore().toFixed(4)}</div>    
+            <div class={styles.red_team}>{redScore().toFixed(4)}</div>
           </div>
         </div>
       </Show>

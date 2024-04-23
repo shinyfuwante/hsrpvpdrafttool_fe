@@ -37,7 +37,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
   );
   const [lightCone, setLightCone] = createSignal(character.light_cone);
   const [cost, setCost] = createSignal(calcCost(props.signal()[id]));
-  
+
   let prevEid = character.eidolon;
   let prevLightCone = character.light_cone;
   let prevSuper = character.superimposition;
@@ -92,21 +92,17 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
               setEidolon(Number(e.target.value));
               handleSuperimpositionEidolonChange();
             }}
-            style={{ "max-width": "100%" }}
+            class={styles.eidolon_select}
             disabled={isSinglePlayer() ? false : team !== ownTeam()}
           >
             {[...Array(7).keys()].map((value) => (
               <option value={value}>E{value}</option>
             ))}
           </select>
-          <div
-            style={{
-              "max-width": "100%",
-              display: "flex",
-            }}
-          >
+          <div class={styles.light_cone_container}>
             <input
               list="light-cones"
+              class={styles.light_cone_input}
               value={props.signal()[id].light_cone}
               onBlur={(e) => {
                 if (e.target.value !== lightCone()) {
@@ -116,14 +112,13 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
                 }
               }}
               placeholder="Light Cone"
-              style={{ flex: 1 }}
               disabled={isSinglePlayer() ? false : team !== ownTeam()}
             />
 
             <datalist id="light-cones">
               {Object.keys(lcJson()).map((key) => (
                 <>
-                <option value={key}>{lcJson()[key].character || key}</option>
+                  <option value={key}>{lcJson()[key].character || key}</option>
                 </>
               ))}
             </datalist>
@@ -134,7 +129,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
                 setSuperimposition(Number(e.target.value));
                 handleSuperimpositionEidolonChange();
               }}
-              style={{ "max-width": "30%" }}
+              class={styles.superimposition_select}
               disabled={isSinglePlayer() ? false : team !== ownTeam()}
             >
               {[...Array(5).keys()].map((value) => (

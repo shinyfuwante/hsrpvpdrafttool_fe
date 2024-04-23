@@ -6,6 +6,7 @@
     margin-bottom: 2em;
     align-items: center;
     padding: 1em;
+    border-radius: 0.5em;
 }
 
 .team_names {
@@ -14,7 +15,19 @@
     justify-content: space-evenly;
     gap: 0.5em;
     align-items: center;
-    height: 2em;
+    height: 2.5em;
+    border-radius: 0.5em;
+}
+
+.team_names_input {
+    background-color: #614b78;
+    border: none;
+    margin: 0.1em;
+    padding: 0.5em;
+    color: #ffffff;
+}
+.team_names_input::placeholder {
+    color: #b8a5c6;
 }
 .initiative {
     display: flex;
@@ -31,6 +44,7 @@
     border: 2px solid #64477c;
     padding: 0.5em;
     transition: transform 0.3s ease;
+    border-radius: 0.5em;
 }
 
 .roll_buttons:hover {
@@ -42,4 +56,8 @@
     flex-direction: column;
     align-items: center;
     margin: 0.5em;
+}
+
+.hide {
+    display: none;
 }

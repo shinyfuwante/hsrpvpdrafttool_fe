@@ -1,7 +1,9 @@
 .card_container {
   min-height: 100px;
-  display: grid;
+  display: grid;  
   grid-template-rows: 3fr 1fr;
+  row-gap: 0.2em;
+  height: 100%;
 }
 
 .character_card {
@@ -13,6 +15,7 @@
   min-height: 75px;
   flex: 1;
   position: relative;
+  border-radius: 0.3em;
 }
 
 .cost {
@@ -25,13 +28,40 @@
     color: white;
     font-weight: bold;
     font-size: 1.5em;
+    border-radius: 0.3em;
 }
 
 .eidolon_sig {
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 3fr 7fr;
     justify-content: space-between;
     width: 100%;
     background-color: #48305f;
-    column-gap: 1em;
+}
+.light_cone_container {
+  display: flex;
+  max-width: 100%;
+}
+input.light_cone_input {
+  flex: 1;
+  background-color: #57436c;
+  margin-right: 0.3em;
+  color: white;
+  border-style: solid;
+  border-width: 1px;
+}
+.light_cone_input::placeholder {
+  color: white;
+}
+.superimposition_select {
+  max-width: 30%;
+  background-color: #57436c;
+  color: white;
+  border-radius: 0.3em;
+}
+.eidolon_select {
+  max-width: 60%;
+  background-color: #57436c;
+  color: white;
+  border-radius: 0.3em;
 }
