@@ -2,13 +2,15 @@
   display: flex;
   flex-direction: column;
   gap: 0.1em;
-  padding: 0.4em;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
 }
 .selector {
   display: grid;
   grid-auto-rows: 75px;
   grid-template-columns: repeat(auto-fill, 75px);
   max-width: 100%;
+  width: 100%;
   max-height: 100%;
   place-content: center;
   gap: 0.2em;
@@ -16,12 +18,18 @@
 }
 .search_bar {
     width: 100%;
+    align-self: center;
     height: 3em;
-    background-color: #EFF7F6;
-    padding: 0.2em;
+    background-color: #221a2f;
     color: black;
+    padding: 0.3em;
+    color: white;
     border: 3px solid var(--buttons);
     margin-bottom: 0.5em;
+    border-radius: 0.3em;
+}
+.search_bar::placeholder {
+    color: #a795b3;
 }
 
 .not_selected {
@@ -51,17 +59,16 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 5px;
     /* background-color: #EFF7F6;
     color: black; */
     color: #EFF7F6;
     font-size: 1em;
-    background-color: #764585;
-    background-color: #e6b741;
     background-color: #48305f;
-    border: 3px solid var(--buttons);
+    border: none;
+    padding: 0.5em;
     cursor: pointer;
     transition: transform 0.3s ease;
+    border-radius: 0.3em;
 }
 
 .roster_button:hover {

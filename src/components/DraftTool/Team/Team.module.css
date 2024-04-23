@@ -1,6 +1,6 @@
 .empty_card {
     width: 100%;
-    height: 75%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     min-height: 100px;
@@ -8,13 +8,14 @@
     color: white;
     text-align: center;
     justify-content: center;
+    border-radius: 0.2em;
 }
 .team {
     display: grid;
     grid-template-rows: 0.3fr repeat(6, 1fr);
     grid-template-columns: repeat(1, 1fr);
     background-color: var(--background);
-    gap: 5px;
+    gap: 0.3em;
 }
 
 .merged-row {
@@ -28,6 +29,7 @@
     justify-content: space-between;
     padding: 0.3em;
     color: white;
+    border-radius: 0.2em;
 }
 .over_30 {
     color: #FFD23F;
@@ -45,11 +47,9 @@
 
 .team_row {
     display: flex;
-    column-gap: 5px;
-    align-items: center;
+    gap: 0.3em;
     justify-content: space-between;
 }
-
 .current_pick {
     border: 2px solid rgb(213, 176, 234);
     animation: pulse 2s infinite;

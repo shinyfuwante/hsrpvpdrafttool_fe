@@ -24,7 +24,7 @@ onMount(async () => {
       kofiWidgetOverlay.draw('metamon', {
         'type': 'floating-chat',
         'floating-chat.donateButton.text': 'Tip Ditto',
-        'floating-chat.donateButton.background-color': '#794bc4',
+        'floating-chat.donateButton.background-color': '#64477c',
         'floating-chat.donateButton.text-color': '#fff'
       });
     `;

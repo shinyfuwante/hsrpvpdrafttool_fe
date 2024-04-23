@@ -140,6 +140,7 @@ const Roster: Component<RosterProps> = (props) => {
                       width: "75px",
                       height: "75px",
                       cursor: !isSelected && isTurn() ? "pointer" : "default",
+                      "border-radius": "0.3em",
                     }}
                     class={`${isSelected ? styles.character : styles.not_selected} ${
                       onceSelected
