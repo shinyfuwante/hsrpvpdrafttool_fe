@@ -53,6 +53,7 @@ const SoloSettings: Component<{}> = (props) => {
               type="text"
               placeholder="Team 1 Name"
               onChange={(e) => updatePlayer1Name(e.target.value)}
+              class={styles.team_names_input}
             ></input>
           </div>
           <div>
@@ -60,6 +61,7 @@ const SoloSettings: Component<{}> = (props) => {
               type="text"
               placeholder="Team 2 Name"
               onChange={(e) => updatePlayer2Name(e.target.value)}
+              class={styles.team_names_input}
             ></input>
           </div>
         </div>
