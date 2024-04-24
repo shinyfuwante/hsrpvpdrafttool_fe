@@ -22,6 +22,7 @@ import {
   ownTeam,
   version,
 } from "~/game/game_logic";
+import Timer from "./Timer";
 
 import styles from "./DraftTool.module.css";
 
@@ -86,6 +87,7 @@ const DraftTool: Component<DraftToolProps> = ({
                 You are on the {ownTeam() == "blue_team" ? "Blue" : "Red"} Team
               </div>
             </Show>
+            <Timer></Timer>
             <div class={styles.draft_container}>
               <div class={styles.team}>
                 <Team
