@@ -1,4 +1,4 @@
-import { ruleSet } from "./game_logic";
+import { applyTimerPenalty, ruleSet } from "./game_logic";
 
 export const calculateBonusCycles = (points: number) => {
   if (points < 30) {
