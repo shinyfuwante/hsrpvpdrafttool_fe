@@ -13,3 +13,26 @@
     justify-content: center;
     margin-bottom: 0.5em;
 }
+
+.timer_urgent { 
+    align-self: center;
+    padding: 0.4em;
+    color: #eb0e5b;
+    font-size: 1.2em;
+    background-color: #48305f;
+    width: 100%;
+    text-align: center;
+    border-radius: 0.3em;
+    height: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5em;
+    animation: flash 1s infinite;
+}
+
+@keyframes flash {
+    0% { color: #eb0e5b; }
+    50% { color: #E0AAFF; } 
+    100% { color: #eb0e5b; }
+  }
