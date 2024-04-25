@@ -2,6 +2,8 @@ import { Component, createSignal } from "solid-js";
 import {
   blueTeamName,
   redTeamName,
+  setApplyTimerPenalty,
+  applyTimerPenalty,
   setBlueTeamName,
   setRedTeamName,
   setInitiativeWinner,
@@ -87,7 +89,7 @@ const SoloSettings: Component<{}> = (props) => {
       </div>
       <div>
         <div class={styles.blue_team_selector}>
-          Blue Team:
+          Assign Blue Team:
           <div>
             <input
               type="radio"
@@ -107,6 +109,14 @@ const SoloSettings: Component<{}> = (props) => {
             <label for="player2">{player2Name()}</label>
           </div>
         </div>
+      </div>
+      <div>
+        <fieldset>
+          <label class={`${styles.switch}`}>
+            <input name="toggle_cycle_penalty" type="checkbox" role="switch" checked onChange={() => setApplyTimerPenalty(!(applyTimerPenalty()))}/>
+            Apply Timer Penalty
+          </label>
+        </fieldset>
       </div>
     </div>
   );

@@ -1,5 +1,24 @@
-import { player1Name, player2Name } from "~/components/SoloSettings/SoloSettings";
-import { ruleSet, blueCost, redCost, initiativeWinner, draftOrder, CharacterBan, CharacterPick, charJson, lcJson, player1Roll, player2Roll, setInitiativeWinner, blueTeamName, redTeamName } from "./game_logic";
+import {
+  player1Name,
+  player2Name,
+} from "~/components/SoloSettings/SoloSettings";
+import {
+  ruleSet,
+  blueCost,
+  redCost,
+  initiativeWinner,
+  draftOrder,
+  CharacterBan,
+  CharacterPick,
+  charJson,
+  lcJson,
+  player1Roll,
+  player2Roll,
+  setInitiativeWinner,
+  blueTeamName,
+  redTeamName,
+  applyTimerPenalty,
+} from "./game_logic";
 import { Setter } from "solid-js";
 
 export const calculateBonusCycles = (points: number) => {
@@ -23,23 +42,35 @@ const determineInitiativeWinner = () => {
       setInitiativeWinner("blue_team");
     }
   }
-
-}
-export const calculateScore = (points: number, deaths: number, p1Cycles: number, p2Cycles: number) => {
+};
+export const calculateScore = (
+  points: number,
+  deaths: number,
+  p1Cycles: number,
+  p2Cycles: number
+) => {
   determineInitiativeWinner();
   if (ruleSet() == "pokke") {
     return p1Cycles + p2Cycles;
   }
-    const bonusCycles = calculateBonusCycles(points + deaths);
-    const score = p1Cycles + p2Cycles + bonusCycles;
+  const bonusCycles = calculateBonusCycles(points + deaths);
+  const score = p1Cycles + p2Cycles + bonusCycles;
 
-    return score;
-} 
+  return score;
+};
 
-export const encodeString = async (blue1Cycles: number, blue2Cycles: number, red1Cycles: number, red2Cycles: number, blueDeaths: number, redDeaths: number, setCopied: Setter<boolean>) => {
+export const encodeString = async (
+  blue1Cycles: number,
+  blue2Cycles: number,
+  red1Cycles: number,
+  red2Cycles: number,
+  blueDeaths: number,
+  redDeaths: number,
+  setCopied: Setter<boolean>
+) => {
   let encodedString = "";
   const cjson = charJson();
-  const lcjson = lcJson()
+  const lcjson = lcJson();
   draftOrder().map((char) => {
     if ((char as CharacterPick).eidolon != undefined) {
       const lc_name = (char as CharacterPick).light_cone;
@@ -48,21 +79,24 @@ export const encodeString = async (blue1Cycles: number, blue2Cycles: number, red
       if (lc && lc.rarity == 5 && (!lc.free || lc.character)) {
         superimp_num = (char as CharacterPick).superimposition;
       }
-      encodedString += `${cjson[char.name].code}${((char as CharacterPick).eidolon)}${superimp_num}`;
-    } else { // it's a ban, just append
+      encodedString += `${cjson[char.name].code}${
+        (char as CharacterPick).eidolon
+      }${superimp_num}`;
+    } else {
+      // it's a ban, just append
       encodedString += cjson[char.name].code;
     }
   });
   // add cycle nums
-  encodedString += String(blue1Cycles).padStart(2, '0');
-  encodedString += String(blue2Cycles).padStart(2, '0');
-  encodedString += String(red1Cycles).padStart(2, '0');
-  encodedString += String(red2Cycles).padStart(2, '0');
+  encodedString += String(blue1Cycles).padStart(2, "0");
+  encodedString += String(blue2Cycles).padStart(2, "0");
+  encodedString += String(red1Cycles).padStart(2, "0");
+  encodedString += String(red2Cycles).padStart(2, "0");
   // add deaths
   encodedString += String(blueDeaths);
   encodedString += String(redDeaths);
-  encodedString += String(blueCost()).padStart(2, '0');
-  encodedString += String(redCost()).padStart(2, '0');
+  encodedString += String(blueCost()).padStart(2, "0");
+  encodedString += String(redCost()).padStart(2, "0");
   encodedString += initiativeWinner() == "blue_team" ? "b" : "r";
   try {
     await navigator.clipboard.writeText(encodedString);
@@ -70,4 +104,4 @@ export const encodeString = async (blue1Cycles: number, blue2Cycles: number, red
   } catch (err) {
     console.error("Failed to copy: ", err);
   }
-}
+};

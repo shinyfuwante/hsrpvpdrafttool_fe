@@ -1,11 +1,7 @@
 import { Component, createSignal } from "solid-js";
 import { Show } from "solid-js";
-import {
-  calculateBonusCycles,
-  calculateScore,
-  encodeString,
-} from "~/game/point_calc";
-import { blueCost, redCost } from "~/game/game_logic";
+import { calculateBonusCycles, calculateScore, encodeString } from "~/game/point_calc";
+import { applyTimerPenalty, blueTimePenalty, redTimePenalty, blueCost, redCost } from "~/game/game_logic";
 import styles from "./Results.module.css";
 import { blueTeamName, redTeamName } from "~/game/game_logic";
 
@@ -21,10 +17,10 @@ const Results: Component<{}> = (props) => {
 
   const calculateScores = () => {
     setBlueScore(
-      calculateScore(blueCost(), blueDeaths, blueOneCycles, blueTwoCycles)
+      calculateScore(blueCost(), blueDeaths, blueOneCycles, blueTwoCycles) + (applyTimerPenalty() ? blueTimePenalty() : 0)
     );
     setRedScore(
-      calculateScore(redCost(), redDeaths, redOneCycles, redTwoCycles)
+      calculateScore(redCost(), redDeaths, redOneCycles, redTwoCycles) + (applyTimerPenalty() ? redTimePenalty() : 0)
     );
     setScoreCalced(true);
     if (blueScore() == redScore()) {

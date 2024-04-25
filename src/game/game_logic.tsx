@@ -88,6 +88,7 @@ const [redCostsMap, setRedCostsMap] = createSignal(new Map());
 const [draftOrder, setDraftOrder] = createSignal<(CharacterBan | CharacterPick)[]>([]);
 const [blueTimePenalty, setBlueTimePenalty] = createSignal(0);
 const [redTimePenalty, setRedTimePenalty] = createSignal(0);
+const [applyTimerPenalty, setApplyTimerPenalty] = createSignal(true);
 export const [turnIndex, setTurnIndex] = createSignal(0);
 const [player1Roll, setPlayer1Roll] = createSignal(0);
 const [player2Roll, setPlayer2Roll] = createSignal(0);
@@ -261,4 +262,6 @@ export {
   setBlueTimePenalty,
   redTimePenalty,
   setRedTimePenalty,
+  applyTimerPenalty,
+  setApplyTimerPenalty
 };
