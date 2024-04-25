@@ -65,3 +65,15 @@
 fieldset {
     border: none;
 }
+
+.toggle_cycle_penalty {
+    display: flex;
+    flex-direction: row;
+    cursor: not-allowed;
+    color: #b8a5c6;
+}
+.toggle_cycle_penalty:disabled {
+    background-color: #48305f;
+    color: #b8a5c6;
+    cursor: not-allowed;
+}

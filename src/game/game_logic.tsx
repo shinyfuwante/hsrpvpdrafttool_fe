@@ -86,7 +86,7 @@ const [blueCostsMap, setBlueCostsMap] = createSignal(new Map());
 const [redCostsMap, setRedCostsMap] = createSignal(new Map());
 const [blueTimePenalty, setBlueTimePenalty] = createSignal(0);
 const [redTimePenalty, setRedTimePenalty] = createSignal(0);
-const [applyTimerPenalty, setApplyTimerPenalty] = createSignal(true);
+const [applyTimerPenalty, setApplyTimerPenalty] = createSignal(false);
 export const [turnIndex, setTurnIndex] = createSignal(0);
 export const turn_order = [
   { team: "blue_team", action: "ban", id: 0 },
