@@ -112,9 +112,15 @@ const SoloSettings: Component<{}> = (props) => {
       </div>
       <div>
         <fieldset>
-          <label class={`${styles.switch}`}>
-            <input name="toggle_cycle_penalty" type="checkbox" role="switch" checked onChange={() => setApplyTimerPenalty(!(applyTimerPenalty()))}/>
-            Apply Timer Penalty
+          <label class={`${styles.toggle_cycle_penalty}`}>
+            <input
+              name="toggle_cycle_penalty"
+              type="checkbox"
+              role="switch"
+              disabled
+              onChange={() => setApplyTimerPenalty(!applyTimerPenalty())}
+            />
+            <div>Apply Timer Penalty</div>
           </label>
         </fieldset>
       </div>
