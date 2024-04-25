@@ -21,10 +21,13 @@ import {
   isSinglePlayer,
   ownTeam,
   version,
+  blueTimePenalty,
+  redTimePenalty
 } from "~/game/game_logic";
-import Timer from "./Timer";
+import Timer from "./Timer/Timer";
 
 import styles from "./DraftTool.module.css";
+import TimerPenalty from "./Timer/TimerPenalty/TimerPenalty";
 
 interface DraftToolProps {
   handlePick: (character: CharacterPick) => void;
@@ -87,7 +90,17 @@ const DraftTool: Component<DraftToolProps> = ({
                 You are on the {ownTeam() == "blue_team" ? "Blue" : "Red"} Team
               </div>
             </Show>
-            <Timer></Timer>
+            <Show when={ruleSet() == "pokke"}>
+              <div class={styles.timer_container}>
+                <div></div>
+                <div class={styles.timer_penalties}>
+                  <TimerPenalty penalty_signal={blueTimePenalty}></TimerPenalty>
+                  <Timer></Timer>
+                  <TimerPenalty penalty_signal={redTimePenalty}></TimerPenalty>
+                </div>
+                <div></div>
+              </div>
+            </Show>
             <div class={styles.draft_container}>
               <div class={styles.team}>
                 <Team

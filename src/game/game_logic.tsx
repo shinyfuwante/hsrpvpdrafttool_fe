@@ -86,6 +86,8 @@ const [error, setError] = createSignal("");
 const [blueCostsMap, setBlueCostsMap] = createSignal(new Map());
 const [redCostsMap, setRedCostsMap] = createSignal(new Map());
 const [draftOrder, setDraftOrder] = createSignal<(CharacterBan | CharacterPick)[]>([]);
+const [blueTimePenalty, setBlueTimePenalty] = createSignal(0);
+const [redTimePenalty, setRedTimePenalty] = createSignal(0);
 export const [turnIndex, setTurnIndex] = createSignal(0);
 const [player1Roll, setPlayer1Roll] = createSignal(0);
 const [player2Roll, setPlayer2Roll] = createSignal(0);
@@ -255,4 +257,8 @@ export {
   setPlayer1Roll,
   player2Roll,
   setPlayer2Roll,
+  blueTimePenalty,
+  setBlueTimePenalty,
+  redTimePenalty,
+  setRedTimePenalty,
 };
