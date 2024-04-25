@@ -11,7 +11,7 @@ import {
 } from "~/game/game_logic";
 
 const Timer: Component<{}> = (props) => {
-  const secondsPerPick = 10;
+  const secondsPerPick = 90;
   const [seconds, setSeconds] = createSignal(secondsPerPick);
   let intervalId: NodeJS.Timeout;
   createEffect(() => {
@@ -38,7 +38,7 @@ const Timer: Component<{}> = (props) => {
       clearInterval(intervalId);
     }
   })
-  return <div class={styles.timer}>{seconds()}</div>;
+  return <div class={seconds() < 30 ? styles.timer_urgent : styles.timer}>{seconds()}</div>;
 };
 
 export default Timer;
