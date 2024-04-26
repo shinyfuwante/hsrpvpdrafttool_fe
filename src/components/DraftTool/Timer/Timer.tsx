@@ -37,6 +37,7 @@ const Timer: Component<{}> = (props) => {
   createEffect(() => {
     if (turnIndex() == turn_order.length) {
       clearInterval(intervalId);
+      setSeconds(90);
     }
   })
   return <div class={seconds() < 30 ? styles.timer_urgent : styles.timer}>{seconds()}</div>;
