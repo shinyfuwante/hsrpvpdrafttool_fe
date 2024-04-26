@@ -8,6 +8,7 @@ import {
   redTimePenalty,
   turnIndex,
   turn_order,
+  redPicks
 } from "~/game/game_logic";
 
 const Timer: Component<{}> = (props) => {
@@ -15,7 +16,7 @@ const Timer: Component<{}> = (props) => {
   const [seconds, setSeconds] = createSignal(secondsPerPick);
   let intervalId: NodeJS.Timeout;
   createEffect(() => {
-    if (turnIndex() > 0) {
+    if (turnIndex() > 0 && turnIndex() < turn_order.length) {
       clearInterval(intervalId);
       setSeconds(secondsPerPick);
       intervalId = setInterval(() => {
@@ -36,6 +37,7 @@ const Timer: Component<{}> = (props) => {
   createEffect(() => {
     if (turnIndex() == turn_order.length) {
       clearInterval(intervalId);
+      setSeconds(90);
     }
   })
   return <div class={seconds() < 30 ? styles.timer_urgent : styles.timer}>{seconds()}</div>;
