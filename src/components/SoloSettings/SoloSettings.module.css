@@ -69,8 +69,7 @@ fieldset {
 .toggle_cycle_penalty {
     display: flex;
     flex-direction: row;
-    cursor: not-allowed;
-    color: #b8a5c6;
+    color: white;
 }
 .toggle_cycle_penalty:disabled {
     background-color: #48305f;
