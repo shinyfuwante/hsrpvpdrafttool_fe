@@ -1,7 +1,17 @@
 import { Component, createSignal } from "solid-js";
 import { Show } from "solid-js";
-import { calculateBonusCycles, calculateScore, encodeString } from "~/game/point_calc";
-import { applyTimerPenalty, blueTimePenalty, redTimePenalty, blueCost, redCost } from "~/game/game_logic";
+import {
+  calculateBonusCycles,
+  calculateScore,
+  encodeString,
+} from "~/game/point_calc";
+import {
+  applyTimerPenalty,
+  blueTimePenalty,
+  redTimePenalty,
+  blueCost,
+  redCost,
+} from "~/game/game_logic";
 import styles from "./Results.module.css";
 import { blueTeamName, redTeamName } from "~/game/game_logic";
 
@@ -17,10 +27,12 @@ const Results: Component<{}> = (props) => {
 
   const calculateScores = () => {
     setBlueScore(
-      calculateScore(blueCost(), blueDeaths, blueOneCycles, blueTwoCycles) + (applyTimerPenalty() ? blueTimePenalty() : 0)
+      calculateScore(blueCost(), blueDeaths, blueOneCycles, blueTwoCycles) +
+        (applyTimerPenalty() ? blueTimePenalty() : 0)
     );
     setRedScore(
-      calculateScore(redCost(), redDeaths, redOneCycles, redTwoCycles) + (applyTimerPenalty() ? redTimePenalty() : 0)
+      calculateScore(redCost(), redDeaths, redOneCycles, redTwoCycles) +
+        (applyTimerPenalty() ? redTimePenalty() : 0)
     );
     setScoreCalced(true);
     if (blueScore() == redScore()) {
@@ -105,6 +117,7 @@ const Results: Component<{}> = (props) => {
         <Show fallback={null} when={copied() == false}>
           {" "}
           <button
+            class={styles.results_button}
             onClick={() =>
               encodeString(
                 blueOneCycles,
@@ -122,6 +135,7 @@ const Results: Component<{}> = (props) => {
         </Show>
         <Show fallback={null} when={copied() == true}>
           <button
+            class={styles.results_button}
             onClick={() =>
               encodeString(
                 blueOneCycles,
