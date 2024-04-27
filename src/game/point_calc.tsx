@@ -18,6 +18,8 @@ import {
   blueTeamName,
   redTeamName,
   applyTimerPenalty,
+  blueTimePenalty,
+  redTimePenalty,
 } from "./game_logic";
 import { Setter } from "solid-js";
 
@@ -95,6 +97,8 @@ export const encodeString = async (
   // add deaths
   encodedString += String(blueDeaths);
   encodedString += String(redDeaths);
+  encodedString += String(blueTimePenalty()).padStart(2, "0");
+  encodedString += String(redTimePenalty()).padStart(2, "0");
   encodedString += String(blueCost()).padStart(2, "0");
   encodedString += String(redCost()).padStart(2, "0");
   encodedString += initiativeWinner() == "blue_team" ? "b" : "r";

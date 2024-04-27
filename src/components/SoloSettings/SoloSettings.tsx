@@ -120,6 +120,7 @@ const SoloSettings: Component<{}> = (props) => {
                 type="checkbox"
                 role="switch"
                 onChange={() => setApplyTimerPenalty(!applyTimerPenalty())}
+                checked={applyTimerPenalty()}
               />
               <div>Apply Timer Penalty</div>
             </label>
