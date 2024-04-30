@@ -90,13 +90,13 @@ export const encodeString = async (
     }
   });
   // add cycle nums
-  encodedString += String(blue1Cycles).padStart(2, "0");
-  encodedString += String(blue2Cycles).padStart(2, "0");
-  encodedString += String(red1Cycles).padStart(2, "0");
-  encodedString += String(red2Cycles).padStart(2, "0");
+  encodedString += String(Math.min(15, blue1Cycles)).padStart(2, "0");
+  encodedString += String(Math.min(15, blue2Cycles)).padStart(2, "0");
+  encodedString += String(Math.min(15, red1Cycles)).padStart(2, "0");
+  encodedString += String(Math.min(15, blue2Cycles)).padStart(2, "0");
   // add deaths
-  encodedString += String(blueDeaths);
-  encodedString += String(redDeaths);
+  encodedString += String(Math.min(8, blueDeaths));
+  encodedString += String(Math.min(8, redDeaths));
   encodedString += String(blueTimePenalty()).padStart(2, "0");
   encodedString += String(redTimePenalty()).padStart(2, "0");
   encodedString += String(blueCost()).padStart(2, "0");

@@ -11,6 +11,7 @@ import {
   redTimePenalty,
   blueCost,
   redCost,
+  ruleSet,
 } from "~/game/game_logic";
 import styles from "./Results.module.css";
 import { blueTeamName, redTeamName } from "~/game/game_logic";
@@ -114,7 +115,7 @@ const Results: Component<{}> = (props) => {
             <div class={styles.red_team}>{redScore().toFixed(4)}</div>
           </div>
         </div>
-        <Show fallback={null} when={copied() == false}>
+        <Show fallback={null} when={ruleSet() == "pokke"}>
           {" "}
           <button
             class={styles.results_button}
@@ -133,24 +134,7 @@ const Results: Component<{}> = (props) => {
             Copy Submission String to Clipboard
           </button>
         </Show>
-        <Show fallback={null} when={copied() == true}>
-          <button
-            class={styles.results_button}
-            onClick={() =>
-              encodeString(
-                blueOneCycles,
-                blueTwoCycles,
-                redOneCycles,
-                redTwoCycles,
-                blueDeaths,
-                redDeaths,
-                setCopied
-              )
-            }
-          >
-            Submission String Copied!
-          </button>
-        </Show>
+          <div class={`${copied() ? styles.show : ""} ${styles.submission_string}`}>Submission String Copied!</div>
       </Show>
     </div>
   );
