@@ -33,6 +33,8 @@ import {
   setDraftOrder,
   redCostsMap,
   blueCostsMap,
+  setBlueTimePenalty,
+  setRedTimePenalty,
 } from "~/game/game_logic";
 
 // interface DraftToolProps {
@@ -97,6 +99,8 @@ const handleReset = () => {
   setPlayerTurn(turn_order[0].team);
   setBlueCostsMap(new Map());
   setRedCostsMap(new Map());
+  setBlueTimePenalty(0);
+  setRedTimePenalty(0);
 };
 const handleUndo = () => {
   if (turnIndex() <= 0) {
