@@ -8,11 +8,15 @@ import {
   redTimePenalty,
   turnIndex,
   turn_order,
-  redPicks
+  redPicks,
+  setBlueTeamReserveTime,
+  blueTeamReserveTime,
+  setRedTeamReserveTime,
+  redTeamReserveTime,
 } from "~/game/game_logic";
 
 const Timer: Component<{}> = (props) => {
-  const secondsPerPick = 90;
+  const secondsPerPick = 30;
   const [seconds, setSeconds] = createSignal(secondsPerPick);
   let intervalId: NodeJS.Timeout;
   createEffect(() => {
@@ -26,21 +30,48 @@ const Timer: Component<{}> = (props) => {
   });
   createEffect(() => {
     if (seconds() == 0) {
+      clearInterval(intervalId);
       if (playerTurn() == "blue_team") {
-        setBlueTimePenalty(blueTimePenalty() + 1);
+        intervalId = setInterval(() => {
+          setBlueTeamReserveTime(blueTeamReserveTime() - 1);
+        }, 1000);
       } else {
-        setRedTimePenalty(redTimePenalty() + 1);
+        intervalId = setInterval(() => {
+          setRedTeamReserveTime(redTeamReserveTime() - 1);
+        }, 1000);
       }
-      setSeconds(secondsPerPick);
+      // setSeconds(secondsPerPick);
     }
-  })
+  });
   createEffect(() => {
     if (turnIndex() == turn_order.length) {
       clearInterval(intervalId);
-      setSeconds(90);
+      setSeconds(secondsPerPick);
     }
-  })
-  return <div class={seconds() < 30 ? styles.timer_urgent : styles.timer}>{seconds()}</div>;
+  });
+  createEffect(() => {
+    if (blueTeamReserveTime() == 0) {
+      clearInterval(intervalId);
+      setBlueTimePenalty(blueTimePenalty() + 1);
+      setBlueTeamReserveTime(60);
+      intervalId = setInterval(() => {
+        setBlueTeamReserveTime(blueTeamReserveTime() - 1);
+      }, 1000);
+    }
+    if (redTeamReserveTime() == 0) {
+      clearInterval(intervalId);
+      setRedTimePenalty(redTimePenalty() + 1);
+      setRedTeamReserveTime(60);
+      intervalId = setInterval(() => {
+        setRedTeamReserveTime(redTeamReserveTime() - 1);
+      }, 1000);
+    }
+  });
+  return (
+    <div class={seconds() < 10 ? styles.timer_urgent : styles.timer}>
+      {seconds()}
+    </div>
+  );
 };
 
 export default Timer;

@@ -1,4 +1,4 @@
-import { Component, createSignal } from "solid-js";
+import { Component, createSignal, Show } from "solid-js";
 import {
   blueTeamName,
   redTeamName,
@@ -6,6 +6,7 @@ import {
   applyTimerPenalty,
   setBlueTeamName,
   setRedTeamName,
+  ruleSet,
 } from "~/game/game_logic";
 import styles from "./SoloSettings.module.css";
 
@@ -107,20 +108,22 @@ const SoloSettings: Component<{}> = (props) => {
           </div>
         </div>
       </div>
-      <div>
-        <fieldset>
-          <label class={`${styles.toggle_cycle_penalty}`}>
-            <input
-              name="toggle_cycle_penalty"
-              type="checkbox"
-              role="switch"
-              disabled
-              onChange={() => setApplyTimerPenalty(!applyTimerPenalty())}
-            />
-            <div>Apply Timer Penalty</div>
-          </label>
-        </fieldset>
-      </div>
+      <Show when={ruleSet() == "pokke"}>
+        <div>
+          <fieldset>
+            <label class={`${styles.toggle_cycle_penalty}`}>
+              <input
+                name="toggle_cycle_penalty"
+                type="checkbox"
+                role="switch"
+                disabled
+                onChange={() => setApplyTimerPenalty(!applyTimerPenalty())}
+              />
+              <div>Apply Timer Penalty</div>
+            </label>
+          </fieldset>
+        </div>
+      </Show>
     </div>
   );
 };

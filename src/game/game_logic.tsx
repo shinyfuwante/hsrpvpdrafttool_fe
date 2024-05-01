@@ -4,7 +4,7 @@ import { v4 } from "uuid";
 
 export const version = () => {
   // version of tool.version of game.subversion of game.subversion of rules
-  return "2.2.1.0.0.5"; 
+  return "2.2.1.0.0.6"; 
 }
 
 const POINTS_PER_SUPERIMPOSITION = 0.5;
@@ -86,6 +86,8 @@ const [blueCostsMap, setBlueCostsMap] = createSignal(new Map());
 const [redCostsMap, setRedCostsMap] = createSignal(new Map());
 const [blueTimePenalty, setBlueTimePenalty] = createSignal(0);
 const [redTimePenalty, setRedTimePenalty] = createSignal(0);
+const [blueTeamReserveTime, setBlueTeamReserveTime] = createSignal(600);
+const [redTeamReserveTime, setRedTeamReserveTime] = createSignal(600);
 const [applyTimerPenalty, setApplyTimerPenalty] = createSignal(false);
 export const [turnIndex, setTurnIndex] = createSignal(0);
 export const turn_order = [
@@ -245,5 +247,9 @@ export {
   redTimePenalty,
   setRedTimePenalty,
   applyTimerPenalty,
-  setApplyTimerPenalty
+  setApplyTimerPenalty,
+  blueTeamReserveTime,
+  setBlueTeamReserveTime,
+  redTeamReserveTime,
+  setRedTeamReserveTime,
 };
