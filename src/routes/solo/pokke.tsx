@@ -101,6 +101,7 @@ const handleReset = () => {
   setRedCostsMap(new Map());
   setBlueTimePenalty(0);
   setRedTimePenalty(0);
+  setDraftOrder([]);
 };
 const handleUndo = () => {
   if (turnIndex() <= 0) {
