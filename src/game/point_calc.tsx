@@ -93,7 +93,7 @@ export const encodeString = async (
   encodedString += String(Math.min(15, blue1Cycles)).padStart(2, "0");
   encodedString += String(Math.min(15, blue2Cycles)).padStart(2, "0");
   encodedString += String(Math.min(15, red1Cycles)).padStart(2, "0");
-  encodedString += String(Math.min(15, blue2Cycles)).padStart(2, "0");
+  encodedString += String(Math.min(15, red2Cycles)).padStart(2, "0");
   // add deaths
   encodedString += String(Math.min(8, blueDeaths));
   encodedString += String(Math.min(8, redDeaths));
