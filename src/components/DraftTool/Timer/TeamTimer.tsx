@@ -8,10 +8,14 @@ import {
   redTimePenalty,
   turnIndex,
   turn_order,
-  redPicks
+  blueTeamReserveTime,
+  setBlueTeamReserveTime,
+  redTeamReserveTime,
+  setRedTeamReserveTime
 } from "~/game/game_logic";
 
-const Timer: Component<{}> = (props) => {
+const TeamTimer: Component<{team: string}> = (props) => {
+    const [timer, setTimer] = [props.team == "blue_team" ? blueTeamReserveTime : redTeamReserveTime, props.team == "blue_team" ? setBlueTeamReserveTime : setRedTeamReserveTime];
   const secondsPerPick = 30;
   const [seconds, setSeconds] = createSignal(secondsPerPick);
   let intervalId: NodeJS.Timeout;
@@ -43,4 +47,4 @@ const Timer: Component<{}> = (props) => {
   return <div class={seconds() < 30 ? styles.timer_urgent : styles.timer}>{seconds()}</div>;
 };
 
-export default Timer;
+export default TeamTimer;

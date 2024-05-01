@@ -22,12 +22,13 @@ import {
   ownTeam,
   version,
   blueTimePenalty,
-  redTimePenalty
+  redTimePenalty,
 } from "~/game/game_logic";
 import Timer from "./Timer/Timer";
 
 import styles from "./DraftTool.module.css";
 import TimerPenalty from "./Timer/TimerPenalty/TimerPenalty";
+import TeamTimer from "./Timer/TeamTimer";
 
 interface DraftToolProps {
   handlePick: (character: CharacterPick) => void;
@@ -94,9 +95,11 @@ const DraftTool: Component<DraftToolProps> = ({
               <div class={styles.timer_container}>
                 <div></div>
                 <div class={styles.timer_penalties}>
+                  <TeamTimer team={"blue_team"}></TeamTimer>
                   <TimerPenalty penalty_signal={blueTimePenalty}></TimerPenalty>
                   <Timer></Timer>
                   <TimerPenalty penalty_signal={redTimePenalty}></TimerPenalty>
+                  <TeamTimer team={"red_team"}></TeamTimer>
                 </div>
                 <div></div>
               </div>
