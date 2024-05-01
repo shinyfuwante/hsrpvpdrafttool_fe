@@ -122,7 +122,7 @@ const SoloSettings: Component<{}> = (props) => {
                 onChange={() => setApplyTimerPenalty(!applyTimerPenalty())}
                 checked={applyTimerPenalty()}
               />
-              <div>Apply Timer Penalty</div>
+              <div>Apply Timer Penalty (Applied for Ranked)</div>
             </label>
           </fieldset>
         </div>
