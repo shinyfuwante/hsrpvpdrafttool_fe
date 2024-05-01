@@ -6,18 +6,21 @@ import {
   applyTimerPenalty,
   setBlueTeamName,
   setRedTeamName,
-  ruleSet,
+  setInitiativeWinner,
+  player1Roll,
+  player2Roll,
+  setPlayer1Roll,
+  setPlayer2Roll,
+  ruleSet
 } from "~/game/game_logic";
 import styles from "./SoloSettings.module.css";
 
+export const [player1Name, setPlayer1Name] = createSignal("Team 1");
+export const [player2Name, setPlayer2Name] = createSignal("Team 2");
 const SoloSettings: Component<{}> = (props) => {
   const roll = () => {
     return Math.floor(Math.random() * 100) + 1;
   };
-  const [player1Name, setPlayer1Name] = createSignal("Team 1");
-  const [player2Name, setPlayer2Name] = createSignal("Team 2");
-  const [player1Roll, setPlayer1Roll] = createSignal(0);
-  const [player2Roll, setPlayer2Roll] = createSignal(0);
   const updatePlayer1Name = (name: string) => {
     const old_name = player1Name();
     if (old_name == blueTeamName()) {
@@ -116,10 +119,10 @@ const SoloSettings: Component<{}> = (props) => {
                 name="toggle_cycle_penalty"
                 type="checkbox"
                 role="switch"
-                disabled
                 onChange={() => setApplyTimerPenalty(!applyTimerPenalty())}
+                checked={applyTimerPenalty()}
               />
-              <div>Apply Timer Penalty</div>
+              <div>Apply Timer Penalty (Applied for Ranked)</div>
             </label>
           </fieldset>
         </div>

@@ -60,6 +60,7 @@ const calcCost = (character: CharacterPick) => {
   }
   return cost;
 };
+const [initiativeWinner, setInitiativeWinner] = createSignal("default");
 const [sideSelector, setSideSelector] = createSignal(false);
 const [totalCost, setTotalCost] = createSignal(30);
 const [playerTurn, setPlayerTurn] = createSignal("blue_team");
@@ -84,12 +85,15 @@ const [isEvent, setIsEvent] = createSignal(false);
 const [error, setError] = createSignal("");
 const [blueCostsMap, setBlueCostsMap] = createSignal(new Map());
 const [redCostsMap, setRedCostsMap] = createSignal(new Map());
+const [draftOrder, setDraftOrder] = createSignal<(CharacterBan | CharacterPick)[]>([]);
 const [blueTimePenalty, setBlueTimePenalty] = createSignal(0);
 const [redTimePenalty, setRedTimePenalty] = createSignal(0);
 const [blueTeamReserveTime, setBlueTeamReserveTime] = createSignal(570);
 const [redTeamReserveTime, setRedTeamReserveTime] = createSignal(570);
-const [applyTimerPenalty, setApplyTimerPenalty] = createSignal(false);
+const [applyTimerPenalty, setApplyTimerPenalty] = createSignal(true);
 export const [turnIndex, setTurnIndex] = createSignal(0);
+const [player1Roll, setPlayer1Roll] = createSignal(0);
+const [player2Roll, setPlayer2Roll] = createSignal(0);
 export const turn_order = [
   { team: "blue_team", action: "ban", id: 0 },
   { team: "red_team", action: "ban", id: 0 },
@@ -146,8 +150,14 @@ export const handleMsg = (data: string) => {
       setBlueTeam(msg.message.blue_team);
       setRedTeam(msg.message.red_team);
       if (msg.message.blue_team == sessionId()) {
+        if (sideSelector()) {
+          setInitiativeWinner("blue_team");
+        }
         setOwnTeam("blue_team");
       } else {
+        if (sideSelector()) {
+          setInitiativeWinner("red_team");
+        }
         setOwnTeam("red_team");
       }
       break;
@@ -242,6 +252,14 @@ export {
   setRedCostsMap,
   totalCost,
   setTotalCost,
+  initiativeWinner,
+  setInitiativeWinner,
+  draftOrder,
+  setDraftOrder,
+  player1Roll,
+  setPlayer1Roll,
+  player2Roll,
+  setPlayer2Roll,
   blueTimePenalty,
   setBlueTimePenalty,
   redTimePenalty,

@@ -1,7 +1,18 @@
 import { Component, createSignal } from "solid-js";
 import { Show } from "solid-js";
-import { calculateBonusCycles, calculateScore } from "~/game/point_calc";
-import { applyTimerPenalty, blueTimePenalty, redTimePenalty, blueCost, redCost } from "~/game/game_logic";
+import {
+  calculateBonusCycles,
+  calculateScore,
+  encodeString,
+} from "~/game/point_calc";
+import {
+  applyTimerPenalty,
+  blueTimePenalty,
+  redTimePenalty,
+  blueCost,
+  redCost,
+  ruleSet,
+} from "~/game/game_logic";
 import styles from "./Results.module.css";
 import { blueTeamName, redTeamName } from "~/game/game_logic";
 
@@ -10,16 +21,19 @@ const Results: Component<{}> = (props) => {
   const [redScore, setRedScore] = createSignal(0);
   const [scoreCalced, setScoreCalced] = createSignal(false);
   const [winnerString, setWinnerString] = createSignal("");
+  const [copied, setCopied] = createSignal(false);
 
   let [blueOneCycles, blueTwoCycles, blueDeaths] = [0, 0, 0];
   let [redOneCycles, redTwoCycles, redDeaths] = [0, 0, 0];
 
   const calculateScores = () => {
     setBlueScore(
-      calculateScore(blueCost(), blueDeaths, blueOneCycles, blueTwoCycles) + (applyTimerPenalty() ? blueTimePenalty() : 0)
+      calculateScore(blueCost(), blueDeaths, blueOneCycles, blueTwoCycles) +
+        (applyTimerPenalty() ? blueTimePenalty() : 0)
     );
     setRedScore(
-      calculateScore(redCost(), redDeaths, redOneCycles, redTwoCycles) + (applyTimerPenalty() ? redTimePenalty() : 0)
+      calculateScore(redCost(), redDeaths, redOneCycles, redTwoCycles) +
+        (applyTimerPenalty() ? redTimePenalty() : 0)
     );
     setScoreCalced(true);
     if (blueScore() == redScore()) {
@@ -101,6 +115,26 @@ const Results: Component<{}> = (props) => {
             <div class={styles.red_team}>{redScore().toFixed(4)}</div>
           </div>
         </div>
+        <Show fallback={null} when={ruleSet() == "pokke"}>
+          {" "}
+          <button
+            class={styles.results_button}
+            onClick={() =>
+              encodeString(
+                blueOneCycles,
+                blueTwoCycles,
+                redOneCycles,
+                redTwoCycles,
+                blueDeaths,
+                redDeaths,
+                setCopied
+              )
+            }
+          >
+            Copy Submission String to Clipboard
+          </button>
+        </Show>
+          <div class={`${copied() ? styles.show : ""} ${styles.submission_string}`}>Submission String Copied!</div>
       </Show>
     </div>
   );

@@ -18,7 +18,7 @@ const TeamTimer: Component<{ team: string }> = (props) => {
   const timer =
     props.team == "blue_team" ? blueTeamReserveTime : redTeamReserveTime;
   const label =
-    props.team == "blue_team" ? "Blue Team Reserve" : "Red Team Reserve";
+    props.team == "blue_team" ? "Reserve Time" : "Reserve Time";
   const display_time = () => {
     let display_minute = Math.floor(timer() / 60);
     let display_seconds = timer() % 60;

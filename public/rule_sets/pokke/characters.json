@@ -10,7 +10,8 @@
             0,
             0
         ],
-        "rarity": 4
+        "rarity": 4,
+        "code": "mr"
     },
     "Dan Heng": {
         "id": "1002",
@@ -23,7 +24,8 @@
             0,
             0
         ],
-        "rarity": 4
+        "rarity": 4,
+        "code": "dh"
     },
     "Himeko": {
         "id": "1003",
@@ -36,6 +38,7 @@
             0,
             2
         ],
+        "code": "hm",
         "rarity": 5
     },
     "Welt": {
@@ -49,6 +52,7 @@
             0,
             2
         ],
+        "code": "wt",
         "rarity": 5
     },
     "Kafka": {
@@ -62,6 +66,7 @@
             1,
             1
         ],
+        "code": "kf",
         "rarity": 5
     },
     "Silver Wolf": {
@@ -75,6 +80,7 @@
             1,
             1
         ],
+        "code": "sw",
         "rarity": 5
     },
     "Arlan": {
@@ -88,6 +94,7 @@
             0,
             0
         ],
+        "code": "ar",
         "rarity": 4
     },
     "Asta": {
@@ -101,6 +108,7 @@
             0,
             0
         ],
+        "code": "as",
         "rarity": 4
     },
     "Herta": {
@@ -114,6 +122,7 @@
             0,
             0
         ],
+        "code": "ht",
         "rarity": 4
     },
     "Bronya": {
@@ -127,6 +136,7 @@
             0,
             2
         ],
+        "code": "br",
         "rarity": 5
     },
     "Seele": {
@@ -140,6 +150,7 @@
             1,
             1
         ],
+        "code": "sl",
         "rarity": 5
     },
     "Serval": {
@@ -153,6 +164,7 @@
             0,
             0
         ],
+        "code": "sv",
         "rarity": 4
     },
     "Gepard": {
@@ -166,6 +178,7 @@
             0,
             2
         ],
+        "code": "gp",
         "rarity": 5
     },
     "Natasha": {
@@ -179,6 +192,7 @@
             0,
             0
         ],
+        "code": "nt",
         "rarity": 4
     },
     "Pela": {
@@ -192,6 +206,7 @@
             0,
             0
         ],
+        "code": "pl",
         "rarity": 4
     },
     "Clara": {
@@ -205,6 +220,7 @@
             0,
             2
         ],
+        "code": "cl",
         "rarity": 5
     },
     "Sampo": {
@@ -218,6 +234,7 @@
             0,
             0
         ],
+        "code": "sp",
         "rarity": 4
     },
     "Hook": {
@@ -231,6 +248,7 @@
             0,
             0
         ],
+        "code": "hk",
         "rarity": 4
     },
     "Lynx": {
@@ -244,6 +262,7 @@
             0,
             0
         ],
+        "code": "ly",
         "rarity": 4
     },
     "Luka": {
@@ -257,6 +276,7 @@
             0,
             0
         ],
+        "code": "lk",
         "rarity": 4
     },
     "Topaz & Numby": {
@@ -270,6 +290,7 @@
             1,
             1
         ],
+        "code": "tp",
         "rarity": 5
     },
     "Qingque": {
@@ -283,6 +304,7 @@
             0,
             0
         ],
+        "code": "qq",
         "rarity": 4
     },
     "Tingyun": {
@@ -296,6 +318,7 @@
             0,
             0
         ],
+        "code": "ty",
         "rarity": 4
     },
     "Luocha": {
@@ -309,6 +332,7 @@
             1,
             1
         ],
+        "code": "lo",
         "rarity": 5
     },
     "Jing Yuan": {
@@ -323,6 +347,7 @@
             1,
             1
         ],
+        "code": "jy",
         "rarity": 5
     },
     "Blade": {
@@ -336,6 +361,7 @@
             1,
             1
         ],
+        "code": "bl",
         "rarity": 5
     },
     "Sushang": {
@@ -349,6 +375,7 @@
             0,
             0
         ],
+        "code": "su",
         "rarity": 4
     },
     "Yukong": {
@@ -362,6 +389,7 @@
             0,
             0
         ],
+        "code": "yk",
         "rarity": 4
     },
     "Fu Xuan": {
@@ -375,6 +403,7 @@
             1,
             1
         ],
+        "code": "fx",
         "rarity": 5
     },
     "Yanqing": {
@@ -388,6 +417,7 @@
             0,
             2
         ],
+        "code": "yq",
         "rarity": 5
     },
     "Guinaifen": {
@@ -401,6 +431,7 @@
             0,
             0
         ],
+        "code": "gu",
         "rarity": 4
     },
     "Bailu": {
@@ -414,6 +445,7 @@
             0,
             2
         ],
+        "code": "ba",
         "rarity": 5
     },
     "Jingliu": {
@@ -427,6 +459,7 @@
             1,
             1
         ],
+        "code": "jl",
         "rarity": 5
     },
     "Dan Heng \u2022 Imbibitor Lunae": {
@@ -440,6 +473,7 @@
             1,
             1
         ],
+        "code": "il",
         "rarity": 5
     },
     "Xueyi": {
@@ -453,6 +487,7 @@
             0,
             0
         ],
+        "code": "xy",
         "rarity": 4
     },
     "Hanya": {
@@ -466,6 +501,7 @@
             0,
             0
         ],
+        "code": "hy",
         "rarity": 4
     },
     "Huohuo": {
@@ -479,6 +515,7 @@
             1,
             1
         ],
+        "code": "hh",
         "rarity": 5
     },
     "Argenti": {
@@ -492,6 +529,7 @@
             1,
             1
         ],
+        "code": "ag",
         "rarity": 5
     },
     "Ruan Mei": {
@@ -505,6 +543,7 @@
             1,
             1
         ],
+        "code": "rm",
         "rarity": 5
     },
     "Dr. Ratio": {
@@ -518,6 +557,7 @@
             1,
             1
         ],
+        "code": "dr",
         "rarity": 5
     },
     "Sparkle": {
@@ -532,6 +572,7 @@
             1,
             1
         ],
+        "code": "sk",
         "rarity": 5
     },
     "Black Swan": {
@@ -545,6 +586,7 @@
             1,
             1
         ],
+        "code": "bs",
         "rarity": 5
     },
     "Misha": {
@@ -558,6 +600,7 @@
             0,
             0
         ],
+        "code": "ms",
         "rarity": 4
     },
     "TrailBlazerPhysical": {
@@ -571,6 +614,7 @@
             0,
             0
         ],
+        "code": "pm",
         "rarity": 5
     },
     "TrailBlazerFire": {
@@ -584,6 +628,7 @@
             0,
             0
         ],
+        "code": "fm",
         "rarity": 5
     },
     "Acheron": {
@@ -598,6 +643,7 @@
             1,
             1
         ],
+        "code": "ac",
         "rarity": 5
     },
     "Gallagher": {
@@ -612,11 +658,13 @@
             0,
             0
         ],
+        "code": "gl",
         "rarity": 4
     },
     "Aventurine": {
         "id": "1304",
         "rarity": 5,
+        "code": "av",
         "point_costs": [
             1,
             1,

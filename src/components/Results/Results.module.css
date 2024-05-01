@@ -88,3 +88,15 @@
     justify-content: space-between;
     border-radius: 0.5em;
 }
+
+.submission_string {
+    color: #b8a5c6;
+    align-self: center;
+    font-size: 8pt;
+    margin-top: 0.3em;
+    display: none;
+}
+
+.show {
+    display: inline-block;
+}
