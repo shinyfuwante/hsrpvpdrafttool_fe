@@ -4,7 +4,7 @@ import { v4 } from "uuid";
 
 export const version = () => {
   // version of tool.version of game.subversion of game.subversion of rules
-  return "2.2.1.0.0.5"; 
+  return "2.2.1.0.0.6"; 
 }
 
 const POINTS_PER_SUPERIMPOSITION = 0.5;
@@ -89,6 +89,8 @@ const [draftOrder, setDraftOrder] = createSignal<(CharacterBan | CharacterPick)[
 const [blueTimePenalty, setBlueTimePenalty] = createSignal(0);
 const [redTimePenalty, setRedTimePenalty] = createSignal(0);
 const [applyTimerPenalty, setApplyTimerPenalty] = createSignal(true);
+const [blueTeamReserveTime, setBlueTeamReserveTime] = createSignal(600);
+const [redTeamReserveTime, setRedTeamReserveTime] = createSignal(600);
 export const [turnIndex, setTurnIndex] = createSignal(0);
 const [player1Roll, setPlayer1Roll] = createSignal(0);
 const [player2Roll, setPlayer2Roll] = createSignal(0);
@@ -263,5 +265,9 @@ export {
   redTimePenalty,
   setRedTimePenalty,
   applyTimerPenalty,
-  setApplyTimerPenalty
+  setApplyTimerPenalty,
+  blueTeamReserveTime,
+  setBlueTeamReserveTime,
+  redTeamReserveTime,
+  setRedTeamReserveTime,
 };
