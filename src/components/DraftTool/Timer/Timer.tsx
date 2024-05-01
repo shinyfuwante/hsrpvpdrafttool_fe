@@ -20,7 +20,7 @@ const Timer: Component<{}> = (props) => {
   const [seconds, setSeconds] = createSignal(secondsPerPick);
   let intervalId: NodeJS.Timeout;
   createEffect(() => {
-    if (turnIndex() > 0 && turnIndex() < turn_order.length) {
+    if (turnIndex() > 1 && turnIndex() < turn_order.length) {
       clearInterval(intervalId);
       setSeconds(secondsPerPick);
       intervalId = setInterval(() => {
