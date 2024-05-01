@@ -127,6 +127,9 @@ const handleUndo = () => {
       setRedCost(Math.max(redCost() - calcCost(char), 0));
     }
   }
+  const draftArray = [...draftOrder()];
+  draftArray.pop();
+  setDraftOrder(draftArray);
   return;
 };
 const game: Component<{}> = (props) => {
