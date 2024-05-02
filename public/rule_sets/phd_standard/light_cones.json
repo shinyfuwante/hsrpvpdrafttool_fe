@@ -338,7 +338,7 @@
   },
   "In the Night": {
     "id": "23001",
-    "point_costs": [2.5, 2.5, 3, 3.5, 4],
+    "point_costs": [2, 2.5, 3, 3.5, 4],
     "character": "Seele",
     "rarity": 5
   },
@@ -375,7 +375,7 @@
   },
   "Incessant Rain": {
     "id": "23007",
-    "point_costs": [1, 1.5, 2, 2.5, 3],
+    "point_costs": [1.5, 1.5, 2, 2.5, 3],
     "character": "Silver Wolf SW",
     "rarity": 5
   },
@@ -405,7 +405,7 @@
   },
   "Sleep Like the Dead": {
     "id": "23012",
-    "point_costs": [0, 0.5, 1, 1.5, 2],
+    "point_costs": [0.5, 0.5, 1, 1.5, 2],
     "character": "Yanqing YQ",
     "rarity": 5
   },
