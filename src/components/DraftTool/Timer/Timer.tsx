@@ -14,13 +14,16 @@ import {
   setRedTeamReserveTime,
   redTeamReserveTime,
 } from "~/game/game_logic";
-
+export const [tickBlue, setTickBlue] = createSignal(false);
+export const [tickRed, setTickRed] = createSignal(false);
 const Timer: Component<{}> = (props) => {
   const secondsPerPick = 30;
   const [seconds, setSeconds] = createSignal(secondsPerPick);
   let intervalId: NodeJS.Timeout;
   createEffect(() => {
     if (turnIndex() > 1 && turnIndex() < turn_order.length) {
+      setTickRed(false);
+      setTickBlue(false);
       clearInterval(intervalId);
       setSeconds(secondsPerPick);
       intervalId = setInterval(() => {
@@ -35,10 +38,12 @@ const Timer: Component<{}> = (props) => {
         intervalId = setInterval(() => {
           setBlueTeamReserveTime(blueTeamReserveTime() - 1);
         }, 1000);
+        setTickBlue(true);
       } else {
         intervalId = setInterval(() => {
           setRedTeamReserveTime(redTeamReserveTime() - 1);
         }, 1000);
+        setTickRed(true);
       }
       // setSeconds(secondsPerPick);
     }
@@ -46,6 +51,8 @@ const Timer: Component<{}> = (props) => {
   createEffect(() => {
     if (turnIndex() == turn_order.length) {
       clearInterval(intervalId);
+      setTickBlue(false);
+      setTickRed(false);
       setSeconds(secondsPerPick);
     }
   });
@@ -68,7 +75,7 @@ const Timer: Component<{}> = (props) => {
     }
   });
   return (
-    <div class={seconds() < 10 ? styles.timer_urgent : styles.timer}>
+    <div class={seconds() < 10 && seconds() > 0 ? styles.timer_urgent : styles.timer}>
       {seconds()}
     </div>
   );

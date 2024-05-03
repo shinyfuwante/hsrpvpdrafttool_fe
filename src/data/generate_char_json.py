@@ -22,7 +22,8 @@ def process_items(items, new_data_file):
         new_data[name] = {
             'id': id,
             'rarity': rarity,
-            'point_costs': [0, 0, 0, 0, 0, 0, 0]
+            'point_costs': [0, 0, 0, 0, 0, 0, 0],
+            'nickname': name
         }
 
     # Write the new dictionary to a new JSON file
