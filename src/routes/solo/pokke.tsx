@@ -37,7 +37,13 @@ import {
   setRedTimePenalty,
   setBlueTeamReserveTime,
   setRedTeamReserveTime,
+  setPlayer1Roll,
+  setPlayer2Roll,
+  setBlueTeamName,
+  setRedTeamName,
 } from "~/game/game_logic";
+
+import { setBlueOneCycles, setBlueTwoCycles, setBlueDeaths, setRedDeaths, setRedOneCycles, setRedTwoCycles } from "~/components/Results/Results";
 
 // interface DraftToolProps {
 //     handleUndo: () => void;
@@ -106,6 +112,14 @@ const handleReset = () => {
   setDraftOrder([]);
   setBlueTeamReserveTime(570);
   setRedTeamReserveTime(570);
+  setBlueOneCycles(-1);
+  setBlueTwoCycles(-1);
+  setBlueDeaths(-1);
+  setRedDeaths(-1);
+  setRedOneCycles(-1);
+  setRedTwoCycles(-1);
+  setPlayer1Roll(0);
+  setPlayer2Roll(0);
 };
 const handleUndo = () => {
   if (turnIndex() <= 0) {

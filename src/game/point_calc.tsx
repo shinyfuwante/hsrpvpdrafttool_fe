@@ -52,6 +52,22 @@ export const calculateScore = (
   p2Cycles: number
 ) => {
   determineInitiativeWinner();
+  if (p1Cycles < 0) {
+    p1Cycles = 0;
+  }
+  if (p2Cycles < 0) {
+    p2Cycles = 0;
+  }
+  if (p1Cycles > 15) {
+    p1Cycles = 15;
+  }
+  if (p2Cycles > 15) {
+    p2Cycles = 15;
+  }
+  if (deaths < 0) {
+    deaths = 0;
+  }
+
   if (ruleSet() == "pokke") {
     return p1Cycles + p2Cycles;
   }
