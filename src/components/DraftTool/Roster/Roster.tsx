@@ -121,7 +121,7 @@ const Roster: Component<RosterProps> = (props) => {
                 selectedChars().filter((x) => x == characterName).length == 1;
               const isMatch =
                 searchTerm() != "" &&
-                characterName
+                (characterDetails as CharacterDetails).nickname
                   .toLowerCase()
                   .includes(searchTerm().toLowerCase());
 

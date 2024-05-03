@@ -4,6 +4,7 @@ export type CharacterDetails = {
     rarity: number;
     special?: boolean;
     code: string;
+    nickname: string;
 };
 export type CharJsonType = {
     [key: string]: CharacterDetails;
