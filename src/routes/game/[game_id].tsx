@@ -135,18 +135,21 @@ export default function GamePage() {
       <div>
         {sideSelector() && (
           <div class={styles.side_selector}>
-            <button
-              class={styles.blue_team}
-              onClick={() => sendSideMessage("blue")}
-            >
-              Blue Team
-            </button>
-            <button
-              class={styles.red_team}
-              onClick={() => sendSideMessage("red")}
-            >
-              Red Team
-            </button>
+            <div class={styles.side_selector_label}>Select a side:</div>
+            <div class={styles.side_button_container}>
+              <button
+                class={styles.blue_team}
+                onClick={() => sendSideMessage("blue")}
+              >
+                Blue Team
+              </button>
+              <button
+                class={styles.red_team}
+                onClick={() => sendSideMessage("red")}
+              >
+                Red Team
+              </button>
+            </div>
           </div>
         )}
         {!sideSelector() && (

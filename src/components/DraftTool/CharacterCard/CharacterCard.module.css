@@ -53,6 +53,10 @@ input.light_cone_input {
 .light_cone_input::placeholder {
   color: #b8a5c6;
 }
+
+.light_cone_input:disabled {
+  background-color: #48305f;
+}
 .superimposition_select {
   max-width: 30%;
   background-color: #57436c;
@@ -64,4 +68,5 @@ input.light_cone_input {
   background-color: #57436c;
   color: white;
   border-radius: 0.3em;
+  min-width: 40px;
 }
