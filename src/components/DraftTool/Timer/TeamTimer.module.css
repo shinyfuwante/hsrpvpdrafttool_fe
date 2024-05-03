@@ -37,12 +37,12 @@
   }
   @keyframes flash {
     0% { color: #E0AAFF; }
-    50% { color: #E0AAFF; } 
-    100% { color: #f9f3ff; }
+    50% { color: #f9f3ff; }
+    100% { color: #E0AAFF; } 
   }
 
   @keyframes urgent_flash {
     0% { color: #E0AAFF; }
-    50% { color: #E0AAFF; } 
-    100% { color: #eb0e5b; }
+    50% { color: #eb0e5b; }
+    100% { color: #E0AAFF; } 
   }
