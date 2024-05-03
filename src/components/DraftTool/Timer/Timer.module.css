@@ -32,7 +32,7 @@
 }
 
 @keyframes flash {
-    0% { color: #eb0e5b; }
+    0% { color: #E0AAFF; }
     50% { color: #E0AAFF; } 
     100% { color: #eb0e5b; }
   }

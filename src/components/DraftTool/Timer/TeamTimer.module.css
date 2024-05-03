@@ -29,3 +29,20 @@
     text-wrap: nowrap;
   }
   
+  .timer_flash {
+    animation: flash 1s infinite;
+  }
+  .timer_urgent {
+    animation: urgent_flash 1s infinite;
+  }
+  @keyframes flash {
+    0% { color: #E0AAFF; }
+    50% { color: #E0AAFF; } 
+    100% { color: #f9f3ff; }
+  }
+
+  @keyframes urgent_flash {
+    0% { color: #E0AAFF; }
+    50% { color: #E0AAFF; } 
+    100% { color: #eb0e5b; }
+  }
