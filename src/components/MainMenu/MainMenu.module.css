@@ -47,6 +47,13 @@
   color: white;
   text-decoration: none;
   align-items: center;
+  background-color: #5865F2;
+  padding: 0.5em;
+  border-radius: 0.7em;
+}
+
+.discord_link:hover {
+  transform: scale(1.1);
 }
 
 .discord_link img {
