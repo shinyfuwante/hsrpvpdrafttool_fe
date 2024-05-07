@@ -136,11 +136,13 @@ const Roster: Component<RosterProps> = (props) => {
                         characterDetails.rarity == 4 ? "#764585" : "#e6b741",
                       filter: !isSelected ? "none" : "grayscale(100%)",
                       display:
-                        isMatch || searchTerm() == "" ? "inline-block" : "none",
+                        isMatch || searchTerm() == "" ? "flex" : "none",
                       width: "75px",
                       height: "75px",
                       cursor: !isSelected && isTurn() ? "pointer" : "default",
                       "border-radius": "0.3em",
+                      "align-items": "center",
+                      "justify-content": "center",
                     }}
                     class={`${isSelected ? styles.character : styles.not_selected} ${
                       onceSelected

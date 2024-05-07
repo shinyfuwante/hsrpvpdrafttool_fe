@@ -207,7 +207,7 @@
       0
     ],
     "rarity": 4,
-    "nickname": "Pela"
+    "nickname": "Pela Pelican"
   },
   "Clara": {
     "id": "1107",
@@ -349,7 +349,7 @@
       3.5
     ],
     "rarity": 5,
-    "nickname": "Jing Yuan Jimmy JY"
+    "nickname": "Jing Yuan Jimmy JY King Yuan Our General"
   },
   "Blade": {
     "id": "1205",
@@ -566,7 +566,7 @@
     "special": false,
     "point_costs": [
       5,
-      2,
+      1.5,
       2.5,
       0,
       0.5,
@@ -675,5 +675,35 @@
       3
     ],
     "nickname": "Aventurine"
+  },
+  "Robin": {
+    "id": "1309",
+    "rarity": 5,
+    "code": "rb",
+    "point_costs": [
+      5,
+      2,
+      1,
+      0.5,
+      0.5,
+      0,
+      6
+    ],
+    "nickname": "Robin"
+  },
+  "TrailBlazerImaginary": {
+    "id": "8006",
+    "point_costs": [
+      3,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "code": "im",
+    "rarity": 5,
+    "nickname": "IMC TrailBlazerImaginary HMC HamSandwich HarmonyMC Ham Sandwich"
   }
 }
