@@ -12,6 +12,7 @@ import {
   blueCost,
   redCost,
   ruleSet,
+  isEvent,
 } from "~/game/game_logic";
 import styles from "./Results.module.css";
 import { blueTeamName, redTeamName } from "~/game/game_logic";
@@ -115,7 +116,7 @@ const Results: Component<{}> = (props) => {
             <div class={styles.red_team}>{redScore().toFixed(4)}</div>
           </div>
         </div>
-        <Show fallback={null} when={ruleSet() == "pokke"}>
+        <Show fallback={null} when={ruleSet() == "pokke" && !isEvent()}>
           {" "}
           <button
             class={styles.results_button}
