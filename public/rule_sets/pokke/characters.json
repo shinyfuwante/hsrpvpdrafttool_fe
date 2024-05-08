@@ -361,7 +361,7 @@
   },
   "Jing Yuan": {
     "id": "1204",
-    "special": true,
+    "special": false,
     "point_costs": [
       1,
       1,
@@ -602,7 +602,7 @@
   },
   "Sparkle": {
     "id": "1306",
-    "special": true,
+    "special": false,
     "point_costs": [
       1,
       1,
@@ -727,6 +727,7 @@
     "id": "1309",
     "rarity": 5,
     "code": "rb",
+    "special": true,
     "point_costs": [
       1,
       1,
