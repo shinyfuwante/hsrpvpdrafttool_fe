@@ -147,7 +147,7 @@
     ],
     "code": "br",
     "rarity": 5,
-    "nickname": "Bronya Lebron"
+    "nickname": "Bronya Lebron Broner"
   },
   "Seele": {
     "id": "1102",
@@ -647,7 +647,7 @@
     "nickname": "Misha"
   },
   "TrailBlazerPhysical": {
-    "id": "8001",
+    "id": "8002",
     "point_costs": [
       0,
       0,
