@@ -709,6 +709,7 @@
   "Boothill": {
     "id": "1315",
     "rarity": 5,
+    "code": "bh",
     "point_costs": [
       0,
       0,
