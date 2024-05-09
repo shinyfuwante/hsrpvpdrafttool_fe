@@ -518,13 +518,27 @@
     "character": "Robin"
   },
   "Tomorrow's Journey": {
-    "id": "224star1",
+    "id": "22002",
     "rarity": 4,
     "point_costs": [0, 0, 0, 0, 0]
   },
   "Boundless Choreo": {
-    "id": "224star2",
+    "id": "21044",
     "rarity": 4,
     "point_costs": [0, 0, 0, 0, 0]
-  }
+  },
+  "Sailing Towards a Second Life": {
+    "id": "23027",
+    "rarity": 5,
+    "point_costs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "character": "Boothill BH"
+}
 }

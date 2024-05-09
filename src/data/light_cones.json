@@ -1246,5 +1246,61 @@
             0,
             0
         ]
+    },
+    "Boundless Choreo": {
+        "id": "21044",
+        "rarity": 4,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "Boundless Choreo"
+    },
+    "For Tomorrow's Journey": {
+        "id": "22002",
+        "rarity": 4,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "For Tomorrow's Journey"
+    },
+    "Flowing Nightglow": {
+        "id": "23026",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "Flowing Nightglow"
+    },
+    "Sailing Towards a Second Life": {
+        "id": "23027",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "Sailing Towards a Second Life"
     }
 }

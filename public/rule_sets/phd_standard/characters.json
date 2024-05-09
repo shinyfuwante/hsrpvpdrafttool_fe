@@ -291,7 +291,7 @@
       2.5
     ],
     "rarity": 5,
-    "nickname": "Topaz & Numby"
+    "nickname": "Topaz & Numby Topass"
   },
   "Qingque": {
     "id": "1201",
@@ -319,7 +319,7 @@
       0.5
     ],
     "rarity": 4,
-    "nickname": "Tingyun TY Thank you"
+    "nickname": "Tingyun TY Thank you Preservation, Aeon Of Preservation"
   },
   "Luocha": {
     "id": "1203",
@@ -689,7 +689,7 @@
       0,
       6
     ],
-    "nickname": "Robin"
+    "nickname": "Robin Birb"
   },
   "TrailBlazerImaginary": {
     "id": "8006",
@@ -705,5 +705,19 @@
     "code": "im",
     "rarity": 5,
     "nickname": "IMC TrailBlazerImaginary HMC HamSandwich HarmonyMC Ham Sandwich"
+  },
+  "Boothill": {
+    "id": "1315",
+    "rarity": 5,
+    "point_costs": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "nickname": "Boothill BH"
   }
 }
