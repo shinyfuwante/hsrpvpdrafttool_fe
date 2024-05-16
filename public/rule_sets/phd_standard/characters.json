@@ -58,13 +58,13 @@
   "Kafka": {
     "id": "1005",
     "point_costs": [
-      2.5,
+      3,
       1.5,
       1,
       0.5,
       2.5,
       0.5,
-      1.5
+      1
     ],
     "rarity": 5,
     "nickname": "Kafka"
@@ -95,7 +95,7 @@
       0
     ],
     "rarity": 4,
-    "nickname": "Arlan"
+    "nickname": "Arlan Free Ban Blank Ban"
   },
   "Asta": {
     "id": "1009",
@@ -148,7 +148,7 @@
       0.5,
       1,
       0.5,
-      0.5
+      0
     ],
     "rarity": 5,
     "nickname": "Seele Seal"
@@ -174,7 +174,7 @@
       0,
       0,
       0,
-      0.5,
+      0,
       0,
       0
     ],
@@ -268,7 +268,7 @@
   "Luka": {
     "id": "1111",
     "point_costs": [
-      2,
+      2.5,
       0,
       0.5,
       0,
@@ -282,11 +282,11 @@
   "Topaz & Numby": {
     "id": "1112",
     "point_costs": [
-      1,
+      1.5,
       2,
       0.5,
       0.5,
-      1.5,
+      1,
       0.5,
       2.5
     ],
@@ -302,7 +302,7 @@
       0,
       1,
       0,
-      1
+      0.5
     ],
     "rarity": 4,
     "nickname": "Qingque QQ"
@@ -340,7 +340,7 @@
     "id": "1204",
     "special": false,
     "point_costs": [
-      1.5,
+      1,
       0.5,
       0.5,
       0,
@@ -368,7 +368,7 @@
   "Sushang": {
     "id": "1206",
     "point_costs": [
-      1.5,
+      2,
       0,
       0,
       0,
@@ -388,7 +388,7 @@
       0,
       0,
       0,
-      0.5
+      1
     ],
     "rarity": 4,
     "nickname": "Yukong YK"
@@ -410,7 +410,7 @@
   "Yanqing": {
     "id": "1209",
     "point_costs": [
-      1.5,
+      1,
       0.5,
       0,
       0.5,
@@ -442,7 +442,7 @@
       0,
       0,
       0,
-      0.5,
+      0,
       0,
       0
     ],
@@ -453,12 +453,12 @@
     "id": "1212",
     "point_costs": [
       3.5,
-      3,
+      1.5,
       1,
       0.5,
       0.5,
       1,
-      2.5
+      2
     ],
     "rarity": 5,
     "nickname": "Jingliu JL Jingles Jenny"
@@ -466,10 +466,10 @@
   "Dan Heng • Imbibitor Lunae": {
     "id": "1213",
     "point_costs": [
-      3,
+      3.5,
       1.5,
-      5,
-      1.5,
+      6,
+      1,
       1,
       0,
       3
@@ -522,9 +522,9 @@
   "Argenti": {
     "id": "1302",
     "point_costs": [
-      1,
-      1,
-      1,
+      1.5,
+      1.5,
+      0.5,
       0,
       0.5,
       1,
@@ -545,14 +545,14 @@
       3.5
     ],
     "rarity": 5,
-    "nickname": "Ruan Mei RM"
+    "nickname": "Ruan Mei RM Ramen"
   },
   "Dr. Ratio": {
     "id": "1305",
     "point_costs": [
       3.5,
       1.5,
-      2,
+      1.5,
       0,
       3,
       0.5,
@@ -579,8 +579,8 @@
   "Black Swan": {
     "id": "1307",
     "point_costs": [
-      2,
-      3.5,
+      2.5,
+      4,
       1,
       0.5,
       1,
@@ -599,7 +599,7 @@
       0,
       0,
       0,
-      1
+      0.5
     ],
     "rarity": 4,
     "nickname": "Misha"
@@ -655,7 +655,7 @@
       0,
       0,
       0,
-      0,
+      0.5,
       0,
       0
     ],
@@ -681,13 +681,13 @@
     "rarity": 5,
     "code": "rb",
     "point_costs": [
-      5,
-      2,
-      1,
+      6,
+      2.5,
+      0.5,
       0.5,
       0.5,
       0,
-      6
+      4.5
     ],
     "nickname": "Robin Birb"
   },
@@ -698,7 +698,7 @@
       0,
       0,
       0,
-      1,
+      0,
       0,
       0
     ],

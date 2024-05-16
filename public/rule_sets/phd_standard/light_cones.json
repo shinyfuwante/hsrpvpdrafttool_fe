@@ -369,7 +369,7 @@
   },
   "Patience Is All You Need": {
     "id": "23006",
-    "point_costs": [1.5, 2, 2.5, 3, 3.5],
+    "point_costs": [1, 2, 2.5, 3, 3.5],
     "character": "Kafka",
     "rarity": 5
   },
@@ -405,7 +405,7 @@
   },
   "Sleep Like the Dead": {
     "id": "23012",
-    "point_costs": [0.5, 0.5, 1, 1.5, 2],
+    "point_costs": [0, 0.5, 1, 1.5, 2],
     "character": "Yanqing YQ",
     "rarity": 5
   },
@@ -454,7 +454,7 @@
   },
   "Baptism of Pure Thought": {
     "id": "23020",
-    "point_costs": [3.5, 4, 4.5, 5, 5.5],
+    "point_costs": [4, 4, 4.5, 5, 5.5],
     "character": "Dr. Ratio",
     "rarity": 5
   },
@@ -466,7 +466,7 @@
   },
   "Reforged Remembrance": {
     "id": "23022",
-    "point_costs": [2, 2.5, 3, 3.5, 4],
+    "point_costs": [1, 2.5, 3, 3.5, 4],
     "character": "Black Swan BS",
     "rarity": 5
   },
@@ -514,7 +514,7 @@
   "Flowing Nightglow": {
     "id": "23026",
     "rarity": 5,
-    "point_costs": [2, 0, 0, 0, 0],
+    "point_costs": [1, 0, 0, 0, 0],
     "character": "Robin"
   },
   "Tomorrow's Journey": {
