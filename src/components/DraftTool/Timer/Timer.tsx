@@ -21,6 +21,11 @@ const Timer: Component<{}> = (props) => {
   const [seconds, setSeconds] = createSignal(secondsPerPick);
   let intervalId: NodeJS.Timeout;
   createEffect(() => {
+    if (turnIndex() == 0) {
+      clearInterval(intervalId);
+    }
+  })
+  createEffect(() => {
     if (turnIndex() > 1 && turnIndex() < turn_order.length) {
       setTickRed(false);
       setTickBlue(false);

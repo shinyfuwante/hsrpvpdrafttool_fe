@@ -91,7 +91,6 @@ const DraftTool: Component<DraftToolProps> = ({
                 You are on the {ownTeam() == "blue_team" ? "Blue" : "Red"} Team
               </div>
             </Show>
-            <Show when={ruleSet() == "pokke"}>
               <div class={styles.timer_container}>
                 <div></div>
                 <div class={styles.timer_penalties}>
@@ -103,7 +102,6 @@ const DraftTool: Component<DraftToolProps> = ({
                 </div>
                 <div></div>
               </div>
-            </Show>
             <div class={styles.draft_container}>
               <div class={styles.team}>
                 <Team
