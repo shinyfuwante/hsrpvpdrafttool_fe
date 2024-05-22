@@ -18,6 +18,7 @@ import {
   ownTeam,
   isSinglePlayer,
   isEvent,
+  isFFA,
 } from "~/game/game_logic";
 import { CharacterDetails } from "~/types";
 import Results from "~/components/Results/Results";
@@ -113,9 +114,13 @@ const Roster: Component<RosterProps> = (props) => {
               const characterId = (characterDetails as CharacterDetails).id;
               const characterImage = `/character_icons/${characterId}.webp`;
               const isSpecial = characterDetails.special == true && isEvent();
-              const isSelected = isSpecial
-                ? selectedChars().filter((x) => x == characterName).length == 2
-                : selectedChars().includes(characterName);
+              const isSelected = () => {
+                if (isSpecial || isFFA()) {
+                  return selectedChars().filter((x) => x == characterName).length == 2;
+                } else {
+                  return selectedChars().includes(characterName);
+                }
+              };
               const onceSelected =
                 isSpecial &&
                 selectedChars().filter((x) => x == characterName).length == 1;
@@ -126,7 +131,7 @@ const Roster: Component<RosterProps> = (props) => {
                   .includes(searchTerm().toLowerCase());
 
               const canPick =
-                !isSelected && isTurn() && turnIndex() < turn_order.length;
+                !isSelected() && isTurn() && turnIndex() < turn_order.length;
 
               const renderChar = () => {
                 return (
@@ -134,20 +139,21 @@ const Roster: Component<RosterProps> = (props) => {
                     style={{
                       "background-color":
                         characterDetails.rarity == 4 ? "#764585" : "#e6b741",
-                      filter: !isSelected ? "none" : "grayscale(100%)",
-                      display:
-                        isMatch || searchTerm() == "" ? "flex" : "none",
+                      filter: !isSelected() ? "none" : "grayscale(100%)",
+                      display: isMatch || searchTerm() == "" ? "flex" : "none",
                       width: "75px",
                       height: "75px",
-                      cursor: !isSelected && isTurn() ? "pointer" : "default",
+                      cursor: !isSelected() && isTurn() ? "pointer" : "default",
                       "border-radius": "0.3em",
                       "align-items": "center",
                       "justify-content": "center",
                     }}
-                    class={`${isSelected ? styles.character : styles.not_selected} ${
+                    class={`${
+                      isSelected() ? styles.character : styles.not_selected
+                    } ${
                       onceSelected
                         ? styles.once
-                        : isSelected
+                        : isSelected()
                         ? styles.selected
                         : "not-selected"
                     }`}

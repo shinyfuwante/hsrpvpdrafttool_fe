@@ -82,6 +82,7 @@ const [redCost, setRedCost] = createSignal(0);
 const [blueCost, setBlueCost] = createSignal(0);
 const [isSinglePlayer, setIsSinglePlayer] = createSignal(false);
 const [isEvent, setIsEvent] = createSignal(false);
+const [isFFA, setIsFFA] = createSignal(false);
 const [error, setError] = createSignal("");
 const [blueCostsMap, setBlueCostsMap] = createSignal(new Map());
 const [redCostsMap, setRedCostsMap] = createSignal(new Map());
@@ -270,4 +271,6 @@ export {
   setBlueTeamReserveTime,
   redTeamReserveTime,
   setRedTeamReserveTime,
+  isFFA,
+  setIsFFA
 };
