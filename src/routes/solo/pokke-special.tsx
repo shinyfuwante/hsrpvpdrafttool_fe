@@ -37,7 +37,8 @@ import {
   setRedTimePenalty,
   setBlueTeamReserveTime,
   setRedTeamReserveTime,
-  setIsEvent
+  setIsEvent,
+  setIsFFA
 } from "~/game/game_logic";
 
 // interface DraftToolProps {
@@ -143,7 +144,7 @@ const game: Component<{}> = (props) => {
     setIsSinglePlayer(true);
     setRuleSet("pokke");
     setTotalCost(10);
-    setIsEvent(true);
+    setIsFFA(true);
   });
   setIsSinglePlayer(true);
   setRuleSet("pokke");
