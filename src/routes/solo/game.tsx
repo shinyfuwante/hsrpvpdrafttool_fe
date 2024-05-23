@@ -31,6 +31,7 @@ import {
   draftOrder,
   blueCostsMap,
   redCostsMap,
+  applyTimerPenalty,
 } from "~/game/game_logic";
 
 // interface DraftToolProps {
@@ -126,6 +127,7 @@ const handleUndo = () => {
 const game: Component<{}> = (props) => {
   onMount(async () => {
     setIsSinglePlayer(true);
+    applyTimerPenalty(false);
   });
   return (
     <DraftTool
