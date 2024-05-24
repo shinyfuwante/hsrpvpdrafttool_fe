@@ -69,11 +69,12 @@ const testing: Component<{}> = (props) => {
   const handleReset = () => {
     setPicks([]);
     setCostsMap(new Map());
+    SetCost(0);
   };
   const handleUndo = () => {
-    setPicks(picks().slice(0, picks().length - 1));
     SetCost(cost() - costsMap().get(picks().length - 1));
     costsMap().set(picks().length - 1, 0);
+    setPicks(picks().slice(0, picks().length - 1));
   };
   const handleBan = () => {
     console.log("Ban");
