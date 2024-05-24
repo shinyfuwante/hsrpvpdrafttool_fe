@@ -8,7 +8,7 @@ import {
   setRedBans,
   redPicks,
   playerTurn,
-  turn_order,
+  turnOrder,
   turnIndex,
   setTurnIndex,
   CharacterPick,
@@ -33,11 +33,11 @@ export interface RosterProps {
 const Roster: Component<RosterProps> = (props) => {
   const { handleBan, handlePick } = props;
   const [searchTerm, setSearchTerm] = createSignal("");
-  const [currentTurn, setCurrentTurn] = createSignal(turn_order[turnIndex()]);
+  const [currentTurn, setCurrentTurn] = createSignal(turnOrder()[turnIndex()]);
   const [isTurn, setIsTurn] = createSignal(false);
   createEffect(() => {
-    if (turnIndex() < turn_order.length && turnIndex() >= 0) {
-      setCurrentTurn(turn_order[turnIndex()]);
+    if (turnIndex() < turnOrder().length && turnIndex() >= 0) {
+      setCurrentTurn(turnOrder()[turnIndex()]);
       setIsTurn(ownTeam() == currentTurn().team || isSinglePlayer());
     }
   });
@@ -51,7 +51,7 @@ const Roster: Component<RosterProps> = (props) => {
     setSelectedChars(selected);
   });
   const selectCharacter = (characterName: string) => {
-    if (turnIndex() >= turn_order.length) {
+    if (turnIndex() >= turnOrder().length) {
       return;
     }
     const currentPlayer = currentTurn().team;
@@ -131,7 +131,7 @@ const Roster: Component<RosterProps> = (props) => {
                   .includes(searchTerm().toLowerCase());
 
               const canPick =
-                !isSelected() && isTurn() && turnIndex() < turn_order.length;
+                !isSelected() && isTurn() && turnIndex() < turnOrder().length;
 
               const renderChar = () => {
                 return (

@@ -3,7 +3,7 @@ import DraftTool from "~/components/DraftTool/DraftTool";
 import {
   setTurnIndex,
   turnIndex,
-  turn_order,
+  turnOrder,
   CharacterPick,
   CharacterBan,
   setPlayerTurn,
@@ -45,12 +45,12 @@ import {
 //   }
 
 const incrementTurn = () => {
-  if (turnIndex() > turn_order.length - 1) {
+  if (turnIndex() > turnOrder().length - 1) {
     return;
   }
   setTurnIndex(turnIndex() + 1);
-  if (turnIndex() < turn_order.length) {
-    setPlayerTurn(turn_order[turnIndex()].team);
+  if (turnIndex() < turnOrder().length) {
+    setPlayerTurn(turnOrder()[turnIndex()].team);
   }
 };
 
@@ -59,7 +59,7 @@ const decrementTurn = () => {
     return;
   }
   setTurnIndex(turnIndex() - 1);
-  setPlayerTurn(turn_order[turnIndex()].team);
+  setPlayerTurn(turnOrder()[turnIndex()].team);
 };
 const handleSigEid = (character: CharacterPick) => {
   const team = character.team;
@@ -98,7 +98,7 @@ const handleReset = () => {
   setTurnIndex(0);
   setBlueCost(0);
   setRedCost(0);
-  setPlayerTurn(turn_order[0].team);
+  setPlayerTurn(turnOrder()[0].team);
   setBlueCostsMap(new Map());
   setRedCostsMap(new Map());
   setBlueTimePenalty(0);
@@ -112,7 +112,7 @@ const handleUndo = () => {
     return;
   }
   decrementTurn();
-  const currentTurn = turn_order[turnIndex()];
+  const currentTurn = turnOrder()[turnIndex()];
   if (currentTurn.team == "blue_team") {
     if (currentTurn.action == "ban") {
       setBlueBans(blueBans().slice(0, -1));

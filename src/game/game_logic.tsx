@@ -4,7 +4,7 @@ import { v4 } from "uuid";
 
 export const version = () => {
   // version of tool.version of game.subversion of game.subversion of rules
-  return "2.2.2.0.0.1"; 
+  return "2.2.2.0.1"; 
 }
 
 const POINTS_PER_SUPERIMPOSITION = 0.5;
@@ -117,6 +117,7 @@ export const turn_order = [
   { team: "blue_team", action: "pick", id: 9 },
   { team: "red_team", action: "pick", id: 9 },
 ];
+const [turnOrder, setTurnOrder] = createSignal(turn_order);
 const MessageEnum = {
   INIT_GAME: "init_game",
   GAME_READY: "game_ready",
@@ -187,8 +188,8 @@ export const handleMsg = (data: string) => {
         setBlueCost(blueCost);
         setRedCost(redCost);
       }
-      if (msg.message.turn_index < turn_order.length) {
-        setPlayerTurn(turn_order[turnIndex()].team);
+      if (msg.message.turn_index < turnOrder().length) {
+        setPlayerTurn(turnOrder()[turnIndex()].team);
       }
       if (msg.message.team && msg.message.team != "") {
         setOwnTeam(msg.message.team);
@@ -272,5 +273,7 @@ export {
   redTeamReserveTime,
   setRedTeamReserveTime,
   isFFA,
-  setIsFFA
+  setIsFFA,
+  turnOrder,
+  setTurnOrder
 };

@@ -7,7 +7,7 @@ import {
   setRedTimePenalty,
   redTimePenalty,
   turnIndex,
-  turn_order,
+  turnOrder,
   redPicks,
   setBlueTeamReserveTime,
   blueTeamReserveTime,
@@ -26,7 +26,7 @@ const Timer: Component<{}> = (props) => {
     }
   })
   createEffect(() => {
-    if (turnIndex() > 1 && turnIndex() < turn_order.length) {
+    if (turnIndex() > 1 && turnIndex() < turnOrder().length) {
       setTickRed(false);
       setTickBlue(false);
       clearInterval(intervalId);
@@ -54,7 +54,7 @@ const Timer: Component<{}> = (props) => {
     }
   });
   createEffect(() => {
-    if (turnIndex() == turn_order.length) {
+    if (turnIndex() == turnOrder().length) {
       clearInterval(intervalId);
       setTickBlue(false);
       setTickRed(false);

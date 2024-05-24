@@ -15,7 +15,7 @@ import {
   blueTeamName,
   redTeamName,
   ownTeam,
-  turn_order,
+  turnOrder,
   turnIndex,
   isSinglePlayer,
   blueCostsMap,
@@ -62,7 +62,7 @@ const Team: Component<TeamProps> = (props) => {
     }
     return (
       <div
-        class={`${styles.empty_card} ${turn_order[turnIndex()] && turn_order[turnIndex()].id == id && turn_order[turnIndex()].action == type && turn_order[turnIndex()].team == team ? styles.current_pick : ""}`}
+        class={`${styles.empty_card} ${turnOrder()[turnIndex()] && turnOrder()[turnIndex()].id == id && turnOrder()[turnIndex()].action == type && turnOrder()[turnIndex()].team == team ? styles.current_pick : ""}`}
       >
         {text} ({order}) 
       </div>
