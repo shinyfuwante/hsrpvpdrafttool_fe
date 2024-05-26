@@ -107,9 +107,13 @@ const testing: Component<{}> = (props) => {
     // input for inputting cycles
     const [cycles, setCycles] = createSignal(0);
     const [efficiency, setEfficiency] = createSignal(0);
+    const [adjustedEfficiency, setAdjustedEfficiency] = createSignal(0);
+    const [efficiencyAdjustment, setEfficiencyAdjustment] = createSignal(0);
 
     createEffect(() => {
       setEfficiency(cost() / 6 + cycles());
+      setEfficiencyAdjustment(cost() != 0 ? (cost() - 15) / 4 : 0);
+      setAdjustedEfficiency(efficiency() + efficiencyAdjustment());
     });
 
     return (
@@ -118,9 +122,11 @@ const testing: Component<{}> = (props) => {
           <div class={styles.calculator_title}>Efficiency Calc: </div>
           <div class={styles.calculator_info}>
             Team Efficiency is calculated as:
-            <div>(Cost / 6) + Clear Speed</div>
+            <div class={styles.results}>(Cost / 6) + Clear Speed</div>
+            Adjusted Efficiency is calculated as:
+            <div class={styles.results}>Team Efficiency + (Cost - 15) / 4</div>
+            Teams are graded by efficiency as follows:
             <div class={styles.results}>
-              Teams are graded by efficiency as follows:
               <div class={styles.too_efficient}>too efficient</div>
               <div class={styles.efficient}>efficient</div>
               <div class={styles.inefficient}>inefficient</div>
@@ -150,6 +156,18 @@ const testing: Component<{}> = (props) => {
           >
             {" "}
             Team Efficiency: {efficiency().toPrecision(4)}
+          </div>
+          <div
+            class={`${
+              efficiency() > 6
+                ? styles.inefficient
+                : efficiency() < 3
+                ? styles.too_efficient
+                : styles.efficient
+            }`}
+          >
+            {" "}
+            Adjusted Efficiency: {adjustedEfficiency().toPrecision(4)}
           </div>
         </div>
       </div>
