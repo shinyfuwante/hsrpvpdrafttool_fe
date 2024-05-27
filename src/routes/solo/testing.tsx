@@ -149,7 +149,7 @@ const testing: Component<{}> = (props) => {
             class={`${
               efficiency() > 6
                 ? styles.inefficient
-                : efficiency() < 3
+                : efficiency() < 4
                 ? styles.too_efficient
                 : styles.efficient
             }`}
@@ -161,7 +161,7 @@ const testing: Component<{}> = (props) => {
             class={`${
               efficiency() > 6
                 ? styles.inefficient
-                : efficiency() < 3
+                : efficiency() < 4
                 ? styles.too_efficient
                 : styles.efficient
             }`}
