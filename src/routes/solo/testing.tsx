@@ -159,9 +159,9 @@ const testing: Component<{}> = (props) => {
           </div>
           <div
             class={`${
-              efficiency() > 6
+                adjustedEfficiency() > 6
                 ? styles.inefficient
-                : efficiency() < 4
+                : adjustedEfficiency() < 4
                 ? styles.too_efficient
                 : styles.efficient
             }`}
