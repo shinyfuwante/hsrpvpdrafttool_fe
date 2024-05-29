@@ -711,13 +711,13 @@
     "rarity": 5,
     "code": "bh",
     "point_costs": [
+      3.5,
+      2,
+      1,
       0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
+      0.5,
+      0.5,
+      4
     ],
     "nickname": "Boothill BH"
   }
