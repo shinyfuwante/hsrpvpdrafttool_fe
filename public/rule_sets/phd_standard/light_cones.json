@@ -334,11 +334,12 @@
     "point_costs": [0, 0, 0, 0, 0],
     "character": "Himeko",
     "rarity": 5,
-    "free": true
+    "free": true,
+    "standard": true
   },
   "In the Night": {
     "id": "23001",
-    "point_costs": [2, 2.5, 3, 3.5, 4],
+    "point_costs": [1.5, 2.5, 3, 3.5, 4],
     "character": "Seele",
     "rarity": 5
   },
@@ -346,26 +347,30 @@
     "id": "23002",
     "point_costs": [0, 0.5, 1, 1.5, 2],
     "character": "Clara",
-    "rarity": 5
+    "rarity": 5,
+    "standard": true
   },
   "But the Battle Isn't Over": {
     "id": "23003",
     "point_costs": [1, 1.5, 2, 2.5, 3],
     "character": "Bronya",
-    "rarity": 5
+    "rarity": 5,
+    "standard": true
   },
   "In the Name of the World": {
     "id": "23004",
     "point_costs": [0, 0.5, 1, 1.5, 2],
     "character": "Welt",
-    "rarity": 5
+    "rarity": 5,
+    "standard": true
   },
   "Moment of Victory": {
     "id": "23005",
     "point_costs": [0, 0, 0, 0, 0],
     "character": "Gepard",
     "rarity": 5,
-    "free": true
+    "free": true,
+    "standard": true
   },
   "Patience Is All You Need": {
     "id": "23006",
@@ -393,7 +398,7 @@
   },
   "Before Dawn": {
     "id": "23010",
-    "point_costs": [2, 2.5, 3, 3.5, 4],
+    "point_costs": [1.5, 2.5, 3, 3.5, 4],
     "character": "Jing Yuan JY Jimmy Wong",
     "rarity": 5
   },
@@ -407,14 +412,16 @@
     "id": "23012",
     "point_costs": [0, 0.5, 1, 1.5, 2],
     "character": "Yanqing YQ",
-    "rarity": 5
+    "rarity": 5,
+    "standard": true
   },
   "Time Waits for No One": {
     "id": "23013",
     "point_costs": [0, 0, 0, 0, 0],
     "character": "Bailu",
     "rarity": 5,
-    "free": true
+    "free": true,
+    "standard": true
   },
   "I Shall Be My Own Sword": {
     "id": "23014",
@@ -430,7 +437,7 @@
   },
   "Worrisome, Blissful": {
     "id": "23016",
-    "point_costs": [2, 2.5, 3, 3.5, 4],
+    "point_costs": [1.5, 2.5, 3, 3.5, 4],
     "character": "Topaz & Numby",
     "rarity": 5
   },
@@ -448,13 +455,13 @@
   },
   "Past Self in Mirror": {
     "id": "23019",
-    "point_costs": [2, 2.5, 3, 3.5, 4],
+    "point_costs": [2.5, 2.5, 3, 3.5, 4],
     "character": "Ruan Mei RM",
     "rarity": 5
   },
   "Baptism of Pure Thought": {
     "id": "23020",
-    "point_costs": [4, 4, 4.5, 5, 5.5],
+    "point_costs": [4.5, 4, 4.5, 5, 5.5],
     "character": "Dr. Ratio",
     "rarity": 5
   },
@@ -496,7 +503,7 @@
   },
   "Along the Passing Shore": {
     "id": "23204",
-    "point_costs": [3.5, 0, 0, 0, 0],
+    "point_costs": [4, 0, 0, 0, 0],
     "rarity": 5,
     "character": "Acheron"
   },
