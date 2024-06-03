@@ -537,7 +537,7 @@
   "Sailing Towards a Second Life": {
     "id": "23027",
     "rarity": 5,
-    "point_costs": [2.5, 0, 0, 0, 0],
+    "point_costs": [3.5, 0, 0, 0, 0],
     "character": "Boothill BH"
   }
 }

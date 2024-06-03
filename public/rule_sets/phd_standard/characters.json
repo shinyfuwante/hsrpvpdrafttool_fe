@@ -325,7 +325,7 @@
     "id": "1203",
     "special": true,
     "point_costs": [
-      1.5,
+      0.5,
       1,
       0,
       0,
@@ -694,7 +694,7 @@
   "TrailBlazerImaginary": {
     "id": "8006",
     "point_costs": [
-      3,
+      3.5,
       0,
       0,
       0,
@@ -711,7 +711,7 @@
     "rarity": 5,
     "code": "bh",
     "point_costs": [
-      3.5,
+      4,
       2,
       1,
       0,
