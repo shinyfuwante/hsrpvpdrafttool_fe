@@ -455,7 +455,7 @@
   },
   "Past Self in Mirror": {
     "id": "23019",
-    "point_costs": [2.5, 2.5, 3, 3.5, 4],
+    "point_costs": [2, 2.5, 3, 3.5, 4],
     "character": "Ruan Mei RM",
     "rarity": 5
   },
@@ -515,13 +515,13 @@
   "Inherently Unjust Destiny": {
     "id": "23023",
     "rarity": 5,
-    "point_costs": [1.5, 0, 0, 0, 0, 0, 0],
+    "point_costs": [2, 0, 0, 0, 0, 0, 0],
     "character": "Aventurine"
   },
   "Flowing Nightglow": {
     "id": "23026",
     "rarity": 5,
-    "point_costs": [1, 0, 0, 0, 0],
+    "point_costs": [1.5, 0, 0, 0, 0],
     "character": "Robin"
   },
   "Tomorrow's Journey": {
