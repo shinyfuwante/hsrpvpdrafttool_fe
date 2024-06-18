@@ -720,5 +720,33 @@
       4
     ],
     "nickname": "Boothill BH"
+  },
+  "Firefly": {
+    "id": "1310",
+    "rarity": 5,
+    "point_costs": [
+      6,
+      1.5,
+      2.5,
+      0,
+      0,
+      0,
+      3
+    ],
+    "nickname": "Firefly FF Sam Samfly Mid"
+  },
+  "Jade": {
+    "id": "1314",
+    "rarity": 5,
+    "point_costs": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "nickname": "Jade"
   }
 }

@@ -650,5 +650,33 @@
             0
         ],
         "nickname": "Boothill"
+    },
+    "Firefly": {
+        "id": "1310",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "Firefly"
+    },
+    "Jade": {
+        "id": "1314",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "Jade"
     }
 }

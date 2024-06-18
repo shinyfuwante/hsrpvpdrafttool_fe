@@ -540,5 +540,61 @@
         0
     ],
     "character": "Boothill BH"
-}
+},
+  "After the Charmony Fall": {
+        "id": "21045",
+        "rarity": 4,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "After the Charmony Fall"
+    },
+    "Whereabouts Should Dreams Rest": {
+        "id": "23025",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "character": "Firefly Sam FF Samfly"
+    },
+    "Yet Hope Is Priceless": {
+        "id": "23028",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "character": "Jade"
+    },
+    "Eternal Calculus": {
+        "id": "24004",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "free": true
+    }
 }

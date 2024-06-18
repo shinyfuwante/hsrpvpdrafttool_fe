@@ -1302,5 +1302,61 @@
             0
         ],
         "nickname": "Sailing Towards a Second Life"
+    },
+    "After the Charmony Fall": {
+        "id": "21045",
+        "rarity": 4,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "After the Charmony Fall"
+    },
+    "Whereabouts Should Dreams Rest": {
+        "id": "23025",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "Whereabouts Should Dreams Rest"
+    },
+    "Yet Hope Is Priceless": {
+        "id": "23028",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "Yet Hope Is Priceless"
+    },
+    "Eternal Calculus": {
+        "id": "24004",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "Eternal Calculus"
     }
 }
