@@ -139,7 +139,7 @@
   },
   "Luocha": {
     "id": "1203",
-    "special": true,
+    "special": false,
     "point_costs": [1, 1, 0, 0, 0.5, 0, 3.5],
     "rarity": 5,
     "nickname": "Luocha Luofraud"
@@ -274,20 +274,21 @@
   },
   "Acheron": {
     "id": "1308",
-    "special": true,
+    "special": false,
     "point_costs": [6, 1.5, 2, 0.5, 0.5, 0, 3],
     "rarity": 5,
     "nickname": "Acheron Acorn"
   },
   "Gallagher": {
     "id": "1301",
-    "special": true,
+    "special": false,
     "point_costs": [0.5, 0, 0.5, 0, 0.5, 0, 0],
     "rarity": 4,
     "nickname": "Gallagher"
   },
   "Aventurine": {
     "id": "1304",
+    "special": true,
     "rarity": 5,
     "point_costs": [1.5, 1, 1.5, 0, 0.5, 0, 3],
     "nickname": "Aventurine"
@@ -295,6 +296,7 @@
   "Robin": {
     "id": "1309",
     "rarity": 5,
+    "special": true,
     "code": "rb",
     "point_costs": [5.5, 5, 1, 0, 0.5, 0, 4.5],
     "nickname": "Robin Birb"
@@ -302,6 +304,7 @@
   "TrailBlazerImaginary": {
     "id": "8006",
     "point_costs": [4, 0, 0, 0, 0, 0, 0],
+    "special": true,
     "code": "im",
     "rarity": 5,
     "nickname": "IMC TrailBlazerImaginary HMC HamSandwich HarmonyMC Ham Sandwich"
