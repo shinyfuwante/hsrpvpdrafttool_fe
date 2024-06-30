@@ -7,10 +7,8 @@ import {
   redBans,
   setRedBans,
   redPicks,
-  playerTurn,
   turnOrder,
   turnIndex,
-  setTurnIndex,
   CharacterPick,
   CharacterBan,
   selectedChars,
@@ -19,6 +17,7 @@ import {
   isSinglePlayer,
   isEvent,
   isFFA,
+  canDoublePickWithCost,
 } from "~/game/game_logic";
 import { CharacterDetails } from "~/types";
 import Results from "~/components/Results/Results";
@@ -35,6 +34,7 @@ const Roster: Component<RosterProps> = (props) => {
   const [searchTerm, setSearchTerm] = createSignal("");
   const [currentTurn, setCurrentTurn] = createSignal(turnOrder()[turnIndex()]);
   const [isTurn, setIsTurn] = createSignal(false);
+  const [bannedCharacters, setBannedCharacters] = createSignal<string[]>([]);
   createEffect(() => {
     if (turnIndex() < turnOrder().length && turnIndex() >= 0) {
       setCurrentTurn(turnOrder()[turnIndex()]);
@@ -43,13 +43,18 @@ const Roster: Component<RosterProps> = (props) => {
   });
   createEffect(() => {
     const selected = [
-      ...blueBans(),
-      ...redBans(),
       ...bluePicks(),
       ...redPicks(),
     ].map((char) => char.name);
     setSelectedChars(selected);
   });
+  createEffect(() => {
+    const banned = [
+      ...blueBans(),
+      ...redBans(),
+    ].map((ban) => ban.name);
+    setBannedCharacters(banned);
+  })
   const selectCharacter = (characterName: string) => {
     if (turnIndex() >= turnOrder().length) {
       return;
@@ -77,6 +82,7 @@ const Roster: Component<RosterProps> = (props) => {
         superimposition: 1,
         index: Math.max(0, pickSignal().length - 1),
         team: currentPlayer,
+        num_picked: selectedChars().includes(characterName) ? 2 : 1
       };
       if (currentPlayer == "blue_team") {
         if (bluePicks().length < 8) {
@@ -114,24 +120,32 @@ const Roster: Component<RosterProps> = (props) => {
               const characterId = (characterDetails as CharacterDetails).id;
               const characterImage = `/character_icons/${characterId}.webp`;
               const isSpecial = characterDetails.special == true && isEvent();
-              const isSelected = () => {
-                if (isSpecial || isFFA()) {
-                  return selectedChars().filter((x) => x == characterName).length == 2;
+              const isBanned = () => {
+                return bannedCharacters().includes(characterName);
+              };
+              const canSelect = () => {
+                if (!isTurn()) {
+                  return false;
+                }
+                if (!(turnIndex() < turnOrder().length)) {
+                  return false;
+                }
+                if (isSpecial || isFFA() || canDoublePickWithCost()) {
+                  const pickSignal = currentTurn().team == "blue_team" ? bluePicks : redPicks;
+                  return pickSignal().filter((char) => char.name == characterName).length == 0;
                 } else {
-                  return selectedChars().includes(characterName);
+                  return !selectedChars().includes(characterName);
                 }
               };
-              const onceSelected =
-                isSpecial &&
-                selectedChars().filter((x) => x == characterName).length == 1;
               const isMatch =
                 searchTerm() != "" &&
                 (characterDetails as CharacterDetails).nickname
                   .toLowerCase()
                   .includes(searchTerm().toLowerCase());
 
-              const canPick =
-                !isSelected() && isTurn() && turnIndex() < turnOrder().length;
+              const canPick = () => {
+                return !isBanned() && canSelect();
+              }
 
               const renderChar = () => {
                 return (
@@ -139,26 +153,20 @@ const Roster: Component<RosterProps> = (props) => {
                     style={{
                       "background-color":
                         characterDetails.rarity == 4 ? "#764585" : "#e6b741",
-                      filter: !isSelected() ? "none" : "grayscale(100%)",
+                      filter: canPick() ? "none" : "grayscale(100%)",
                       display: isMatch || searchTerm() == "" ? "flex" : "none",
                       width: "75px",
                       height: "75px",
-                      cursor: !isSelected() && isTurn() ? "pointer" : "default",
+                      cursor: canPick() && isTurn() ? "pointer" : "default",
                       "border-radius": "0.3em",
                       "align-items": "center",
                       "justify-content": "center",
                     }}
                     class={`${
-                      isSelected() ? styles.character : styles.not_selected
-                    } ${
-                      onceSelected
-                        ? styles.once
-                        : isSelected()
-                        ? styles.selected
-                        : "not-selected"
+                      canPick() ? styles.not_selected : styles.character
                     }`}
                     onClick={
-                      canPick ? () => selectCharacter(characterName) : undefined
+                      canPick() ? () => selectCharacter(characterName) : undefined
                     }
                   >
                     <img

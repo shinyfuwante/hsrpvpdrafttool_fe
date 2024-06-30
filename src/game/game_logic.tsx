@@ -25,6 +25,7 @@ type CharacterPick = {
   superimposition: number;
   index: number;
   team: string;
+  num_picked: number;
 };
 type CharacterBan = {
   name: string;
@@ -51,6 +52,9 @@ const calcCost = (character: CharacterPick) => {
   }
   if (ruleSet() == "pokke") {
     return cost;
+  }
+  if (canDoublePickWithCost() && character.num_picked == 2) {
+    cost = Math.ceil(cost * 1.5 * 2) / 2;
   }
   if (lc && character.superimposition > 0) {
     cost += lc.point_costs[0];
@@ -89,6 +93,7 @@ const [blueCost, setBlueCost] = createSignal(0);
 const [isSinglePlayer, setIsSinglePlayer] = createSignal(false);
 const [isEvent, setIsEvent] = createSignal(false);
 const [isFFA, setIsFFA] = createSignal(false);
+const [canDoublePickWithCost, setCanDoublePickWithCost] = createSignal(false);
 const [error, setError] = createSignal("");
 const [blueCostsMap, setBlueCostsMap] = createSignal(new Map());
 const [redCostsMap, setRedCostsMap] = createSignal(new Map());
@@ -281,5 +286,7 @@ export {
   isFFA,
   setIsFFA,
   turnOrder,
-  setTurnOrder
+  setTurnOrder,
+  canDoublePickWithCost,
+  setCanDoublePickWithCost
 };

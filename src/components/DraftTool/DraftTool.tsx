@@ -3,18 +3,12 @@ import Team from "./Team/Team";
 import Roster from "./Roster/Roster";
 import SoloSettings from "../SoloSettings/SoloSettings";
 import {
-  playerTurn,
   blueBans,
   redBans,
   bluePicks,
   redPicks,
-  blueTeam,
-  redTeam,
-  selectedChars,
   ruleSet,
-  charJson,
   setCharJson,
-  lcJson,
   setLcJson,
   CharacterBan,
   CharacterPick,

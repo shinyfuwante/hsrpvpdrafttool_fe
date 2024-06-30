@@ -129,7 +129,7 @@ const game: Component<{}> = (props) => {
   onMount(async () => {
     setIsSinglePlayer(true);
     setApplyTimerPenalty(false);
-    // setCanDoublePickWithCost(true);
+    setCanDoublePickWithCost(true);
   });
   return (
     <DraftTool

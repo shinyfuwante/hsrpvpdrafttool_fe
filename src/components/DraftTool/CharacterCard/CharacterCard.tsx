@@ -31,6 +31,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
   const handleSigEid = props.handleSigEid;
   const team = props.team;
   const character = props.character;
+  const num_picked = character.num_picked;
   const [eidolon, setEidolon] = createSignal(character.eidolon);
   const [superimposition, setSuperimposition] = createSignal(
     character.superimposition
@@ -56,6 +57,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
         superimposition: superimposition(),
         index: id,
         team: team,
+        num_picked: num_picked
       };
       if (
         props.signal()[id].eidolon !== eidolon() ||
