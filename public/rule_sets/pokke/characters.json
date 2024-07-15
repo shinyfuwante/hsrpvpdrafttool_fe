@@ -372,7 +372,7 @@
   "Jade": {
     "id": "1314",
     "rarity": 5,
-    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "point_costs": [1, 1, 1, 1, 1, 1, 1],
     "code": "jd",
     "nickname": "Jade"
   }
