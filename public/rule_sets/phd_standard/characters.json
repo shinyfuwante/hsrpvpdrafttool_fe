@@ -140,7 +140,7 @@
   "Luocha": {
     "id": "1203",
     "special": false,
-    "point_costs": [1.5, 1, 0, 0, 0.5, 0, 2.5],
+    "point_costs": [1.5, 0, 0, 0, 0.5, 0, 2.5],
     "rarity": 5,
     "nickname": "Luocha Luofraud"
   },
