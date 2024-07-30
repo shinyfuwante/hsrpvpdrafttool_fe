@@ -563,5 +563,22 @@
     "rarity": 5,
     "point_costs": [0, 0, 0, 0, 0, 0, 0],
     "free": true
+  },
+  "Dance at Sunset": {
+    "id": "23030",
+    "rarity": 5,
+    "point_costs": [2, 0, 0, 0, 0, 0, 0],
+    "character": "Yunli"
+  },
+  "Those Many Springs": {
+    "id": "23029",
+    "rarity": 5,
+    "point_costs": [2, 0, 0, 0, 0, 0, 0],
+    "character": "Jiaoqiu JQ"
+  },
+  "Poised to Bloom": {
+    "id": "21046",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0]
   }
 }

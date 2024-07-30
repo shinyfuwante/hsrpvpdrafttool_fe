@@ -329,5 +329,26 @@
     "point_costs": [2.5, 0.5, 1, 0, 0.5, 0, 1.5],
     "code": "jd",
     "nickname": "Jade"
+  },
+  "Yunli": {
+    "id": "1221",
+    "rarity": 5,
+    "point_costs": [5, 2, 2, 0, 0.5, 0, 2],
+    "code": "yl",
+    "nickname": "Yunli"
+  },
+  "Jiaoqiu": {
+    "id": "1218",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "code": "xx",
+    "nickname": "Jiaoqiu JQ"
+  },
+  "March 7th Hunt": {
+    "id": "1224",
+    "rarity": 4,
+    "point_costs": [3, 0, 0, 0, 0, 0, 0],
+    "code": "mh",
+    "nickname": "March 7th M7 March 8th M8"
   }
 }
