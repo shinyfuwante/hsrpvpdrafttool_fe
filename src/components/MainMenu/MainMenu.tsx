@@ -20,6 +20,10 @@ const MainMenu: Component<MainMenuProps> = (props: any) => {
     const url = `/solo/pokke`;
     window.location.href = url;
   };
+  const testingTool = () => {
+    const url = `/solo/testing`;
+    window.location.href = url;
+  };
   return (
     <div>
       {props.children}
@@ -32,6 +36,9 @@ const MainMenu: Component<MainMenuProps> = (props: any) => {
           </div>
           <div onClick={() => joinGame()} class={styles.game_mode_select}>
             <div>Create a game for multiplayer lobby-style drafting</div>
+          </div>
+          <div onClick={() => testingTool()} class={styles.game_mode_select}>
+            <div>PHD Points Testing Tool</div>
           </div>
           <a href="https://discord.gg/Rb4PKm5aWn" class={styles.discord_link}>
             <img src="/discord.svg" alt="Discord Logo"/>
