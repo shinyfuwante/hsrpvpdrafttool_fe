@@ -24,6 +24,10 @@ const MainMenu: Component<MainMenuProps> = (props: any) => {
     const url = `/solo/testing`;
     window.location.href = url;
   };
+  const costs = () => {
+    const url = `/solo/costs`;
+    window.location.href = url;
+  }
   return (
     <div>
       {props.children}
@@ -39,6 +43,9 @@ const MainMenu: Component<MainMenuProps> = (props: any) => {
           </div>
           <div onClick={() => testingTool()} class={styles.game_mode_select}>
             <div>PHD Points Testing Tool</div>
+          </div>
+          <div onClick={() => costs()} class={styles.game_mode_select}>
+            <div>PHD Costs Table</div>
           </div>
           <a href="https://discord.gg/Rb4PKm5aWn" class={styles.discord_link}>
             <img src="/discord.svg" alt="Discord Logo"/>
