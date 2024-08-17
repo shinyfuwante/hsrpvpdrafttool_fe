@@ -109,3 +109,11 @@
 .under_30 {
     color: white;
 }
+
+.edit_costs_toggle {
+    display: flex;
+    flex-direction: row;
+    background-color: #30203f;
+    padding: 0.5em;
+    border-radius: 0.3em;
+}

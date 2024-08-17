@@ -4,6 +4,7 @@ import {
   createEffect,
   createMemo,
   Accessor,
+  Show,
 } from "solid-js";
 import {
   charJson,
@@ -12,6 +13,7 @@ import {
   ownTeam,
   isSinglePlayer,
   calcCost,
+  testingTool,
 } from "~/game/game_logic";
 
 import styles from "./CharacterCard.module.css";
@@ -39,6 +41,10 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
   const [lightCone, setLightCone] = createSignal(character.light_cone);
   const [cost, setCost] = createSignal(calcCost(props.signal()[id]));
 
+  const [editedCharCost, setEditedCharCost] = createSignal(0);
+  const [editedLCCost, setEditedLCCost] = createSignal(0);
+  const [editedCost, setEditedCost] = createSignal(0);
+
   let prevEid = character.eidolon;
   let prevLightCone = character.light_cone;
   let prevSuper = character.superimposition;
@@ -57,7 +63,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
         superimposition: superimposition(),
         index: id,
         team: team,
-        num_picked: num_picked
+        num_picked: num_picked,
       };
       if (
         props.signal()[id].eidolon !== eidolon() ||
@@ -67,11 +73,16 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
         handleSigEid(pick);
       }
     }
-    setCost(calcCost(props.signal()[id]) || 0);
+    if (testingTool()) {
+      setCost(calcCost(props.signal()[id]) + editedCost() || 0);
+    } else {
+      setCost(calcCost(props.signal()[id]) || 0);
+    }
     onCostChange(id, cost());
   };
   createEffect(() => {
     handleSuperimpositionEidolonChange();
+    setEditedCost(editedCharCost() + editedLCCost());
   });
   const characterCard = createMemo(() => {
     const backgroundColor = char.rarity === 4 ? "#764585" : "#e6b741";
@@ -84,6 +95,32 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
             "background-color": backgroundColor,
           }}
         >
+          <Show when={testingTool()}>
+            <div class={styles.tt_modifier}>
+              <div class={styles.tt_label}>Character Mod</div>
+              <input
+                type="text"
+                onChange={(e) => setEditedCharCost(Number(e.target.value))}
+                class={styles.tt_char_cost}
+                value={editedCharCost()}
+                inputmode="numeric"
+              ></input>
+            </div>
+          </Show>
+          <Show when={testingTool()}>
+            <div class={`${styles.tt_modifier} ${styles.tt_label_lc}`}>
+              <div class={`${styles.tt_label_lc} ${styles.tt_label}`}>
+                LC Mod
+              </div>
+              <input
+                type="text"
+                onChange={(e) => setEditedLCCost(Number(e.target.value))}
+                class={styles.tt_lc_cost}
+                value={editedLCCost()}
+                inputmode="numeric"
+              ></input>
+            </div>
+          </Show>
           <div class={styles.cost}>+{cost()}</div>
         </div>
         <div class={styles.eidolon_sig}>
