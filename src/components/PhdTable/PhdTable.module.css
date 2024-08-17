@@ -1,0 +1,29 @@
+.tables {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.tables > h3 {
+    text-align: center;
+}
+
+td {
+    padding: 0.3em;
+}
+
+/* .table {
+    background-color: #48305f;
+} */
+
+.body:nth-child(odd) {
+    background-color: #5a496a;
+}
+.data_name {
+    text-align: left;
+}
+
+.data_table {
+    width: 75%;
+    align-self: center;
+}
