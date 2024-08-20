@@ -26,6 +26,8 @@ type CharacterPick = {
   index: number;
   team: string;
   num_picked: number;
+  char_mod?: number;
+  lc_mod?: number;
 };
 type CharacterBan = {
   name: string;
