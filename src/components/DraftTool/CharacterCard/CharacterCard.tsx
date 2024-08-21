@@ -78,9 +78,13 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
       if (
         props.signal()[id].eidolon !== eidolon() ||
         props.signal()[id].superimposition !== superimposition() ||
-        props.signal()[id].light_cone !== lightCone()
+        props.signal()[id].light_cone !== lightCone() 
       ) {
         handleSigEid(pick);
+      } else if (testingTool()) {
+        if (props.signal()[id].char_mod != editedCharCost() || props.signal()[id].lc_mod != editedLCCost()) {
+          handleSigEid(pick);
+        } 
       }
     }
     if (testingTool()) {
