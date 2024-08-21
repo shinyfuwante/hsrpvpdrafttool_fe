@@ -352,7 +352,7 @@
   },
   "But the Battle Isn't Over": {
     "id": "23003",
-    "point_costs": [1, 1.5, 2, 2.5, 3],
+    "point_costs": [0.5, 1.5, 2, 2.5, 3],
     "character": "Bronya",
     "rarity": 5,
     "standard": true
@@ -380,7 +380,7 @@
   },
   "Incessant Rain": {
     "id": "23007",
-    "point_costs": [1.5, 1.5, 2, 2.5, 3],
+    "point_costs": [1, 1.5, 2, 2.5, 3],
     "character": "Silver Wolf SW",
     "rarity": 5
   },
@@ -467,7 +467,7 @@
   },
   "Earthly Escapade": {
     "id": "23021",
-    "point_costs": [2, 2.5, 3, 3.5, 4],
+    "point_costs": [1.5, 2.5, 3, 3.5, 4],
     "character": "Sparkle Hanabi",
     "rarity": 5
   },
@@ -573,7 +573,7 @@
   "Those Many Springs": {
     "id": "23029",
     "rarity": 5,
-    "point_costs": [2, 0, 0, 0, 0, 0, 0],
+    "point_costs": [1.5, 0, 0, 0, 0, 0, 0],
     "character": "Jiaoqiu JQ"
   },
   "Poised to Bloom": {
