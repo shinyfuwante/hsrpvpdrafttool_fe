@@ -55,13 +55,13 @@
   },
   "Bronya": {
     "id": "1101",
-    "point_costs": [3, 0.5, 0, 0, 0, 0, 0],
+    "point_costs": [3, 0.5, 0, 0, 0, 0, 0.5],
     "rarity": 5,
     "nickname": "Bronya Lebron Broner"
   },
   "Seele": {
     "id": "1102",
-    "point_costs": [1.5, 0, 1, 0, 1, 0, 0],
+    "point_costs": [2, 0, 1, 0, 1, 0, 0],
     "rarity": 5,
     "nickname": "Seele Seal"
   },
@@ -171,7 +171,7 @@
   },
   "Fu Xuan": {
     "id": "1208",
-    "point_costs": [1, 1, 0.5, 0, 0.5, 0, 1.5],
+    "point_costs": [1, 1, 0, 0, 0.5, 0, 1.5],
     "rarity": 5,
     "nickname": "Fu Xuan FX"
   },
@@ -219,7 +219,7 @@
   },
   "Huohuo": {
     "id": "1217",
-    "point_costs": [1.5, 1, 0.5, 0, 0, 0, 2],
+    "point_costs": [2, 1, 0, 0, 0, 0, 1.5],
     "rarity": 5,
     "nickname": "Huohuo HH Tail HweHwe"
   },
@@ -231,7 +231,7 @@
   },
   "Ruan Mei": {
     "id": "1303",
-    "point_costs": [5, 3, 0.5, 0, 0, 0, 1],
+    "point_costs": [4.5, 3, 0.5, 0, 0, 0, 1],
     "rarity": 5,
     "nickname": "Ruan Mei RM Ramen"
   },
@@ -250,7 +250,7 @@
   },
   "Black Swan": {
     "id": "1307",
-    "point_costs": [1.5, 3.5, 0.5, 0, 0.5, 0, 0.5],
+    "point_costs": [2, 3.5, 0.5, 0, 0.5, 0, 0.5],
     "rarity": 5,
     "nickname": "Black Swan BS"
   },
@@ -313,7 +313,7 @@
     "id": "1315",
     "rarity": 5,
     "code": "bh",
-    "point_costs": [5, 2, 0, 0, 0.5, 0.5, 1.5],
+    "point_costs": [4.5, 2, 0.5, 0, 0.5, 0.5, 1.5],
     "nickname": "Boothill BH"
   },
   "Firefly": {
