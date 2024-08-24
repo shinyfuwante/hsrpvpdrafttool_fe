@@ -26,6 +26,8 @@ type CharacterPick = {
   index: number;
   team: string;
   num_picked: number;
+  char_mod?: number;
+  lc_mod?: number;
 };
 type CharacterBan = {
   name: string;
@@ -106,6 +108,7 @@ const [applyTimerPenalty, setApplyTimerPenalty] = createSignal(true);
 export const [turnIndex, setTurnIndex] = createSignal(0);
 const [player1Roll, setPlayer1Roll] = createSignal(0);
 const [player2Roll, setPlayer2Roll] = createSignal(0);
+const [testingTool, setTestingTool] = createSignal(false);
 export const turn_order = [
   { team: "blue_team", action: "ban", id: 0 },
   { team: "red_team", action: "ban", id: 0 },
@@ -288,5 +291,7 @@ export {
   turnOrder,
   setTurnOrder,
   canDoublePickWithCost,
-  setCanDoublePickWithCost
+  setCanDoublePickWithCost,
+  testingTool,
+  setTestingTool
 };

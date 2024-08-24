@@ -1,4 +1,4 @@
-import { Component, createEffect, createSignal } from "solid-js";
+import { Component, createEffect, createSignal, Show } from "solid-js";
 import Roster from "~/components/DraftTool/Roster/Roster";
 import {
   CharacterPick,
@@ -10,6 +10,8 @@ import {
   setLcJson,
   setTurnOrder,
   totalCost,
+  setTestingTool,
+  testingTool,
 } from "~/game/game_logic";
 import { CharacterCard } from "~/components/DraftTool/CharacterCard/CharacterCard";
 import styles from "./testing.module.css";
@@ -109,11 +111,13 @@ const testing: Component<{}> = (props) => {
     const [efficiency, setEfficiency] = createSignal(0);
     const [adjustedEfficiency, setAdjustedEfficiency] = createSignal(0);
     const [efficiencyAdjustment, setEfficiencyAdjustment] = createSignal(0);
+    const [edited_cost, setEditedCost] = createSignal(cost());
 
     createEffect(() => {
       setEfficiency(cost() / 6 + cycles());
       setEfficiencyAdjustment(cost() != 0 ? (cost() - 15) / 4 : 0);
       setAdjustedEfficiency(efficiency() + efficiencyAdjustment());
+      setEditedCost(cost()); // TODO
     });
 
     return (
@@ -142,6 +146,18 @@ const testing: Component<{}> = (props) => {
             />
           </div>
         </div>
+        <div>
+            <label class={`${styles.edit_costs_toggle}`}>
+              <input
+                name="toggle_cycle_penalty"
+                type="checkbox"
+                role="switch"
+                onChange={() => setTestingTool(!testingTool())}
+                checked={false}
+              />
+              <div>Edit costs</div>
+            </label>
+          </div>
         <div class={styles.results}>
           <div> Cycles Taken: {cycles()}</div>
           <div> Cost: {cost()}</div>
@@ -173,7 +189,6 @@ const testing: Component<{}> = (props) => {
       </div>
     );
   };
-
   setTurnOrder(turn_order);
   return (
     <div class={styles.container}>

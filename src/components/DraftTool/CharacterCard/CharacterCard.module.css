@@ -70,3 +70,72 @@ input.light_cone_input {
   border-radius: 0.3em;
   min-width: 40px;
 }
+
+/** Testing Tool specific **/
+
+/* .tt_modifier {
+  display: flex;
+  flex-direction: column;
+} */
+
+.tt_char_cost {
+  position: relative;
+  top: 0;
+  left: 0%;
+  margin: 5px;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: bold;
+  max-width: 3em;
+  font-size: 1.5em;
+  border-radius: 0.3em;
+  text-align: center;
+}
+
+.tt_lc_cost {
+  position: absolute;
+  top: 0;
+  left: 20%;
+  margin: 5px;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: bold;
+  max-width: 3em;
+  font-size: 1.5em;
+  border-radius: 0.3em;
+  text-align: center;
+}
+
+.tt_label {
+  color: white;
+  position: absolute;
+  top: 0;
+  font-size: 0.7em;
+  z-index: 1;
+}
+
+.tt_label_lc {
+  left: 26%;
+}
+
+.tt_label_char {
+  left: 3%;
+}
+
+.tt_reset_button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0.1em;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  cursor: pointer;
+  padding: 0.5em;
+  border-style: none;
+}
+
+.tt_reset_button:hover {
+  background-color: rgba(0, 0, 0, 0.75);
+}

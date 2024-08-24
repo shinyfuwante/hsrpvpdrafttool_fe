@@ -4,6 +4,7 @@ import {
   createEffect,
   createMemo,
   Accessor,
+  Show,
 } from "solid-js";
 import {
   charJson,
@@ -12,9 +13,11 @@ import {
   ownTeam,
   isSinglePlayer,
   calcCost,
+  testingTool,
 } from "~/game/game_logic";
 
 import styles from "./CharacterCard.module.css";
+import testing from "~/routes/solo/testing";
 
 interface CharacterCardProps {
   id: number;
@@ -39,6 +42,16 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
   const [lightCone, setLightCone] = createSignal(character.light_cone);
   const [cost, setCost] = createSignal(calcCost(props.signal()[id]));
 
+  const [editedCharCost, setEditedCharCost] = createSignal(
+    props.character.char_mod || 0
+  );
+  const [editedLCCost, setEditedLCCost] = createSignal(
+    props.character.lc_mod || 0
+  );
+  const [editedCost, setEditedCost] = createSignal(
+    cost() + editedCharCost() + editedLCCost()
+  );
+
   let prevEid = character.eidolon;
   let prevLightCone = character.light_cone;
   let prevSuper = character.superimposition;
@@ -48,7 +61,8 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
     if (
       prevEid !== eidolon() ||
       prevSuper !== superimposition() ||
-      prevLightCone !== lightCone()
+      prevLightCone !== lightCone() ||
+      testingTool()
     ) {
       const pick: CharacterPick = {
         name: character.name,
@@ -57,21 +71,32 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
         superimposition: superimposition(),
         index: id,
         team: team,
-        num_picked: num_picked
+        num_picked: num_picked,
+        char_mod: editedCharCost(),
+        lc_mod: editedLCCost(),
       };
       if (
         props.signal()[id].eidolon !== eidolon() ||
         props.signal()[id].superimposition !== superimposition() ||
-        props.signal()[id].light_cone !== lightCone()
+        props.signal()[id].light_cone !== lightCone() 
       ) {
         handleSigEid(pick);
+      } else if (testingTool()) {
+        if (props.signal()[id].char_mod != editedCharCost() || props.signal()[id].lc_mod != editedLCCost()) {
+          handleSigEid(pick);
+        } 
       }
     }
-    setCost(calcCost(props.signal()[id]) || 0);
+    if (testingTool()) {
+      setCost(calcCost(props.signal()[id]) + editedCost() || 0);
+    } else {
+      setCost(calcCost(props.signal()[id]) || 0);
+    }
     onCostChange(id, cost());
   };
   createEffect(() => {
     handleSuperimpositionEidolonChange();
+    setEditedCost(editedCharCost() + editedLCCost());
   });
   const characterCard = createMemo(() => {
     const backgroundColor = char.rarity === 4 ? "#764585" : "#e6b741";
@@ -84,7 +109,51 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
             "background-color": backgroundColor,
           }}
         >
+          <Show when={testingTool()}>
+            <div class={`${styles.tt_modifier}`}>
+              <div class={`${styles.tt_label_char} ${styles.tt_label}`}>Character</div>
+              <input
+                type="text"
+                onChange={(e) => {
+                  setEditedCharCost(Number(e.target.value));
+                  handleSuperimpositionEidolonChange();
+                }}
+                class={styles.tt_char_cost}
+                value={editedCharCost()}
+                inputmode="numeric"
+              ></input>
+            </div>
+          </Show>
+          <Show when={testingTool()}>
+            <div class={`${styles.tt_modifier} ${styles.tt_label_lc}`}>
+              <div class={`${styles.tt_label_lc} ${styles.tt_label}`}>LC</div>
+              <input
+                type="text"
+                onChange={(e) => {
+                  setEditedLCCost(Number(e.target.value));
+                  handleSuperimpositionEidolonChange();
+                }}
+                class={styles.tt_lc_cost}
+                value={editedLCCost()}
+                inputmode="numeric"
+              ></input>
+            </div>
+          </Show>
           <div class={styles.cost}>+{cost()}</div>
+          <Show when={testingTool()}>
+            <div>
+              <input
+                type="button"
+                onClick={(e) => {
+                  setEditedCharCost(0);
+                  setEditedLCCost(0);
+                  handleSuperimpositionEidolonChange();
+                }}
+                class={styles.tt_reset_button}
+                value={"Reset Cost"}
+              ></input>
+            </div>
+          </Show>
         </div>
         <div class={styles.eidolon_sig}>
           <select
