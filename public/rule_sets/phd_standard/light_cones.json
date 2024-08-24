@@ -573,7 +573,7 @@
   "Those Many Springs": {
     "id": "23029",
     "rarity": 5,
-    "point_costs": [1.5, 0, 0, 0, 0, 0, 0],
+    "point_costs": [1, 0, 0, 0, 0, 0, 0],
     "character": "Jiaoqiu JQ"
   },
   "Poised to Bloom": {
