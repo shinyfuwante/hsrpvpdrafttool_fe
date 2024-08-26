@@ -82,7 +82,7 @@ const DraftTool: Component<DraftToolProps> = ({
             </Show>
             <Show when={!isSinglePlayer()}>
               <div class={styles.team_notifier}>
-                You are on the {ownTeam() == "blue_team" ? "Blue" : "Red"} Team
+                You are {ownTeam() == "blue_team" ? "on the Blue Team" : ownTeam() == "on the  red_team" ? "Red Team" : "spectating."}
               </div>
             </Show>
               <div class={styles.timer_container}>

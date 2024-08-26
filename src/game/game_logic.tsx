@@ -151,6 +151,7 @@ const MessageEnum = {
 export const handleMsg = (data: string) => {
   const msg = JSON.parse(data);
   setError("");
+  console.log(msg);
   switch (msg.message.message_type) {
     case MessageEnum.GAME_READY:
       setSessionId(msg.message.cid);
@@ -164,7 +165,9 @@ export const handleMsg = (data: string) => {
       setGamePhase(game_phases.DRAFTING);
       setPlayerTurn(msg.message.turn_player);
       setBlueTeam(msg.message.blue_team);
+      setBlueTeamName(msg.message.blue_team_name);
       setRedTeam(msg.message.red_team);
+      setRedTeamName(msg.message.red_team_name);
       if (msg.message.blue_team == sessionId()) {
         if (sideSelector()) {
           setInitiativeWinner("blue_team");

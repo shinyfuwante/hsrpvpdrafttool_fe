@@ -21,11 +21,49 @@ export default function GamePage() {
   const params = useParams();
   const game_id = params.game_id;
   const ruleSetString = ruleSet();
-  const backendUrl = `wss://${
+  const backendUrl = `ws://${ // TODO: Change back to WSS for prod, ws for testing
     import.meta.env.VITE_BACKEND_URL
   }/ws/game/${game_id}?ruleSet=${ruleSetString}&cid=${getCID()}`;
-  const client = new WebSocket(backendUrl);
+  console.log(backendUrl);
+  let client: WebSocket; 
   const [copied, setCopied] = createSignal(false);
+  const [teamName, setTeamName] = createSignal("");
+  const [teamNameSet, setTeamNameSet] = createSignal(false);
+  const joinGame = async () => {
+    client = new WebSocket(backendUrl);
+    client.onopen = () => {
+      const message = {
+        type: MessageEnum.INIT_GAME,
+        team_name: teamName(),
+      };
+      client.send(JSON.stringify(message));
+    };
+    client.onmessage = (message: any) => {
+      handleMsg(message.data);
+    };
+  };
+  const initialMenu = () => {
+    return (
+      <div class={styles.loading_container}>
+        <div class={styles.loading_message}>
+          <div>Set your team name: </div>
+          <input
+            type="text"
+            onInput={(e) => setTeamName(e.currentTarget.value)}
+          />
+          <button
+            onClick={() => {
+              setTeamNameSet(true);
+              joinGame();
+            }}
+            class={styles.side_button_container}
+          >
+            Join Game
+          </button>
+        </div>
+      </div>
+    );
+  };
   const copiedModal = () => {
     return (
       <div class={styles.copied_modal}>
@@ -162,26 +200,29 @@ export default function GamePage() {
       </div>
     );
   };
-  onMount(async () => {
-    client.onopen = () => {
-      console.log("WebSocket Client Connected");
-    };
-    client.onmessage = (message: any) => {
-      handleMsg(message.data);
-    };
-  });
+  // onMount(async () => {
+  //   client.onopen = () => {
+  //     console.log("WebSocket Client Connected");
+  //   };
+  //   client.onmessage = (message: any) => {
+  //     handleMsg(message.data);
+  //   };
+  // });
   return (
     <div>
-      <MainApp
-        ReconnectScreen={ReconnectScreen}
-        LoadingMenu={LoadingMenu}
-        SideSelection={SideSelection}
-        handleBan={handleBan}
-        handlePick={handlePick}
-        handleSigEid={handleSigEidChange}
-        handleUndo={handleUndo}
-        handleReset={handleReset}
-      />
+      <Show when={!teamNameSet()}>{initialMenu()}</Show>
+      <Show when={teamNameSet()}>
+        <MainApp
+          ReconnectScreen={ReconnectScreen}
+          LoadingMenu={LoadingMenu}
+          SideSelection={SideSelection}
+          handleBan={handleBan}
+          handlePick={handlePick}
+          handleSigEid={handleSigEidChange}
+          handleUndo={handleUndo}
+          handleReset={handleReset}
+        />
+      </Show>
     </div>
   );
 }
