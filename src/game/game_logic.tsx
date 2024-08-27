@@ -4,7 +4,7 @@ import { v4 } from "uuid";
 
 export const version = () => {
   // version of tool.version of game.subversion of game.subversion of rules
-  return "3.2.4";
+  return "3.2.4.1";
 };
 
 const POINTS_PER_SUPERIMPOSITION = 0.5;
@@ -78,7 +78,7 @@ const [initiativeWinner, setInitiativeWinner] = createSignal("default");
 const [sideSelector, setSideSelector] = createSignal(false);
 const [totalCost, setTotalCost] = createSignal(30);
 const [playerTurn, setPlayerTurn] = createSignal("blue_team");
-const [ownTeam, setOwnTeam] = createSignal("spectator");
+const [ownTeam, setOwnTeam] = createSignal("blue_team");
 const [sessionId, setSessionId] = createSignal("");
 const [blueBans, setBlueBans] = createSignal<CharacterBan[]>([]);
 const [redBans, setRedBans] = createSignal<CharacterBan[]>([]);
