@@ -123,3 +123,9 @@
 .team_names_button:hover {
     transform: scale(1.1);
 }
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}

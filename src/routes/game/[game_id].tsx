@@ -72,9 +72,17 @@ export default function GamePage() {
       </div>
     );
   };
-  const copyToClipboard = async () => {
+  const copyGameToClipboard = async () => {
     try {
       await navigator.clipboard.writeText(window.location.href);
+      setCopied(true);
+    } catch (err) {
+      console.error("Failed to copy: ", err);
+    }
+  };
+  const copyWatchToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href.replace('game', 'watch'));
       setCopied(true);
     } catch (err) {
       console.error("Failed to copy: ", err);
@@ -86,12 +94,17 @@ export default function GamePage() {
         <div class={styles.loading_screen}>
           <div class={styles.loading_message}>
             <Show when={error() != ""}>{error()}</Show>
-            <div>
+            <div class={styles.links}>
               Waiting for another player. Click to copy this link to send to
               your friend:
               {/* <a href={window.location.href}>{window.location.href}</a> */}
-              <div onClick={copyToClipboard} class={styles.link_to_copy}>
+              <div onClick={copyGameToClipboard} class={styles.link_to_copy}>
                 {window.location.href}
+              </div>
+              <div></div>
+              Click to copy the spectator link: 
+              <div onClick={copyWatchToClipboard} class={styles.link_to_copy}>
+                {window.location.href.replace('game', 'watch')}
               </div>
             </div>
           </div>
@@ -108,7 +121,7 @@ export default function GamePage() {
             Other player has disconnected. Send this link to your friend to join
             the game:
             {/* <a href={window.location.href}>{window.location.href}</a> */}
-            <div onClick={copyToClipboard} class={styles.link_to_copy}>
+            <div onClick={copyGameToClipboard} class={styles.link_to_copy}>
               {window.location.href}
             </div>
           </div>
