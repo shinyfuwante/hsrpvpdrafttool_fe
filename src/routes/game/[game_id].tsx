@@ -21,7 +21,7 @@ export default function GamePage() {
   const params = useParams();
   const game_id = params.game_id;
   const ruleSetString = ruleSet();
-  const backendUrl = `ws://${ // TODO: Change back to WSS for prod, ws for testing
+  const backendUrl = `wss://${ // TODO: Change back to WSS for prod, ws for testing
     import.meta.env.VITE_BACKEND_URL
   }/ws/game/${game_id}?ruleSet=${ruleSetString}&cid=${getCID()}`;
   console.log(backendUrl);
