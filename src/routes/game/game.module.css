@@ -100,3 +100,26 @@
   gap: 1em;
   height: 100vh;
 }
+.team_names_input {
+  background-color: #876ca3;
+  border: none;
+  margin: 0.3em;
+  padding: 0.5em;
+  color: #ffffff;
+}
+
+.team_names_button {
+  display: flex;  
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid #64477c;
+    padding: 0.5em;
+    transition: transform 0.3s ease;
+    border-radius: 0.5em;
+}
+
+
+.team_names_button:hover {
+    transform: scale(1.1);
+}

@@ -50,13 +50,14 @@ export default function GamePage() {
           <input
             type="text"
             onInput={(e) => setTeamName(e.currentTarget.value)}
+            class={styles.team_names_input}
           />
           <button
             onClick={() => {
               setTeamNameSet(true);
               joinGame();
             }}
-            class={styles.side_button_container}
+            class={styles.team_names_button}
           >
             Join Game
           </button>
