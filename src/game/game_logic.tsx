@@ -4,7 +4,7 @@ import { v4 } from "uuid";
 
 export const version = () => {
   // version of tool.version of game.subversion of game.subversion of rules
-  return "2.2.4.3.5.1"; 
+  return "3.2.4"; 
 }
 
 const POINTS_PER_SUPERIMPOSITION = 0.5;
@@ -76,7 +76,7 @@ const [initiativeWinner, setInitiativeWinner] = createSignal("default");
 const [sideSelector, setSideSelector] = createSignal(false);
 const [totalCost, setTotalCost] = createSignal(30);
 const [playerTurn, setPlayerTurn] = createSignal("blue_team");
-const [ownTeam, setOwnTeam] = createSignal("blue_team");
+const [ownTeam, setOwnTeam] = createSignal("spectator");
 const [sessionId, setSessionId] = createSignal("");
 const [blueBans, setBlueBans] = createSignal<CharacterBan[]>([]);
 const [redBans, setRedBans] = createSignal<CharacterBan[]>([]);
@@ -109,6 +109,7 @@ export const [turnIndex, setTurnIndex] = createSignal(0);
 const [player1Roll, setPlayer1Roll] = createSignal(0);
 const [player2Roll, setPlayer2Roll] = createSignal(0);
 const [testingTool, setTestingTool] = createSignal(false);
+const [isSpectator, setIsSpectator] = createSignal(false);
 export const turn_order = [
   { team: "blue_team", action: "ban", id: 0 },
   { team: "red_team", action: "ban", id: 0 },
@@ -173,11 +174,14 @@ export const handleMsg = (data: string) => {
           setInitiativeWinner("blue_team");
         }
         setOwnTeam("blue_team");
-      } else {
+      } else if (msg.message.red_team == sessionId()) {
         if (sideSelector()) {
           setInitiativeWinner("red_team");
         }
         setOwnTeam("red_team");
+      } 
+      if (isSpectator()){
+        setOwnTeam("spectator");
       }
       break;
     case MessageEnum.GAME_STATE:
@@ -296,5 +300,7 @@ export {
   canDoublePickWithCost,
   setCanDoublePickWithCost,
   testingTool,
-  setTestingTool
+  setTestingTool,
+  isSpectator,
+  setIsSpectator
 };

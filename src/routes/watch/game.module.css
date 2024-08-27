@@ -1,0 +1,100 @@
+.loading_message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 1.2rem;
+  color: white;
+  background: #48305f;
+  border-radius: 10px;
+  /* box-shadow: 0 0 10px var(--periwinkle); */
+  overflow: hidden;
+}
+
+.loading_screen {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+.side_selector {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.side_button_container {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+.side_selector_label {
+  color: white;
+  font-size: 1.5em;
+
+}
+.blue_team {
+    background-color: #6d86f9;
+    color: white;
+    font-size: 1.2em;
+    padding: 1.5em;
+    border-radius: 0.5em;
+    border: none;
+}
+
+.red_team {
+    background-color: #ca515f;
+    color: white;
+    font-size: 1.2em;
+    padding: 1.5em;
+    border-radius: 0.5em;
+    border: none;
+}
+
+.blue_team:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.red_team:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.link_to_copy {
+  cursor: pointer;
+  color: #6d86f9;
+}
+
+.copied_modal {
+  padding: 1em;
+  text-align: center;
+  background-color: #48305f;
+  color: #fff;
+  animation: fade 0.2s linear;
+  bottom: 30%;
+  position: absolute;
+  border-radius: 0.5em;
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.loading_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  height: 100vh;
+}
