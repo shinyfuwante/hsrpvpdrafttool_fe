@@ -24,7 +24,7 @@ export default function GamePage() {
   const params = useParams();
   const game_id = params.game_id;
   const ruleSetString = ruleSet();
-  const backendUrl = `wss://${
+  const backendUrl = `ws://${
     import.meta.env.VITE_BACKEND_URL
   }/ws/watch/${game_id}?ruleSet=${ruleSetString}&cid=${getCID()}`;
   const client = new WebSocket(backendUrl);

@@ -4,8 +4,8 @@ import { v4 } from "uuid";
 
 export const version = () => {
   // version of tool.version of game.subversion of game.subversion of rules
-  return "3.2.4"; 
-}
+  return "3.2.4";
+};
 
 const POINTS_PER_SUPERIMPOSITION = 0.5;
 const game_phases = {
@@ -64,10 +64,12 @@ const calcCost = (character: CharacterPick) => {
       return cost;
     }
     if (lc.rarity == 5) {
-      cost += POINTS_PER_SUPERIMPOSITION * Math.floor((character.superimposition - 1)/2);
+      cost +=
+        POINTS_PER_SUPERIMPOSITION *
+        Math.floor((character.superimposition - 1) / 2);
     }
     // else if (lc.rarity == 5) {
-      // cost += (POINTS_PER_SUPERIMPOSITION * (character.superimposition - 1));
+    // cost += (POINTS_PER_SUPERIMPOSITION * (character.superimposition - 1));
     // }
   }
   return cost;
@@ -99,7 +101,9 @@ const [canDoublePickWithCost, setCanDoublePickWithCost] = createSignal(false);
 const [error, setError] = createSignal("");
 const [blueCostsMap, setBlueCostsMap] = createSignal(new Map());
 const [redCostsMap, setRedCostsMap] = createSignal(new Map());
-const [draftOrder, setDraftOrder] = createSignal<(CharacterBan | CharacterPick)[]>([]);
+const [draftOrder, setDraftOrder] = createSignal<
+  (CharacterBan | CharacterPick)[]
+>([]);
 const [blueTimePenalty, setBlueTimePenalty] = createSignal(0);
 const [redTimePenalty, setRedTimePenalty] = createSignal(0);
 const [blueTeamReserveTime, setBlueTeamReserveTime] = createSignal(570);
@@ -179,8 +183,8 @@ export const handleMsg = (data: string) => {
           setInitiativeWinner("red_team");
         }
         setOwnTeam("red_team");
-      } 
-      if (isSpectator()){
+      }
+      if (isSpectator()) {
         setOwnTeam("spectator");
       }
       break;
@@ -191,6 +195,12 @@ export const handleMsg = (data: string) => {
       setBluePicks(msg.message.game_state.picks.blue_team);
       setRedPicks(msg.message.game_state.picks.red_team);
       setTurnIndex(msg.message.turn_index);
+      if (msg.message.blue_team) {
+        setBlueTeam(msg.message.blue_team);
+        setBlueTeamName(msg.message.blue_team_name);
+        setRedTeam(msg.message.red_team);
+        setRedTeamName(msg.message.red_team_name);
+      }
       if (turnIndex() == 0) {
         // reset happened
         console.log("new game");
@@ -302,5 +312,5 @@ export {
   testingTool,
   setTestingTool,
   isSpectator,
-  setIsSpectator
+  setIsSpectator,
 };
