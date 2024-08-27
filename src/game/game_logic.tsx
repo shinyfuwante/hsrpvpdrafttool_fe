@@ -201,6 +201,9 @@ export const handleMsg = (data: string) => {
         setRedTeam(msg.message.red_team);
         setRedTeamName(msg.message.red_team_name);
       }
+      if (isSpectator()) {
+        setOwnTeam("spectator");
+      }
       if (turnIndex() == 0) {
         // reset happened
         console.log("new game");
