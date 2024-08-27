@@ -4,7 +4,7 @@ import { v4 } from "uuid";
 
 export const version = () => {
   // version of tool.version of game.subversion of game.subversion of rules
-  return "2.2.4.3.5.1"; 
+  return "3.2.4"; 
 }
 
 const POINTS_PER_SUPERIMPOSITION = 0.5;
@@ -76,7 +76,7 @@ const [initiativeWinner, setInitiativeWinner] = createSignal("default");
 const [sideSelector, setSideSelector] = createSignal(false);
 const [totalCost, setTotalCost] = createSignal(30);
 const [playerTurn, setPlayerTurn] = createSignal("blue_team");
-const [ownTeam, setOwnTeam] = createSignal("blue_team");
+const [ownTeam, setOwnTeam] = createSignal("spectator");
 const [sessionId, setSessionId] = createSignal("");
 const [blueBans, setBlueBans] = createSignal<CharacterBan[]>([]);
 const [redBans, setRedBans] = createSignal<CharacterBan[]>([]);
@@ -109,6 +109,7 @@ export const [turnIndex, setTurnIndex] = createSignal(0);
 const [player1Roll, setPlayer1Roll] = createSignal(0);
 const [player2Roll, setPlayer2Roll] = createSignal(0);
 const [testingTool, setTestingTool] = createSignal(false);
+const [isSpectator, setIsSpectator] = createSignal(false);
 export const turn_order = [
   { team: "blue_team", action: "ban", id: 0 },
   { team: "red_team", action: "ban", id: 0 },
@@ -151,6 +152,7 @@ const MessageEnum = {
 export const handleMsg = (data: string) => {
   const msg = JSON.parse(data);
   setError("");
+  console.log(msg);
   switch (msg.message.message_type) {
     case MessageEnum.GAME_READY:
       setSessionId(msg.message.cid);
@@ -164,17 +166,22 @@ export const handleMsg = (data: string) => {
       setGamePhase(game_phases.DRAFTING);
       setPlayerTurn(msg.message.turn_player);
       setBlueTeam(msg.message.blue_team);
+      setBlueTeamName(msg.message.blue_team_name);
       setRedTeam(msg.message.red_team);
+      setRedTeamName(msg.message.red_team_name);
       if (msg.message.blue_team == sessionId()) {
         if (sideSelector()) {
           setInitiativeWinner("blue_team");
         }
         setOwnTeam("blue_team");
-      } else {
+      } else if (msg.message.red_team == sessionId()) {
         if (sideSelector()) {
           setInitiativeWinner("red_team");
         }
         setOwnTeam("red_team");
+      } 
+      if (isSpectator()){
+        setOwnTeam("spectator");
       }
       break;
     case MessageEnum.GAME_STATE:
@@ -293,5 +300,7 @@ export {
   canDoublePickWithCost,
   setCanDoublePickWithCost,
   testingTool,
-  setTestingTool
+  setTestingTool,
+  isSpectator,
+  setIsSpectator
 };

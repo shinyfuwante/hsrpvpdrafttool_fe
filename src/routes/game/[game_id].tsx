@@ -21,11 +21,50 @@ export default function GamePage() {
   const params = useParams();
   const game_id = params.game_id;
   const ruleSetString = ruleSet();
-  const backendUrl = `wss://${
+  const backendUrl = `wss://${ // TODO: Change back to WSS for prod, ws for testing
     import.meta.env.VITE_BACKEND_URL
   }/ws/game/${game_id}?ruleSet=${ruleSetString}&cid=${getCID()}`;
-  const client = new WebSocket(backendUrl);
+  console.log(backendUrl);
+  let client: WebSocket; 
   const [copied, setCopied] = createSignal(false);
+  const [teamName, setTeamName] = createSignal("");
+  const [teamNameSet, setTeamNameSet] = createSignal(false);
+  const joinGame = async () => {
+    client = new WebSocket(backendUrl);
+    client.onopen = () => {
+      const message = {
+        type: MessageEnum.INIT_GAME,
+        team_name: teamName(),
+      };
+      client.send(JSON.stringify(message));
+    };
+    client.onmessage = (message: any) => {
+      handleMsg(message.data);
+    };
+  };
+  const initialMenu = () => {
+    return (
+      <div class={styles.loading_container}>
+        <div class={styles.loading_message}>
+          <div>Set your team name: </div>
+          <input
+            type="text"
+            onInput={(e) => setTeamName(e.currentTarget.value)}
+            class={styles.team_names_input}
+          />
+          <button
+            onClick={() => {
+              setTeamNameSet(true);
+              joinGame();
+            }}
+            class={styles.team_names_button}
+          >
+            Join Game
+          </button>
+        </div>
+      </div>
+    );
+  };
   const copiedModal = () => {
     return (
       <div class={styles.copied_modal}>
@@ -33,9 +72,17 @@ export default function GamePage() {
       </div>
     );
   };
-  const copyToClipboard = async () => {
+  const copyGameToClipboard = async () => {
     try {
       await navigator.clipboard.writeText(window.location.href);
+      setCopied(true);
+    } catch (err) {
+      console.error("Failed to copy: ", err);
+    }
+  };
+  const copyWatchToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href.replace('game', 'watch'));
       setCopied(true);
     } catch (err) {
       console.error("Failed to copy: ", err);
@@ -47,12 +94,17 @@ export default function GamePage() {
         <div class={styles.loading_screen}>
           <div class={styles.loading_message}>
             <Show when={error() != ""}>{error()}</Show>
-            <div>
+            <div class={styles.links}>
               Waiting for another player. Click to copy this link to send to
               your friend:
               {/* <a href={window.location.href}>{window.location.href}</a> */}
-              <div onClick={copyToClipboard} class={styles.link_to_copy}>
+              <div onClick={copyGameToClipboard} class={styles.link_to_copy}>
                 {window.location.href}
+              </div>
+              <div></div>
+              Click to copy the spectator link: 
+              <div onClick={copyWatchToClipboard} class={styles.link_to_copy}>
+                {window.location.href.replace('game', 'watch')}
               </div>
             </div>
           </div>
@@ -69,7 +121,7 @@ export default function GamePage() {
             Other player has disconnected. Send this link to your friend to join
             the game:
             {/* <a href={window.location.href}>{window.location.href}</a> */}
-            <div onClick={copyToClipboard} class={styles.link_to_copy}>
+            <div onClick={copyGameToClipboard} class={styles.link_to_copy}>
               {window.location.href}
             </div>
           </div>
@@ -162,26 +214,29 @@ export default function GamePage() {
       </div>
     );
   };
-  onMount(async () => {
-    client.onopen = () => {
-      console.log("WebSocket Client Connected");
-    };
-    client.onmessage = (message: any) => {
-      handleMsg(message.data);
-    };
-  });
+  // onMount(async () => {
+  //   client.onopen = () => {
+  //     console.log("WebSocket Client Connected");
+  //   };
+  //   client.onmessage = (message: any) => {
+  //     handleMsg(message.data);
+  //   };
+  // });
   return (
     <div>
-      <MainApp
-        ReconnectScreen={ReconnectScreen}
-        LoadingMenu={LoadingMenu}
-        SideSelection={SideSelection}
-        handleBan={handleBan}
-        handlePick={handlePick}
-        handleSigEid={handleSigEidChange}
-        handleUndo={handleUndo}
-        handleReset={handleReset}
-      />
+      <Show when={!teamNameSet()}>{initialMenu()}</Show>
+      <Show when={teamNameSet()}>
+        <MainApp
+          ReconnectScreen={ReconnectScreen}
+          LoadingMenu={LoadingMenu}
+          SideSelection={SideSelection}
+          handleBan={handleBan}
+          handlePick={handlePick}
+          handleSigEid={handleSigEidChange}
+          handleUndo={handleUndo}
+          handleReset={handleReset}
+        />
+      </Show>
     </div>
   );
 }

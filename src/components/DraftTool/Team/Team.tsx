@@ -76,7 +76,7 @@ const Team: Component<TeamProps> = (props) => {
       class = {`${styles.team}`}
     >
       <div class={`${styles.team_header} ${team === "blue_team" ? styles.blue_team : styles.red_team }`}>
-        <div>{isSinglePlayer() ? teamName() : team == ownTeam() ? "Your Team" : teamName()} </div>
+        <div>{teamName()} </div>
         <div class={`${cost() >= totalCost() ? styles.over_30    : ""}`}>{cost()}/{totalCost()}</div>
       </div>
       <div class={styles.ban_row}>

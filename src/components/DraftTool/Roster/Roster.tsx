@@ -124,12 +124,15 @@ const Roster: Component<RosterProps> = (props) => {
                 return bannedCharacters().includes(characterName);
               };
               const canSelect = () => {
-                if (!isTurn()) {
-                  return false;
+                if (ownTeam() != "spectator") {
+                  if (!isTurn()) {
+                    return false;
+                  }
+                  if (!(turnIndex() < turnOrder().length)) {
+                    return false;
+                  }
                 }
-                if (!(turnIndex() < turnOrder().length)) {
-                  return false;
-                }
+
                 if (isSpecial || isFFA() || canDoublePickWithCost()) {
                   const pickSignal = currentTurn().team == "blue_team" ? bluePicks : redPicks;
                   return pickSignal().filter((char) => char.name == characterName).length == 0;
@@ -166,7 +169,7 @@ const Roster: Component<RosterProps> = (props) => {
                       canPick() ? styles.not_selected : styles.character
                     }`}
                     onClick={
-                      canPick() ? () => selectCharacter(characterName) : undefined
+                      canPick() && !(ownTeam() == "spectator") ? () => selectCharacter(characterName) : undefined
                     }
                   >
                     <img
