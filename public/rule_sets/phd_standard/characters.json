@@ -19,7 +19,7 @@
   },
   "Welt": {
     "id": "1004",
-    "point_costs": [1.5, 0, 2, 0, 0, 0, 2.5],
+    "point_costs": [2, 0, 2, 0, 0, 0, 2.5],
     "rarity": 5,
     "nickname": "Welt Bricked"
   },
@@ -43,7 +43,7 @@
   },
   "Asta": {
     "id": "1009",
-    "point_costs": [0.5, 0, 0, 0, 1.5, 0, 1],
+    "point_costs": [0.5, 0, 0, 0, 1.5, 0, 0.5],
     "rarity": 4,
     "nickname": "Asta"
   },
@@ -55,7 +55,7 @@
   },
   "Bronya": {
     "id": "1101",
-    "point_costs": [3, 0.5, 0, 0, 0, 0, 0.5],
+    "point_costs": [3.5, 0.5, 0, 0, 0, 0, 0.5],
     "rarity": 5,
     "nickname": "Bronya Lebron Broner"
   },
@@ -165,13 +165,13 @@
   },
   "Yukong": {
     "id": "1207",
-    "point_costs": [0.5, 0, 0, 0, 0, 0, 1],
+    "point_costs": [0.5, 0, 0, 0, 0, 0, 2],
     "rarity": 4,
     "nickname": "Yukong YK"
   },
   "Fu Xuan": {
     "id": "1208",
-    "point_costs": [1, 1, 0, 0, 0.5, 0, 1.5],
+    "point_costs": [2, 1, 0, 0, 0.5, 0, 1.5],
     "rarity": 5,
     "nickname": "Fu Xuan FX"
   },
@@ -183,7 +183,7 @@
   },
   "Guinaifen": {
     "id": "1210",
-    "point_costs": [2, 0, 0, 0, 0, 0, 0.5],
+    "point_costs": [1.5, 0, 0, 0, 0, 0, 0.5],
     "rarity": 4,
     "nickname": "Guinaifen GNF"
   },
@@ -219,7 +219,7 @@
   },
   "Huohuo": {
     "id": "1217",
-    "point_costs": [2, 1, 0, 0, 0, 0, 1.5],
+    "point_costs": [3, 1, 0, 0, 0, 0, 1.5],
     "rarity": 5,
     "nickname": "Huohuo HH Tail HweHwe"
   },
@@ -244,7 +244,7 @@
   "Sparkle": {
     "id": "1306",
     "special": false,
-    "point_costs": [3.5, 1, 2, 0, 0.5, 0, 1.5],
+    "point_costs": [4, 1, 2, 0, 0.5, 0, 1.5],
     "rarity": 5,
     "nickname": "Sparkle Sprinkle Spork Hanabi"
   },
@@ -282,7 +282,7 @@
   "Gallagher": {
     "id": "1301",
     "special": false,
-    "point_costs": [1, 0.5, 0.5, 0, 0, 0, 0.5],
+    "point_costs": [1, 0.5, 0.5, 0, 0, 0, 0],
     "rarity": 4,
     "nickname": "Gallagher"
   },
@@ -298,12 +298,12 @@
     "rarity": 5,
     "special": true,
     "code": "rb",
-    "point_costs": [4.5, 3.5, 2, 0, 0.5, 0, 1.5],
+    "point_costs": [6, 3, 2, 0, 0.5, 0, 1.5],
     "nickname": "Robin Birb"
   },
   "TrailBlazerImaginary": {
     "id": "8006",
-    "point_costs": [3.5, 0, 0, 0, 0, 0, 0],
+    "point_costs": [4, 0, 0, 0, 0, 0, 0],
     "special": true,
     "code": "im",
     "rarity": 5,
