@@ -7,13 +7,13 @@
   },
   "Dan Heng": {
     "id": "1002",
-    "point_costs": [0.5, 0, 0, 0, 0, 0, 0],
+    "point_costs": [1, 0, 0, 0, 0, 0, 0],
     "rarity": 4,
     "nickname": "Dan Heng DH Broccoli"
   },
   "Himeko": {
     "id": "1003",
-    "point_costs": [3.5, 0.5, 0, 0, 0, 0, 0.5],
+    "point_costs": [0.5, 0.5, 0, 0, 0, 0, 0.5],
     "rarity": 5,
     "nickname": "Himeko"
   },
@@ -25,7 +25,7 @@
   },
   "Kafka": {
     "id": "1005",
-    "point_costs": [2.5, 2, 0, 0, 0.5, 0, 0],
+    "point_costs": [2.5, 2, 0.5, 0, 0.5, 0, 0],
     "rarity": 5,
     "nickname": "Kafka"
   },
@@ -49,7 +49,7 @@
   },
   "Herta": {
     "id": "1013",
-    "point_costs": [1, 0, 0, 0, 0, 0, 0],
+    "point_costs": [0.5, 0, 0, 0, 0, 0, 0],
     "rarity": 4,
     "nickname": "Herta"
   },
@@ -61,13 +61,13 @@
   },
   "Seele": {
     "id": "1102",
-    "point_costs": [2, 0, 1, 0, 1, 0, 0],
+    "point_costs": [1, 0, 1, 0, 1, 0, 0],
     "rarity": 5,
     "nickname": "Seele Seal"
   },
   "Serval": {
     "id": "1103",
-    "point_costs": [0.5, 0, 0, 0, 0, 0, 1.5],
+    "point_costs": [0.5, 0, 0, 0, 0, 0, 0.5],
     "rarity": 4,
     "nickname": "Serval"
   },
@@ -91,7 +91,7 @@
   },
   "Clara": {
     "id": "1107",
-    "point_costs": [2.5, 0, 1, 0, 0.5, 0, 2],
+    "point_costs": [2.5, 0, 1, 0, 0.5, 0, 1],
     "rarity": 5,
     "nickname": "Clara Svarog"
   },
@@ -109,7 +109,7 @@
   },
   "Lynx": {
     "id": "1110",
-    "point_costs": [0.5, 0, 0, 0, 0, 0, 0],
+    "point_costs": [1, 0, 0, 0, 0, 0, 0],
     "rarity": 4,
     "nickname": "Lynx Lynxdd"
   },
@@ -121,7 +121,7 @@
   },
   "Topaz & Numby": {
     "id": "1112",
-    "point_costs": [2.5, 1, 0, 0, 1, 0, 1],
+    "point_costs": [2.5, 1.5, 0, 0, 1, 0, 1],
     "rarity": 5,
     "nickname": "Topaz & Numby Topass"
   },
@@ -147,19 +147,19 @@
   "Jing Yuan": {
     "id": "1204",
     "special": false,
-    "point_costs": [0.5, 0.5, 0.5, 0, 0.5, 0.5, 1],
+    "point_costs": [0.5, 0.5, 0, 0, 0.5, 0.5, 1],
     "rarity": 5,
     "nickname": "Jing Yuan Jimmy JY King Yuan Our General"
   },
   "Blade": {
     "id": "1205",
-    "point_costs": [1.5, 0.5, 0.5, 0, 0, 0, 1.5],
+    "point_costs": [2.5, 1, 1, 0, 0.5, 0, 1.5],
     "rarity": 5,
     "nickname": "Blade Swift Dispatch Balde"
   },
   "Sushang": {
     "id": "1206",
-    "point_costs": [1.5, 0, 0, 0, 0.5, 0, 0.5],
+    "point_costs": [1, 0, 0, 0, 0.5, 0, 0.5],
     "rarity": 4,
     "nickname": "Sushang"
   },
@@ -177,7 +177,7 @@
   },
   "Yanqing": {
     "id": "1209",
-    "point_costs": [1, 0, 0, 0, 1, 0, 0.5],
+    "point_costs": [1.5, 0, 0, 0, 1, 0, 0.5],
     "rarity": 5,
     "nickname": "Yanqing YQ"
   },
@@ -195,19 +195,19 @@
   },
   "Jingliu": {
     "id": "1212",
-    "point_costs": [2, 1, 1, 0, 0.5, 0.5, 2],
+    "point_costs": [2, 2.5, 1, 0, 0.5, 0.5, 2],
     "rarity": 5,
     "nickname": "Jingliu JL Jingles Jenny"
   },
   "Dan Heng • Imbibitor Lunae": {
     "id": "1213",
-    "point_costs": [2, 0.5, 3.5, 0.5, 0.5, 0, 2],
+    "point_costs": [4, 0.5, 3.5, 0.5, 0.5, 0, 2],
     "rarity": 5,
     "nickname": "Dan Heng • Imbibitor Lunae DHIL Daniel"
   },
   "Xueyi": {
     "id": "1214",
-    "point_costs": [0.5, 0, 0, 0, 0.5, 0, 0.5],
+    "point_costs": [0.5, 0, 0, 0, 0.5, 0, 0],
     "rarity": 4,
     "nickname": "Xueyi XY"
   },
@@ -237,7 +237,7 @@
   },
   "Dr. Ratio": {
     "id": "1305",
-    "point_costs": [4, 1, 0, 0, 1.5, 0, 3],
+    "point_costs": [4.5, 1.5, 0, 0, 1.5, 0, 4],
     "rarity": 5,
     "nickname": "Dr. Ratio"
   },
@@ -250,13 +250,13 @@
   },
   "Black Swan": {
     "id": "1307",
-    "point_costs": [2, 3.5, 0.5, 0, 0.5, 0, 0.5],
+    "point_costs": [2, 3, 0, 0, 0.5, 0, 0.5],
     "rarity": 5,
     "nickname": "Black Swan BS"
   },
   "Misha": {
     "id": "1312",
-    "point_costs": [1, 0, 0, 0, 0, 0, 0.5],
+    "point_costs": [2, 0, 0, 0, 0, 0, 0.5],
     "rarity": 4,
     "nickname": "Misha"
   },
@@ -268,14 +268,14 @@
   },
   "TrailBlazerFire": {
     "id": "8004",
-    "point_costs": [1, 0, 0, 0, 0, 0, 0],
+    "point_costs": [0.5, 0, 0, 0, 0, 0, 0],
     "rarity": 5,
     "nickname": "TrailBlazerFire FMC"
   },
   "Acheron": {
     "id": "1308",
     "special": false,
-    "point_costs": [5, 1.5, 1.5, 0, 0.5, 0, 1],
+    "point_costs": [5.5, 1.5, 2, 0, 0.5, 0, 1.5],
     "rarity": 5,
     "nickname": "Acheron Acorn"
   },
@@ -313,27 +313,27 @@
     "id": "1315",
     "rarity": 5,
     "code": "bh",
-    "point_costs": [4.5, 2, 0.5, 0, 0.5, 0.5, 1.5],
+    "point_costs": [8, 2, 0.5, 0, 0.5, 0.5, 1.5],
     "nickname": "Boothill BH"
   },
   "Firefly": {
     "id": "1310",
     "rarity": 5,
-    "point_costs": [4.5, 2.5, 2, 0, 0.5, 0, 2],
+    "point_costs": [5, 2, 2, 0, 0.5, 0, 3],
     "code": "ff",
     "nickname": "Firefly FF Sam Samfly Mid"
   },
   "Jade": {
     "id": "1314",
     "rarity": 5,
-    "point_costs": [2.5, 0.5, 1, 0, 1, 0, 2],
+    "point_costs": [3, 1, 0.5, 0, 0.5, 0, 1],
     "code": "jd",
     "nickname": "Jade"
   },
   "Yunli": {
     "id": "1221",
     "rarity": 5,
-    "point_costs": [4.5, 2, 2, 0, 0.5, 0, 2],
+    "point_costs": [5.5, 2.5, 2, 0, 0.5, 0, 2],
     "code": "yl",
     "nickname": "Yunli"
   },
