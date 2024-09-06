@@ -225,7 +225,7 @@
   },
   "Argenti": {
     "id": "1302",
-    "point_costs": [3.5, 1.5, 0, 0, 0.5, 0.5, 2],
+    "point_costs": [3.5, 1.5, 0, 0, 0.5, 0.5, 1.5],
     "rarity": 5,
     "nickname": "Argenti Ourgenti Messi"
   },
