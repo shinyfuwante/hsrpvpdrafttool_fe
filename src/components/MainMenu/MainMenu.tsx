@@ -20,6 +20,10 @@ const MainMenu: Component<MainMenuProps> = (props: any) => {
     const url = `/solo/pokke`;
     window.location.href = url;
   };
+  const mirrorCupGame = () => {
+    const url = `/mirror_cup/game`;
+    window.location.href = url;
+  };
   const testingTool = () => {
     const url = `/solo/testing`;
     window.location.href = url;
@@ -56,6 +60,9 @@ const MainMenu: Component<MainMenuProps> = (props: any) => {
           <div class={styles.other_formats}> Other Formats: </div>
           <div onClick={() => pokkeGame()} class={styles.game_mode_select}>
             <div>Create a Screen-Share draft for Pokke's format</div>
+          </div>
+          <div onClick={() => mirrorCupGame()} class={styles.game_mode_select}>
+            <div>Create a Screen-Share draft for the Mirror Cup format</div>
           </div>
         </div>
       </div>

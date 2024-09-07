@@ -46,6 +46,7 @@ const DraftTool: Component<DraftToolProps> = ({
     );
     // if response fails, fetch phd_standard characters.json
     if (!response1.ok) {
+      console.log("failed to fetch characters.json");
       try {
         response1 = await fetch(
           `/rule_sets/phd_standard/characters.json?version=${version()}`
