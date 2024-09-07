@@ -197,7 +197,8 @@
   "Dance! Dance! Dance!": {
     "id": "21018",
     "point_costs": [1, 0, 0, 0, 0],
-    "rarity": 4
+    "rarity": 4,
+    "character": "DDD"
   },
   "Under the Blue Sky": {
     "id": "21019",
