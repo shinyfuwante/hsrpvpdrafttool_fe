@@ -196,7 +196,7 @@
   },
   "Dance! Dance! Dance!": {
     "id": "21018",
-    "point_costs": [0, 0, 0, 0, 0],
+    "point_costs": [1, 0, 0, 0, 0],
     "rarity": 4
   },
   "Under the Blue Sky": {
