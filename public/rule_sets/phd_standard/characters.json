@@ -97,7 +97,7 @@
   },
   "Sampo": {
     "id": "1108",
-    "point_costs": [0.5, 0, 0, 0, 0.5, 0, 0],
+    "point_costs": [0.5, 0, 0, 0, 1, 0, 0],
     "rarity": 4,
     "nickname": "Sampo Shampoo"
   },
@@ -127,7 +127,7 @@
   },
   "Qingque": {
     "id": "1201",
-    "point_costs": [0.5, 0, 0, 0, 0.5, 0, 0.5],
+    "point_costs": [0.5, 0, 0, 0, 0.5, 0, 1],
     "rarity": 4,
     "nickname": "Qingque QQ"
   },
