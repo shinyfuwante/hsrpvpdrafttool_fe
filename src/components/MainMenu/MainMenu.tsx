@@ -24,6 +24,10 @@ const MainMenu: Component<MainMenuProps> = (props: any) => {
     const url = `/mirror_cup/game`;
     window.location.href = url;
   };
+  const mirrorCupTestingTool = () => {
+    const url = `/mirror_cup/testing`;
+    window.location.href = url;
+  };
   const testingTool = () => {
     const url = `/solo/testing`;
     window.location.href = url;
@@ -63,6 +67,9 @@ const MainMenu: Component<MainMenuProps> = (props: any) => {
           </div>
           <div onClick={() => mirrorCupGame()} class={styles.game_mode_select}>
             <div>Create a Screen-Share draft for the Mirror Cup format</div>
+          </div>
+          <div onClick={() => mirrorCupTestingTool()} class={styles.game_mode_select}>
+            <div>Mirror Cup Points Testing Tool</div>
           </div>
         </div>
       </div>

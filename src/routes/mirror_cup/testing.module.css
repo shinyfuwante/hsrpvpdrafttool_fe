@@ -1,0 +1,119 @@
+.container {
+    display: grid;
+    grid-template-columns: 0.7fr 0.5fr 1fr;
+    width: 100%;
+    gap: 0.5em;
+}
+.team {
+    width: 100%;
+    height: 100%;
+    gap: 0.3em;
+    display: flex;
+    flex-direction: column;
+}
+.empty_card {
+    display: flex;
+    width: 100%;
+    min-height: 125px;
+    background-color: #48305f;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.2em;
+}
+
+.calculator {
+    background-color: #48305f;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 0.2em;
+    height: auto;
+}
+.calculator_top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0.5em;
+
+}
+.calculator_title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 1em;
+    margin-bottom: 0.5em;
+}
+.calculator_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 0.8em;
+    margin-bottom: 1em;
+}
+.clear_speed {
+    background-color: #614b78;
+    border: none;
+    margin: 0.3em;
+    padding: 0.5em;
+    color: #ffffff;
+}
+.results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2em;
+    background-color: #30203f;
+    color: white;
+    margin: 0.3em;
+    border-radius: 0.5em;
+}
+.clear_speed::placeholder {
+    color: #a390b6;
+}
+
+.inefficient {
+    color: #b76868;
+}
+
+.efficient {
+    color: #6b996b;
+}
+
+.too_efficient {
+    color: #d4d246;
+}
+
+.header {
+    text-align: right;
+    font-size: 20pt;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.3em;
+    color: white;
+    border-radius: 0.2em;
+    background-color: #996bce;
+}
+.over_30 {
+    color: #FFD23F;
+}
+.under_30 {
+    color: white;
+}
+
+.edit_costs_toggle {
+    display: flex;
+    flex-direction: row;
+    background-color: #30203f;
+    padding: 0.5em;
+    border-radius: 0.3em;
+}
