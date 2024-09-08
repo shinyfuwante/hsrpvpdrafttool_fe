@@ -25,7 +25,6 @@ const testing: Component<{}> = (props) => {
     );
   };
   const fetchData = async () => {
-    console.log(ruleSet());
     setRuleSet("mirror_cup");
     let response1 = await fetch(
       `/rule_sets/${ruleSet()}/characters.json?version=${version()}`
@@ -46,6 +45,7 @@ const testing: Component<{}> = (props) => {
       `/rule_sets/${ruleSet()}/light_cones.json?version=${version()}`
     );
     if (!response2.ok) {
+        console.log("failed to fetch light_cones.json");
       try {
         response2 = await fetch(
           `/rule_sets/phd_standard/light_cones.json?version=${version()}`
@@ -58,7 +58,7 @@ const testing: Component<{}> = (props) => {
   };
   fetchData();
   setIsSinglePlayer(true);
-  setRuleSet("phd_standard");
+  setRuleSet("mirror_cup");
   const [picks, setPicks] = createSignal<CharacterPick[]>([]);
   const [cost, SetCost] = createSignal<number>(0);
   const [costsMap, setCostsMap] = createSignal(new Map());
