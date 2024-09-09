@@ -109,7 +109,7 @@
     "point_costs": [1, 0, 0, 0, 0, 0, 2],
     "code": "cl",
     "rarity": 5,
-    "nickname": "Clara Svarog"
+    "nickname": "Clara Svarog Barefeet Barefoot"
   },
   "Sampo": {
     "id": "1108",
@@ -286,7 +286,7 @@
     "point_costs": [1, 1, 1, 1, 1, 1, 1],
     "code": "sk",
     "rarity": 5,
-    "nickname": "Sparkle Sprinkle Spork Hanabi"
+    "nickname": "Sparkle Sprinkle Spork Hanabi 5'2"
   },
   "Black Swan": {
     "id": "1307",
@@ -375,13 +375,13 @@
     "point_costs": [1, 1, 1, 1, 1, 1, 1],
     "code": "jd",
     "nickname": "Jade"
-  }, 
+  },
   "Yunli": {
     "id": "1221",
     "rarity": 5,
     "point_costs": [1, 1, 1, 1, 1, 1, 1],
     "code": "yl",
-    "nickname": "Yunli"
+    "nickname": "Yunli Barefeet Barefoot YL"
   },
   "Jiaoqiu": {
     "id": "1218",
@@ -396,5 +396,26 @@
     "point_costs": [0, 0, 0, 0, 0, 0, 0],
     "code": "mh",
     "nickname": "March 7th M7 March 8th M8"
+  },
+  "Feixiao": {
+    "id": "1220",
+    "rarity": 5,
+    "point_costs": [1, 1, 1, 1, 1, 1, 1],
+    "code": "fe",
+    "nickname": "Feixiao Fampter FX"
+  },
+  "Lingsha": {
+    "id": "1222",
+    "rarity": 5,
+    "point_costs": [1, 1, 1, 1, 1, 1, 1],
+    "code": "xx",
+    "nickname": "Lingsha"
+  },
+  "Moze": {
+    "id": "1223",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "code": "mz",
+    "nickname": "Moze"
   }
 }

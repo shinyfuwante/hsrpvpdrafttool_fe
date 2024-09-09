@@ -246,7 +246,7 @@
     "special": false,
     "point_costs": [4.75, 1, 1.25, 0, 0.25, 0, 2],
     "rarity": 5,
-    "nickname": "Sparkle Sprinkle Spork Hanabi"
+    "nickname": "Sparkle Sprinkle Spork Hanabi 5'2"
   },
   "Black Swan": {
     "id": "1307",
@@ -350,5 +350,26 @@
     "point_costs": [3.5, 0, 0, 0, 0, 0, 0],
     "code": "mh",
     "nickname": "March 7th M7 March 8th M8"
+  },
+  "Feixiao": {
+    "id": "1220",
+    "rarity": 5,
+    "point_costs": [0,0,0,0,0,0,0],
+    "code": "fe",
+    "nickname": "Feixiao Fampter FX"
+  },
+  "Lingsha": {
+    "id": "1222",
+    "rarity": 5,
+    "point_costs": [0,0,0,0,0,0,0],
+    "code": "xx",
+    "nickname": "Lingsha"
+  },
+  "Moze": {
+    "id": "1223",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "code": "mz",
+    "nickname": "Moze"
   }
 }

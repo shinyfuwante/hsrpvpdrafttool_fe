@@ -353,7 +353,7 @@
   },
   "But the Battle Isn't Over": {
     "id": "23003",
-    "point_costs": [1, 1.5, 2, 2.5, 3],
+    "point_costs": [0, 1.5, 2, 2.5, 3],
     "character": "Bronya",
     "rarity": 5,
     "standard": true
@@ -387,13 +387,13 @@
   },
   "Echoes of the Coffin": {
     "id": "23008",
-    "point_costs": [0.5, 0.5, 1, 1.5, 2],
+    "point_costs": [0, 0.5, 1, 1.5, 2],
     "character": "Luocha",
     "rarity": 5
   },
   "The Unreachable Side": {
     "id": "23009",
-    "point_costs": [1.5, 2, 2.5, 3, 3.5],
+    "point_costs": [1, 2, 2.5, 3, 3.5],
     "character": "Blade",
     "rarity": 5
   },
@@ -405,7 +405,7 @@
   },
   "She Already Shut Her Eyes": {
     "id": "23011",
-    "point_costs": [0.5, 1.5, 2, 2.5, 3],
+    "point_costs": [0, 1.5, 2, 2.5, 3],
     "character": "Fu Xuan FX",
     "rarity": 5
   },
@@ -426,7 +426,7 @@
   },
   "I Shall Be My Own Sword": {
     "id": "23014",
-    "point_costs": [3, 4.5, 5, 5.5, 6],
+    "point_costs": [2.5, 4.5, 5, 5.5, 6],
     "character": "Jingliu JL",
     "rarity": 5
   },
@@ -444,7 +444,7 @@
   },
   "Night of Fright": {
     "id": "23017",
-    "point_costs": [0.5, 1.5, 2, 2.5, 3],
+    "point_costs": [0, 1.5, 2, 2.5, 3],
     "character": "Huohuo HH",
     "rarity": 5
   },
@@ -462,7 +462,7 @@
   },
   "Baptism of Pure Thought": {
     "id": "23020",
-    "point_costs": [3, 4, 4.5, 5, 5.5],
+    "point_costs": [2.5, 4, 4.5, 5, 5.5],
     "character": "Dr. Ratio",
     "rarity": 5
   },
@@ -516,13 +516,13 @@
   "Inherently Unjust Destiny": {
     "id": "23023",
     "rarity": 5,
-    "point_costs": [1.5, 0, 0, 0, 0, 0, 0],
+    "point_costs": [1, 0, 0, 0, 0, 0, 0],
     "character": "Aventurine"
   },
   "Flowing Nightglow": {
     "id": "23026",
     "rarity": 5,
-    "point_costs": [2, 0, 0, 0, 0],
+    "point_costs": [1.5, 0, 0, 0, 0],
     "character": "Robin"
   },
   "Tomorrow's Journey": {
@@ -538,7 +538,7 @@
   "Sailing Towards a Second Life": {
     "id": "23027",
     "rarity": 5,
-    "point_costs": [3, 0, 0, 0, 0],
+    "point_costs": [2.5, 0, 0, 0, 0],
     "character": "Boothill BH"
   },
   "After the Charmony Fall": {
@@ -568,7 +568,7 @@
   "Dance at Sunset": {
     "id": "23030",
     "rarity": 5,
-    "point_costs": [2, 0, 0, 0, 0, 0, 0],
+    "point_costs": [2.5, 0, 0, 0, 0, 0, 0],
     "character": "Yunli"
   },
   "Those Many Springs": {
@@ -581,5 +581,22 @@
     "id": "21046",
     "rarity": 4,
     "point_costs": [0, 0, 0, 0, 0]
+  },
+  "Shadowed by Night": {
+    "id": "21047",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0]
+  },
+  "I Venture Forth to Hunt": {
+    "id": "23031",
+    "rarity": 5,
+    "point_costs": [2.5, 0, 0, 0, 0, 0, 0],
+    "character": "Fei Xiao Fampter FX"
+  },
+  "Scent Alone Stays True": {
+    "id": "23032",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "character": "Lingsha"
   }
 }
