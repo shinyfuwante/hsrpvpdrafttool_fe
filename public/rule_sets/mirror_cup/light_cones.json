@@ -196,8 +196,10 @@
   },
   "Dance! Dance! Dance!": {
     "id": "21018",
-    "point_costs": [0, 0, 0, 0, 0],
-    "rarity": 4
+    "point_costs": [0.5, 0.75, 0.75, 1, 1],
+    "rarity": 4,
+    "mc_rules": true,
+    "character": "DDD"
   },
   "Under the Blue Sky": {
     "id": "21019",
@@ -353,7 +355,7 @@
   },
   "But the Battle Isn't Over": {
     "id": "23003",
-    "point_costs": [0.75, 1.5, 2, 2.5, 3],
+    "point_costs": [0.5, 1.5, 2, 2.5, 3],
     "character": "Bronya",
     "rarity": 5,
     "standard": true
@@ -368,10 +370,11 @@
   },
   "Moment of Victory": {
     "id": "23005",
-    "point_costs": [0.25, 0, 0, 0, 0],
+    "point_costs": [0.25, 0.5, 0.75, 1, 1.25],
     "character": "Gepard",
     "rarity": 5,
-    "standard": true
+    "standard": true,
+    "mc_rules": true
   },
   "Patience Is All You Need": {
     "id": "23006",
@@ -411,10 +414,11 @@
   },
   "Sleep Like the Dead": {
     "id": "23012",
-    "point_costs": [0.25, 0.5, 1, 1.5, 2],
+    "point_costs": [0.25, 0.5, 0.75, 1, 1.25],
     "character": "Yanqing YQ",
     "rarity": 5,
-    "standard": true
+    "standard": true,
+    "mc_rules": true
   },
   "Time Waits for No One": {
     "id": "23013",
@@ -462,13 +466,13 @@
   },
   "Baptism of Pure Thought": {
     "id": "23020",
-    "point_costs": [3, 4, 4.5, 5, 5.5],
+    "point_costs": [2.75, 4, 4.5, 5, 5.5],
     "character": "Dr. Ratio",
     "rarity": 5
   },
   "Earthly Escapade": {
     "id": "23021",
-    "point_costs": [1.5, 2.5, 3, 3.5, 4],
+    "point_costs": [1, 2.5, 3, 3.5, 4],
     "character": "Sparkle Hanabi",
     "rarity": 5
   },
@@ -550,7 +554,7 @@
   "Whereabouts Should Dreams Rest": {
     "id": "23025",
     "rarity": 5,
-    "point_costs": [1, 0, 0, 0, 0],
+    "point_costs": [0.75, 0, 0, 0, 0],
     "character": "Firefly Sam FF Samfly"
   },
   "Yet Hope Is Priceless": {
@@ -574,7 +578,7 @@
   "Those Many Springs": {
     "id": "23029",
     "rarity": 5,
-    "point_costs": [1, 0, 0, 0, 0, 0, 0],
+    "point_costs": [1.5, 0, 0, 0, 0, 0, 0],
     "character": "Jiaoqiu JQ"
   },
   "Poised to Bloom": {
@@ -590,7 +594,7 @@
   "I Venture Forth to Hunt": {
     "id": "23031",
     "rarity": 5,
-    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "point_costs": [3, 0, 0, 0, 0, 0, 0],
     "character": "Fei Xiao Fampter FX"
   },
   "Scent Alone Stays True": {
