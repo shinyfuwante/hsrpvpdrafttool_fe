@@ -64,14 +64,7 @@ const calcCost = (character: CharacterPick) => {
       return cost;
     }
     if (ruleSet() == "mirror_cup") {
-      if (lc.rarity == 5 && !lc.mc_rules) {
-        cost +=
-          POINTS_PER_SUPERIMPOSITION *
-          Math.floor((character.superimposition - 1) / 2);
-      }
-      if (lc.mc_rules == true) {
-        cost += lc.point_costs[character.superimposition - 1] - lc.point_costs[0];
-      }
+      cost += lc.point_costs[character.superimposition - 1] - lc.point_costs[0];
     } else {
       if (lc.rarity == 5) {
         cost +=

@@ -341,7 +341,7 @@
   },
   "In the Night": {
     "id": "23001",
-    "point_costs": [1.25, 2.5, 3, 3.5, 4],
+    "point_costs": [1.25, 1.5, 1.75, 2, 2.25],
     "character": "Seele",
     "rarity": 5
   },
@@ -362,7 +362,7 @@
   },
   "In the Name of the World": {
     "id": "23004",
-    "point_costs": [0, 0.5, 1, 1.5, 2],
+    "point_costs": [0, 0, 0, 0, 0],
     "character": "Welt",
     "rarity": 5,
     "free": true,
@@ -384,31 +384,31 @@
   },
   "Incessant Rain": {
     "id": "23007",
-    "point_costs": [0.5, 1.5, 2, 2.5, 3],
+    "point_costs": [0.5, 0.75, 1, 1.25, 1.5],
     "character": "Silver Wolf SW",
     "rarity": 5
   },
   "Echoes of the Coffin": {
     "id": "23008",
-    "point_costs": [0.5, 0.5, 1, 1.5, 2],
+    "point_costs": [0.5, 0.75, 1, 1.25, 1.5],
     "character": "Luocha",
     "rarity": 5
   },
   "The Unreachable Side": {
     "id": "23009",
-    "point_costs": [1.5, 2, 2.5, 3, 3.5],
+    "point_costs": [1.5, 1.75, 2, 2.25, 2.5],
     "character": "Blade",
     "rarity": 5
   },
   "Before Dawn": {
     "id": "23010",
-    "point_costs": [1.25, 2.5, 3, 3.5, 4],
+    "point_costs": [1.25, 1.75, 2.25, 2.75, 3.25],
     "character": "Jing Yuan JY Jimmy Wong",
     "rarity": 5
   },
   "She Already Shut Her Eyes": {
     "id": "23011",
-    "point_costs": [0.5, 1.5, 2, 2.5, 3],
+    "point_costs": [0.5, 0.75, 1, 1.25, 1.5],
     "character": "Fu Xuan FX",
     "rarity": 5
   },
@@ -430,7 +430,7 @@
   },
   "I Shall Be My Own Sword": {
     "id": "23014",
-    "point_costs": [1.75, 4.5, 5, 5.5, 6],
+    "point_costs": [1.75, 2.25, 2.75, 3.25, 3.75],
     "character": "Jingliu JL",
     "rarity": 5
   },
@@ -442,25 +442,25 @@
   },
   "Worrisome, Blissful": {
     "id": "23016",
-    "point_costs": [1.5, 2.5, 3, 3.5, 4],
+    "point_costs": [1.5, 2, 2.5, 3, 3.5],
     "character": "Topaz & Numby",
     "rarity": 5
   },
   "Night of Fright": {
     "id": "23017",
-    "point_costs": [0.5, 1.5, 2, 2.5, 3],
+    "point_costs": [0.5, 0.75, 1, 1.25, 1.5],
     "character": "Huohuo HH",
     "rarity": 5
   },
   "An Instant Before A Gaze": {
     "id": "23018",
-    "point_costs": [1, 2, 2.5, 3, 3.5],
+    "point_costs": [1, 1.25, 1.5, 1.75, 2],
     "character": "Argenti",
     "rarity": 5
   },
   "Past Self in Mirror": {
     "id": "23019",
-    "point_costs": [1.25, 2.5, 3, 3.5, 4],
+    "point_costs": [1.25, 1.75, 2.25, 2.75, 3.25],
     "character": "Ruan Mei RM",
     "rarity": 5
   },
@@ -472,13 +472,13 @@
   },
   "Earthly Escapade": {
     "id": "23021",
-    "point_costs": [1, 2.5, 3, 3.5, 4],
+    "point_costs": [1, 1.25, 1.5, 1.75, 2],
     "character": "Sparkle Hanabi",
     "rarity": 5
   },
   "Reforged Remembrance": {
     "id": "23022",
-    "point_costs": [0.75, 2.5, 3, 3.5, 4],
+    "point_costs": [0.75, 1.25, 1.75, 2.25, 2.75],
     "character": "Black Swan BS",
     "rarity": 5
   },
@@ -508,7 +508,7 @@
   },
   "Along the Passing Shore": {
     "id": "23204",
-    "point_costs": [3, 0, 0, 0, 0],
+    "point_costs": [3, 3.25, 3.5, 3.75, 4],
     "rarity": 5,
     "character": "Acheron"
   },
@@ -520,13 +520,13 @@
   "Inherently Unjust Destiny": {
     "id": "23023",
     "rarity": 5,
-    "point_costs": [1.5, 0, 0, 0, 0, 0, 0],
+    "point_costs": [1.5, 1.75, 2, 2.25, 2.5, 0, 0],
     "character": "Aventurine"
   },
   "Flowing Nightglow": {
     "id": "23026",
     "rarity": 5,
-    "point_costs": [1.5, 0, 0, 0, 0],
+    "point_costs": [1.25, 1.75, 2.25, 2.75, 3.25],
     "character": "Robin"
   },
   "Tomorrow's Journey": {
@@ -554,13 +554,13 @@
   "Whereabouts Should Dreams Rest": {
     "id": "23025",
     "rarity": 5,
-    "point_costs": [0.75, 0, 0, 0, 0],
+    "point_costs": [0.75, 1.25, 1.75, 2.25, 2.75],
     "character": "Firefly Sam FF Samfly"
   },
   "Yet Hope Is Priceless": {
     "id": "23028",
     "rarity": 5,
-    "point_costs": [1.25, 0, 0, 0, 0, 0, 0],
+    "point_costs": [1.25, 1.75, 2.25, 2.75, 3.25, 0, 0],
     "character": "Jade"
   },
   "Eternal Calculus": {
@@ -572,13 +572,13 @@
   "Dance at Sunset": {
     "id": "23030",
     "rarity": 5,
-    "point_costs": [1.5, 0, 0, 0, 0, 0, 0],
+    "point_costs": [1.5, 2, 2.5, 3, 3.5, 0, 0],
     "character": "Yunli"
   },
   "Those Many Springs": {
     "id": "23029",
     "rarity": 5,
-    "point_costs": [1.5, 0, 0, 0, 0, 0, 0],
+    "point_costs": [1.5, 1.75, 2, 2.25, 2.75, 3.25, 0],
     "character": "Jiaoqiu JQ"
   },
   "Poised to Bloom": {
@@ -594,7 +594,7 @@
   "I Venture Forth to Hunt": {
     "id": "23031",
     "rarity": 5,
-    "point_costs": [3, 0, 0, 0, 0, 0, 0],
+    "point_costs": [2.5, 3, 3.5, 4, 4.5, 0, 0],
     "character": "Fei Xiao Fampter FX"
   },
   "Scent Alone Stays True": {
