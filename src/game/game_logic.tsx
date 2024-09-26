@@ -67,9 +67,14 @@ const calcCost = (character: CharacterPick) => {
       cost += lc.point_costs[character.superimposition - 1] - lc.point_costs[0];
     } else {
       if (lc.rarity == 5) {
-        cost +=
-          POINTS_PER_SUPERIMPOSITION *
-          Math.floor(character.superimposition / 2);
+        if (lc.special) {
+          cost +=
+            lc.point_costs[character.superimposition - 1] - lc.point_costs[0];
+        } else {
+          cost +=
+            POINTS_PER_SUPERIMPOSITION *
+            Math.floor(character.superimposition / 2);
+        }
       }
     }
     // else if (lc.rarity == 5) {

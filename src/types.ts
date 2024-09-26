@@ -17,6 +17,7 @@ export type LCDetails = {
     free?: boolean;
     standard?: boolean;
     mc_rules?: boolean;
+    special?: boolean;
 };
 export type LCJsonType = {
     [key: string]: LCDetails;
