@@ -375,13 +375,13 @@
   },
   "Patience Is All You Need": {
     "id": "23006",
-    "point_costs": [1, 2, 2.5, 3, 3.5],
+    "point_costs": [0.5, 2, 2.5, 3, 3.5],
     "character": "Kafka",
     "rarity": 5
   },
   "Incessant Rain": {
     "id": "23007",
-    "point_costs": [0.5, 1.5, 2, 2.5, 3],
+    "point_costs": [0, 1.5, 2, 2.5, 3],
     "character": "Silver Wolf SW",
     "rarity": 5
   },
@@ -516,13 +516,13 @@
   "Inherently Unjust Destiny": {
     "id": "23023",
     "rarity": 5,
-    "point_costs": [1, 0, 0, 0, 0, 0, 0],
+    "point_costs": [0.5, 0, 0, 0, 0, 0, 0],
     "character": "Aventurine"
   },
   "Flowing Nightglow": {
     "id": "23026",
     "rarity": 5,
-    "point_costs": [1.5, 0, 0, 0, 0],
+    "point_costs": [1, 0, 0, 0, 0],
     "character": "Robin"
   },
   "Tomorrow's Journey": {
@@ -568,8 +568,9 @@
   "Dance at Sunset": {
     "id": "23030",
     "rarity": 5,
-    "point_costs": [2.5, 0, 0, 0, 0, 0, 0],
-    "character": "Yunli"
+    "point_costs": [2.5, 3, 3.5, 4, 4.5, 0, 0],
+    "character": "Yunli",
+    "special": true
   },
   "Those Many Springs": {
     "id": "23029",
