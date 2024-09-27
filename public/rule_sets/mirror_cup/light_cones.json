@@ -466,7 +466,7 @@
   },
   "Baptism of Pure Thought": {
     "id": "23020",
-    "point_costs": [2.75, 4, 4.5, 5, 5.5],
+    "point_costs": [2.75, 3, 3.25, 3.5, 3.75],
     "character": "Dr. Ratio",
     "rarity": 5
   },
