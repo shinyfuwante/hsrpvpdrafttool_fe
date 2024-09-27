@@ -378,7 +378,7 @@
   },
   "Patience Is All You Need": {
     "id": "23006",
-    "point_costs": [1.5, 2, 2.5, 3, 3.5],
+    "point_costs": [1, 2, 2.5, 3, 3.5],
     "character": "Kafka",
     "rarity": 5
   },

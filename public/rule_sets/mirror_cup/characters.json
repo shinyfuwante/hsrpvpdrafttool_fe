@@ -1,7 +1,7 @@
 {
   "March 7th": {
     "id": "1001",
-    "point_costs": [0.75, 0, 0, 0, 0, 0, 0],
+    "point_costs": [1, 0, 0, 0, 0, 0, 0],
     "rarity": 4,
     "nickname": "March 7th M7"
   },
@@ -19,7 +19,7 @@
   },
   "Welt": {
     "id": "1004",
-    "point_costs": [1, 0, 1, 0, 0, 0, 1.5],
+    "point_costs": [2, 0, 1, 0, 0, 0, 1.5],
     "rarity": 5,
     "nickname": "Welt Bricked"
   },
@@ -165,7 +165,7 @@
   },
   "Yukong": {
     "id": "1207",
-    "point_costs": [0.5, 0, 0, 0, 0, 0, 0.75],
+    "point_costs": [0.5, 0, 0, 0, 0, 0, 1.75],
     "rarity": 4,
     "nickname": "Yukong YK"
   },
@@ -250,13 +250,13 @@
   },
   "Black Swan": {
     "id": "1307",
-    "point_costs": [3.25, 1.75, 0.25, 0.5, 0.5, 0, 1],
+    "point_costs": [3, 2.25, 0.25, 0.5, 0.5, 0, 1],
     "rarity": 5,
     "nickname": "Black Swan BS"
   },
   "Misha": {
     "id": "1312",
-    "point_costs": [1, 0, 0, 0, 0, 0, 0.5],
+    "point_costs": [1, 0, 0.5, 0, 0, 0, 0],
     "rarity": 4,
     "nickname": "Misha"
   },
@@ -290,7 +290,7 @@
     "id": "1304",
     "special": true,
     "rarity": 5,
-    "point_costs": [2, 1, 1.5, 0, 0.5, 0, 1],
+    "point_costs": [2, 1, 1.5, 0, 0.5, 0, 4.25],
     "nickname": "Aventurine"
   },
   "Robin": {
@@ -298,7 +298,7 @@
     "rarity": 5,
     "special": true,
     "code": "rb",
-    "point_costs": [6, 2.5, 1, 0, 0.5, 0, 2.5],
+    "point_costs": [6.5, 2.5, 1, 0, 0.5, 0, 2.5],
     "nickname": "Robin Birb"
   },
   "TrailBlazerImaginary": {
@@ -319,7 +319,7 @@
   "Firefly": {
     "id": "1310",
     "rarity": 5,
-    "point_costs": [4, 0.75, 3, 0, 0, 0, 5.25],
+    "point_costs": [4, 1.5, 2, 0, 0, 0, 5.25],
     "code": "ff",
     "nickname": "Firefly FF Sam Samfly Mid"
   },
@@ -333,7 +333,7 @@
   "Yunli": {
     "id": "1221",
     "rarity": 5,
-    "point_costs": [5.5, 2, 2, 0, 0.5, 0, 2],
+    "point_costs": [5.5, 2.5, 2, 0, 0.5, 0, 2],
     "code": "yl",
     "nickname": "Yunli"
   },
@@ -368,7 +368,7 @@
   "Moze": {
     "id": "1223",
     "rarity": 4,
-    "point_costs": [1, 0, 1, 0, 0, 0, 0.5],
+    "point_costs": [2, 0, 1.25, 0, 0, 0, 0.5],
     "code": "mz",
     "nickname": "Moze"
   }
