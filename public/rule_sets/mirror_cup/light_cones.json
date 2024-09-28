@@ -347,7 +347,7 @@
   },
   "Something Irreplaceable": {
     "id": "23002",
-    "point_costs": [0, 0.5, 1, 1.5, 2],
+    "point_costs": [0, 0, 0, 0, 0],
     "character": "Clara",
     "rarity": 5,
     "free": true,
@@ -355,7 +355,7 @@
   },
   "But the Battle Isn't Over": {
     "id": "23003",
-    "point_costs": [0.5, 1.5, 2, 2.5, 3],
+    "point_costs": [0.5, 0.75, 1, 1.25, 1.5],
     "character": "Bronya",
     "rarity": 5,
     "standard": true
@@ -378,7 +378,7 @@
   },
   "Patience Is All You Need": {
     "id": "23006",
-    "point_costs": [1, 2, 2.5, 3, 3.5],
+    "point_costs": [1, 1.5, 2, 2.5, 3],
     "character": "Kafka",
     "rarity": 5
   },
@@ -402,7 +402,7 @@
   },
   "Before Dawn": {
     "id": "23010",
-    "point_costs": [1.25, 1.75, 2.25, 2.75, 3.25],
+    "point_costs": [1, 1.25, 1.5, 1.75, 2],
     "character": "Jing Yuan JY Jimmy Wong",
     "rarity": 5
   },
@@ -430,19 +430,19 @@
   },
   "I Shall Be My Own Sword": {
     "id": "23014",
-    "point_costs": [1.75, 2.25, 2.75, 3.25, 3.75],
+    "point_costs": [1.25, 1.75, 2.25, 2.75, 3.25],
     "character": "Jingliu JL",
     "rarity": 5
   },
   "Brighter Than the Sun": {
     "id": "23015",
-    "point_costs": [1.5, 2.5, 3, 3.5, 4],
+    "point_costs": [1.5, 1.75, 2, 2.25, 2.5],
     "character": "Dan Heng Imbibitor Lunae DHIL Daniel",
     "rarity": 5
   },
   "Worrisome, Blissful": {
     "id": "23016",
-    "point_costs": [1.5, 2, 2.5, 3, 3.5],
+    "point_costs": [2, 2.5, 3, 3.5, 4],
     "character": "Topaz & Numby",
     "rarity": 5
   },
@@ -460,25 +460,25 @@
   },
   "Past Self in Mirror": {
     "id": "23019",
-    "point_costs": [1.25, 1.75, 2.25, 2.75, 3.25],
+    "point_costs": [1.5, 2, 2.5, 3, 3.5],
     "character": "Ruan Mei RM",
     "rarity": 5
   },
   "Baptism of Pure Thought": {
     "id": "23020",
-    "point_costs": [2.75, 3, 3.25, 3.5, 3.75],
+    "point_costs": [3, 3.5, 4, 4.5, 5],
     "character": "Dr. Ratio",
     "rarity": 5
   },
   "Earthly Escapade": {
     "id": "23021",
-    "point_costs": [1, 1.25, 1.5, 1.75, 2],
+    "point_costs": [1.25, 1.5, 1.75, 2, 2.25],
     "character": "Sparkle Hanabi",
     "rarity": 5
   },
   "Reforged Remembrance": {
     "id": "23022",
-    "point_costs": [0.75, 1.25, 1.75, 2.25, 2.75],
+    "point_costs": [1, 1.5, 2, 2.5, 3],
     "character": "Black Swan BS",
     "rarity": 5
   },
@@ -542,7 +542,7 @@
   "Sailing Towards a Second Life": {
     "id": "23027",
     "rarity": 5,
-    "point_costs": [2.5, 0, 0, 0, 0],
+    "point_costs": [2.5, 3, 3.5, 4, 4.5],
     "character": "Boothill BH"
   },
   "After the Charmony Fall": {
@@ -554,7 +554,7 @@
   "Whereabouts Should Dreams Rest": {
     "id": "23025",
     "rarity": 5,
-    "point_costs": [0.75, 1.25, 1.75, 2.25, 2.75],
+    "point_costs": [1, 1.5, 2, 2.5, 3],
     "character": "Firefly Sam FF Samfly"
   },
   "Yet Hope Is Priceless": {
@@ -578,7 +578,7 @@
   "Those Many Springs": {
     "id": "23029",
     "rarity": 5,
-    "point_costs": [1.5, 1.75, 2, 2.25, 2.75, 3.25, 0],
+    "point_costs": [1.5, 2, 2.5, 3, 3.5, 0],
     "character": "Jiaoqiu JQ"
   },
   "Poised to Bloom": {
