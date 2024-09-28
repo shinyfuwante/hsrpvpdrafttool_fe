@@ -85,7 +85,7 @@
   },
   "Pela": {
     "id": "1106",
-    "point_costs": [2.75, 0, 0, 0, 3.25, 0, 0],
+    "point_costs": [2.75, 0, 0, 0, 0.5, 0, 0],
     "rarity": 4,
     "nickname": "Pela Pelican"
   },
