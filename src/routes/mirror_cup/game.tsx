@@ -34,6 +34,8 @@ import {
   setApplyTimerPenalty,
   setCanDoublePickWithCost,
   setRuleSet,
+  setBlueTeamReserveTime,
+  setRedTeamReserveTime,
 } from "~/game/game_logic";
 
 // interface DraftToolProps {
@@ -132,6 +134,8 @@ const game: Component<{}> = (props) => {
     setApplyTimerPenalty(false);
     // setCanDoublePickWithCost(true);
     setRuleSet("mirror_cup");
+    setBlueTeamReserveTime(300);
+    setRedTeamReserveTime(300);
   });
   setRuleSet("mirror_cup");
   return (
