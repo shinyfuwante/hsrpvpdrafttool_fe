@@ -387,7 +387,7 @@
   },
   "Echoes of the Coffin": {
     "id": "23008",
-    "point_costs": [0, 0.5, 1, 1.5, 2],
+    "point_costs": [0.5, 0.5, 1, 1.5, 2],
     "character": "Luocha",
     "rarity": 5
   },
@@ -504,7 +504,7 @@
   },
   "Along the Passing Shore": {
     "id": "23204",
-    "point_costs": [3, 0, 0, 0, 0],
+    "point_costs": [2.5, 0, 0, 0, 0],
     "rarity": 5,
     "character": "Acheron"
   },
@@ -570,7 +570,6 @@
     "rarity": 5,
     "point_costs": [2.5, 3, 3.5, 4, 4.5, 0, 0],
     "character": "Yunli",
-    "special": true
   },
   "Those Many Springs": {
     "id": "23029",
