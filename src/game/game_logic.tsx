@@ -4,7 +4,7 @@ import { v4 } from "uuid";
 
 export const version = () => {
   // version of tool.version of game.subversion of game.subversion of rules
-  return "3.2.5.7.1";
+  return "3.2.5.7.2";
 };
 
 const POINTS_PER_SUPERIMPOSITION = 0.5;
