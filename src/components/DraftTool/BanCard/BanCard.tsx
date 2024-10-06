@@ -1,6 +1,6 @@
 import { Component} from "solid-js";
 import { charJson } from "~/game/game_logic";
-import { CharacterBan } from "~/game/game_logic";
+import { CharacterBan, turnOrder, turn_order_3_bans } from "~/game/game_logic";
 import styles from "./BanCard.module.css";
 
 interface BanCardProps {
@@ -10,7 +10,7 @@ export const BanCard: Component<BanCardProps> = ({ character }) => {
   const char = charJson()[character.name];
   return (
     <div
-      class={styles.ban_card}
+      class={`${turnOrder() == turn_order_3_bans ? styles.ban_row_half : styles.ban_card}`}
       style={{
         "background-image": `url(/character_images/${char.id}.webp)`,
       }}

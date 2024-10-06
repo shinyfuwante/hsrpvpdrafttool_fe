@@ -16,6 +16,10 @@ const MainMenu: Component<MainMenuProps> = (props: any) => {
     const url = `/solo/game`;
     window.location.href = url;
   };
+  const soloGame6Bans = () => {
+    const url = `/solo/game_6_bans`;
+    window.location.href = url;
+  };
   const pokkeGame = () => {
     const url = `/solo/pokke`;
     window.location.href = url;
@@ -44,6 +48,11 @@ const MainMenu: Component<MainMenuProps> = (props: any) => {
           <div onClick={() => soloGame()} class={styles.game_mode_select}>
             <div>
               Create a game for Screen-Share drafting (e.g. Discord, etc)
+            </div>
+          </div>
+          <div onClick={() => soloGame6Bans()} class={styles.game_mode_select}>
+            <div>
+              BETA: Create a game for Screen-Share drafting with 6 bans (e.g. Discord, etc)
             </div>
           </div>
           <div onClick={() => joinGame()} class={styles.game_mode_select}>

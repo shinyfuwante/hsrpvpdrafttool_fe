@@ -63,15 +63,11 @@ const Roster: Component<RosterProps> = (props) => {
     const currentAction = currentTurn().action;
     if (currentAction == "ban") {
       if (currentPlayer == "blue_team") {
-        if (blueBans().length < 2) {
           setBlueBans([...blueBans(), { name: characterName }]);
           handleBan({ name: characterName });
-        }
       } else {
-        if (redBans().length < 2) {
           setRedBans([...redBans(), { name: characterName }]);
           handleBan({ name: characterName });
-        }
       }
     } else {
       const pickSignal = currentPlayer == "blue_team" ? bluePicks : redPicks;

@@ -123,7 +123,7 @@ const [player1Roll, setPlayer1Roll] = createSignal(0);
 const [player2Roll, setPlayer2Roll] = createSignal(0);
 const [testingTool, setTestingTool] = createSignal(false);
 const [isSpectator, setIsSpectator] = createSignal(false);
-export const turn_order = [
+export const turn_order_2_bans = [
   { team: "blue_team", action: "ban", id: 0 },
   { team: "red_team", action: "ban", id: 0 },
   { team: "blue_team", action: "pick", id: 1 },
@@ -145,7 +145,31 @@ export const turn_order = [
   { team: "blue_team", action: "pick", id: 9 },
   { team: "red_team", action: "pick", id: 9 },
 ];
-const [turnOrder, setTurnOrder] = createSignal(turn_order);
+export const turn_order_3_bans = [
+  { team: "blue_team", action: "ban", id: 0 },
+  { team: "red_team", action: "ban", id: 0 },
+  { team: "blue_team", action: "ban", id: 1 },
+  { team: "red_team", action: "ban", id: 1 },
+  { team: "blue_team", action: "pick", id: 2 },
+  { team: "red_team", action: "pick", id: 2 },
+  { team: "red_team", action: "pick", id: 3 },
+  { team: "blue_team", action: "pick", id: 3 },
+  { team: "red_team", action: "ban", id: 4 },
+  { team: "blue_team", action: "ban", id: 4 },
+  { team: "red_team", action: "pick", id: 5 },
+  { team: "blue_team", action: "pick", id: 5 },
+  { team: "blue_team", action: "pick", id: 6 },
+  { team: "red_team", action: "pick", id: 6 },
+  { team: "red_team", action: "pick", id: 7 },
+  { team: "blue_team", action: "pick", id: 7 },
+  { team: "blue_team", action: "pick", id: 8 },
+  { team: "red_team", action: "pick", id: 8 },
+  { team: "red_team", action: "pick", id: 9 },
+  { team: "blue_team", action: "pick", id: 9 },
+  { team: "blue_team", action: "pick", id: 10 },
+  { team: "red_team", action: "pick", id: 10 },
+];
+const [turnOrder, setTurnOrder] = createSignal(turn_order_2_bans);
 const MessageEnum = {
   INIT_GAME: "init_game",
   GAME_READY: "game_ready",

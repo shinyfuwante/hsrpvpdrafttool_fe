@@ -7,7 +7,6 @@ import {
   setRedTimePenalty,
   redTimePenalty,
   turnIndex,
-  turn_order,
   blueTeamReserveTime,
   setBlueTeamReserveTime,
   redTeamReserveTime,

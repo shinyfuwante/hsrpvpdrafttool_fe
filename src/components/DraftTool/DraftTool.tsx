@@ -1,5 +1,6 @@
 import { Component, onMount, createSignal, Show } from "solid-js";
 import Team from "./Team/Team";
+import TeamWith3Bans from "./TeamWith3Bans/TeamWith3Bans";
 import Roster from "./Roster/Roster";
 import SoloSettings from "../SoloSettings/SoloSettings";
 import {
@@ -17,6 +18,8 @@ import {
   version,
   blueTimePenalty,
   redTimePenalty,
+  turn_order_3_bans,
+  turnOrder,
 } from "~/game/game_logic";
 import Timer from "./Timer/Timer";
 
@@ -83,28 +86,45 @@ const DraftTool: Component<DraftToolProps> = ({
             </Show>
             <Show when={!isSinglePlayer()}>
               <div class={styles.team_notifier}>
-                You are {ownTeam() == "blue_team" ? "on the Blue Team" : ownTeam() == "red_team" ? "on the Red Team" : "spectating"}
+                You are{" "}
+                {ownTeam() == "blue_team"
+                  ? "on the Blue Team"
+                  : ownTeam() == "red_team"
+                  ? "on the Red Team"
+                  : "spectating"}
               </div>
             </Show>
-              <div class={styles.timer_container}>
-                <div></div>
-                <div class={styles.timer_penalties}>
-                  <TeamTimer team={"blue_team"}></TeamTimer>
-                  <TimerPenalty penalty_signal={blueTimePenalty}></TimerPenalty>
-                  <Timer></Timer>
-                  <TimerPenalty penalty_signal={redTimePenalty}></TimerPenalty>
-                  <TeamTimer team={"red_team"}></TeamTimer>
-                </div>
-                <div></div>
+            <div class={styles.timer_container}>
+              <div></div>
+              <div class={styles.timer_penalties}>
+                <TeamTimer team={"blue_team"}></TeamTimer>
+                <TimerPenalty penalty_signal={blueTimePenalty}></TimerPenalty>
+                <Timer></Timer>
+                <TimerPenalty penalty_signal={redTimePenalty}></TimerPenalty>
+                <TeamTimer team={"red_team"}></TeamTimer>
               </div>
+              <div></div>
+            </div>
             <div class={styles.draft_container}>
               <div class={styles.team}>
-                <Team
-                  bansSignal={blueBans}
-                  picksSignal={bluePicks}
-                  team={"blue_team"}
-                  handleSigEid={handleSigEid}
-                />
+                <Show
+                  when={turnOrder() == turn_order_3_bans}
+                  fallback={
+                    <Team
+                      bansSignal={blueBans}
+                      picksSignal={bluePicks}
+                      team={"blue_team"}
+                      handleSigEid={handleSigEid}
+                    />
+                  }
+                >
+                  <TeamWith3Bans
+                    bansSignal={blueBans}
+                    picksSignal={bluePicks}
+                    team={"blue_team"}
+                    handleSigEid={handleSigEid}
+                  />
+                </Show>
               </div>
               <div class={styles.roster}>
                 <Roster
@@ -115,12 +135,24 @@ const DraftTool: Component<DraftToolProps> = ({
                 />
               </div>
               <div class={styles.team}>
-                <Team
-                  bansSignal={redBans}
-                  picksSignal={redPicks}
-                  team={"red_team"}
-                  handleSigEid={handleSigEid}
-                />
+              <Show
+                  when={turnOrder() == turn_order_3_bans}
+                  fallback={
+                    <Team
+                      bansSignal={redBans}
+                      picksSignal={redPicks}
+                      team={"red_team"}
+                      handleSigEid={handleSigEid}
+                    />
+                  }
+                >
+                  <TeamWith3Bans
+                    bansSignal={redBans}
+                    picksSignal={redPicks}
+                    team={"red_team"}
+                    handleSigEid={handleSigEid}
+                  />
+                </Show>
               </div>
             </div>
           </div>
