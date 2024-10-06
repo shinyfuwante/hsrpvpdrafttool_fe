@@ -100,3 +100,15 @@
 .show {
     display: inline-block;
 }
+
+.penalty_counter {
+    align-self: center;
+}
+
+.blue_advantage {
+    color: #6d86f9;
+}
+
+.red_advantage {
+    color: #ca515f;
+} 

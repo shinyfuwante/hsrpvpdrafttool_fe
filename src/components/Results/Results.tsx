@@ -1,4 +1,4 @@
-import { Component, createSignal } from "solid-js";
+import { Component, createEffect, createSignal } from "solid-js";
 import { Show } from "solid-js";
 import {
   calculateBonusCycles,
@@ -23,10 +23,30 @@ const Results: Component<{}> = (props) => {
   const [scoreCalced, setScoreCalced] = createSignal(false);
   const [winnerString, setWinnerString] = createSignal("");
   const [copied, setCopied] = createSignal(false);
+  const [blueBonus, setBlueBonus] = createSignal(0);
+  const [redBonus, setRedBonus] = createSignal(0);
 
+  createEffect(() => {
+    setBlueBonus(calculateBonusCycles(blueCost()));
+    setRedBonus(calculateBonusCycles(redCost()));
+  });
   let [blueOneCycles, blueTwoCycles, blueDeaths] = [0, 0, 0];
   let [redOneCycles, redTwoCycles, redDeaths] = [0, 0, 0];
 
+  const penaltyCounter = () => {
+    const diff = blueBonus() - redBonus();
+    return (
+      <div
+        class={`${styles.penalty_counter} ${
+          blueBonus() < redBonus()
+            ? styles.blue_advantage
+            : styles.red_advantage
+        }`}
+      >
+        Cycle difference: {diff.toFixed(3)}
+      </div>
+    );
+  };
   const calculateScores = () => {
     setBlueScore(
       calculateScore(blueCost(), blueDeaths, blueOneCycles, blueTwoCycles) +
@@ -102,6 +122,9 @@ const Results: Component<{}> = (props) => {
           </input>
         </div>
       </div>
+      <Show when={ruleSet() != "pokke"}>
+        <div class={styles.penalty_counter}>{penaltyCounter()}</div>
+      </Show>
       <button
         class={`${styles.results_button}`}
         onClick={() => calculateScores()}
@@ -135,7 +158,11 @@ const Results: Component<{}> = (props) => {
             Copy Submission String to Clipboard
           </button>
         </Show>
-          <div class={`${copied() ? styles.show : ""} ${styles.submission_string}`}>Submission String Copied!</div>
+        <div
+          class={`${copied() ? styles.show : ""} ${styles.submission_string}`}
+        >
+          Submission String Copied!
+        </div>
       </Show>
     </div>
   );
