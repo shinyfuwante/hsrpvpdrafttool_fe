@@ -19,7 +19,7 @@
   },
   "Welt": {
     "id": "1004",
-    "point_costs": [2, 0, 1, 0, 0, 0, 2.5],
+    "point_costs": [2, 0, 1, 0, 0, 0, 2],
     "rarity": 5,
     "nickname": "Welt Bricked"
   },
@@ -153,7 +153,7 @@
   },
   "Blade": {
     "id": "1205",
-    "point_costs": [3, 1, 1, 0, 0.5, 0, 1.5],
+    "point_costs": [3, 1, 1, 0, 0.5, 0, 1],
     "rarity": 5,
     "nickname": "Blade Swift Dispatch Balde"
   },
@@ -195,7 +195,7 @@
   },
   "Jingliu": {
     "id": "1212",
-    "point_costs": [1.5, 2.5, 1, 0, 0.5, 0.5, 2],
+    "point_costs": [1.5, 2.5, 1, 0, 0.5, 0.5, 1],
     "rarity": 5,
     "nickname": "Jingliu JL Jingles Jenny"
   },
@@ -237,7 +237,7 @@
   },
   "Dr. Ratio": {
     "id": "1305",
-    "point_costs": [3, 1, 0.5, 0, 1, 0, 4],
+    "point_costs": [3, 1, 0.5, 0, 1.5, 0, 4],
     "rarity": 5,
     "nickname": "Dr. Ratio"
   },
@@ -275,7 +275,7 @@
   "Acheron": {
     "id": "1308",
     "special": false,
-    "point_costs": [6.5, 1.5, 1, 0, 0.5, 0, 2],
+    "point_costs": [7, 1.5, 1, 0, 0.5, 0, 2],
     "rarity": 5,
     "nickname": "Acheron Acorn"
   },
@@ -313,7 +313,7 @@
     "id": "1315",
     "rarity": 5,
     "code": "bh",
-    "point_costs": [8, 1, 0.5, 0, 0.5, 0.5, 1.5],
+    "point_costs": [8, 1, 0.5, 0, 0, 0.5, 1],
     "nickname": "Boothill BH"
   },
   "Firefly": {
