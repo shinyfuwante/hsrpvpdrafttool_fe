@@ -143,12 +143,12 @@ const game: Component<{}> = (props) => {
   onMount(async () => {
     setIsSinglePlayer(true);
     setRuleSet("pokke");
-    setTotalCost(10);
+    setTotalCost(9);
     setIsFFA(true);
   });
   setIsSinglePlayer(true);
   setRuleSet("pokke");
-  setTotalCost(8);
+  // setTotalCost(8);
   return (
     <DraftTool
       handlePick={handlePick}
