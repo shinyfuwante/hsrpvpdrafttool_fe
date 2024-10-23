@@ -417,5 +417,12 @@
     "point_costs": [0, 0, 0, 0, 0, 0, 0],
     "code": "mz",
     "nickname": "Moze"
+  },
+  "Rappa": {
+    "id": "1317",
+    "rarity": 5,
+    "point_costs": [1, 1, 1, 1, 1, 1, 1],
+    "code": "rp",
+    "nickname": "Rappa"
   }
 }

@@ -590,5 +590,11 @@
     "rarity": 5,
     "point_costs": [0, 0, 0, 0, 0, 0, 0],
     "character": "Lingsha"
+  },
+  "Ninjutsu Inscription: Dazzling Evilbreaker": {
+    "id": "23033",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "character": "Rappa"
   }
 }
