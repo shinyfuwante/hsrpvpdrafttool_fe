@@ -62,7 +62,7 @@ const Team: Component<TeamProps> = (props) => {
     }
     return (
       <div
-        class={`${styles.empty_card} ${turnOrder()[turnIndex()] && turnOrder()[turnIndex()].id == id && turnOrder()[turnIndex()].action == type && turnOrder()[turnIndex()].team == team ? styles.current_pick : ""}`}
+        class={`${styles.empty_card} ${type == "ban" ? styles.ban : styles.pick} ${turnOrder()[turnIndex()] && turnOrder()[turnIndex()].id == id && turnOrder()[turnIndex()].action == type && turnOrder()[turnIndex()].team == team ? styles.current_pick : ""}`}
       >
         {text} ({order}) 
       </div>

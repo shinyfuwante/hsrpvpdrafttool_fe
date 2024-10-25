@@ -8,10 +8,9 @@ interface BanCardProps {
 }
 export const BanCard: Component<BanCardProps> = ({ character }) => {
   const char = charJson()[character.name];
-  const style = styles.ban_card;
   return (
     <div
-      class={`${style}`}
+      class={`${styles.ban_card}`}
       style={{
         "background-image": `url(/character_images/${char.id}.webp)`,
       }}
