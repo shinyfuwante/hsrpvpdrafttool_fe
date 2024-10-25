@@ -6,9 +6,9 @@ import styles from "./BanCard.module.css";
 interface BanCardProps {
   character: CharacterBan;
 }
-export const BanCard: Component<BanCardProps> = ({ character }) => {
+export const HalfBanCard: Component<BanCardProps> = ({ character }) => {
   const char = charJson()[character.name];
-  const style = styles.ban_card;
+  const style = styles.ban_row_half;
   return (
     <div
       class={`${style}`}

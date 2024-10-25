@@ -23,6 +23,7 @@ import {
   totalCost,
 } from "~/game/game_logic";
 import styles from "./Team.module.css";
+import { HalfBanCard } from "../BanCard/HalfBanCard";
 
 export type TeamProps = {
   bansSignal: Accessor<CharacterBan[]>;
@@ -100,7 +101,7 @@ const TeamWith3Bans: Component<TeamProps> = (props) => {
             when={bansSignal()[0]}
             fallback={<EmptyCharacterComponent id={0} type={"ban"} />}
           >
-            <BanCard character={bansSignal()[0]} />
+            <HalfBanCard character={bansSignal()[0]} />
           </Show>
         </div>
         <div style={{ flex: 1 }}>
@@ -108,7 +109,7 @@ const TeamWith3Bans: Component<TeamProps> = (props) => {
           when={bansSignal()[1]}
           fallback={<EmptyCharacterComponent id={1} type={"ban"} />}
         >
-          <BanCard character={bansSignal()[1]} />
+          <HalfBanCard character={bansSignal()[1]} />
         </Show>
         </div>
       </div>
