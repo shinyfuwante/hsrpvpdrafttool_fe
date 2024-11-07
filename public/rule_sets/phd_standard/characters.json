@@ -1,13 +1,13 @@
 {
   "March 7th": {
     "id": "1001",
-    "point_costs": [0.5, 0, 0, 0, 0, 0, 0],
+    "point_costs": [1, 0, 0, 0, 0, 0, 0],
     "rarity": 4,
     "nickname": "March 7th M7"
   },
   "Dan Heng": {
     "id": "1002",
-    "point_costs": [0.5, 0, 0, 0, 0, 0, 0],
+    "point_costs": [1, 0, 0, 0, 0, 0, 0],
     "rarity": 4,
     "nickname": "Dan Heng DH Broccoli"
   },
@@ -19,7 +19,7 @@
   },
   "Welt": {
     "id": "1004",
-    "point_costs": [1.5, 0, 1, 0, 0, 0, 2],
+    "point_costs": [1.5, 0, 1, 0, 0, 0, 0.5],
     "rarity": 5,
     "nickname": "Welt Bricked"
   },
@@ -97,13 +97,13 @@
   },
   "Sampo": {
     "id": "1108",
-    "point_costs": [0.5, 0, 0, 0, 0, 0, 0],
+    "point_costs": [2, 0, 0, 0, 0, 0, 0],
     "rarity": 4,
     "nickname": "Sampo Shampoo"
   },
   "Hook": {
     "id": "1109",
-    "point_costs": [0.5, 0, 0, 0, 0, 0, 0],
+    "point_costs": [1, 0, 0, 0, 0, 0, 0],
     "rarity": 4,
     "nickname": "Hook Pitch Dark"
   },
@@ -115,7 +115,7 @@
   },
   "Luka": {
     "id": "1111",
-    "point_costs": [0.5, 0, 0.5, 0, 0, 0, 0.5],
+    "point_costs": [1.5, 0, 0.5, 0, 0, 0, 0.5],
     "rarity": 4,
     "nickname": "Luka"
   },
@@ -153,7 +153,7 @@
   },
   "Blade": {
     "id": "1205",
-    "point_costs": [1, 1, 1, 0, 0.5, 0, 1],
+    "point_costs": [1.5, 1, 1, 0, 0.5, 0, 1],
     "rarity": 5,
     "nickname": "Blade Swift Dispatch Balde"
   },
@@ -177,7 +177,7 @@
   },
   "Yanqing": {
     "id": "1209",
-    "point_costs": [0.5, 0, 0, 0, 1, 0, 0],
+    "point_costs": [0.5, 0, 0, 0, 0, 0, 0],
     "rarity": 5,
     "nickname": "Yanqing YQ"
   },
@@ -231,7 +231,7 @@
   },
   "Ruan Mei": {
     "id": "1303",
-    "point_costs": [4.5, 3.5, 0, 0, 0, 0, 3.5],
+    "point_costs": [4.5, 4, 0, 0, 0, 0, 3],
     "rarity": 5,
     "nickname": "Ruan Mei RM Ramen"
   },
@@ -250,7 +250,7 @@
   },
   "Black Swan": {
     "id": "1307",
-    "point_costs": [1, 4.5, 0, 0, 0.5, 0, 0.5],
+    "point_costs": [2, 5, 0, 0, 0.5, 0, 0.5],
     "rarity": 5,
     "nickname": "Black Swan BS"
   },
@@ -282,7 +282,7 @@
   "Gallagher": {
     "id": "1301",
     "special": false,
-    "point_costs": [2, 0.5, 0.5, 0, 0, 0, 0.5],
+    "point_costs": [3, 0, 0.5, 0, 0.5, 0, 0],
     "rarity": 4,
     "nickname": "Gallagher"
   },
@@ -298,12 +298,12 @@
     "rarity": 5,
     "special": true,
     "code": "rb",
-    "point_costs": [5, 4.5, 1, 0, 0.5, 0, 1],
+    "point_costs": [5, 5, 1, 0, 0.5, 0, 1],
     "nickname": "Robin Birb"
   },
   "TrailBlazerImaginary": {
     "id": "8006",
-    "point_costs": [6, 0, 0, 0, 0, 0, 0],
+    "point_costs": [5, 0, 0, 0, 0, 0, 0],
     "special": true,
     "code": "im",
     "rarity": 5,
@@ -313,13 +313,13 @@
     "id": "1315",
     "rarity": 5,
     "code": "bh",
-    "point_costs": [6, 2, 0.5, 0, 0, 0.5, 1],
+    "point_costs": [7, 2, 0.5, 0, 0, 0.5, 1],
     "nickname": "Boothill BH"
   },
   "Firefly": {
     "id": "1310",
     "rarity": 5,
-    "point_costs": [6, 1.5, 3, 0, 0.5, 0, 3],
+    "point_costs": [6, 1.5, 3, 0, 0.5, 0, 1.5],
     "code": "ff",
     "nickname": "Firefly FF Sam Samfly Mid"
   },
@@ -333,7 +333,7 @@
   "Yunli": {
     "id": "1221",
     "rarity": 5,
-    "point_costs": [6, 4.5, 1.5, 0, 0.5, 0, 2],
+    "point_costs": [5, 5, 1.5, 0, 0.5, 0, 2],
     "code": "yl",
     "nickname": "Yunli Barefeet Barefoot YL"
   },
@@ -347,35 +347,35 @@
   "March 7th Hunt": {
     "id": "1224",
     "rarity": 4,
-    "point_costs": [3.5, 0, 0, 0, 0, 0, 0],
+    "point_costs": [3, 0, 0, 0, 0, 0, 0],
     "code": "mh",
     "nickname": "March 7th M7 March 8th M8"
   },
   "Feixiao": {
     "id": "1220",
     "rarity": 5,
-    "point_costs": [8, 1.5, 3, 0, 0.5, 0, 3],
+    "point_costs": [6, 1.5, 3, 0, 0.5, 0, 3],
     "code": "fe",
     "nickname": "Feixiao Fampter FX"
   },
   "Lingsha": {
     "id": "1222",
     "rarity": 5,
-    "point_costs": [4, 3.5, 1, 0, 0, 0, 2.5],
+    "point_costs": [4.5, 3.5, 1, 0, 0, 0, 2.5],
     "code": "ls",
     "nickname": "Lingsha"
   },
   "Moze": {
     "id": "1223",
     "rarity": 4,
-    "point_costs": [1.5, 0.5, 1, 0, 0.5, 0, 0],
+    "point_costs": [2, 0.5, 1, 0, 0.5, 0, 0],
     "code": "mz",
     "nickname": "Moze"
   },
   "Rappa": {
     "id": "1317",
     "rarity": 5,
-    "point_costs": [5.5, 1.5, 1, 0, 0.5, 0, 2],
+    "point_costs": [7.5, 1, 0.5, 0, 0.5, 0, 2],
     "code": "rp",
     "nickname": "Rappa"
   }

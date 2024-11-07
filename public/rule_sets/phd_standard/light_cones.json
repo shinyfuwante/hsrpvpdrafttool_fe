@@ -461,7 +461,7 @@
   },
   "Baptism of Pure Thought": {
     "id": "23020",
-    "point_costs": [3, 4, 4.5, 5, 5.5],
+    "point_costs": [4, 4, 4.5, 5, 5.5],
     "character": "Dr. Ratio",
     "rarity": 5
   },
@@ -549,7 +549,7 @@
   "Whereabouts Should Dreams Rest": {
     "id": "23025",
     "rarity": 5,
-    "point_costs": [1.5, 0, 0, 0, 0],
+    "point_costs": [1, 0, 0, 0, 0],
     "character": "Firefly Sam FF Samfly"
   },
   "Yet Hope Is Priceless": {
@@ -567,7 +567,7 @@
   "Dance at Sunset": {
     "id": "23030",
     "rarity": 5,
-    "point_costs": [2.5, 3, 3.5, 4, 4.5, 0, 0],
+    "point_costs": [2, 3, 3.5, 4, 4.5, 0, 0],
     "character": "Yunli"
   },
   "Those Many Springs": {
@@ -589,7 +589,7 @@
   "I Venture Forth to Hunt": {
     "id": "23031",
     "rarity": 5,
-    "point_costs": [3, 0, 0, 0, 0, 0, 0],
+    "point_costs": [4, 0, 0, 0, 0, 0, 0],
     "character": "Feixiao Fei Xiao Fampter FX"
   },
   "Scent Alone Stays True": {
@@ -601,7 +601,7 @@
   "Ninjutsu Inscription: Dazzling Evilbreaker": {
     "id": "23033",
     "rarity": 5,
-    "point_costs": [2, 0, 0, 0, 0, 0, 0],
+    "point_costs": [1.5, 0, 0, 0, 0, 0, 0],
     "character": "Rappa"
   }
 }
