@@ -15,14 +15,14 @@
   },
   "Himeko": {
     "id": "1003",
-    "point_costs": [1, 0, 0, 0, 0, 0, 1],
+    "point_costs": [1, 0, 0, 0, 0, 0, 0],
     "code": "hm",
     "rarity": 5,
     "nickname": "Himeko"
   },
   "Welt": {
     "id": "1004",
-    "point_costs": [1, 0, 0, 0, 0, 0, 1],
+    "point_costs": [1, 0, 0, 0, 0, 0, 0],
     "code": "wt",
     "rarity": 5,
     "nickname": "Welt Bricked"
@@ -64,7 +64,7 @@
   },
   "Bronya": {
     "id": "1101",
-    "point_costs": [1, 0, 0, 0, 0, 0, 1],
+    "point_costs": [1, 0, 0, 0, 0, 0, 0],
     "code": "br",
     "rarity": 5,
     "nickname": "Bronya Lebron Broner"
@@ -85,7 +85,7 @@
   },
   "Gepard": {
     "id": "1104",
-    "point_costs": [1, 0, 0, 0, 0, 0, 1],
+    "point_costs": [1, 0, 0, 0, 0, 0, 0],
     "code": "gp",
     "rarity": 5,
     "nickname": "Gepard Gefraud"
@@ -106,7 +106,7 @@
   },
   "Clara": {
     "id": "1107",
-    "point_costs": [1, 0, 0, 0, 0, 0, 1],
+    "point_costs": [1, 0, 0, 0, 0, 0, 0],
     "code": "cl",
     "rarity": 5,
     "nickname": "Clara Svarog Barefeet Barefoot"
@@ -205,7 +205,7 @@
   },
   "Yanqing": {
     "id": "1209",
-    "point_costs": [1, 0, 0, 0, 0, 0, 1],
+    "point_costs": [1, 0, 0, 0, 0, 0, 0],
     "code": "yq",
     "rarity": 5,
     "nickname": "Yanqing YQ"
@@ -219,7 +219,7 @@
   },
   "Bailu": {
     "id": "1211",
-    "point_costs": [1, 0, 0, 0, 0, 0, 1],
+    "point_costs": [1, 0, 0, 0, 0, 0, 0],
     "code": "ba",
     "rarity": 5,
     "nickname": "Bailu"
