@@ -424,5 +424,19 @@
     "point_costs": [1, 1, 1, 1, 1, 1, 1],
     "code": "rp",
     "nickname": "Rappa"
+  },
+  "Sunday": {
+    "id": "1313",
+    "rarity": 5,
+    "point_costs": [1, 1, 1, 1, 1, 1, 1],
+    "code": "sy",
+    "nickname": "Sunday"
+  },
+  "Fugue": {
+    "id": "1225",
+    "rarity": 5,
+    "point_costs": [1, 1, 1, 1, 1, 1, 1],
+    "code": "xx",
+    "nickname": "Stingyun Fugue"
   }
 }

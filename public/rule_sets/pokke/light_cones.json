@@ -596,5 +596,17 @@
     "rarity": 5,
     "point_costs": [0, 0, 0, 0, 0, 0, 0],
     "character": "Rappa"
+  },
+  "Long Road Leads Home": {
+    "id": "23035", 
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "character": "Fugue"
+  },
+  "A Grounded Ascent": {
+    "id": "23034",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "character": "Sunday"
   }
 }
