@@ -117,6 +117,9 @@ const Roster: Component<RosterProps> = (props) => {
               const characterImage = `/character_icons/${characterId}.webp`;
               const isSpecial = characterDetails.special == true && isEvent();
               const isBanned = () => {
+                if (isFFA()) {
+                  return bannedCharacters().filter(c => c == characterName).length == 2;
+                }
                 return bannedCharacters().includes(characterName);
               };
               const canSelect = () => {
