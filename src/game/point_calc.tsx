@@ -74,12 +74,13 @@ export const encodeString = async (
   if (isFFA()) {
     if (blueTeamName().toLowerCase().includes("horror") && redTeamName().toLowerCase().includes("movies")) {
       try {
-        await navigator.clipboard.writeText("own that fraud");
+        await navigator.clipboard.writeText("hello you silly goose, own that fraud");
         setCopied(true);
       } catch (err) {
         console.error("Failed to copy: ", err);
       }
     } 
+    return;
   }
   let encodedString = "";
   const cjson = charJson();
