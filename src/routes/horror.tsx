@@ -1,0 +1,21 @@
+import { Component } from "solid-js";
+
+const horror: Component<{}> = (props) => {
+  
+  return <div class="secret">Loosely based on Bram Stoker’s Dracula, <b>Nosferatu</b> tells the story of Count Orlok, a vampire whose eerie appearance and sinister behavior bring death and despair to the inhabitants of a small town.
+
+  The film’s power lies in its atmosphere and visual style. The use of shadows, stark lighting, and distorted imagery creates a nightmarish world, evoking the feeling of a dream or a waking nightmare. Orlok, played by Max Schreck, is a grotesque figure, whose rat-like features and gaunt, elongated limbs made him a chilling representation of evil. The film’s haunting imagery, especially its depiction of the vampire’s shadow creeping across the walls, has influenced countless filmmakers and continues to resonate with contemporary audiences. Nosferatu helped to establish the archetype of the vampire, setting the stage for future depictions of these supernatural creatures.
+  
+  The film’s use of expressionist techniques, such as exaggerated set designs and unnatural lighting, contributed to the creation of a surreal and unsettling atmosphere. These techniques were not only a visual innovation but also a means of expressing inner emotional turmoil, making Nosferatu more than just a simple monster movie. The fear it invokes is psychological as much as it is physical, and its sense of dread lingers long after the film ends.
+  
+  Beyond its aesthetic impact, Nosferatu also reflects the societal anxieties of its time. Released in post-World War I Germany, the film can be interpreted as a metaphor for the fear of the foreign, the unknown, and the invasion of the domestic sphere by dark, uncontrollable forces. In this sense, Nosferatu is not just a horror film but a reflection of the cultural and political anxieties of the early 20th century.
+  What makes The <b>Exorcist</b> stand apart from earlier horror films is its seamless blend of psychological horror with supernatural terror. While Nosferatu was steeped in the visual language of expressionism and <b>Noroi: The Curse</b>(a more recent entry into the genre) uses documentary-style filmmaking to build tension, The Exorcist uses a slow build-up of dread, subtly increasing the sense of unease until it explodes into shocking, grotesque moments. The supernatural elements in The Exorcist are both grounded in religious symbolism and deeply psychological, creating a compelling narrative about the battle for a soul.
+  
+  The film’s success lies in its ability to merge horror with deep emotional and spiritual themes. The Exorcist doesn’t just focus on the fear of the demon but also examines the psychological toll that such a terrifying experience can have on its characters. Father Karras, one of the film’s central characters, is not only facing an external demonic force but also grappling with personal crises, including his loss of faith. This dual exploration of spiritual and psychological horror elevates the film to a level of complexity rarely seen in the genre.
+  What sets Noroi: The Curse apart is its ability to build suspense and dread through the slow revelation of disturbing details. The film’s documentary format makes the horror feel grounded in reality, as if the events unfolding on screen could happen to anyone. By using a found footage style, Shiraishi draws the audience into the narrative, making them feel like witnesses to the terrifying events. The gradual unraveling of a cursed history, along with the eerie visuals and supernatural elements tied to Japanese cultural beliefs, creates a terrifying atmosphere of inevitability.
+  
+  Unlike Nosferatu and The Exorcist, which focus heavily on individual figures of evil (the vampire and the demon), Noroi: The Curse explores a more insidious form of horror. The curse in the film is not just a personal affliction but a communal one, suggesting that evil is not contained in a single entity but is part of a broader, more pervasive force. This shift from individual to collective horror reflects contemporary fears about the breakdown of social and cultural structures, where terror can strike at the heart of the community itself.
+  </div>;
+};
+
+export default horror;

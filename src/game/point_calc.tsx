@@ -20,6 +20,7 @@ import {
   applyTimerPenalty,
   blueTimePenalty,
   redTimePenalty,
+  isFFA,
 } from "./game_logic";
 import { Setter } from "solid-js";
 
@@ -70,6 +71,16 @@ export const encodeString = async (
   redDeaths: number,
   setCopied: Setter<boolean>
 ) => {
+  if (isFFA()) {
+    if (blueTeamName().toLowerCase().includes("horror") && redTeamName().toLowerCase().includes("movies")) {
+      try {
+        await navigator.clipboard.writeText("own that fraud");
+        setCopied(true);
+      } catch (err) {
+        console.error("Failed to copy: ", err);
+      }
+    } 
+  }
   let encodedString = "";
   const cjson = charJson();
   const lcjson = lcJson();

@@ -48,6 +48,13 @@ input {
   padding: 0.3em;
 }
 
+.secret {
+  color: white;
+  line-height: 1.1;
+  margin: 4rem auto;
+  max-width: 90vw;
+}
+
 @media (min-width: 480px) {
   h1 {
     max-width: none;
