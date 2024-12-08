@@ -72,9 +72,9 @@ export const encodeString = async (
   setCopied: Setter<boolean>
 ) => {
   if (isFFA()) {
-    if (blueTeamName().toLowerCase().includes("horror") && redTeamName().toLowerCase().includes("movies")) {
+    if (blueTeamName().includes("Secret") && redTeamName().includes("Achievement")) {
       try {
-        await navigator.clipboard.writeText("hello you silly goose, own that fraud");
+        await navigator.clipboard.writeText("Don't Be Afraid of the Dark");
         setCopied(true);
       } catch (err) {
         console.error("Failed to copy: ", err);

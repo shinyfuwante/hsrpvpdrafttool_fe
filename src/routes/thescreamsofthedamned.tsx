@@ -1,6 +1,6 @@
 import { Component } from "solid-js";
 
-const horror: Component<{}> = (props) => {
+const thescreamsofthedamned: Component<{}> = (props) => {
   
   return <div class="secret">Loosely based on Bram Stoker’s Dracula, <b>Nosferatu</b> tells the story of Count Orlok, a vampire whose eerie appearance and sinister behavior bring death and despair to the inhabitants of a small town.
 
@@ -18,4 +18,4 @@ const horror: Component<{}> = (props) => {
   </div>;
 };
 
-export default horror;
+export default thescreamsofthedamned; 
