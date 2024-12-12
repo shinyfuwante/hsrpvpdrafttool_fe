@@ -11,7 +11,8 @@ import {
   player2Roll,
   setPlayer1Roll,
   setPlayer2Roll,
-  ruleSet
+  ruleSet,
+  isMeme
 } from "~/game/game_logic";
 import styles from "./SoloSettings.module.css";
 
@@ -74,14 +75,26 @@ const SoloSettings: Component<{}> = (props) => {
         <div class={styles.initiative}>
           <div
             class={styles.roll_buttons}
-            onClick={() => setPlayer1Roll(roll())}
+            onClick={() => {
+              if (isMeme()) {
+                setPlayer1Roll(100);
+              } else {
+                setPlayer1Roll(roll());
+              }
+            }}
           >
             <div>{player1Roll()}</div>
             Roll for {player1Name()}
           </div>
           <div
             class={styles.roll_buttons}
-            onClick={() => setPlayer2Roll(roll())}
+            onClick={() => {
+              if (isMeme()) {
+                setPlayer2Roll(101);
+              } else {
+                setPlayer2Roll(roll());
+              }
+            }}
           >
             <div>{player2Roll()}</div>
             Roll for {player2Name()}

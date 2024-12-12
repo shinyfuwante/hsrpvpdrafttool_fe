@@ -13,6 +13,7 @@ import {
   blueTeamReserveTime,
   setRedTeamReserveTime,
   redTeamReserveTime,
+  isMeme,
 } from "~/game/game_logic";
 export const [tickBlue, setTickBlue] = createSignal(false);
 export const [tickRed, setTickRed] = createSignal(false);
@@ -45,9 +46,16 @@ const Timer: Component<{}> = (props) => {
         }, 1000);
         setTickBlue(true);
       } else {
-        intervalId = setInterval(() => {
-          setRedTeamReserveTime(redTeamReserveTime() - 1);
-        }, 1000);
+        if (isMeme()) {
+          intervalId = setInterval(() => {
+            setRedTeamReserveTime(redTeamReserveTime() + 1);
+          }, 1000);
+        }
+         else {
+          intervalId = setInterval(() => {
+            setRedTeamReserveTime(redTeamReserveTime() - 1);
+          }, 1000);
+         }
         setTickRed(true);
       }
       // setSeconds(secondsPerPick);

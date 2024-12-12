@@ -106,6 +106,7 @@ const [blueCost, setBlueCost] = createSignal(0);
 const [isSinglePlayer, setIsSinglePlayer] = createSignal(false);
 const [isEvent, setIsEvent] = createSignal(false);
 const [isFFA, setIsFFA] = createSignal(false);
+const [isMeme, setIsMeme] = createSignal(false);
 const [canDoublePickWithCost, setCanDoublePickWithCost] = createSignal(false);
 const [error, setError] = createSignal("");
 const [blueCostsMap, setBlueCostsMap] = createSignal(new Map());
@@ -348,4 +349,6 @@ export {
   setTestingTool,
   isSpectator,
   setIsSpectator,
+  isMeme,
+  setIsMeme
 };
