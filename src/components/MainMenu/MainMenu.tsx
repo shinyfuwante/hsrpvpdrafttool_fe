@@ -24,6 +24,14 @@ const MainMenu: Component<MainMenuProps> = (props: any) => {
     const url = `/solo/pokke`;
     window.location.href = url;
   };
+  const pokkeSpecial = () => {
+    const url = `/solo/pokke-special`;
+    window.location.href = url;
+  }
+  const phd_11 = () => {
+    const url = `/solo/phd_11`;
+    window.location.href = url;
+  }
   const mirrorCupGame = () => {
     const url = `/mirror_cup/game`;
     window.location.href = url;
@@ -74,12 +82,18 @@ const MainMenu: Component<MainMenuProps> = (props: any) => {
           <div onClick={() => pokkeGame()} class={styles.game_mode_select}>
             <div>Create a Screen-Share draft for Pokke's format</div>
           </div>
-          <div onClick={() => mirrorCupGame()} class={styles.game_mode_select}>
+          <div onClick={() => pokkeSpecial()} class={styles.game_mode_select}>
+            <div>Create a Screen-Share draft for Pokke's Special format</div>
+          </div>
+          <div onClick={() => phd_11()} class={styles.game_mode_select}>
+            <div>Create a Screen-Share draft for PHD's MoC 11 Balance</div>
+          </div>
+          {/* <div onClick={() => mirrorCupGame()} class={styles.game_mode_select}>
             <div>Create a Screen-Share draft for the Mirror Cup format</div>
           </div>
           <div onClick={() => mirrorCupTestingTool()} class={styles.game_mode_select}>
             <div>Mirror Cup Points Testing Tool</div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
