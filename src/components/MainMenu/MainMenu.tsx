@@ -44,6 +44,10 @@ const MainMenu: Component<MainMenuProps> = (props: any) => {
     const url = `/solo/testing`;
     window.location.href = url;
   };
+  const phd_11_testing = () => {
+    const url = `/solo/testing_11`;
+    window.location.href = url;
+  };
   const costs = () => {
     const url = `/solo/costs`;
     window.location.href = url;
@@ -87,6 +91,9 @@ const MainMenu: Component<MainMenuProps> = (props: any) => {
           </div>
           <div onClick={() => phd_11()} class={styles.game_mode_select}>
             <div>Create a Screen-Share draft for PHD's MoC 11 Balance</div>
+          </div>
+          <div onClick={() => phd_11_testing()} class={styles.game_mode_select}>
+            <div>PHD's MoC 11 Testing Tool</div>
           </div>
           {/* <div onClick={() => mirrorCupGame()} class={styles.game_mode_select}>
             <div>Create a Screen-Share draft for the Mirror Cup format</div>
