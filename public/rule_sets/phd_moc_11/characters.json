@@ -31,7 +31,7 @@
   },
   "Silver Wolf": {
     "id": "1006",
-    "point_costs": [3.5, 0.5, 0, 0, 0, 0, 2],
+    "point_costs": [3, 1, 0, 0, 0, 0, 1],
     "rarity": 5,
     "nickname": "Silver Wolf SW"
   },
@@ -91,7 +91,7 @@
   },
   "Clara": {
     "id": "1107",
-    "point_costs": [3, 0, 0.5, 0, 0, 0, 0],
+    "point_costs": [2.5, 0, 0.5, 0, 0, 0, 0.5],
     "rarity": 5,
     "nickname": "Clara Svarog Barefeet Barefoot"
   },
@@ -121,13 +121,13 @@
   },
   "Topaz & Numby": {
     "id": "1112",
-    "point_costs": [4, 1, 0, 0, 0.5, 0, 1],
+    "point_costs": [3.5, 1, 0, 0, 0.5, 0, 1],
     "rarity": 5,
     "nickname": "Topaz & Numby Topass"
   },
   "Qingque": {
     "id": "1201",
-    "point_costs": [1, 0, 0, 0, 0.5, 0, 1],
+    "point_costs": [2, 0, 0, 0, 0.5, 0, 1],
     "rarity": 4,
     "nickname": "Qingque QQ"
   },
@@ -147,13 +147,13 @@
   "Jing Yuan": {
     "id": "1204",
     "special": false,
-    "point_costs": [1.5, 0.5, 0, 0, 1, 0.5, 1],
+    "point_costs": [1, 0.5, 0, 0, 1, 0.5, 1],
     "rarity": 5,
     "nickname": "Jing Yuan Jimmy JY King Yuan Our General"
   },
   "Blade": {
     "id": "1205",
-    "point_costs": [0.5, 1, 1, 0, 0.5, 0, 1],
+    "point_costs": [1, 0.5, 1, 0, 0.5, 0, 1],
     "rarity": 5,
     "nickname": "Blade Swift Dispatch Balde"
   },
@@ -183,7 +183,7 @@
   },
   "Guinaifen": {
     "id": "1210",
-    "point_costs": [2.5, 0, 0, 0, 0, 0, 0.5],
+    "point_costs": [1.5, 0, 0, 0, 0, 0, 0.5],
     "rarity": 4,
     "nickname": "Guinaifen GNF"
   },
@@ -201,7 +201,7 @@
   },
   "Dan Heng • Imbibitor Lunae": {
     "id": "1213",
-    "point_costs": [1, 0.5, 3, 0, 0.5, 0, 1.5],
+    "point_costs": [1, 0.5, 3.5, 0, 0.5, 0, 1.5],
     "rarity": 5,
     "nickname": "Dan Heng • Imbibitor Lunae DHIL Daniel"
   },
@@ -231,20 +231,20 @@
   },
   "Ruan Mei": {
     "id": "1303",
-    "point_costs": [5, 4, 0, 0, 0, 0, 1.5],
+    "point_costs": [5, 3.5, 0, 0, 0, 0, 1.5],
     "rarity": 5,
     "nickname": "Ruan Mei RM Ramen"
   },
   "Dr. Ratio": {
     "id": "1305",
-    "point_costs": [3, 1.5, 0.5, 0, 1.5, 0, 4],
+    "point_costs": [2.5, 1.5, 0.5, 0, 1.5, 0, 4],
     "rarity": 5,
     "nickname": "Dr. Ratio"
   },
   "Sparkle": {
     "id": "1306",
     "special": false,
-    "point_costs": [4, 1, 3, 0, 0, 0, 3],
+    "point_costs": [4, 1, 2.5, 0, 0, 0, 1.5],
     "rarity": 5,
     "nickname": "Sparkle Sprinkle Spork Hanabi 5'2"
   },
@@ -290,7 +290,7 @@
     "id": "1304",
     "special": true,
     "rarity": 5,
-    "point_costs": [2, 1, 1.5, 0, 0, 0, 2.5],
+    "point_costs": [2, 1, 1.5, 0, 0, 0, 1.5],
     "nickname": "Aventurine"
   },
   "Robin": {
@@ -298,7 +298,7 @@
     "rarity": 5,
     "special": true,
     "code": "rb",
-    "point_costs": [4.5, 5.5, 1, 0, 0, 0, 1],
+    "point_costs": [4.5, 4.5, 1, 0, 0, 0, 1],
     "nickname": "Robin Birb"
   },
   "TrailBlazerImaginary": {
@@ -313,13 +313,13 @@
     "id": "1315",
     "rarity": 5,
     "code": "bh",
-    "point_costs": [6, 2, 0.5, 0, 0, 0.5, 1],
+    "point_costs": [5.5, 2, 0.5, 0, 0, 0.5, 1],
     "nickname": "Boothill BH"
   },
   "Firefly": {
     "id": "1310",
     "rarity": 5,
-    "point_costs": [4, 1, 3, 0, 0.5, 0, 4.5],
+    "point_costs": [3, 1, 3.5, 0, 0.5, 0, 4.5],
     "code": "ff",
     "nickname": "Firefly FF Sam Samfly Mid"
   },
@@ -340,7 +340,7 @@
   "Jiaoqiu": {
     "id": "1218",
     "rarity": 5,
-    "point_costs": [4, 0.5, 0.5, 0, 0, 0, 3.5],
+    "point_costs": [4.5, 0.5, 0, 0, 0, 0, 3.5],
     "code": "jq",
     "nickname": "Jiaoqiu JQ"
   },
@@ -354,7 +354,7 @@
   "Feixiao": {
     "id": "1220",
     "rarity": 5,
-    "point_costs": [6.5, 1.5, 3.5, 0, 0, 0, 3],
+    "point_costs": [7, 1.5, 3.5, 0, 0, 0, 3],
     "code": "fe",
     "nickname": "Feixiao Fampter FX"
   },
@@ -368,14 +368,14 @@
   "Moze": {
     "id": "1223",
     "rarity": 4,
-    "point_costs": [2.5, 0.5, 1, 0, 0.5, 0, 0],
+    "point_costs": [2, 0.5, 1, 0, 0.5, 0, 0],
     "code": "mz",
     "nickname": "Moze"
   },
   "Rappa": {
     "id": "1317",
     "rarity": 5,
-    "point_costs": [6, 2, 0, 0, 0, 0, 1.5],
+    "point_costs": [6, 2, 0, 0, 0, 0, 1],
     "code": "rp",
     "nickname": "Rappa"
   },
@@ -389,8 +389,8 @@
   "Fugue": {
     "id": "1225",
     "rarity": 5,
-    "point_costs": [1, 1, 1, 1, 1, 1, 1],
-    "code": "xx",
+    "point_costs": [5, 3, 1.5, 0, 0.5, 0, 0.5],
+    "code": "fg",
     "nickname": "Stingyun Fugue"
   }
 }
