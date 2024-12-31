@@ -118,7 +118,7 @@ const Roster: Component<RosterProps> = (props) => {
               const isSpecial = characterDetails.special == true && isEvent();
               const isBanned = () => {
                 if (isFFA()) {
-                  return bannedCharacters().filter(c => c == characterName).length == 2;
+                  return bannedCharacters().filter(c => c == characterName).length == 3;
                 }
                 return bannedCharacters().includes(characterName);
               };
