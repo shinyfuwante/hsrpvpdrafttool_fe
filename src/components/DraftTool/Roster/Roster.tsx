@@ -98,7 +98,7 @@ const Roster: Component<RosterProps> = (props) => {
   };
   const endDraftPhase = () => {
     if (turnOrder() == turn_order_bb) {
-      return redPicks().length == 10 && blueBans().length == 5; 
+      return redPicks().length == 10 && blueBans().length == 4; 
     }
     return redPicks().length == 8;
   }
@@ -158,9 +158,9 @@ const Roster: Component<RosterProps> = (props) => {
                   if (!(turnIndex() < turnOrder().length)) {
                     return false;
                   }
-                  if (turnOrder() == turn_order_bb && turnIndex() > turnOrder().length - 3 && turnIndex() < turnOrder().length) {
-                    return true;
-                  }
+                  // if (turnOrder() == turn_order_bb && turnIndex() > turnOrder().length - 3 && turnIndex() < turnOrder().length) {
+                  //   return true;
+                  // }
                 }
 
                 if (isSpecial || isFFA() || canDoublePickWithCost()) {
