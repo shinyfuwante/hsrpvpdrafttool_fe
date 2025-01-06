@@ -124,26 +124,26 @@ const Roster: Component<RosterProps> = (props) => {
               const characterId = (characterDetails as CharacterDetails).id;
               const characterImage = `/character_icons/${characterId}.webp`;
               const isSpecial = characterDetails.special == true && isEvent();
-              if (turnOrder() == turn_order_bb) {
-                if (turnIndex() == turnOrder().length - 2) {
-                  let match = false;
-                  for (const pick of bluePicks()) {
-                    if (pick.name == characterName) {
-                      match = true;
-                    }
-                  }
-                  if (!match) return;
-                }
-                if (turnIndex() == turnOrder().length - 1) {
-                  let match = false;
-                  for (const pick of redPicks()) {
-                    if (pick.name == characterName) {
-                      match = true;
-                    }
-                  }
-                  if (!match) return;
-                }
-              }
+              // if (turnOrder() == turn_order_bb) {
+              //   if (turnIndex() == turnOrder().length - 2) {
+              //     let match = false;
+              //     for (const pick of bluePicks()) {
+              //       if (pick.name == characterName) {
+              //         match = true;
+              //       }
+              //     }
+              //     if (!match) return;
+              //   }
+              //   if (turnIndex() == turnOrder().length - 1) {
+              //     let match = false;
+              //     for (const pick of redPicks()) {
+              //       if (pick.name == characterName) {
+              //         match = true;
+              //       }
+              //     }
+              //     if (!match) return;
+              //   }
+              // }
               const isBanned = () => {
                 if (isFFA()) {
                   return bannedCharacters().filter(c => c == characterName).length == 3;

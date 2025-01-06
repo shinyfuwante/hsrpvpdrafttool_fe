@@ -288,14 +288,6 @@ const TeamForBB: Component<TeamProps> = (props) => {
           </Show>
         </div>
       </div>
-      <div class={styles.ban_row}>
-        <Show
-          when={bansSignal()[4]}
-          fallback={<EmptyCharacterComponent id={14} type={"ban"} />}
-        >
-          <BanCard character={bansSignal()[4]} />
-        </Show>
-      </div>
     </div>
   );
 };

@@ -199,8 +199,6 @@ export const turn_order_bb = [
   { team: "blue_team", action: "pick", id: 12 },
   { team: "blue_team", action: "pick", id: 13 },
   { team: "red_team", action: "pick", id: 13 },
-  { team: "red_team", action: "ban", id: 14 },
-  { team: "blue_team", action: "ban", id: 14 },
 ]
 const [turnOrder, setTurnOrder] = createSignal(turn_order_2_bans);
 const MessageEnum = {
