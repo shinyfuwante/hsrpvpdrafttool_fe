@@ -137,6 +137,7 @@ const game: Component<{}> = (props) => {
     setRuleSet("bb_rules");
     // setCanDoublePickWithCost(true);
   });
+  setRuleSet("bb_rules");
   return (
     <DraftTool
       handlePick={handlePick}

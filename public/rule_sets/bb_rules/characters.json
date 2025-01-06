@@ -1,5 +1,5 @@
 {
-    "\u4e09\u6708\u4e03": {
+    "三月七": {
         "id": "1001",
         "rarity": 4,
         "point_costs": [
@@ -11,9 +11,9 @@
             0,
             0
         ],
-        "nickname": "\u4e09\u6708\u4e03"
+        "nickname": "三月七"
     },
-    "\u4e39\u6052": {
+    "丹恒": {
         "id": "1002",
         "rarity": 4,
         "point_costs": [
@@ -25,9 +25,9 @@
             0,
             0
         ],
-        "nickname": "\u4e39\u6052"
+        "nickname": "丹恒"
     },
-    "\u59ec\u5b50": {
+    "姬子": {
         "id": "1003",
         "rarity": 5,
         "point_costs": [
@@ -39,9 +39,9 @@
             0,
             0
         ],
-        "nickname": "\u59ec\u5b50"
+        "nickname": "姬子"
     },
-    "\u74e6\u5c14\u7279": {
+    "瓦尔特": {
         "id": "1004",
         "rarity": 5,
         "point_costs": [
@@ -53,9 +53,9 @@
             0,
             0
         ],
-        "nickname": "\u74e6\u5c14\u7279"
+        "nickname": "瓦尔特"
     },
-    "\u5361\u8299\u5361": {
+    "卡芙卡": {
         "id": "1005",
         "rarity": 5,
         "point_costs": [
@@ -67,9 +67,9 @@
             0,
             0
         ],
-        "nickname": "\u5361\u8299\u5361"
+        "nickname": "卡芙卡"
     },
-    "\u94f6\u72fc": {
+    "银狼": {
         "id": "1006",
         "rarity": 5,
         "point_costs": [
@@ -81,9 +81,9 @@
             0,
             0
         ],
-        "nickname": "\u94f6\u72fc"
+        "nickname": "银狼"
     },
-    "\u963f\u5170": {
+    "阿兰": {
         "id": "1008",
         "rarity": 4,
         "point_costs": [
@@ -95,9 +95,9 @@
             0,
             0
         ],
-        "nickname": "\u963f\u5170"
+        "nickname": "阿兰"
     },
-    "\u827e\u4e1d\u59b2": {
+    "艾丝妲": {
         "id": "1009",
         "rarity": 4,
         "point_costs": [
@@ -109,9 +109,9 @@
             0,
             0
         ],
-        "nickname": "\u827e\u4e1d\u59b2"
+        "nickname": "艾丝妲"
     },
-    "\u9ed1\u5854": {
+    "黑塔": {
         "id": "1013",
         "rarity": 4,
         "point_costs": [
@@ -123,9 +123,9 @@
             0,
             0
         ],
-        "nickname": "\u9ed1\u5854"
+        "nickname": "黑塔"
     },
-    "\u5e03\u6d1b\u59ae\u5a05": {
+    "布洛妮娅": {
         "id": "1101",
         "rarity": 5,
         "point_costs": [
@@ -137,9 +137,9 @@
             0,
             0
         ],
-        "nickname": "\u5e03\u6d1b\u59ae\u5a05"
+        "nickname": "布洛妮娅"
     },
-    "\u5e0c\u513f": {
+    "希儿": {
         "id": "1102",
         "rarity": 5,
         "point_costs": [
@@ -151,9 +151,9 @@
             0,
             0
         ],
-        "nickname": "\u5e0c\u513f"
+        "nickname": "希儿"
     },
-    "\u5e0c\u9732\u74e6": {
+    "希露瓦": {
         "id": "1103",
         "rarity": 4,
         "point_costs": [
@@ -165,9 +165,9 @@
             0,
             0
         ],
-        "nickname": "\u5e0c\u9732\u74e6"
+        "nickname": "希露瓦"
     },
-    "\u6770\u5e15\u5fb7": {
+    "杰帕德": {
         "id": "1104",
         "rarity": 5,
         "point_costs": [
@@ -179,9 +179,9 @@
             0,
             0
         ],
-        "nickname": "\u6770\u5e15\u5fb7"
+        "nickname": "杰帕德"
     },
-    "\u5a1c\u5854\u838e": {
+    "娜塔莎": {
         "id": "1105",
         "rarity": 4,
         "point_costs": [
@@ -193,9 +193,9 @@
             0,
             0
         ],
-        "nickname": "\u5a1c\u5854\u838e"
+        "nickname": "娜塔莎"
     },
-    "\u4f69\u62c9": {
+    "佩拉": {
         "id": "1106",
         "rarity": 4,
         "point_costs": [
@@ -207,9 +207,9 @@
             0,
             0
         ],
-        "nickname": "\u4f69\u62c9"
+        "nickname": "佩拉"
     },
-    "\u514b\u62c9\u62c9": {
+    "克拉拉": {
         "id": "1107",
         "rarity": 5,
         "point_costs": [
@@ -221,9 +221,9 @@
             0,
             0
         ],
-        "nickname": "\u514b\u62c9\u62c9"
+        "nickname": "克拉拉"
     },
-    "\u6851\u535a": {
+    "桑博": {
         "id": "1108",
         "rarity": 4,
         "point_costs": [
@@ -235,9 +235,9 @@
             0,
             0
         ],
-        "nickname": "\u6851\u535a"
+        "nickname": "桑博"
     },
-    "\u864e\u514b": {
+    "虎克": {
         "id": "1109",
         "rarity": 4,
         "point_costs": [
@@ -249,9 +249,9 @@
             0,
             0
         ],
-        "nickname": "\u864e\u514b"
+        "nickname": "虎克"
     },
-    "\u73b2\u53ef": {
+    "玲可": {
         "id": "1110",
         "rarity": 4,
         "point_costs": [
@@ -263,9 +263,9 @@
             0,
             0
         ],
-        "nickname": "\u73b2\u53ef"
+        "nickname": "玲可"
     },
-    "\u5362\u5361": {
+    "卢卡": {
         "id": "1111",
         "rarity": 4,
         "point_costs": [
@@ -277,9 +277,9 @@
             0,
             0
         ],
-        "nickname": "\u5362\u5361"
+        "nickname": "卢卡"
     },
-    "\u6258\u5e15&\u8d26\u8d26": {
+    "托帕&账账": {
         "id": "1112",
         "rarity": 5,
         "point_costs": [
@@ -291,9 +291,9 @@
             0,
             0
         ],
-        "nickname": "\u6258\u5e15&\u8d26\u8d26"
+        "nickname": "托帕&账账"
     },
-    "\u9752\u96c0": {
+    "青雀": {
         "id": "1201",
         "rarity": 4,
         "point_costs": [
@@ -305,9 +305,9 @@
             0,
             0
         ],
-        "nickname": "\u9752\u96c0"
+        "nickname": "青雀"
     },
-    "\u505c\u4e91": {
+    "停云": {
         "id": "1202",
         "rarity": 4,
         "point_costs": [
@@ -319,9 +319,9 @@
             0,
             0
         ],
-        "nickname": "\u505c\u4e91"
+        "nickname": "停云"
     },
-    "\u7f57\u5239": {
+    "罗刹": {
         "id": "1203",
         "rarity": 5,
         "point_costs": [
@@ -333,9 +333,9 @@
             0,
             0
         ],
-        "nickname": "\u7f57\u5239"
+        "nickname": "罗刹"
     },
-    "\u666f\u5143": {
+    "景元": {
         "id": "1204",
         "rarity": 5,
         "point_costs": [
@@ -347,9 +347,9 @@
             0,
             0
         ],
-        "nickname": "\u666f\u5143"
+        "nickname": "景元"
     },
-    "\u5203": {
+    "刃": {
         "id": "1205",
         "rarity": 5,
         "point_costs": [
@@ -361,9 +361,9 @@
             0,
             0
         ],
-        "nickname": "\u5203"
+        "nickname": "刃"
     },
-    "\u7d20\u88f3": {
+    "素裳": {
         "id": "1206",
         "rarity": 4,
         "point_costs": [
@@ -375,9 +375,9 @@
             0,
             0
         ],
-        "nickname": "\u7d20\u88f3"
+        "nickname": "素裳"
     },
-    "\u9a6d\u7a7a": {
+    "驭空": {
         "id": "1207",
         "rarity": 4,
         "point_costs": [
@@ -389,9 +389,9 @@
             0,
             0
         ],
-        "nickname": "\u9a6d\u7a7a"
+        "nickname": "驭空"
     },
-    "\u7b26\u7384": {
+    "符玄": {
         "id": "1208",
         "rarity": 5,
         "point_costs": [
@@ -403,9 +403,9 @@
             0,
             0
         ],
-        "nickname": "\u7b26\u7384"
+        "nickname": "符玄"
     },
-    "\u5f66\u537f": {
+    "彦卿": {
         "id": "1209",
         "rarity": 5,
         "point_costs": [
@@ -417,9 +417,9 @@
             0,
             0
         ],
-        "nickname": "\u5f66\u537f"
+        "nickname": "彦卿"
     },
-    "\u6842\u4e43\u82ac": {
+    "桂乃芬": {
         "id": "1210",
         "rarity": 4,
         "point_costs": [
@@ -431,9 +431,9 @@
             0,
             0
         ],
-        "nickname": "\u6842\u4e43\u82ac"
+        "nickname": "桂乃芬"
     },
-    "\u767d\u9732": {
+    "白露": {
         "id": "1211",
         "rarity": 5,
         "point_costs": [
@@ -445,9 +445,9 @@
             0,
             0
         ],
-        "nickname": "\u767d\u9732"
+        "nickname": "白露"
     },
-    "\u955c\u6d41": {
+    "镜流": {
         "id": "1212",
         "rarity": 5,
         "point_costs": [
@@ -459,9 +459,9 @@
             0,
             0
         ],
-        "nickname": "\u955c\u6d41"
+        "nickname": "镜流"
     },
-    "\u4e39\u6052\u2022\u996e\u6708": {
+    "丹恒•饮月": {
         "id": "1213",
         "rarity": 5,
         "point_costs": [
@@ -473,9 +473,9 @@
             0,
             0
         ],
-        "nickname": "\u4e39\u6052\u2022\u996e\u6708"
+        "nickname": "丹恒•饮月"
     },
-    "\u96ea\u8863": {
+    "雪衣": {
         "id": "1214",
         "rarity": 4,
         "point_costs": [
@@ -487,9 +487,9 @@
             0,
             0
         ],
-        "nickname": "\u96ea\u8863"
+        "nickname": "雪衣"
     },
-    "\u5bd2\u9e26": {
+    "寒鸦": {
         "id": "1215",
         "rarity": 4,
         "point_costs": [
@@ -501,9 +501,9 @@
             0,
             0
         ],
-        "nickname": "\u5bd2\u9e26"
+        "nickname": "寒鸦"
     },
-    "\u85ff\u85ff": {
+    "藿藿": {
         "id": "1217",
         "rarity": 5,
         "point_costs": [
@@ -515,9 +515,9 @@
             0,
             0
         ],
-        "nickname": "\u85ff\u85ff"
+        "nickname": "藿藿"
     },
-    "\u6912\u4e18": {
+    "椒丘": {
         "id": "1218",
         "rarity": 5,
         "point_costs": [
@@ -529,9 +529,9 @@
             0,
             0
         ],
-        "nickname": "\u6912\u4e18"
+        "nickname": "椒丘"
     },
-    "\u98de\u9704": {
+    "飞霄": {
         "id": "1220",
         "rarity": 5,
         "point_costs": [
@@ -543,9 +543,9 @@
             0,
             0
         ],
-        "nickname": "\u98de\u9704"
+        "nickname": "飞霄"
     },
-    "\u4e91\u7483": {
+    "云璃": {
         "id": "1221",
         "rarity": 5,
         "point_costs": [
@@ -557,9 +557,9 @@
             0,
             0
         ],
-        "nickname": "\u4e91\u7483"
+        "nickname": "云璃"
     },
-    "\u7075\u7802": {
+    "灵砂": {
         "id": "1222",
         "rarity": 5,
         "point_costs": [
@@ -571,9 +571,9 @@
             0,
             0
         ],
-        "nickname": "\u7075\u7802"
+        "nickname": "灵砂"
     },
-    "\u8c8a\u6cfd": {
+    "貊泽": {
         "id": "1223",
         "rarity": 4,
         "point_costs": [
@@ -585,9 +585,9 @@
             0,
             0
         ],
-        "nickname": "\u8c8a\u6cfd"
+        "nickname": "貊泽"
     },
-    "\u5fd8\u5f52\u4eba": {
+    "忘归人": {
         "id": "1225",
         "rarity": 5,
         "point_costs": [
@@ -599,9 +599,9 @@
             0,
             0
         ],
-        "nickname": "\u5fd8\u5f52\u4eba"
+        "nickname": "忘归人"
     },
-    "\u52a0\u62c9\u8d6b": {
+    "加拉赫": {
         "id": "1301",
         "rarity": 4,
         "point_costs": [
@@ -613,9 +613,9 @@
             0,
             0
         ],
-        "nickname": "\u52a0\u62c9\u8d6b"
+        "nickname": "加拉赫"
     },
-    "\u94f6\u679d": {
+    "银枝": {
         "id": "1302",
         "rarity": 5,
         "point_costs": [
@@ -627,9 +627,9 @@
             0,
             0
         ],
-        "nickname": "\u94f6\u679d"
+        "nickname": "银枝"
     },
-    "\u962e\u2022\u6885": {
+    "阮•梅": {
         "id": "1303",
         "rarity": 5,
         "point_costs": [
@@ -641,9 +641,9 @@
             0,
             0
         ],
-        "nickname": "\u962e\u2022\u6885"
+        "nickname": "阮•梅"
     },
-    "\u7802\u91d1": {
+    "砂金": {
         "id": "1304",
         "rarity": 5,
         "point_costs": [
@@ -655,9 +655,9 @@
             0,
             0
         ],
-        "nickname": "\u7802\u91d1"
+        "nickname": "砂金"
     },
-    "\u771f\u7406\u533b\u751f": {
+    "真理医生": {
         "id": "1305",
         "rarity": 5,
         "point_costs": [
@@ -669,9 +669,9 @@
             0,
             0
         ],
-        "nickname": "\u771f\u7406\u533b\u751f"
+        "nickname": "真理医生"
     },
-    "\u82b1\u706b": {
+    "花火": {
         "id": "1306",
         "rarity": 5,
         "point_costs": [
@@ -683,9 +683,9 @@
             0,
             0
         ],
-        "nickname": "\u82b1\u706b"
+        "nickname": "花火"
     },
-    "\u9ed1\u5929\u9e45": {
+    "黑天鹅": {
         "id": "1307",
         "rarity": 5,
         "point_costs": [
@@ -697,9 +697,9 @@
             0,
             0
         ],
-        "nickname": "\u9ed1\u5929\u9e45"
+        "nickname": "黑天鹅"
     },
-    "\u9ec4\u6cc9": {
+    "黄泉": {
         "id": "1308",
         "rarity": 5,
         "point_costs": [
@@ -711,9 +711,9 @@
             0,
             0
         ],
-        "nickname": "\u9ec4\u6cc9"
+        "nickname": "黄泉"
     },
-    "\u77e5\u66f4\u9e1f": {
+    "知更鸟": {
         "id": "1309",
         "rarity": 5,
         "point_costs": [
@@ -725,9 +725,9 @@
             0,
             0
         ],
-        "nickname": "\u77e5\u66f4\u9e1f"
+        "nickname": "知更鸟"
     },
-    "\u6d41\u8424": {
+    "流萤": {
         "id": "1310",
         "rarity": 5,
         "point_costs": [
@@ -739,9 +739,9 @@
             0,
             0
         ],
-        "nickname": "\u6d41\u8424"
+        "nickname": "流萤"
     },
-    "\u7c73\u6c99": {
+    "米沙": {
         "id": "1312",
         "rarity": 4,
         "point_costs": [
@@ -753,9 +753,9 @@
             0,
             0
         ],
-        "nickname": "\u7c73\u6c99"
+        "nickname": "米沙"
     },
-    "\u661f\u671f\u65e5": {
+    "星期日": {
         "id": "1313",
         "rarity": 5,
         "point_costs": [
@@ -767,9 +767,9 @@
             0,
             0
         ],
-        "nickname": "\u661f\u671f\u65e5"
+        "nickname": "星期日"
     },
-    "\u7fe1\u7fe0": {
+    "翡翠": {
         "id": "1314",
         "rarity": 5,
         "point_costs": [
@@ -781,9 +781,9 @@
             0,
             0
         ],
-        "nickname": "\u7fe1\u7fe0"
+        "nickname": "翡翠"
     },
-    "\u6ce2\u63d0\u6b27": {
+    "波提欧": {
         "id": "1315",
         "rarity": 5,
         "point_costs": [
@@ -795,9 +795,9 @@
             0,
             0
         ],
-        "nickname": "\u6ce2\u63d0\u6b27"
+        "nickname": "波提欧"
     },
-    "\u4e71\u7834": {
+    "乱破": {
         "id": "1317",
         "rarity": 5,
         "point_costs": [
@@ -809,6 +809,6 @@
             0,
             0
         ],
-        "nickname": "\u4e71\u7834"
+        "nickname": "乱破"
     }
 }

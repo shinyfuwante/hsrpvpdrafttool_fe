@@ -1,5 +1,5 @@
 {
-    "\u950b\u955d": {
+    "锋镝": {
         "id": "20000",
         "rarity": 3,
         "point_costs": [
@@ -11,9 +11,9 @@
             0,
             0
         ],
-        "nickname": "\u950b\u955d"
+        "nickname": "锋镝"
     },
-    "\u7269\u7a70": {
+    "物穰": {
         "id": "20001",
         "rarity": 3,
         "point_costs": [
@@ -25,9 +25,9 @@
             0,
             0
         ],
-        "nickname": "\u7269\u7a70"
+        "nickname": "物穰"
     },
-    "\u5929\u503e": {
+    "天倾": {
         "id": "20002",
         "rarity": 3,
         "point_costs": [
@@ -39,9 +39,9 @@
             0,
             0
         ],
-        "nickname": "\u5929\u503e"
+        "nickname": "天倾"
     },
-    "\u7425\u73c0": {
+    "琥珀": {
         "id": "20003",
         "rarity": 3,
         "point_costs": [
@@ -53,9 +53,9 @@
             0,
             0
         ],
-        "nickname": "\u7425\u73c0"
+        "nickname": "琥珀"
     },
-    "\u5e7d\u9083": {
+    "幽邃": {
         "id": "20004",
         "rarity": 3,
         "point_costs": [
@@ -67,9 +67,9 @@
             0,
             0
         ],
-        "nickname": "\u5e7d\u9083"
+        "nickname": "幽邃"
     },
-    "\u9f50\u9882": {
+    "齐颂": {
         "id": "20005",
         "rarity": 3,
         "point_costs": [
@@ -81,9 +81,9 @@
             0,
             0
         ],
-        "nickname": "\u9f50\u9882"
+        "nickname": "齐颂"
     },
-    "\u667a\u5e93": {
+    "智库": {
         "id": "20006",
         "rarity": 3,
         "point_costs": [
@@ -95,9 +95,9 @@
             0,
             0
         ],
-        "nickname": "\u667a\u5e93"
+        "nickname": "智库"
     },
-    "\u79bb\u5f26": {
+    "离弦": {
         "id": "20007",
         "rarity": 3,
         "point_costs": [
@@ -109,9 +109,9 @@
             0,
             0
         ],
-        "nickname": "\u79bb\u5f26"
+        "nickname": "离弦"
     },
-    "\u5609\u679c": {
+    "嘉果": {
         "id": "20008",
         "rarity": 3,
         "point_costs": [
@@ -123,9 +123,9 @@
             0,
             0
         ],
-        "nickname": "\u5609\u679c"
+        "nickname": "嘉果"
     },
-    "\u4e50\u572e": {
+    "乐圮": {
         "id": "20009",
         "rarity": 3,
         "point_costs": [
@@ -137,9 +137,9 @@
             0,
             0
         ],
-        "nickname": "\u4e50\u572e"
+        "nickname": "乐圮"
     },
-    "\u620d\u5fa1": {
+    "戍御": {
         "id": "20010",
         "rarity": 3,
         "point_costs": [
@@ -151,9 +151,9 @@
             0,
             0
         ],
-        "nickname": "\u620d\u5fa1"
+        "nickname": "戍御"
     },
-    "\u6e0a\u73af": {
+    "渊环": {
         "id": "20011",
         "rarity": 3,
         "point_costs": [
@@ -165,9 +165,9 @@
             0,
             0
         ],
-        "nickname": "\u6e0a\u73af"
+        "nickname": "渊环"
     },
-    "\u8f6e\u5951": {
+    "轮契": {
         "id": "20012",
         "rarity": 3,
         "point_costs": [
@@ -179,9 +179,9 @@
             0,
             0
         ],
-        "nickname": "\u8f6e\u5951"
+        "nickname": "轮契"
     },
-    "\u7075\u94a5": {
+    "灵钥": {
         "id": "20013",
         "rarity": 3,
         "point_costs": [
@@ -193,9 +193,9 @@
             0,
             0
         ],
-        "nickname": "\u7075\u94a5"
+        "nickname": "灵钥"
     },
-    "\u76f8\u6297": {
+    "相抗": {
         "id": "20014",
         "rarity": 3,
         "point_costs": [
@@ -207,9 +207,9 @@
             0,
             0
         ],
-        "nickname": "\u76f8\u6297"
+        "nickname": "相抗"
     },
-    "\u8543\u606f": {
+    "蕃息": {
         "id": "20015",
         "rarity": 3,
         "point_costs": [
@@ -221,9 +221,9 @@
             0,
             0
         ],
-        "nickname": "\u8543\u606f"
+        "nickname": "蕃息"
     },
-    "\u4ff1\u6b81": {
+    "俱殁": {
         "id": "20016",
         "rarity": 3,
         "point_costs": [
@@ -235,9 +235,9 @@
             0,
             0
         ],
-        "nickname": "\u4ff1\u6b81"
+        "nickname": "俱殁"
     },
-    "\u5f00\u7586": {
+    "开疆": {
         "id": "20017",
         "rarity": 3,
         "point_costs": [
@@ -249,9 +249,9 @@
             0,
             0
         ],
-        "nickname": "\u5f00\u7586"
+        "nickname": "开疆"
     },
-    "\u533f\u5f71": {
+    "匿影": {
         "id": "20018",
         "rarity": 3,
         "point_costs": [
@@ -263,9 +263,9 @@
             0,
             0
         ],
-        "nickname": "\u533f\u5f71"
+        "nickname": "匿影"
     },
-    "\u8c03\u548c": {
+    "调和": {
         "id": "20019",
         "rarity": 3,
         "point_costs": [
@@ -277,9 +277,9 @@
             0,
             0
         ],
-        "nickname": "\u8c03\u548c"
+        "nickname": "调和"
     },
-    "\u777f\u89c1": {
+    "睿见": {
         "id": "20020",
         "rarity": 3,
         "point_costs": [
@@ -291,9 +291,9 @@
             0,
             0
         ],
-        "nickname": "\u777f\u89c1"
+        "nickname": "睿见"
     },
-    "\u4e00\u573a\u672f\u540e\u5bf9\u8bdd": {
+    "一场术后对话": {
         "id": "21000",
         "rarity": 4,
         "point_costs": [
@@ -305,9 +305,9 @@
             0,
             0
         ],
-        "nickname": "\u4e00\u573a\u672f\u540e\u5bf9\u8bdd"
+        "nickname": "一场术后对话"
     },
-    "\u665a\u5b89\u4e0e\u7761\u989c": {
+    "晚安与睡颜": {
         "id": "21001",
         "rarity": 4,
         "point_costs": [
@@ -319,9 +319,9 @@
             0,
             0
         ],
-        "nickname": "\u665a\u5b89\u4e0e\u7761\u989c"
+        "nickname": "晚安与睡颜"
     },
-    "\u4f59\u751f\u7684\u7b2c\u4e00\u5929": {
+    "余生的第一天": {
         "id": "21002",
         "rarity": 4,
         "point_costs": [
@@ -333,9 +333,9 @@
             0,
             0
         ],
-        "nickname": "\u4f59\u751f\u7684\u7b2c\u4e00\u5929"
+        "nickname": "余生的第一天"
     },
-    "\u552f\u6709\u6c89\u9ed8": {
+    "唯有沉默": {
         "id": "21003",
         "rarity": 4,
         "point_costs": [
@@ -347,9 +347,9 @@
             0,
             0
         ],
-        "nickname": "\u552f\u6709\u6c89\u9ed8"
+        "nickname": "唯有沉默"
     },
-    "\u8bb0\u5fc6\u4e2d\u7684\u6a21\u6837": {
+    "记忆中的模样": {
         "id": "21004",
         "rarity": 4,
         "point_costs": [
@@ -361,9 +361,9 @@
             0,
             0
         ],
-        "nickname": "\u8bb0\u5fc6\u4e2d\u7684\u6a21\u6837"
+        "nickname": "记忆中的模样"
     },
-    "\u9f39\u9f20\u515a\u6b22\u8fce\u4f60": {
+    "鼹鼠党欢迎你": {
         "id": "21005",
         "rarity": 4,
         "point_costs": [
@@ -375,9 +375,9 @@
             0,
             0
         ],
-        "nickname": "\u9f39\u9f20\u515a\u6b22\u8fce\u4f60"
+        "nickname": "鼹鼠党欢迎你"
     },
-    "\u300c\u6211\u300d\u7684\u8bde\u751f": {
+    "「我」的诞生": {
         "id": "21006",
         "rarity": 4,
         "point_costs": [
@@ -389,9 +389,9 @@
             0,
             0
         ],
-        "nickname": "\u300c\u6211\u300d\u7684\u8bde\u751f"
+        "nickname": "「我」的诞生"
     },
-    "\u540c\u4e00\u79cd\u5fc3\u60c5": {
+    "同一种心情": {
         "id": "21007",
         "rarity": 4,
         "point_costs": [
@@ -403,9 +403,9 @@
             0,
             0
         ],
-        "nickname": "\u540c\u4e00\u79cd\u5fc3\u60c5"
+        "nickname": "同一种心情"
     },
-    "\u730e\u7269\u7684\u89c6\u7ebf": {
+    "猎物的视线": {
         "id": "21008",
         "rarity": 4,
         "point_costs": [
@@ -417,9 +417,9 @@
             0,
             0
         ],
-        "nickname": "\u730e\u7269\u7684\u89c6\u7ebf"
+        "nickname": "猎物的视线"
     },
-    "\u6717\u9053\u7684\u9009\u62e9": {
+    "朗道的选择": {
         "id": "21009",
         "rarity": 4,
         "point_costs": [
@@ -431,9 +431,9 @@
             0,
             0
         ],
-        "nickname": "\u6717\u9053\u7684\u9009\u62e9"
+        "nickname": "朗道的选择"
     },
-    "\u8bba\u5251": {
+    "论剑": {
         "id": "21010",
         "rarity": 4,
         "point_costs": [
@@ -445,9 +445,9 @@
             0,
             0
         ],
-        "nickname": "\u8bba\u5251"
+        "nickname": "论剑"
     },
-    "\u4e0e\u884c\u661f\u76f8\u4f1a": {
+    "与行星相会": {
         "id": "21011",
         "rarity": 4,
         "point_costs": [
@@ -459,9 +459,9 @@
             0,
             0
         ],
-        "nickname": "\u4e0e\u884c\u661f\u76f8\u4f1a"
+        "nickname": "与行星相会"
     },
-    "\u79d8\u5bc6\u8a93\u5fc3": {
+    "秘密誓心": {
         "id": "21012",
         "rarity": 4,
         "point_costs": [
@@ -473,9 +473,9 @@
             0,
             0
         ],
-        "nickname": "\u79d8\u5bc6\u8a93\u5fc3"
+        "nickname": "秘密誓心"
     },
-    "\u522b\u8ba9\u4e16\u754c\u9759\u4e0b\u6765": {
+    "别让世界静下来": {
         "id": "21013",
         "rarity": 4,
         "point_costs": [
@@ -487,9 +487,9 @@
             0,
             0
         ],
-        "nickname": "\u522b\u8ba9\u4e16\u754c\u9759\u4e0b\u6765"
+        "nickname": "别让世界静下来"
     },
-    "\u6b64\u65f6\u6070\u597d": {
+    "此时恰好": {
         "id": "21014",
         "rarity": 4,
         "point_costs": [
@@ -501,9 +501,9 @@
             0,
             0
         ],
-        "nickname": "\u6b64\u65f6\u6070\u597d"
+        "nickname": "此时恰好"
     },
-    "\u51b3\u5fc3\u5982\u6c57\u73e0\u822c\u95ea\u8000": {
+    "决心如汗珠般闪耀": {
         "id": "21015",
         "rarity": 4,
         "point_costs": [
@@ -515,9 +515,9 @@
             0,
             0
         ],
-        "nickname": "\u51b3\u5fc3\u5982\u6c57\u73e0\u822c\u95ea\u8000"
+        "nickname": "决心如汗珠般闪耀"
     },
-    "\u5b87\u5b99\u5e02\u573a\u8d8b\u52bf": {
+    "宇宙市场趋势": {
         "id": "21016",
         "rarity": 4,
         "point_costs": [
@@ -529,9 +529,9 @@
             0,
             0
         ],
-        "nickname": "\u5b87\u5b99\u5e02\u573a\u8d8b\u52bf"
+        "nickname": "宇宙市场趋势"
     },
-    "\u70b9\u4e2a\u5173\u6ce8\u5427\uff01": {
+    "点个关注吧！": {
         "id": "21017",
         "rarity": 4,
         "point_costs": [
@@ -543,9 +543,9 @@
             0,
             0
         ],
-        "nickname": "\u70b9\u4e2a\u5173\u6ce8\u5427\uff01"
+        "nickname": "点个关注吧！"
     },
-    "\u821e\uff01\u821e\uff01\u821e\uff01": {
+    "舞！舞！舞！": {
         "id": "21018",
         "rarity": 4,
         "point_costs": [
@@ -557,9 +557,9 @@
             0,
             0
         ],
-        "nickname": "\u821e\uff01\u821e\uff01\u821e\uff01"
+        "nickname": "舞！舞！舞！"
     },
-    "\u5728\u84dd\u5929\u4e0b": {
+    "在蓝天下": {
         "id": "21019",
         "rarity": 4,
         "point_costs": [
@@ -571,9 +571,9 @@
             0,
             0
         ],
-        "nickname": "\u5728\u84dd\u5929\u4e0b"
+        "nickname": "在蓝天下"
     },
-    "\u5929\u624d\u4eec\u7684\u4f11\u61a9": {
+    "天才们的休憩": {
         "id": "21020",
         "rarity": 4,
         "point_costs": [
@@ -585,9 +585,9 @@
             0,
             0
         ],
-        "nickname": "\u5929\u624d\u4eec\u7684\u4f11\u61a9"
+        "nickname": "天才们的休憩"
     },
-    "\u7b49\u4ef7\u4ea4\u6362": {
+    "等价交换": {
         "id": "21021",
         "rarity": 4,
         "point_costs": [
@@ -599,9 +599,9 @@
             0,
             0
         ],
-        "nickname": "\u7b49\u4ef7\u4ea4\u6362"
+        "nickname": "等价交换"
     },
-    "\u5ef6\u957f\u8bb0\u53f7": {
+    "延长记号": {
         "id": "21022",
         "rarity": 4,
         "point_costs": [
@@ -613,9 +613,9 @@
             0,
             0
         ],
-        "nickname": "\u5ef6\u957f\u8bb0\u53f7"
+        "nickname": "延长记号"
     },
-    "\u6211\u4eec\u662f\u5730\u706b": {
+    "我们是地火": {
         "id": "21023",
         "rarity": 4,
         "point_costs": [
@@ -627,9 +627,9 @@
             0,
             0
         ],
-        "nickname": "\u6211\u4eec\u662f\u5730\u706b"
+        "nickname": "我们是地火"
     },
-    "\u6625\u6c34\u521d\u751f": {
+    "春水初生": {
         "id": "21024",
         "rarity": 4,
         "point_costs": [
@@ -641,9 +641,9 @@
             0,
             0
         ],
-        "nickname": "\u6625\u6c34\u521d\u751f"
+        "nickname": "春水初生"
     },
-    "\u8fc7\u5f80\u672a\u6765": {
+    "过往未来": {
         "id": "21025",
         "rarity": 4,
         "point_costs": [
@@ -655,9 +655,9 @@
             0,
             0
         ],
-        "nickname": "\u8fc7\u5f80\u672a\u6765"
+        "nickname": "过往未来"
     },
-    "\u6c6a\uff01\u6563\u6b65\u65f6\u95f4\uff01": {
+    "汪！散步时间！": {
         "id": "21026",
         "rarity": 4,
         "point_costs": [
@@ -669,9 +669,9 @@
             0,
             0
         ],
-        "nickname": "\u6c6a\uff01\u6563\u6b65\u65f6\u95f4\uff01"
+        "nickname": "汪！散步时间！"
     },
-    "\u65e9\u9910\u7684\u4eea\u5f0f\u611f": {
+    "早餐的仪式感": {
         "id": "21027",
         "rarity": 4,
         "point_costs": [
@@ -683,9 +683,9 @@
             0,
             0
         ],
-        "nickname": "\u65e9\u9910\u7684\u4eea\u5f0f\u611f"
+        "nickname": "早餐的仪式感"
     },
-    "\u6696\u591c\u4e0d\u4f1a\u6f2b\u957f": {
+    "暖夜不会漫长": {
         "id": "21028",
         "rarity": 4,
         "point_costs": [
@@ -697,9 +697,9 @@
             0,
             0
         ],
-        "nickname": "\u6696\u591c\u4e0d\u4f1a\u6f2b\u957f"
+        "nickname": "暖夜不会漫长"
     },
-    "\u540e\u4f1a\u6709\u671f": {
+    "后会有期": {
         "id": "21029",
         "rarity": 4,
         "point_costs": [
@@ -711,9 +711,9 @@
             0,
             0
         ],
-        "nickname": "\u540e\u4f1a\u6709\u671f"
+        "nickname": "后会有期"
     },
-    "\u8fd9\u5c31\u662f\u6211\u5566\uff01": {
+    "这就是我啦！": {
         "id": "21030",
         "rarity": 4,
         "point_costs": [
@@ -725,9 +725,9 @@
             0,
             0
         ],
-        "nickname": "\u8fd9\u5c31\u662f\u6211\u5566\uff01"
+        "nickname": "这就是我啦！"
     },
-    "\u91cd\u8fd4\u5e7d\u51a5": {
+    "重返幽冥": {
         "id": "21031",
         "rarity": 4,
         "point_costs": [
@@ -739,9 +739,9 @@
             0,
             0
         ],
-        "nickname": "\u91cd\u8fd4\u5e7d\u51a5"
+        "nickname": "重返幽冥"
     },
-    "\u9542\u6708\u88c1\u4e91\u4e4b\u610f": {
+    "镂月裁云之意": {
         "id": "21032",
         "rarity": 4,
         "point_costs": [
@@ -753,9 +753,9 @@
             0,
             0
         ],
-        "nickname": "\u9542\u6708\u88c1\u4e91\u4e4b\u610f"
+        "nickname": "镂月裁云之意"
     },
-    "\u65e0\u5904\u53ef\u9003": {
+    "无处可逃": {
         "id": "21033",
         "rarity": 4,
         "point_costs": [
@@ -767,9 +767,9 @@
             0,
             0
         ],
-        "nickname": "\u65e0\u5904\u53ef\u9003"
+        "nickname": "无处可逃"
     },
-    "\u4eca\u65e5\u4ea6\u662f\u548c\u5e73\u7684\u4e00\u65e5": {
+    "今日亦是和平的一日": {
         "id": "21034",
         "rarity": 4,
         "point_costs": [
@@ -781,9 +781,9 @@
             0,
             0
         ],
-        "nickname": "\u4eca\u65e5\u4ea6\u662f\u548c\u5e73\u7684\u4e00\u65e5"
+        "nickname": "今日亦是和平的一日"
     },
-    "\u4f55\u7269\u4e3a\u771f": {
+    "何物为真": {
         "id": "21035",
         "rarity": 4,
         "point_costs": [
@@ -795,9 +795,9 @@
             0,
             0
         ],
-        "nickname": "\u4f55\u7269\u4e3a\u771f"
+        "nickname": "何物为真"
     },
-    "\u7f8e\u68a6\u5c0f\u9547\u5927\u5192\u9669": {
+    "美梦小镇大冒险": {
         "id": "21036",
         "rarity": 4,
         "point_costs": [
@@ -809,9 +809,9 @@
             0,
             0
         ],
-        "nickname": "\u7f8e\u68a6\u5c0f\u9547\u5927\u5192\u9669"
+        "nickname": "美梦小镇大冒险"
     },
-    "\u6700\u540e\u7684\u8d62\u5bb6": {
+    "最后的赢家": {
         "id": "21037",
         "rarity": 4,
         "point_costs": [
@@ -823,9 +823,9 @@
             0,
             0
         ],
-        "nickname": "\u6700\u540e\u7684\u8d62\u5bb6"
+        "nickname": "最后的赢家"
     },
-    "\u5728\u706b\u7684\u8fdc\u5904": {
+    "在火的远处": {
         "id": "21038",
         "rarity": 4,
         "point_costs": [
@@ -837,9 +837,9 @@
             0,
             0
         ],
-        "nickname": "\u5728\u706b\u7684\u8fdc\u5904"
+        "nickname": "在火的远处"
     },
-    "\u7ec7\u9020\u547d\u8fd0\u4e4b\u7ebf": {
+    "织造命运之线": {
         "id": "21039",
         "rarity": 4,
         "point_costs": [
@@ -851,9 +851,9 @@
             0,
             0
         ],
-        "nickname": "\u7ec7\u9020\u547d\u8fd0\u4e4b\u7ebf"
+        "nickname": "织造命运之线"
     },
-    "\u94f6\u6cb3\u6ca6\u9677\u65e5": {
+    "银河沦陷日": {
         "id": "21040",
         "rarity": 4,
         "point_costs": [
@@ -865,9 +865,9 @@
             0,
             0
         ],
-        "nickname": "\u94f6\u6cb3\u6ca6\u9677\u65e5"
+        "nickname": "银河沦陷日"
     },
-    "\u597d\u620f\u5f00\u6f14": {
+    "好戏开演": {
         "id": "21041",
         "rarity": 4,
         "point_costs": [
@@ -879,9 +879,9 @@
             0,
             0
         ],
-        "nickname": "\u597d\u620f\u5f00\u6f14"
+        "nickname": "好戏开演"
     },
-    "\u94ed\u8bb0\u4e8e\u5fc3\u7684\u7ea6\u5b9a": {
+    "铭记于心的约定": {
         "id": "21042",
         "rarity": 4,
         "point_costs": [
@@ -893,9 +893,9 @@
             0,
             0
         ],
-        "nickname": "\u94ed\u8bb0\u4e8e\u5fc3\u7684\u7ea6\u5b9a"
+        "nickname": "铭记于心的约定"
     },
-    "\u4e24\u4e2a\u4eba\u7684\u6f14\u5531\u4f1a": {
+    "两个人的演唱会": {
         "id": "21043",
         "rarity": 4,
         "point_costs": [
@@ -907,9 +907,9 @@
             0,
             0
         ],
-        "nickname": "\u4e24\u4e2a\u4eba\u7684\u6f14\u5531\u4f1a"
+        "nickname": "两个人的演唱会"
     },
-    "\u65e0\u8fb9\u66fc\u821e": {
+    "无边曼舞": {
         "id": "21044",
         "rarity": 4,
         "point_costs": [
@@ -921,9 +921,9 @@
             0,
             0
         ],
-        "nickname": "\u65e0\u8fb9\u66fc\u821e"
+        "nickname": "无边曼舞"
     },
-    "\u8c10\u4e50\u9759\u9ed8\u4e4b\u540e": {
+    "谐乐静默之后": {
         "id": "21045",
         "rarity": 4,
         "point_costs": [
@@ -935,9 +935,9 @@
             0,
             0
         ],
-        "nickname": "\u8c10\u4e50\u9759\u9ed8\u4e4b\u540e"
+        "nickname": "谐乐静默之后"
     },
-    "\u82b3\u534e\u5f85\u707c": {
+    "芳华待灼": {
         "id": "21046",
         "rarity": 4,
         "point_costs": [
@@ -949,9 +949,9 @@
             0,
             0
         ],
-        "nickname": "\u82b3\u534e\u5f85\u707c"
+        "nickname": "芳华待灼"
     },
-    "\u9ed1\u591c\u5982\u5f71\u968f\u884c": {
+    "黑夜如影随行": {
         "id": "21047",
         "rarity": 4,
         "point_costs": [
@@ -963,9 +963,9 @@
             0,
             0
         ],
-        "nickname": "\u9ed1\u591c\u5982\u5f71\u968f\u884c"
+        "nickname": "黑夜如影随行"
     },
-    "\u68a6\u7684\u8499\u592a\u5947": {
+    "梦的蒙太奇": {
         "id": "21048",
         "rarity": 4,
         "point_costs": [
@@ -977,9 +977,9 @@
             0,
             0
         ],
-        "nickname": "\u68a6\u7684\u8499\u592a\u5947"
+        "nickname": "梦的蒙太奇"
     },
-    "\u65b0\u624b\u4efb\u52a1\u5f00\u59cb\u524d": {
+    "新手任务开始前": {
         "id": "22000",
         "rarity": 4,
         "point_costs": [
@@ -991,9 +991,9 @@
             0,
             0
         ],
-        "nickname": "\u65b0\u624b\u4efb\u52a1\u5f00\u59cb\u524d"
+        "nickname": "新手任务开始前"
     },
-    "\u563f\uff0c\u6211\u5728\u8fd9\u513f": {
+    "嘿，我在这儿": {
         "id": "22001",
         "rarity": 4,
         "point_costs": [
@@ -1005,9 +1005,9 @@
             0,
             0
         ],
-        "nickname": "\u563f\uff0c\u6211\u5728\u8fd9\u513f"
+        "nickname": "嘿，我在这儿"
     },
-    "\u4e3a\u4e86\u660e\u65e5\u7684\u65c5\u9014": {
+    "为了明日的旅途": {
         "id": "22002",
         "rarity": 4,
         "point_costs": [
@@ -1019,9 +1019,9 @@
             0,
             0
         ],
-        "nickname": "\u4e3a\u4e86\u660e\u65e5\u7684\u65c5\u9014"
+        "nickname": "为了明日的旅途"
     },
-    "\u5fcd\u4e8b\u5f55\u2022\u97f3\u5f8b\u72e9\u730e": {
+    "忍事录•音律狩猎": {
         "id": "22003",
         "rarity": 4,
         "point_costs": [
@@ -1033,9 +1033,9 @@
             0,
             0
         ],
-        "nickname": "\u5fcd\u4e8b\u5f55\u2022\u97f3\u5f8b\u72e9\u730e"
+        "nickname": "忍事录•音律狩猎"
     },
-    "\u94f6\u6cb3\u94c1\u9053\u4e4b\u591c": {
+    "银河铁道之夜": {
         "id": "23000",
         "rarity": 5,
         "point_costs": [
@@ -1047,9 +1047,9 @@
             0,
             0
         ],
-        "nickname": "\u94f6\u6cb3\u94c1\u9053\u4e4b\u591c"
+        "nickname": "银河铁道之夜"
     },
-    "\u4e8e\u591c\u8272\u4e2d": {
+    "于夜色中": {
         "id": "23001",
         "rarity": 5,
         "point_costs": [
@@ -1061,9 +1061,9 @@
             0,
             0
         ],
-        "nickname": "\u4e8e\u591c\u8272\u4e2d"
+        "nickname": "于夜色中"
     },
-    "\u65e0\u53ef\u53d6\u4ee3\u7684\u4e1c\u897f": {
+    "无可取代的东西": {
         "id": "23002",
         "rarity": 5,
         "point_costs": [
@@ -1075,9 +1075,9 @@
             0,
             0
         ],
-        "nickname": "\u65e0\u53ef\u53d6\u4ee3\u7684\u4e1c\u897f"
+        "nickname": "无可取代的东西"
     },
-    "\u4f46\u6218\u6597\u8fd8\u672a\u7ed3\u675f": {
+    "但战斗还未结束": {
         "id": "23003",
         "rarity": 5,
         "point_costs": [
@@ -1089,9 +1089,9 @@
             0,
             0
         ],
-        "nickname": "\u4f46\u6218\u6597\u8fd8\u672a\u7ed3\u675f"
+        "nickname": "但战斗还未结束"
     },
-    "\u4ee5\u4e16\u754c\u4e4b\u540d": {
+    "以世界之名": {
         "id": "23004",
         "rarity": 5,
         "point_costs": [
@@ -1103,9 +1103,9 @@
             0,
             0
         ],
-        "nickname": "\u4ee5\u4e16\u754c\u4e4b\u540d"
+        "nickname": "以世界之名"
     },
-    "\u5236\u80dc\u7684\u77ac\u95f4": {
+    "制胜的瞬间": {
         "id": "23005",
         "rarity": 5,
         "point_costs": [
@@ -1117,9 +1117,9 @@
             0,
             0
         ],
-        "nickname": "\u5236\u80dc\u7684\u77ac\u95f4"
+        "nickname": "制胜的瞬间"
     },
-    "\u53ea\u9700\u7b49\u5f85": {
+    "只需等待": {
         "id": "23006",
         "rarity": 5,
         "point_costs": [
@@ -1131,9 +1131,9 @@
             0,
             0
         ],
-        "nickname": "\u53ea\u9700\u7b49\u5f85"
+        "nickname": "只需等待"
     },
-    "\u96e8\u4e00\u76f4\u4e0b": {
+    "雨一直下": {
         "id": "23007",
         "rarity": 5,
         "point_costs": [
@@ -1145,9 +1145,9 @@
             0,
             0
         ],
-        "nickname": "\u96e8\u4e00\u76f4\u4e0b"
+        "nickname": "雨一直下"
     },
-    "\u68fa\u7684\u56de\u54cd": {
+    "棺的回响": {
         "id": "23008",
         "rarity": 5,
         "point_costs": [
@@ -1159,9 +1159,9 @@
             0,
             0
         ],
-        "nickname": "\u68fa\u7684\u56de\u54cd"
+        "nickname": "棺的回响"
     },
-    "\u5230\u4e0d\u4e86\u7684\u5f7c\u5cb8": {
+    "到不了的彼岸": {
         "id": "23009",
         "rarity": 5,
         "point_costs": [
@@ -1173,9 +1173,9 @@
             0,
             0
         ],
-        "nickname": "\u5230\u4e0d\u4e86\u7684\u5f7c\u5cb8"
+        "nickname": "到不了的彼岸"
     },
-    "\u62c2\u6653\u4e4b\u524d": {
+    "拂晓之前": {
         "id": "23010",
         "rarity": 5,
         "point_costs": [
@@ -1187,9 +1187,9 @@
             0,
             0
         ],
-        "nickname": "\u62c2\u6653\u4e4b\u524d"
+        "nickname": "拂晓之前"
     },
-    "\u5979\u5df2\u95ed\u4e0a\u53cc\u773c": {
+    "她已闭上双眼": {
         "id": "23011",
         "rarity": 5,
         "point_costs": [
@@ -1201,9 +1201,9 @@
             0,
             0
         ],
-        "nickname": "\u5979\u5df2\u95ed\u4e0a\u53cc\u773c"
+        "nickname": "她已闭上双眼"
     },
-    "\u5982\u6ce5\u9163\u7720": {
+    "如泥酣眠": {
         "id": "23012",
         "rarity": 5,
         "point_costs": [
@@ -1215,9 +1215,9 @@
             0,
             0
         ],
-        "nickname": "\u5982\u6ce5\u9163\u7720"
+        "nickname": "如泥酣眠"
     },
-    "\u65f6\u8282\u4e0d\u5c45": {
+    "时节不居": {
         "id": "23013",
         "rarity": 5,
         "point_costs": [
@@ -1229,9 +1229,9 @@
             0,
             0
         ],
-        "nickname": "\u65f6\u8282\u4e0d\u5c45"
+        "nickname": "时节不居"
     },
-    "\u6b64\u8eab\u4e3a\u5251": {
+    "此身为剑": {
         "id": "23014",
         "rarity": 5,
         "point_costs": [
@@ -1243,9 +1243,9 @@
             0,
             0
         ],
-        "nickname": "\u6b64\u8eab\u4e3a\u5251"
+        "nickname": "此身为剑"
     },
-    "\u6bd4\u9633\u5149\u66f4\u660e\u4eae\u7684": {
+    "比阳光更明亮的": {
         "id": "23015",
         "rarity": 5,
         "point_costs": [
@@ -1257,9 +1257,9 @@
             0,
             0
         ],
-        "nickname": "\u6bd4\u9633\u5149\u66f4\u660e\u4eae\u7684"
+        "nickname": "比阳光更明亮的"
     },
-    "\u70e6\u607c\u7740\uff0c\u5e78\u798f\u7740": {
+    "烦恼着，幸福着": {
         "id": "23016",
         "rarity": 5,
         "point_costs": [
@@ -1271,9 +1271,9 @@
             0,
             0
         ],
-        "nickname": "\u70e6\u607c\u7740\uff0c\u5e78\u798f\u7740"
+        "nickname": "烦恼着，幸福着"
     },
-    "\u60ca\u9b42\u591c": {
+    "惊魂夜": {
         "id": "23017",
         "rarity": 5,
         "point_costs": [
@@ -1285,9 +1285,9 @@
             0,
             0
         ],
-        "nickname": "\u60ca\u9b42\u591c"
+        "nickname": "惊魂夜"
     },
-    "\u7247\u523b\uff0c\u7559\u5728\u773c\u5e95": {
+    "片刻，留在眼底": {
         "id": "23018",
         "rarity": 5,
         "point_costs": [
@@ -1299,9 +1299,9 @@
             0,
             0
         ],
-        "nickname": "\u7247\u523b\uff0c\u7559\u5728\u773c\u5e95"
+        "nickname": "片刻，留在眼底"
     },
-    "\u955c\u4e2d\u6545\u6211": {
+    "镜中故我": {
         "id": "23019",
         "rarity": 5,
         "point_costs": [
@@ -1313,9 +1313,9 @@
             0,
             0
         ],
-        "nickname": "\u955c\u4e2d\u6545\u6211"
+        "nickname": "镜中故我"
     },
-    "\u7eaf\u7cb9\u601d\u7ef4\u7684\u6d17\u793c": {
+    "纯粹思维的洗礼": {
         "id": "23020",
         "rarity": 5,
         "point_costs": [
@@ -1327,9 +1327,9 @@
             0,
             0
         ],
-        "nickname": "\u7eaf\u7cb9\u601d\u7ef4\u7684\u6d17\u793c"
+        "nickname": "纯粹思维的洗礼"
     },
-    "\u6e38\u620f\u5c18\u5bf0": {
+    "游戏尘寰": {
         "id": "23021",
         "rarity": 5,
         "point_costs": [
@@ -1341,9 +1341,9 @@
             0,
             0
         ],
-        "nickname": "\u6e38\u620f\u5c18\u5bf0"
+        "nickname": "游戏尘寰"
     },
-    "\u91cd\u5851\u65f6\u5149\u4e4b\u5fc6": {
+    "重塑时光之忆": {
         "id": "23022",
         "rarity": 5,
         "point_costs": [
@@ -1355,9 +1355,9 @@
             0,
             0
         ],
-        "nickname": "\u91cd\u5851\u65f6\u5149\u4e4b\u5fc6"
+        "nickname": "重塑时光之忆"
     },
-    "\u547d\u8fd0\u4ece\u672a\u516c\u5e73": {
+    "命运从未公平": {
         "id": "23023",
         "rarity": 5,
         "point_costs": [
@@ -1369,9 +1369,9 @@
             0,
             0
         ],
-        "nickname": "\u547d\u8fd0\u4ece\u672a\u516c\u5e73"
+        "nickname": "命运从未公平"
     },
-    "\u884c\u4e8e\u6d41\u901d\u7684\u5cb8": {
+    "行于流逝的岸": {
         "id": "23024",
         "rarity": 5,
         "point_costs": [
@@ -1383,9 +1383,9 @@
             0,
             0
         ],
-        "nickname": "\u884c\u4e8e\u6d41\u901d\u7684\u5cb8"
+        "nickname": "行于流逝的岸"
     },
-    "\u68a6\u5e94\u5f52\u4e8e\u4f55\u5904": {
+    "梦应归于何处": {
         "id": "23025",
         "rarity": 5,
         "point_costs": [
@@ -1397,9 +1397,9 @@
             0,
             0
         ],
-        "nickname": "\u68a6\u5e94\u5f52\u4e8e\u4f55\u5904"
+        "nickname": "梦应归于何处"
     },
-    "\u591c\u8272\u6d41\u5149\u6ea2\u5f69": {
+    "夜色流光溢彩": {
         "id": "23026",
         "rarity": 5,
         "point_costs": [
@@ -1411,9 +1411,9 @@
             0,
             0
         ],
-        "nickname": "\u591c\u8272\u6d41\u5149\u6ea2\u5f69"
+        "nickname": "夜色流光溢彩"
     },
-    "\u9a76\u5411\u7b2c\u4e8c\u6b21\u751f\u547d": {
+    "驶向第二次生命": {
         "id": "23027",
         "rarity": 5,
         "point_costs": [
@@ -1425,9 +1425,9 @@
             0,
             0
         ],
-        "nickname": "\u9a76\u5411\u7b2c\u4e8c\u6b21\u751f\u547d"
+        "nickname": "驶向第二次生命"
     },
-    "\u504f\u504f\u5e0c\u671b\u65e0\u4ef7": {
+    "偏偏希望无价": {
         "id": "23028",
         "rarity": 5,
         "point_costs": [
@@ -1439,9 +1439,9 @@
             0,
             0
         ],
-        "nickname": "\u504f\u504f\u5e0c\u671b\u65e0\u4ef7"
+        "nickname": "偏偏希望无价"
     },
-    "\u90a3\u65e0\u6570\u4e2a\u6625\u5929": {
+    "那无数个春天": {
         "id": "23029",
         "rarity": 5,
         "point_costs": [
@@ -1453,9 +1453,9 @@
             0,
             0
         ],
-        "nickname": "\u90a3\u65e0\u6570\u4e2a\u6625\u5929"
+        "nickname": "那无数个春天"
     },
-    "\u843d\u65e5\u65f6\u8d77\u821e": {
+    "落日时起舞": {
         "id": "23030",
         "rarity": 5,
         "point_costs": [
@@ -1467,9 +1467,9 @@
             0,
             0
         ],
-        "nickname": "\u843d\u65e5\u65f6\u8d77\u821e"
+        "nickname": "落日时起舞"
     },
-    "\u6211\u5c06\uff0c\u5de1\u5f81\u8ffd\u730e": {
+    "我将，巡征追猎": {
         "id": "23031",
         "rarity": 5,
         "point_costs": [
@@ -1481,9 +1481,9 @@
             0,
             0
         ],
-        "nickname": "\u6211\u5c06\uff0c\u5de1\u5f81\u8ffd\u730e"
+        "nickname": "我将，巡征追猎"
     },
-    "\u552f\u6709\u9999\u5982\u6545": {
+    "唯有香如故": {
         "id": "23032",
         "rarity": 5,
         "point_costs": [
@@ -1495,9 +1495,9 @@
             0,
             0
         ],
-        "nickname": "\u552f\u6709\u9999\u5982\u6545"
+        "nickname": "唯有香如故"
     },
-    "\u5fcd\u6cd5\u5e16\u2022\u7f2d\u4e71\u7834\u9b54": {
+    "忍法帖•缭乱破魔": {
         "id": "23033",
         "rarity": 5,
         "point_costs": [
@@ -1509,9 +1509,9 @@
             0,
             0
         ],
-        "nickname": "\u5fcd\u6cd5\u5e16\u2022\u7f2d\u4e71\u7834\u9b54"
+        "nickname": "忍法帖•缭乱破魔"
     },
-    "\u56de\u5230\u5927\u5730\u7684\u98de\u884c": {
+    "回到大地的飞行": {
         "id": "23034",
         "rarity": 5,
         "point_costs": [
@@ -1523,9 +1523,9 @@
             0,
             0
         ],
-        "nickname": "\u56de\u5230\u5927\u5730\u7684\u98de\u884c"
+        "nickname": "回到大地的飞行"
     },
-    "\u957f\u8def\u7ec8\u6709\u5f52\u9014": {
+    "长路终有归途": {
         "id": "23035",
         "rarity": 5,
         "point_costs": [
@@ -1537,9 +1537,9 @@
             0,
             0
         ],
-        "nickname": "\u957f\u8def\u7ec8\u6709\u5f52\u9014"
+        "nickname": "长路终有归途"
     },
-    "\u8bb0\u4e00\u4f4d\u661f\u795e\u7684\u9668\u843d": {
+    "记一位星神的陨落": {
         "id": "24000",
         "rarity": 5,
         "point_costs": [
@@ -1551,9 +1551,9 @@
             0,
             0
         ],
-        "nickname": "\u8bb0\u4e00\u4f4d\u661f\u795e\u7684\u9668\u843d"
+        "nickname": "记一位星神的陨落"
     },
-    "\u661f\u6d77\u5de1\u822a": {
+    "星海巡航": {
         "id": "24001",
         "rarity": 5,
         "point_costs": [
@@ -1565,9 +1565,9 @@
             0,
             0
         ],
-        "nickname": "\u661f\u6d77\u5de1\u822a"
+        "nickname": "星海巡航"
     },
-    "\u8bb0\u5fc6\u7684\u8d28\u6599": {
+    "记忆的质料": {
         "id": "24002",
         "rarity": 5,
         "point_costs": [
@@ -1579,9 +1579,9 @@
             0,
             0
         ],
-        "nickname": "\u8bb0\u5fc6\u7684\u8d28\u6599"
+        "nickname": "记忆的质料"
     },
-    "\u5b64\u72ec\u7684\u7597\u6108": {
+    "孤独的疗愈": {
         "id": "24003",
         "rarity": 5,
         "point_costs": [
@@ -1593,9 +1593,9 @@
             0,
             0
         ],
-        "nickname": "\u5b64\u72ec\u7684\u7597\u6108"
+        "nickname": "孤独的疗愈"
     },
-    "\u4e0d\u606f\u7684\u6f14\u7b97": {
+    "不息的演算": {
         "id": "24004",
         "rarity": 5,
         "point_costs": [
@@ -1607,6 +1607,6 @@
             0,
             0
         ],
-        "nickname": "\u4e0d\u606f\u7684\u6f14\u7b97"
+        "nickname": "不息的演算"
     }
 }
