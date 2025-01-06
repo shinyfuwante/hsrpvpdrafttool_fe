@@ -18,6 +18,7 @@ import {
   isEvent,
   isFFA,
   canDoublePickWithCost,
+  turn_order_bb,
 } from "~/game/game_logic";
 import { CharacterDetails } from "~/types";
 import Results from "~/components/Results/Results";
@@ -56,6 +57,8 @@ const Roster: Component<RosterProps> = (props) => {
     setBannedCharacters(banned);
   })
   const selectCharacter = (characterName: string) => {
+    console.log(turnIndex());
+    console.log(turnOrder().length);
     if (turnIndex() >= turnOrder().length) {
       return;
     }
@@ -81,11 +84,11 @@ const Roster: Component<RosterProps> = (props) => {
         num_picked: selectedChars().includes(characterName) ? 2 : 1
       };
       if (currentPlayer == "blue_team") {
-        if (bluePicks().length < 8) {
+        if (bluePicks().length < 8 || (turnOrder() == turn_order_bb && bluePicks().length < 10)) {
           handlePick(pick);
         }
       } else {
-        if (redPicks().length < 8) {
+        if (redPicks().length < 8 || (turnOrder() == turn_order_bb && redPicks().length < 10)) {
           handlePick(pick);
         }
       }
@@ -93,12 +96,17 @@ const Roster: Component<RosterProps> = (props) => {
     // setTurnIndex(turnIndex() + 1);
     setSearchTerm("");
   };
-
+  const endDraftPhase = () => {
+    if (turnOrder() == turn_order_bb) {
+      return redPicks().length == 10 && blueBans().length == 5; 
+    }
+    return redPicks().length == 8;
+  }
   return (
     <div class={styles.roster_container}>
       <div
         style={{
-          display: redPicks().length == 8 ? "none" : "flex",
+          display: endDraftPhase() ? "none" : "flex",
           "flex-direction": "column",
         }}
       >
@@ -110,12 +118,32 @@ const Roster: Component<RosterProps> = (props) => {
           class={styles.search_bar}
         />
         <div class={styles.selector}>
-          {Object.entries(charJson())
+          { Object.entries(charJson())
             .sort(([a], [b]) => a.localeCompare(b))
             .map(([characterName, characterDetails]) => {
               const characterId = (characterDetails as CharacterDetails).id;
               const characterImage = `/character_icons/${characterId}.webp`;
               const isSpecial = characterDetails.special == true && isEvent();
+              if (turnOrder() == turn_order_bb) {
+                if (turnIndex() == turnOrder().length - 2) {
+                  let match = false;
+                  for (const pick of bluePicks()) {
+                    if (pick.name == characterName) {
+                      match = true;
+                    }
+                  }
+                  if (!match) return;
+                }
+                if (turnIndex() == turnOrder().length - 1) {
+                  let match = false;
+                  for (const pick of redPicks()) {
+                    if (pick.name == characterName) {
+                      match = true;
+                    }
+                  }
+                  if (!match) return;
+                }
+              }
               const isBanned = () => {
                 if (isFFA()) {
                   return bannedCharacters().filter(c => c == characterName).length == 3;
@@ -129,6 +157,9 @@ const Roster: Component<RosterProps> = (props) => {
                   }
                   if (!(turnIndex() < turnOrder().length)) {
                     return false;
+                  }
+                  if (turnOrder() == turn_order_bb && turnIndex() > turnOrder().length - 3 && turnIndex() < turnOrder().length) {
+                    return true;
                   }
                 }
 
@@ -188,7 +219,7 @@ const Roster: Component<RosterProps> = (props) => {
       </div>
       <div
         style={{
-          display: redPicks().length == 8 ? "inline-block" : "none",
+          display: endDraftPhase() ? "inline-block" : "none",
         }}
       >
         <Results></Results>

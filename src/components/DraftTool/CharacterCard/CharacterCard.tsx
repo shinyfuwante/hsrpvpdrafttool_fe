@@ -14,6 +14,8 @@ import {
   isSinglePlayer,
   calcCost,
   testingTool,
+  turnOrder,
+  turn_order_bb,
 } from "~/game/game_logic";
 
 import styles from "./CharacterCard.module.css";
@@ -139,7 +141,9 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
               ></input>
             </div>
           </Show>
-          <div class={styles.cost}>+{cost()}</div>
+          <Show when={turnOrder() != turn_order_bb}>
+            <div class={styles.cost}>+{cost()}</div>
+          </Show>
           <Show when={testingTool()}>
             <div>
               <input

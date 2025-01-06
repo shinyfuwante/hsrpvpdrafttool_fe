@@ -1,6 +1,14 @@
-import { Component, onMount, createSignal, Show } from "solid-js";
+import {
+  Component,
+  onMount,
+  createSignal,
+  Show,
+  Match,
+  Switch,
+} from "solid-js";
 import Team from "./Team/Team";
 import TeamWith3Bans from "./TeamWith3Bans/TeamWith3Bans";
+import TeamForBB from "./TeamForBB/TeamForBB";
 import Roster from "./Roster/Roster";
 import SoloSettings from "../SoloSettings/SoloSettings";
 import {
@@ -20,6 +28,7 @@ import {
   redTimePenalty,
   turn_order_3_bans,
   turnOrder,
+  turn_order_bb,
 } from "~/game/game_logic";
 import Timer from "./Timer/Timer";
 
@@ -107,8 +116,7 @@ const DraftTool: Component<DraftToolProps> = ({
             </div>
             <div class={styles.draft_container}>
               <div class={styles.team}>
-                <Show
-                  when={turnOrder() == turn_order_3_bans}
+                <Switch
                   fallback={
                     <Team
                       bansSignal={blueBans}
@@ -118,13 +126,23 @@ const DraftTool: Component<DraftToolProps> = ({
                     />
                   }
                 >
-                  <TeamWith3Bans
-                    bansSignal={blueBans}
-                    picksSignal={bluePicks}
-                    team={"blue_team"}
-                    handleSigEid={handleSigEid}
-                  />
-                </Show>
+                  <Match when={turnOrder() == turn_order_3_bans}>
+                    <TeamWith3Bans
+                      bansSignal={blueBans}
+                      picksSignal={bluePicks}
+                      team={"blue_team"}
+                      handleSigEid={handleSigEid}
+                    />
+                  </Match>
+                  <Match when={turnOrder() == turn_order_bb}>
+                    <TeamForBB
+                      bansSignal={blueBans}
+                      picksSignal={bluePicks}
+                      team={"blue_team"}
+                      handleSigEid={handleSigEid}
+                    />
+                  </Match>
+                </Switch>
               </div>
               <div class={styles.roster}>
                 <Roster
@@ -135,8 +153,7 @@ const DraftTool: Component<DraftToolProps> = ({
                 />
               </div>
               <div class={styles.team}>
-              <Show
-                  when={turnOrder() == turn_order_3_bans}
+                <Switch
                   fallback={
                     <Team
                       bansSignal={redBans}
@@ -146,13 +163,23 @@ const DraftTool: Component<DraftToolProps> = ({
                     />
                   }
                 >
-                  <TeamWith3Bans
-                    bansSignal={redBans}
-                    picksSignal={redPicks}
-                    team={"red_team"}
-                    handleSigEid={handleSigEid}
-                  />
-                </Show>
+                  <Match when={turnOrder() == turn_order_3_bans}>
+                    <TeamWith3Bans
+                      bansSignal={redBans}
+                      picksSignal={redPicks}
+                      team={"red_team"}
+                      handleSigEid={handleSigEid}
+                    />
+                  </Match>
+                  <Match when={turnOrder() == turn_order_bb}>
+                    <TeamForBB
+                      bansSignal={redBans}
+                      picksSignal={redPicks}
+                      team={"red_team"}
+                      handleSigEid={handleSigEid}
+                    />
+                  </Match>
+                </Switch>
               </div>
             </div>
           </div>

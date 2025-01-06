@@ -13,6 +13,8 @@ import {
   redCost,
   ruleSet,
   isEvent,
+  turnOrder,
+  turn_order_bb,
 } from "~/game/game_logic";
 import styles from "./Results.module.css";
 import { blueTeamName, redTeamName } from "~/game/game_logic";
@@ -122,7 +124,7 @@ const Results: Component<{}> = (props) => {
           </input>
         </div>
       </div>
-      <Show when={ruleSet() != "pokke"}>
+      <Show when={ruleSet() != "pokke" && turnOrder() != turn_order_bb}>
         <div class={styles.penalty_counter}>{penaltyCounter()}</div>
       </Show>
       <button
