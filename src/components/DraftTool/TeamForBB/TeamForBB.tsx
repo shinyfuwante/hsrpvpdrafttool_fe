@@ -51,8 +51,8 @@ const TeamForBB: Component<TeamProps> = (props) => {
       }
     }
   };
-  const blue_pick_index = [1, 3, 5, 8, 9, 12, 14, 17, 18, 21, 22, 24, 27, 28, 31];
-  const red_pick_index = [2, 4, 6, 7, 10, 11, 13, 16, 19, 20, 23, 25, 26, 29, 30];
+  const blue_pick_index = [1, 3, 5, 8, 9, 12, 14, 16, 17, 20, 21, 23, 26, 27, 30];
+  const red_pick_index = [2, 4, 6, 7, 10, 11, 13, 15, 18, 19, 22, 24, 25, 28, 29];
   const EmptyCharacterComponent = ({ id = 0, type = "" }) => {
     const order =
       team === "blue_team" ? blue_pick_index[id] : red_pick_index[id];
