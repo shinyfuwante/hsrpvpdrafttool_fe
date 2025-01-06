@@ -35,7 +35,8 @@ import {
   setCanDoublePickWithCost,
   turn_order_3_bans,
   setTurnOrder,
-  turn_order_bb
+  turn_order_bb,
+  setRuleSet
 } from "~/game/game_logic";
 
 // interface DraftToolProps {
@@ -133,6 +134,7 @@ const game: Component<{}> = (props) => {
     setIsSinglePlayer(true);
     setApplyTimerPenalty(false);
     setTurnOrder(turn_order_bb);
+    setRuleSet("bb_rules");
     // setCanDoublePickWithCost(true);
   });
   return (

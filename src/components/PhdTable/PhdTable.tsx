@@ -1,27 +1,29 @@
-import { Component } from "solid-js";
+import { Component, createEffect } from "solid-js";
 import {
   setCharJson,
   setLcJson,
   charJson,
   lcJson,
   version,
+  ruleSet,
 } from "~/game/game_logic";
 import styles from "./PhdTable.module.css";
 
 const PhdTable: Component<{}> = (props) => {
   const fetchData = async () => {
     let response1 = await fetch(
-      `/rule_sets/phd_standard/characters.json?version=${version()}`
+      `/rule_sets/${ruleSet()}/characters.json?version=${version()}`
     );
 
     setCharJson(await response1.json());
 
     let response2 = await fetch(
-      `/rule_sets/phd_standard/light_cones.json?version=${version()}`
+      `/rule_sets/${ruleSet()}/light_cones.json?version=${version()}`
     );
 
     setLcJson(await response2.json());
   };
+  createEffect(fetchData);
   const sumCosts = (point_costs: number[]) => {
     const sum = [];
     let runningSum = 0;

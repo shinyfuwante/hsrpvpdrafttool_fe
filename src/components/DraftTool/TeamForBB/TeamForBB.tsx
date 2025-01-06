@@ -24,6 +24,7 @@ import {
 } from "~/game/game_logic";
 import styles from "./Team.module.css";
 import { HalfBanCard } from "../BanCard/HalfBanCard";
+import { CharacterCardSingle } from "../CharacterCard/CharacterCardSingle";
 
 export type TeamProps = {
   bansSignal: Accessor<CharacterBan[]>;
@@ -180,7 +181,7 @@ const TeamForBB: Component<TeamProps> = (props) => {
             when={picksSignal()[4]}
             fallback={<EmptyCharacterComponent id={6} type={"pick"} />}
           >
-            <CharacterCard
+            <CharacterCardSingle
               id={4}
               character={picksSignal()[4]}
               signal={props.picksSignal}
@@ -205,7 +206,7 @@ const TeamForBB: Component<TeamProps> = (props) => {
             when={picksSignal()[5]}
             fallback={<EmptyCharacterComponent id={8} type={"pick"} />}
           >
-            <CharacterCard
+            <CharacterCardSingle
               id={5}
               character={picksSignal()[5]}
               signal={props.picksSignal}
