@@ -44,7 +44,7 @@ const getCID = () => {
   }
   return cid;
 };
-const formatDecimal = (value: number) => {
+export const formatDecimal = (value: number) => {
   // Check if the value is already a whole number
   if (Number.isInteger(value)) {
     return value;
