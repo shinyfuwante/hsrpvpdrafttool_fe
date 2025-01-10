@@ -44,6 +44,16 @@ const getCID = () => {
   }
   return cid;
 };
+const formatDecimal = (value: number) => {
+  // Check if the value is already a whole number
+  if (Number.isInteger(value)) {
+    return value;
+  }
+
+  // Round to the nearest whole number
+  const multiplier = 100; // Adjust this value as needed
+  return Math.round(value * multiplier) / multiplier;
+}
 const calcCost = (character: CharacterPick) => {
   const char = charJson()[character.name];
   const lcs = lcJson();
@@ -60,11 +70,19 @@ const calcCost = (character: CharacterPick) => {
   }
   if (lc && character.superimposition > 0) {
     cost += lc.point_costs[0];
+    console.log(cost);
     if (lc.free) {
       return cost;
     }
     if (ruleSet() == "mirror_cup") {
       cost += lc.point_costs[character.superimposition - 1] - lc.point_costs[0];
+    } else if (ruleSet() == "boulder_league") {
+      let i = character.superimposition - 1;
+      while (i >= 0) {
+        cost += lc.point_costs[i--];
+      }
+      cost -= lc.point_costs[0];
+      return formatDecimal(cost);
     } else {
       if (lc.rarity == 5) {
         if (lc.special) {
