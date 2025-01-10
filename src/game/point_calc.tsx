@@ -24,7 +24,14 @@ import {
 } from "./game_logic";
 import { Setter } from "solid-js";
 
+
 export const calculateBonusCycles = (points: number) => {
+  if (ruleSet() == "boulder_league") {
+    if (points < 35) {
+      return (points - 35) / 10;
+    }
+    return (points - 35) / 5;
+  }
   if (points < 30) {
     return (points - 30) / 6;
   } else {
