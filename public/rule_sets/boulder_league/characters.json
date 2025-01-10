@@ -67,7 +67,7 @@
   },
   "Serval": {
     "id": "1103",
-    "point_costs": [5.6, 0, 0, 0, 0, 0, 0.5],
+    "point_costs": [5.6, 0, 0, 0, 0, 0, 0],
     "rarity": 4,
     "nickname": "Serval"
   },

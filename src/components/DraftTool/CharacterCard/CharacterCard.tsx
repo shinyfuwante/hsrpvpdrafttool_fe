@@ -16,6 +16,7 @@ import {
   testingTool,
   turnOrder,
   turn_order_bb,
+  formatDecimal
 } from "~/game/game_logic";
 
 import styles from "./CharacterCard.module.css";
@@ -92,7 +93,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
     if (testingTool()) {
       setCost(calcCost(props.signal()[id]) + editedCost() || 0);
     } else {
-      setCost(calcCost(props.signal()[id]) || 0);
+      setCost(formatDecimal(calcCost(props.signal()[id])) || 0);
     }
     onCostChange(id, cost());
   };
