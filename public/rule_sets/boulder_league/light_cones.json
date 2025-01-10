@@ -368,7 +368,6 @@
     "point_costs": [0.4, 0, 0.2, 0.2, 0],
     "character": "Gepard",
     "rarity": 5,
-    "free": true,
     "standard": true
   },
   "Patience Is All You Need": {
@@ -385,7 +384,7 @@
   },
   "Echoes of the Coffin": {
     "id": "23008",
-    "point_costs": [0.5, 0.5, 1, 1.5, 2],
+    "point_costs": [0.8, 0.2, 0.2, 0.2, 0.2],
     "character": "Luocha",
     "rarity": 5
   },
@@ -409,7 +408,7 @@
   },
   "Sleep Like the Dead": {
     "id": "23012",
-    "point_costs": [0, 0, 0, 0.2, 0.2],
+    "point_costs": [0, 0, 0.2, 0, 0.2],
     "character": "Yanqing YQ",
     "rarity": 5,
     "standard": true
@@ -502,7 +501,7 @@
   },
   "Along the Passing Shore": {
     "id": "23204",
-    "point_costs": [1.6, 0.6, 0.6, 0.6, 0.6],
+    "point_costs": [1.6, 0.6, 0.8, 0.6, 0.6],
     "rarity": 5,
     "character": "Acheron"
   },
@@ -606,7 +605,7 @@
   "Long Road Leads Home": {
     "id": "23035", 
     "rarity": 5,
-    "point_costs": [1.6, 0.4, 0.4, 0.4, 0.4, 0, 0],
+    "point_costs": [1.6, 0.4, 0.4, 0.2, 0.2, 0, 0],
     "character": "Fugue"
   },
   "A Grounded Ascent": {

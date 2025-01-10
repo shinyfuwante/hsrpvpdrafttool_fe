@@ -55,7 +55,7 @@
   },
   "Bronya": {
     "id": "1101",
-    "point_costs": [5.2, 1, 1.6, 0, 1, 0, 0.4],
+    "point_costs": [5.2, 1, 1.6, 0, 0.8, 0, 0.4],
     "rarity": 5,
     "nickname": "Bronya Lebron Broner"
   },
@@ -219,7 +219,7 @@
   },
   "Huohuo": {
     "id": "1217",
-    "point_costs": [4, 0.4, 0.2, 0.2, 0, 0, 1.8],
+    "point_costs": [4.4, 0.4, 0.2, 0.2, 0, 0, 1.8],
     "rarity": 5,
     "nickname": "Huohuo HH Tail HweHwe"
   },
@@ -326,7 +326,7 @@
   "Jade": {
     "id": "1314",
     "rarity": 5,
-    "point_costs": [2.4, 5, 0.2, 0.2, 1, 0.2, 5.6],
+    "point_costs": [2.4, 2.6, 0.2, 0.2, 1, 0.2, 5.6],
     "code": "jd",
     "nickname": "Jade"
   },
