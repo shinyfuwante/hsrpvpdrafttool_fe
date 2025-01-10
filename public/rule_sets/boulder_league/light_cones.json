@@ -605,7 +605,7 @@
   "Long Road Leads Home": {
     "id": "23035", 
     "rarity": 5,
-    "point_costs": [1.6, 0.4, 0.4, 0.2, 0.2, 0, 0],
+    "point_costs": [1.6, 0.4, 0.4, 0.2, 0.4, 0, 0],
     "character": "Fugue"
   },
   "A Grounded Ascent": {
