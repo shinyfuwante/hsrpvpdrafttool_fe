@@ -22,6 +22,7 @@ import {
   redCostsMap,
   totalCost,
   isMeme,
+  formatDecimal
 } from "~/game/game_logic";
 import styles from "./Team.module.css";
 
@@ -97,7 +98,7 @@ const Team: Component<TeamProps> = (props) => {
           when={isMeme()}
           fallback={
             <div class={`${cost() >= totalCost() ? styles.over_30 : ""}`}>
-              {cost()}/{totalCost()}
+              {formatDecimal(cost())}/{totalCost()}
             </div>
           }
         >
