@@ -57,8 +57,6 @@ const Roster: Component<RosterProps> = (props) => {
     setBannedCharacters(banned);
   })
   const selectCharacter = (characterName: string) => {
-    console.log(turnIndex());
-    console.log(turnOrder().length);
     if (turnIndex() >= turnOrder().length) {
       return;
     }
