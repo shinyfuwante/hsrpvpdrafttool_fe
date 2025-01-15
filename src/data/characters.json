@@ -428,7 +428,7 @@
         ],
         "rarity": 5
     },
-    "Dan Heng \u2022 Imbibitor Lunae": {
+    "Dan Heng • Imbibitor Lunae": {
         "id": "1213",
         "point_costs": [
             1,
@@ -748,5 +748,75 @@
             0
         ],
         "nickname": "Moze"
+    },
+    "Fugue": {
+        "id": "1225",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "Fugue"
+    },
+    "Sunday": {
+        "id": "1313",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "Sunday"
+    },
+    "Rappa": {
+        "id": "1317",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "Rappa"
+    },
+    "The Herta": {
+        "id": "1401",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "The Herta"
+    },
+    "Aglaea": {
+        "id": "1402",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "Aglaea"
     }
 }
