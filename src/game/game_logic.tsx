@@ -84,7 +84,7 @@ const calcCost = (character: CharacterPick) => {
       cost -= lc.point_costs[0];
       return formatDecimal(cost);
     } else {
-      if ((ruleSet() == "phd_standard" && lc.rarity == 5) || lc.special) {
+      if (lc.rarity == 5 || lc.special) {
         cost +=
           lc.point_costs[character.superimposition - 1] - lc.point_costs[0];
       } else {
