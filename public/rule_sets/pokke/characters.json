@@ -438,5 +438,24 @@
     "point_costs": [1, 1, 1, 1, 1, 1, 1],
     "code": "fg",
     "nickname": "Stingyun Fugue"
+  },
+  "TrailBlazerIce": {
+    "id": "8008",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "code": "ic",
+    "nickname": "RMC Remembrance MC TrailblazerIce Mem"
+  },
+  "The Herta": {
+    "id": "1401",
+    "rarity": 5,
+    "point_costs": [1, 1, 1, 1, 1, 1, 1],
+    "nickname": "The Herta Therta"
+  },
+  "Aglaea": {
+    "id": "1402",
+    "rarity": 5,
+    "point_costs": [1, 1, 1, 1, 1, 1, 1],
+    "nickname": "Aglaea"
   }
 }

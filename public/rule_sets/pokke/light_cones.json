@@ -197,7 +197,8 @@
   "Dance! Dance! Dance!": {
     "id": "21018",
     "point_costs": [0, 0, 0, 0, 0],
-    "rarity": 4
+    "rarity": 4,
+    "character": "Dance! Dance! Dance! DDD"
   },
   "Under the Blue Sky": {
     "id": "21019",
@@ -608,5 +609,124 @@
     "rarity": 5,
     "point_costs": [0, 0, 0, 0, 0, 0, 0],
     "character": "Sunday"
-  }
+  },
+"Shadowburn": {
+    "id": "20021",
+    "rarity": 3,
+    "point_costs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ]
+},
+"Reminiscence": {
+    "id": "20022",
+    "rarity": 3,
+    "point_costs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ]
+},
+"Dream's Montage": {
+    "id": "21048",
+    "rarity": 4,
+    "point_costs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ]
+},
+"Victory In a Blink": {
+    "id": "21050",
+    "rarity": 4,
+    "point_costs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ]
+},
+"Geniuses' Greetings": {
+    "id": "21051",
+    "rarity": 4,
+    "point_costs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ]
+},
+"Sweat Now, Cry Less": {
+    "id": "21052",
+    "rarity": 4,
+    "point_costs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ]
+},
+"Ninja Record: Sound Hunt": {
+    "id": "22003",
+    "rarity": 4,
+    "point_costs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ]
+},
+"Time Woven Into Gold": {
+    "id": "23036",
+    "rarity": 5,
+    "point_costs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "character": "Aglaea"
+},
+"Into the Unreachable Veil": {
+    "id": "23037",
+    "rarity": 5,
+    "point_costs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "character": "The Herta Therta"
+}
 }
