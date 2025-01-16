@@ -53,7 +53,7 @@ export const formatDecimal = (value: number) => {
   // Round to the nearest whole number
   const multiplier = 100; // Adjust this value as needed
   return Math.round(value * multiplier) / multiplier;
-}
+};
 const calcCost = (character: CharacterPick) => {
   const char = charJson()[character.name];
   const lcs = lcJson();
@@ -84,14 +84,13 @@ const calcCost = (character: CharacterPick) => {
       cost -= lc.point_costs[0];
       return formatDecimal(cost);
     } else {
-      if (lc.rarity == 5 || lc.special) {
-          cost +=
-            lc.point_costs[character.superimposition - 1] - lc.point_costs[0];
-        // } else {
-        //   cost +=
-        //     POINTS_PER_SUPERIMPOSITION *
-        //     Math.floor(character.superimposition / 2);
-        // }
+      if ((ruleSet() == "phd_standard" && lc.rarity == 5) || lc.special) {
+        cost +=
+          lc.point_costs[character.superimposition - 1] - lc.point_costs[0];
+      } else {
+        cost +=
+          POINTS_PER_SUPERIMPOSITION *
+          Math.floor(character.superimposition / 2);
       }
     }
     // else if (lc.rarity == 5) {
@@ -202,7 +201,7 @@ export const turn_order_bb = [
   { team: "blue_team", action: "pick", id: 5 },
   { team: "red_team", action: "pick", id: 6 },
   { team: "blue_team", action: "pick", id: 6 },
-  { team: "red_team", action: "ban", id:  7},
+  { team: "red_team", action: "ban", id: 7 },
   { team: "blue_team", action: "ban", id: 7 },
   { team: "blue_team", action: "pick", id: 8 },
   { team: "red_team", action: "pick", id: 8 },
@@ -210,13 +209,13 @@ export const turn_order_bb = [
   { team: "blue_team", action: "pick", id: 9 },
   { team: "blue_team", action: "pick", id: 10 },
   { team: "red_team", action: "pick", id: 10 },
-  { team: "blue_team", action: "ban", id:  11},
+  { team: "blue_team", action: "ban", id: 11 },
   { team: "red_team", action: "ban", id: 11 },
   { team: "red_team", action: "pick", id: 12 },
   { team: "blue_team", action: "pick", id: 12 },
   { team: "blue_team", action: "pick", id: 13 },
   { team: "red_team", action: "pick", id: 13 },
-]
+];
 const [turnOrder, setTurnOrder] = createSignal(turn_order_2_bans);
 const MessageEnum = {
   INIT_GAME: "init_game",
@@ -397,5 +396,5 @@ export {
   isSpectator,
   setIsSpectator,
   isMeme,
-  setIsMeme
+  setIsMeme,
 };
