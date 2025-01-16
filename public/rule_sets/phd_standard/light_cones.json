@@ -196,7 +196,7 @@
   },
   "Dance! Dance! Dance!": {
     "id": "21018",
-    "point_costs": [1, 0, 0, 0, 0],
+    "point_costs": [1, 1, 1, 1, 1],
     "rarity": 4,
     "character": "DDD"
   },
@@ -332,27 +332,27 @@
   },
   "Night on the Milky Way": {
     "id": "23000",
-    "point_costs": [0.5, 0, 0, 0, 0],
+    "point_costs": [0.5, 0.5, 1, 1, 1.5],
     "character": "Himeko",
     "rarity": 5,
     "standard": true
   },
   "In the Night": {
     "id": "23001",
-    "point_costs": [1.5, 2.5, 3, 3.5, 4],
+    "point_costs": [1.5, 1.5, 2, 2, 2.5],
     "character": "Seele",
     "rarity": 5
   },
   "Something Irreplaceable": {
     "id": "23002",
-    "point_costs": [0, 0.5, 1, 1.5, 2],
+    "point_costs": [0, 0, 0.5, 0.5, 1],
     "character": "Clara",
     "rarity": 5,
     "standard": true
   },
   "But the Battle Isn't Over": {
     "id": "23003",
-    "point_costs": [0.5, 1.5, 2, 2.5, 3],
+    "point_costs": [0.5, 0.5, 1, 1, 1.5],
     "character": "Bronya",
     "rarity": 5
   },
@@ -373,43 +373,43 @@
   },
   "Patience Is All You Need": {
     "id": "23006",
-    "point_costs": [0.5, 2, 2.5, 3, 3.5],
+    "point_costs": [0.5, 0.5, 1, 1, 1.5],
     "character": "Kafka",
     "rarity": 5
   },
   "Incessant Rain": {
     "id": "23007",
-    "point_costs": [0, 1.5, 2, 2.5, 3],
+    "point_costs": [0, 0, 0.5, 0.5, 1],
     "character": "Silver Wolf SW",
     "rarity": 5
   },
   "Echoes of the Coffin": {
     "id": "23008",
-    "point_costs": [0.5, 0.5, 1, 1.5, 2],
+    "point_costs": [0.5, 0.5, 0.5, 0.5, 0.5],
     "character": "Luocha",
     "rarity": 5
   },
   "The Unreachable Side": {
     "id": "23009",
-    "point_costs": [1, 2, 2.5, 3, 3.5],
+    "point_costs": [1, 1, 1.5, 1.5, 2],
     "character": "Blade",
     "rarity": 5
   },
   "Before Dawn": {
     "id": "23010",
-    "point_costs": [0.5, 2.5, 3, 3.5, 4],
+    "point_costs": [0.5, 0.5, 1, 1, 1.5],
     "character": "Jing Yuan JY Jimmy Wong",
     "rarity": 5
   },
   "She Already Shut Her Eyes": {
     "id": "23011",
-    "point_costs": [0.5, 1.5, 2, 2.5, 3],
+    "point_costs": [0.5, 0.5, 0.5, 0.5, 0.5],
     "character": "Fu Xuan FX",
     "rarity": 5
   },
   "Sleep Like the Dead": {
     "id": "23012",
-    "point_costs": [0, 0.5, 1, 1.5, 2],
+    "point_costs": [0, 0, 0.5, 0.5, 1],
     "character": "Yanqing YQ",
     "rarity": 5,
     "standard": true
@@ -430,49 +430,49 @@
   },
   "Brighter Than the Sun": {
     "id": "23015",
-    "point_costs": [1.5, 2.5, 3, 3.5, 4],
+    "point_costs": [1.5, 1.5, 2, 2, 2.5],
     "character": "Dan Heng Imbibitor Lunae DHIL Daniel",
     "rarity": 5
   },
   "Worrisome, Blissful": {
     "id": "23016",
-    "point_costs": [1, 2.5, 3, 3.5, 4],
+    "point_costs": [1, 1, 2, 2.5, 3],
     "character": "Topaz & Numby",
     "rarity": 5
   },
   "Night of Fright": {
     "id": "23017",
-    "point_costs": [0.5, 1.5, 2, 2.5, 3],
+    "point_costs": [0.5, 0.5, 0.5, 0.5, 0.5],
     "character": "Huohuo HH",
     "rarity": 5
   },
   "An Instant Before A Gaze": {
     "id": "23018",
-    "point_costs": [0.5, 2, 2.5, 3, 3.5],
+    "point_costs": [0.5, 0.5, 1, 1, 1.5],
     "character": "Argenti",
     "rarity": 5
   },
   "Past Self in Mirror": {
     "id": "23019",
-    "point_costs": [1, 2.5, 3, 3.5, 4],
+    "point_costs": [1, 1, 2, 2.5, 3],
     "character": "Ruan Mei RM",
     "rarity": 5
   },
   "Baptism of Pure Thought": {
     "id": "23020",
-    "point_costs": [4, 4, 4.5, 5, 5.5],
+    "point_costs": [4, 4, 5, 5.5, 6],
     "character": "Dr. Ratio",
     "rarity": 5
   },
   "Earthly Escapade": {
     "id": "23021",
-    "point_costs": [1.5, 2.5, 3, 3.5, 4],
+    "point_costs": [1.5, 1.5, 2, 2, 2.5],
     "character": "Sparkle Hanabi",
     "rarity": 5
   },
   "Reforged Remembrance": {
     "id": "23022",
-    "point_costs": [0.5, 2.5, 3, 3.5, 4],
+    "point_costs": [0.5, 0.5, 1, 1, 1.5],
     "character": "Black Swan BS",
     "rarity": 5
   },
@@ -502,7 +502,7 @@
   },
   "Along the Passing Shore": {
     "id": "23204",
-    "point_costs": [2, 0, 0, 0, 0],
+    "point_costs": [2, 2, 3, 3.5, 4],
     "rarity": 5,
     "character": "Acheron"
   },
@@ -514,13 +514,13 @@
   "Inherently Unjust Destiny": {
     "id": "23023",
     "rarity": 5,
-    "point_costs": [0.5, 0, 0, 0, 0, 0, 0],
+    "point_costs": [0.5, 0.5, 1, 1, 1.5, 0, 0],
     "character": "Aventurine"
   },
   "Flowing Nightglow": {
     "id": "23026",
     "rarity": 5,
-    "point_costs": [1.5, 0, 0, 0, 0],
+    "point_costs": [1.5, 1.5, 2, 2, 2.5],
     "character": "Robin"
   },
   "Tomorrow's Journey": {
@@ -536,7 +536,7 @@
   "Sailing Towards a Second Life": {
     "id": "23027",
     "rarity": 5,
-    "point_costs": [2, 0, 0, 0, 0],
+    "point_costs": [2, 2, 2.5, 2.5, 3],
     "character": "Boothill BH"
   },
   "After the Charmony Fall": {
@@ -548,13 +548,13 @@
   "Whereabouts Should Dreams Rest": {
     "id": "23025",
     "rarity": 5,
-    "point_costs": [1, 0, 0, 0, 0],
+    "point_costs": [1, 1, 1.5, 1.5, 2],
     "character": "Firefly Sam FF Samfly"
   },
   "Yet Hope Is Priceless": {
     "id": "23028",
     "rarity": 5,
-    "point_costs": [1.5, 0, 0, 0, 0, 0, 0],
+    "point_costs": [1.5, 1.5, 2.5, 3, 3.5],
     "character": "Jade"
   },
   "Eternal Calculus": {
@@ -566,13 +566,13 @@
   "Dance at Sunset": {
     "id": "23030",
     "rarity": 5,
-    "point_costs": [2, 3, 3.5, 4, 4.5, 0, 0],
+    "point_costs": [2, 2, 3, 3.5, 4, 0, 0],
     "character": "Yunli"
   },
   "Those Many Springs": {
     "id": "23029",
     "rarity": 5,
-    "point_costs": [1, 0, 0, 0, 0, 0, 0],
+    "point_costs": [1, 1, 1.5, 1.5, 2, 0, 0],
     "character": "Jiaoqiu JQ"
   },
   "Poised to Bloom": {
@@ -588,31 +588,78 @@
   "I Venture Forth to Hunt": {
     "id": "23031",
     "rarity": 5,
-    "point_costs": [4, 0, 0, 0, 0, 0, 0],
+    "point_costs": [4, 4, 5, 5.5, 6],
     "character": "Feixiao Fei Xiao Fampter FX"
   },
   "Scent Alone Stays True": {
     "id": "23032",
     "rarity": 5,
-    "point_costs": [0.5, 0, 0, 0, 0, 0, 0],
+    "point_costs": [0.5, 0.5, 1, 1, 1.5],
     "character": "Lingsha"
   },
   "Ninjutsu Inscription: Dazzling Evilbreaker": {
     "id": "23033",
     "rarity": 5,
-    "point_costs": [2.5, 0, 0, 0, 0, 0, 0],
+    "point_costs": [2.5, 2.5, 3, 3, 3.5, 0, 0],
     "character": "Rappa"
   },
   "Long Road Leads Home": {
-    "id": "23035", 
+    "id": "23035",
     "rarity": 5,
-    "point_costs": [1, 0, 0, 0, 0, 0, 0],
+    "point_costs": [1, 1, 1.5, 1.5, 2, 0, 0],
     "character": "Fugue"
   },
   "A Grounded Ascent": {
     "id": "23034",
     "rarity": 5,
-    "point_costs": [1, 0, 0, 0, 0, 0, 0],
+    "point_costs": [1.5, 1.5, 2, 2, 2.5, 0, 0],
     "character": "Sunday"
+  },
+  "Shadowburn": {
+    "id": "20021",
+    "rarity": 3,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0]
+  },
+  "Reminiscence": {
+    "id": "20022",
+    "rarity": 3,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0]
+  },
+  "Dream's Montage": {
+    "id": "21048",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0]
+  },
+  "Victory In a Blink": {
+    "id": "21050",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0]
+  },
+  "Geniuses' Greetings": {
+    "id": "21051",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0]
+  },
+  "Sweat Now, Cry Less": {
+    "id": "21052",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0]
+  },
+  "Ninja Record: Sound Hunt": {
+    "id": "22003",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0]
+  },
+  "Time Woven Into Gold": {
+    "id": "23036",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "character": "Aglaea"
+  },
+  "Into the Unreachable Veil": {
+    "id": "23037",
+    "rarity": 5,
+    "point_costs": [1, 1, 1.5, 1.5, 2],
+    "character": "The Herta Therta"
   }
 }

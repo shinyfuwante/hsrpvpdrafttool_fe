@@ -84,15 +84,14 @@ const calcCost = (character: CharacterPick) => {
       cost -= lc.point_costs[0];
       return formatDecimal(cost);
     } else {
-      if (lc.rarity == 5) {
-        if (lc.special) {
+      if (lc.rarity == 5 || lc.special) {
           cost +=
             lc.point_costs[character.superimposition - 1] - lc.point_costs[0];
-        } else {
-          cost +=
-            POINTS_PER_SUPERIMPOSITION *
-            Math.floor(character.superimposition / 2);
-        }
+        // } else {
+        //   cost +=
+        //     POINTS_PER_SUPERIMPOSITION *
+        //     Math.floor(character.superimposition / 2);
+        // }
       }
     }
     // else if (lc.rarity == 5) {
