@@ -12,6 +12,8 @@ import {
   totalCost,
   setTestingTool,
   testingTool,
+  formatDecimal,
+  setTotalCost
 } from "~/game/game_logic";
 import { CharacterCard } from "~/components/DraftTool/CharacterCard/CharacterCard";
 import styles from "./testing.module.css";
@@ -59,6 +61,7 @@ const testing: Component<{}> = (props) => {
   fetchData();
   setIsSinglePlayer(true);
   setRuleSet("boulder_league");
+  setTotalCost(35);
   const [picks, setPicks] = createSignal<CharacterPick[]>([]);
   const [cost, SetCost] = createSignal<number>(0);
   const [costsMap, setCostsMap] = createSignal(new Map());
@@ -115,10 +118,10 @@ const testing: Component<{}> = (props) => {
     const [edited_cost, setEditedCost] = createSignal(cost());
 
     createEffect(() => {
-      setEfficiency(cost() / 10 + cycles());
+      setEfficiency(formatDecimal(cost()) / 10 + cycles());
       setEfficiencyAdjustment(cost() != 0 ? (cost() - 35) / 5 : 0);
       setAdjustedEfficiency(efficiency() + efficiencyAdjustment());
-      setEditedCost(cost()); // TODO
+      setEditedCost(formatDecimal(cost())); // TODO
     });
 
     return (
@@ -161,7 +164,7 @@ const testing: Component<{}> = (props) => {
           </div>
         <div class={styles.results}>
           <div> Cycles Taken: {cycles()}</div>
-          <div> Cost: {cost()}</div>
+          <div> Cost: {formatDecimal(cost())}</div>
           <div
             class={`${
               efficiency() > 6
@@ -195,11 +198,11 @@ const testing: Component<{}> = (props) => {
     <div class={styles.container}>
       <div class={styles.team}>
         <div
-          class={`${cost() > 30 ? styles.over_30 : styles.under_30} ${
+          class={`${cost() > 45 ? styles.over_30 : styles.under_30} ${
             styles.header
           }`}
         >
-          Cost: {cost()}/{totalCost()}
+          Cost: {formatDecimal(cost())}/{totalCost()}
         </div>
         {Array.from({ length: 4 }).map((_, i) =>
           picks()[i] ? (
