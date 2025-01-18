@@ -25,7 +25,7 @@
   },
   "Kafka": {
     "id": "1005",
-    "point_costs": [4.6, 3.8, 0.4, 0, 0, 0.2, 0.2],
+    "point_costs": [4.8, 3.8, 0.4, 0, 0, 0.2, 1.2],
     "rarity": 5,
     "nickname": "Kafka"
   },
@@ -43,31 +43,31 @@
   },
   "Asta": {
     "id": "1009",
-    "point_costs": [4.2, 0, 0, 0, 0, 0, 1],
+    "point_costs": [4, 0, 0, 0, 0, 0, 1],
     "rarity": 4,
     "nickname": "Asta"
   },
   "Herta": {
     "id": "1013",
-    "point_costs": [2.6, 0, 0, 0, 0, 0, 1],
+    "point_costs": [3, 0, 0, 0, 0, 0, 1],
     "rarity": 4,
     "nickname": "Herta"
   },
   "Bronya": {
     "id": "1101",
-    "point_costs": [5.2, 1, 1.6, 0, 0.8, 0, 0.4],
+    "point_costs": [5, 1, 1.8, 0, 0.8, 0, 0.4],
     "rarity": 5,
     "nickname": "Bronya Lebron Broner"
   },
   "Seele": {
     "id": "1102",
-    "point_costs": [3, 0.2, 2.8, 0.2, 2.4, 0.2, 0.4],
+    "point_costs": [3, 0.2, 1.8, 0.2, 2.4, 0.2, 1.8],
     "rarity": 5,
     "nickname": "Seele Seal"
   },
   "Serval": {
     "id": "1103",
-    "point_costs": [5.6, 0, 0, 0, 0, 0, 0],
+    "point_costs": [3.4, 0, 0, 0, 0, 0, 0],
     "rarity": 4,
     "nickname": "Serval"
   },
@@ -121,7 +121,7 @@
   },
   "Topaz & Numby": {
     "id": "1112",
-    "point_costs": [5.2, 2.2, 0.6, 0.2, 0.6, 0.2, 3],
+    "point_costs": [5.2, 2.6, 0.6, 0.2, 0.6, 0.2, 2.6],
     "rarity": 5,
     "nickname": "Topaz & Numby Topass"
   },
@@ -133,7 +133,7 @@
   },
   "Tingyun": {
     "id": "1202",
-    "point_costs": [4.4, 0, 0, 0, 0, 0, 0.4],
+    "point_costs": [5, 0, 0, 0, 0, 0, 0.4],
     "rarity": 4,
     "nickname": "Tingyun TY Thank you Preservation, Aeon Of Preservation"
   },
@@ -147,7 +147,7 @@
   "Jing Yuan": {
     "id": "1204",
     "special": false,
-    "point_costs": [5.2, 1.6, 0.2, 0.2, 0.2, 0.2, 1.2],
+    "point_costs": [5.4, 1.6, 0.2, 0.2, 0.2, 0.2, 1.2],
     "rarity": 5,
     "nickname": "Jing Yuan Jimmy JY King Yuan Our General"
   },
@@ -183,7 +183,7 @@
   },
   "Guinaifen": {
     "id": "1210",
-    "point_costs": [4, 0, 0, 0, 0.4, 0, 0.4],
+    "point_costs": [4.2, 0, 0, 0, 0.4, 0, 0.4],
     "rarity": 4,
     "nickname": "Guinaifen GNF"
   },
@@ -213,13 +213,13 @@
   },
   "Hanya": {
     "id": "1215",
-    "point_costs": [4.6, 0, 0.4, 0, 0.4, 0, 0.2],
+    "point_costs": [4.4, 0, 0.4, 0, 0.4, 0, 0.2],
     "rarity": 4,
     "nickname": "Hanya"
   },
   "Huohuo": {
     "id": "1217",
-    "point_costs": [4.4, 0.4, 0.2, 0.2, 0, 0, 1.8],
+    "point_costs": [4.4, 0.6, 0.2, 0.2, 0, 0, 1.8],
     "rarity": 5,
     "nickname": "Huohuo HH Tail HweHwe"
   },
@@ -237,20 +237,20 @@
   },
   "Dr. Ratio": {
     "id": "1305",
-    "point_costs": [3.4, 1.2, 0.6, 0.2, 3.8, 0.2, 2],
+    "point_costs": [2.6, 1.2, 0.6, 0.2, 3.8, 0.2, 2],
     "rarity": 5,
     "nickname": "Dr. Ratio"
   },
   "Sparkle": {
     "id": "1306",
     "special": false,
-    "point_costs": [9, 1.2, 2.6, 0.2, 0.2, 0.2, 1.6],
+    "point_costs": [7.8, 1.2, 3.6, 0.2, 0.2, 0.2, 1.6],
     "rarity": 5,
     "nickname": "Sparkle Sprinkle Spork Hanabi 5'2"
   },
   "Black Swan": {
     "id": "1307",
-    "point_costs": [5.2, 5.6, 0.2, 0.2, 0, 0.2, 1],
+    "point_costs": [5.2, 5.6, 0.2, 0.2, 0, 0.2, 2],
     "rarity": 5,
     "nickname": "Black Swan BS"
   },
@@ -275,14 +275,14 @@
   "Acheron": {
     "id": "1308",
     "special": false,
-    "point_costs": [9.2, 1, 5.6, 0.2, 0.2, 0.2, 1],
+    "point_costs": [9.8, 1, 5.6, 0.2, 0.2, 0.2, 1],
     "rarity": 5,
     "nickname": "Acheron Acorn"
   },
   "Gallagher": {
     "id": "1301",
     "special": false,
-    "point_costs": [2.6, 0.2, 0.2, 0, 0.2, 0, 0.2],
+    "point_costs": [3.4, 0.2, 0.2, 0, 0.2, 0, 0.2],
     "rarity": 4,
     "nickname": "Gallagher"
   },
@@ -290,7 +290,7 @@
     "id": "1304",
     "special": true,
     "rarity": 5,
-    "point_costs": [6, 1, 2.2, 0.2, 1, 0.2, 4.8],
+    "point_costs": [6, 1, 1.2, 0.2, 1, 0.2, 4.8],
     "nickname": "Aventurine"
   },
   "Robin": {
@@ -298,7 +298,7 @@
     "rarity": 5,
     "special": true,
     "code": "rb",
-    "point_costs": [11, 3.2, 1.2, 0.2, 0.6, 0.2, 3.2],
+    "point_costs": [11.6, 3.2, 1.2, 0.2, 0.6, 0.2, 3.2],
     "nickname": "Robin Birb"
   },
   "TrailBlazerImaginary": {
@@ -313,7 +313,7 @@
     "id": "1315",
     "rarity": 5,
     "code": "bh",
-    "point_costs": [8.4, 0.6, 0.2, 0, 0.4, 0.2, 4],
+    "point_costs": [8.8, 0.6, 0.2, 0, 0.4, 0.2, 4],
     "nickname": "Boothill BH"
   },
   "Firefly": {
@@ -326,35 +326,35 @@
   "Jade": {
     "id": "1314",
     "rarity": 5,
-    "point_costs": [2.4, 2.6, 0.2, 0.2, 1, 0.2, 5.6],
+    "point_costs": [3.4, 2.6, 1, 0.2, 1, 0.2, 5.6],
     "code": "jd",
     "nickname": "Jade"
   },
   "Yunli": {
     "id": "1221",
     "rarity": 5,
-    "point_costs": [5, 5.4, 1, 0.2, 0.2, 0.2, 3],
+    "point_costs": [5.2, 5.8, 1, 0.2, 0.2, 0.2, 3],
     "code": "yl",
     "nickname": "Yunli Barefeet Barefoot YL"
   },
   "Jiaoqiu": {
     "id": "1218",
     "rarity": 5,
-    "point_costs": [8, 2.6, 0.2, 0.2, 0.2, 0.2, 4.6],
+    "point_costs": [7.4, 2.6, 0.2, 0.2, 0.2, 0.2, 4.6],
     "code": "jq",
     "nickname": "Jiaoqiu JQ"
   },
   "March 7th Hunt": {
     "id": "1224",
     "rarity": 4,
-    "point_costs": [6, 0, 0, 0, 0, 0, 0],
+    "point_costs": [6.2, 0, 0, 0, 0, 0, 0],
     "code": "mh",
     "nickname": "March 7th M7 March 8th M8"
   },
   "Feixiao": {
     "id": "1220",
     "rarity": 5,
-    "point_costs": [7.4, 1.4, 4.8, 0, 1, 0.2, 4.8],
+    "point_costs": [6, 1.4, 5.8, 0, 1, 0.2, 4.8],
     "code": "fe",
     "nickname": "Feixiao Fampter FX"
   },
@@ -375,21 +375,21 @@
   "Rappa": {
     "id": "1317",
     "rarity": 5,
-    "point_costs": [10.6, 1.4, 0.4, 0.2, 1, 0.2, 3],
+    "point_costs": [11, 1.4, 0.8, 0.2, 1, 0.2, 2.6],
     "code": "rp",
     "nickname": "Rappa"
   },
   "Sunday": {
     "id": "1313",
     "rarity": 5,
-    "point_costs": [9.2, 1.8, 0.4, 0.2, 0.2, 0.2, 3.4],
+    "point_costs": [9.2, 2.2, 0.4, 0.2, 0.2, 0.2, 3.4],
     "code": "sy",
     "nickname": "Sunday"
   },
   "Fugue": {
     "id": "1225",
     "rarity": 5,
-    "point_costs": [9.4, 2.8, 1.6, 0.2, 1, 0.2, 4.8],
+    "point_costs": [9.8, 2.8, 1.6, 0.2, 1, 0.2, 6.2],
     "code": "fg",
     "nickname": "Stingyun Fugue"
   }

@@ -332,7 +332,7 @@
   },
   "Night on the Milky Way": {
     "id": "23000",
-    "point_costs": [0, 0, 0, 0.2, 0.2],
+    "point_costs": [0.2, 0, 0, 0.2, 0.2],
     "character": "Himeko",
     "rarity": 5,
     "standard": true
@@ -519,7 +519,7 @@
   "Flowing Nightglow": {
     "id": "23026",
     "rarity": 5,
-    "point_costs": [2, 0.6, 0.6, 0.6, 0.6],
+    "point_costs": [1, 0.6, 0.6, 0.6, 0.6],
     "character": "Robin"
   },
   "Tomorrow's Journey": {
@@ -535,7 +535,7 @@
   "Sailing Towards a Second Life": {
     "id": "23027",
     "rarity": 5,
-    "point_costs": [1.6, 0.6, 0.6, 0.6, 0.6],
+    "point_costs": [1, 0.6, 0.6, 0.6, 0.6],
     "character": "Boothill BH"
   },
   "After the Charmony Fall": {
@@ -553,7 +553,7 @@
   "Yet Hope Is Priceless": {
     "id": "23028",
     "rarity": 5,
-    "point_costs": [1.4, 0.6, 0.6, 0.6, 0.6, 0, 0],
+    "point_costs": [1.6, 0.6, 0.6, 0.6, 0.6, 0, 0],
     "character": "Jade"
   },
   "Eternal Calculus": {
@@ -571,7 +571,7 @@
   "Those Many Springs": {
     "id": "23029",
     "rarity": 5,
-    "point_costs": [1.8, 0.4, 0.4, 0.4, 0.4, 0, 0],
+    "point_costs": [1.6, 0.4, 0.4, 0.4, 0.4, 0, 0],
     "character": "Jiaoqiu JQ"
   },
   "Poised to Bloom": {
@@ -599,7 +599,7 @@
   "Ninjutsu Inscription: Dazzling Evilbreaker": {
     "id": "23033",
     "rarity": 5,
-    "point_costs": [1, 0.6, 0.6, 0.6, 0.6, 0, 0],
+    "point_costs": [1, 0.6, 0.8, 0.6, 0.6, 0, 0],
     "character": "Rappa"
   },
   "Long Road Leads Home": {
@@ -611,7 +611,7 @@
   "A Grounded Ascent": {
     "id": "23034",
     "rarity": 5,
-    "point_costs": [2, 0.6, 0.6, 0.6, 0.6, 0.6, 0],
+    "point_costs": [2.2, 0.6, 0.6, 0.6, 0.6, 0.6, 0],
     "character": "Sunday"
   }
 }
