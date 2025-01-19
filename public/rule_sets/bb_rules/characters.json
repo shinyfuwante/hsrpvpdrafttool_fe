@@ -347,17 +347,17 @@
     "point_costs": [0, 0, 0, 0, 0, 0, 0],
     "nickname": "乱破 luanpo"
   },
-  "TrailBlazerPhysical": {
+  "开拓者 毁灭": {
     "id": "8002",
     "point_costs": [0, 0, 0, 0, 0, 0, 0],
     "rarity": 5,
-    "nickname": "TrailBlazerPhysical PMC"
+    "nickname": "开拓者 毁灭 kaituozhe huimie 物理爷"
   },
   "TrailBlazerFire": {
     "id": "8004",
     "point_costs": [0, 0, 0, 0, 0, 0, 0],
     "rarity": 5,
-    "nickname": "TrailBlazerFire FMC"
+    "nickname": "kaituozhe"
   },
   "TrailBlazerImaginary": {
     "id": "8006",
@@ -365,14 +365,14 @@
     "special": true,
     "code": "im",
     "rarity": 5,
-    "nickname": "IMC TrailBlazerImaginary HMC HamSandwich HarmonyMC Ham Sandwich"
+    "nickname": "kaituozhe"
   },
   "TrailBlazerIce": {
     "id": "8008",
     "rarity": 5,
     "point_costs": [0, 0, 0, 0, 0, 0, 0],
     "code": "ic",
-    "nickname": "RMC Remembrance MC TrailblazerIce Mem"
+    "nickname": "kaituozhe"
   }, 
   "大黑塔": {
     "id": "1401",
