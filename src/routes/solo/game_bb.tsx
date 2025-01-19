@@ -1,5 +1,5 @@
 import { Component, onMount } from "solid-js";
-import DraftTool from "~/components/DraftTool/DraftTool";
+import DraftTool from "~/components/ComponentsCN/DraftTool/DraftTool";
 import {
   setTurnIndex,
   turnIndex,

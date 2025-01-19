@@ -43,19 +43,13 @@ const Roster: Component<RosterProps> = (props) => {
     }
   });
   createEffect(() => {
-    const selected = [
-      ...bluePicks(),
-      ...redPicks(),
-    ].map((char) => char.name);
+    const selected = [...bluePicks(), ...redPicks()].map((char) => char.name);
     setSelectedChars(selected);
   });
   createEffect(() => {
-    const banned = [
-      ...blueBans(),
-      ...redBans(),
-    ].map((ban) => ban.name);
+    const banned = [...blueBans(), ...redBans()].map((ban) => ban.name);
     setBannedCharacters(banned);
-  })
+  });
   const selectCharacter = (characterName: string) => {
     if (turnIndex() >= turnOrder().length) {
       return;
@@ -64,11 +58,11 @@ const Roster: Component<RosterProps> = (props) => {
     const currentAction = currentTurn().action;
     if (currentAction == "ban") {
       if (currentPlayer == "blue_team") {
-          setBlueBans([...blueBans(), { name: characterName }]);
-          handleBan({ name: characterName });
+        setBlueBans([...blueBans(), { name: characterName }]);
+        handleBan({ name: characterName });
       } else {
-          setRedBans([...redBans(), { name: characterName }]);
-          handleBan({ name: characterName });
+        setRedBans([...redBans(), { name: characterName }]);
+        handleBan({ name: characterName });
       }
     } else {
       const pickSignal = currentPlayer == "blue_team" ? bluePicks : redPicks;
@@ -79,14 +73,20 @@ const Roster: Component<RosterProps> = (props) => {
         superimposition: 1,
         index: Math.max(0, pickSignal().length - 1),
         team: currentPlayer,
-        num_picked: selectedChars().includes(characterName) ? 2 : 1
+        num_picked: selectedChars().includes(characterName) ? 2 : 1,
       };
       if (currentPlayer == "blue_team") {
-        if (bluePicks().length < 8 || (turnOrder() == turn_order_bb && bluePicks().length < 10)) {
+        if (
+          bluePicks().length < 8 ||
+          (turnOrder() == turn_order_bb && bluePicks().length < 10)
+        ) {
           handlePick(pick);
         }
       } else {
-        if (redPicks().length < 8 || (turnOrder() == turn_order_bb && redPicks().length < 10)) {
+        if (
+          redPicks().length < 8 ||
+          (turnOrder() == turn_order_bb && redPicks().length < 10)
+        ) {
           handlePick(pick);
         }
       }
@@ -96,10 +96,10 @@ const Roster: Component<RosterProps> = (props) => {
   };
   const endDraftPhase = () => {
     if (turnOrder() == turn_order_bb) {
-      return redPicks().length == 10 && blueBans().length == 4; 
+      return redPicks().length == 10 && blueBans().length == 4;
     }
     return redPicks().length == 8;
-  }
+  };
   return (
     <div class={styles.roster_container}>
       <div
@@ -112,11 +112,11 @@ const Roster: Component<RosterProps> = (props) => {
           type="text"
           value={searchTerm()}
           onInput={(e) => setSearchTerm(e.target.value)}
-          placeholder="Search characters"
+          placeholder="搜索角色"
           class={styles.search_bar}
         />
         <div class={styles.selector}>
-          { Object.entries(charJson())
+          {Object.entries(charJson())
             .sort(([a], [b]) => a.localeCompare(b))
             .map(([characterName, characterDetails]) => {
               const characterId = (characterDetails as CharacterDetails).id;
@@ -144,7 +144,10 @@ const Roster: Component<RosterProps> = (props) => {
               }
               const isBanned = () => {
                 if (isFFA()) {
-                  return bannedCharacters().filter(c => c == characterName).length == 3;
+                  return (
+                    bannedCharacters().filter((c) => c == characterName)
+                      .length == 3
+                  );
                 }
                 return bannedCharacters().includes(characterName);
               };
@@ -156,14 +159,22 @@ const Roster: Component<RosterProps> = (props) => {
                   if (!(turnIndex() < turnOrder().length)) {
                     return false;
                   }
-                  if (turnOrder() == turn_order_bb && turnIndex() > turnOrder().length - 7 && turnIndex() < turnOrder().length - 5) {
+                  if (
+                    turnOrder() == turn_order_bb &&
+                    turnIndex() > turnOrder().length - 7 &&
+                    turnIndex() < turnOrder().length - 5
+                  ) {
                     return true;
                   }
                 }
 
                 if (isSpecial || isFFA() || canDoublePickWithCost()) {
-                  const pickSignal = currentTurn().team == "blue_team" ? bluePicks : redPicks;
-                  return pickSignal().filter((char) => char.name == characterName).length == 0;
+                  const pickSignal =
+                    currentTurn().team == "blue_team" ? bluePicks : redPicks;
+                  return (
+                    pickSignal().filter((char) => char.name == characterName)
+                      .length == 0
+                  );
                 } else {
                   return !selectedChars().includes(characterName);
                 }
@@ -176,7 +187,7 @@ const Roster: Component<RosterProps> = (props) => {
 
               const canPick = () => {
                 return !isBanned() && canSelect();
-              }
+              };
 
               const renderChar = () => {
                 return (
@@ -197,7 +208,9 @@ const Roster: Component<RosterProps> = (props) => {
                       canPick() ? styles.not_selected : styles.character
                     }`}
                     onClick={
-                      canPick() && !(ownTeam() == "spectator") ? () => selectCharacter(characterName) : undefined
+                      canPick() && !(ownTeam() == "spectator")
+                        ? () => selectCharacter(characterName)
+                        : undefined
                     }
                   >
                     <img
@@ -230,10 +243,10 @@ const Roster: Component<RosterProps> = (props) => {
         }}
       >
         <button onClick={props.handleUndo} class={`${styles.roster_button}`}>
-          Undo
+          返回
         </button>
         <button onClick={props.handleReset} class={styles.roster_button}>
-          Reset
+          重制
         </button>
       </div>
     </div>

@@ -1,0 +1,84 @@
+.settings_menu {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background: #48305f;
+    margin-bottom: 2em;
+    align-items: center;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+.team_names {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 0.5em;
+    align-items: center;
+    height: 2.5em;
+    border-radius: 0.5em;
+}
+
+.team_names_input {
+    background-color: #614b78;
+    border: none;
+    margin: 0.1em;
+    padding: 0.5em;
+    color: #ffffff;
+}
+.team_names_input::placeholder {
+    color: #b8a5c6;
+}
+.initiative {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0.5em;
+}
+.roll_buttons {
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid #64477c;
+    padding: 0.5em;
+    transition: transform 0.3s ease;
+    border-radius: 0.5em;
+}
+
+.roll_buttons:hover {
+    background-color: var(--buttons);
+    transform: scale(1.1);
+}
+.blue_team_selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5em;
+}
+
+.hide {
+    display: none;
+}
+  
+fieldset {
+    border: none;
+}
+
+.toggle_cycle_penalty {
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+.toggle_cycle_penalty:disabled {
+    background-color: #48305f;
+    color: #b8a5c6;
+    cursor: not-allowed;
+}
+.logo {
+    /* height: 100%; */
+    width: 25%;
+    left: 0;
+    top: 0;
+}

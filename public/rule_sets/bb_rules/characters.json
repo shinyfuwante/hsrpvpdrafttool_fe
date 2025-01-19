@@ -1,814 +1,391 @@
 {
-    "三月七": {
-        "id": "1001",
-        "rarity": 4,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "三月七"
-    },
-    "丹恒": {
-        "id": "1002",
-        "rarity": 4,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "丹恒"
-    },
-    "姬子": {
-        "id": "1003",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "姬子"
-    },
-    "瓦尔特": {
-        "id": "1004",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "瓦尔特"
-    },
-    "卡芙卡": {
-        "id": "1005",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "卡芙卡"
-    },
-    "银狼": {
-        "id": "1006",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "银狼"
-    },
-    "阿兰": {
-        "id": "1008",
-        "rarity": 4,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "阿兰"
-    },
-    "艾丝妲": {
-        "id": "1009",
-        "rarity": 4,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "艾丝妲"
-    },
-    "黑塔": {
-        "id": "1013",
-        "rarity": 4,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "黑塔"
-    },
-    "布洛妮娅": {
-        "id": "1101",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "布洛妮娅"
-    },
-    "希儿": {
-        "id": "1102",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "希儿"
-    },
-    "希露瓦": {
-        "id": "1103",
-        "rarity": 4,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "希露瓦"
-    },
-    "杰帕德": {
-        "id": "1104",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "杰帕德"
-    },
-    "娜塔莎": {
-        "id": "1105",
-        "rarity": 4,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "娜塔莎"
-    },
-    "佩拉": {
-        "id": "1106",
-        "rarity": 4,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "佩拉"
-    },
-    "克拉拉": {
-        "id": "1107",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "克拉拉"
-    },
-    "桑博": {
-        "id": "1108",
-        "rarity": 4,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "桑博"
-    },
-    "虎克": {
-        "id": "1109",
-        "rarity": 4,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "虎克"
-    },
-    "玲可": {
-        "id": "1110",
-        "rarity": 4,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "玲可"
-    },
-    "卢卡": {
-        "id": "1111",
-        "rarity": 4,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "卢卡"
-    },
-    "托帕&账账": {
-        "id": "1112",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "托帕&账账"
-    },
-    "青雀": {
-        "id": "1201",
-        "rarity": 4,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "青雀"
-    },
-    "停云": {
-        "id": "1202",
-        "rarity": 4,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "停云"
-    },
-    "罗刹": {
-        "id": "1203",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "罗刹"
-    },
-    "景元": {
-        "id": "1204",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "景元"
-    },
-    "刃": {
-        "id": "1205",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "刃"
-    },
-    "素裳": {
-        "id": "1206",
-        "rarity": 4,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "素裳"
-    },
-    "驭空": {
-        "id": "1207",
-        "rarity": 4,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "驭空"
-    },
-    "符玄": {
-        "id": "1208",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "符玄"
-    },
-    "彦卿": {
-        "id": "1209",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "彦卿"
-    },
-    "桂乃芬": {
-        "id": "1210",
-        "rarity": 4,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "桂乃芬"
-    },
-    "白露": {
-        "id": "1211",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "白露"
-    },
-    "镜流": {
-        "id": "1212",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "镜流"
-    },
-    "丹恒•饮月": {
-        "id": "1213",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "丹恒•饮月"
-    },
-    "雪衣": {
-        "id": "1214",
-        "rarity": 4,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "雪衣"
-    },
-    "寒鸦": {
-        "id": "1215",
-        "rarity": 4,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "寒鸦"
-    },
-    "藿藿": {
-        "id": "1217",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "藿藿"
-    },
-    "椒丘": {
-        "id": "1218",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "椒丘"
-    },
-    "飞霄": {
-        "id": "1220",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "飞霄"
-    },
-    "云璃": {
-        "id": "1221",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "云璃"
-    },
-    "灵砂": {
-        "id": "1222",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "灵砂"
-    },
-    "貊泽": {
-        "id": "1223",
-        "rarity": 4,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "貊泽"
-    },
-    "忘归人": {
-        "id": "1225",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "忘归人"
-    },
-    "加拉赫": {
-        "id": "1301",
-        "rarity": 4,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "加拉赫"
-    },
-    "银枝": {
-        "id": "1302",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "银枝"
-    },
-    "阮•梅": {
-        "id": "1303",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "阮•梅"
-    },
-    "砂金": {
-        "id": "1304",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "砂金"
-    },
-    "真理医生": {
-        "id": "1305",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "真理医生"
-    },
-    "花火": {
-        "id": "1306",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "花火"
-    },
-    "黑天鹅": {
-        "id": "1307",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "黑天鹅"
-    },
-    "黄泉": {
-        "id": "1308",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "黄泉"
-    },
-    "知更鸟": {
-        "id": "1309",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "知更鸟"
-    },
-    "流萤": {
-        "id": "1310",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "流萤"
-    },
-    "米沙": {
-        "id": "1312",
-        "rarity": 4,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "米沙"
-    },
-    "星期日": {
-        "id": "1313",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "星期日"
-    },
-    "翡翠": {
-        "id": "1314",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "翡翠"
-    },
-    "波提欧": {
-        "id": "1315",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "波提欧"
-    },
-    "乱破": {
-        "id": "1317",
-        "rarity": 5,
-        "point_costs": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ],
-        "nickname": "乱破"
-    }
+  "三月七": {
+    "id": "1001",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "三月七 sanyueqi 37"
+  },
+  "丹恒": {
+    "id": "1002",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "丹恒 danheng 冷面小青龙"
+  },
+  "姬子": {
+    "id": "1003",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "姬子 jizi"
+  },
+  "瓦尔特": {
+    "id": "1004",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "瓦尔特 waerte 老杨"
+  },
+  "卡芙卡": {
+    "id": "1005",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "卡芙卡 kafuka dot"
+  },
+  "银狼": {
+    "id": "1006",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "银狼 yinlang 牢狼"
+  },
+  "阿兰": {
+    "id": "1008",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "阿兰 alan"
+  },
+  "艾丝妲": {
+    "id": "1009",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "艾丝妲 aisida"
+  },
+  "黑塔": {
+    "id": "1013",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "黑塔 heita"
+  },
+  "布洛妮娅": {
+    "id": "1101",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "布洛妮娅 buluoniya 大鸭鸭 dayaya"
+  },
+  "希儿": {
+    "id": "1102",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "希儿 xier 希尔 牢希 AI"
+  },
+  "希露瓦": {
+    "id": "1103",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "希露瓦 xiluwa"
+  },
+  "杰帕德": {
+    "id": "1104",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "杰帕德 jiepade"
+  },
+  "娜塔莎": {
+    "id": "1105",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "娜塔莎 natasha"
+  },
+  "佩拉": {
+    "id": "1106",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "佩拉 pela"
+  },
+  "克拉拉": {
+    "id": "1107",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "克拉拉 kelala"
+  },
+  "桑博": {
+    "id": "1108",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "桑博 sangbo"
+  },
+  "虎克": {
+    "id": "1109",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "虎克 huke"
+  },
+  "玲可": {
+    "id": "1110",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "玲可 lingke"
+  },
+  "卢卡": {
+    "id": "1111",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "卢卡 luka"
+  },
+  "托帕&账账": {
+    "id": "1112",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "托帕&账账 tuopa 买榜姐"
+  },
+  "青雀": {
+    "id": "1201",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "青雀 qingque 青将军"
+  },
+  "停云": {
+    "id": "1202",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "停云 tingyun"
+  },
+  "罗刹": {
+    "id": "1203",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "罗刹 luocha"
+  },
+  "景元": {
+    "id": "1204",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "景元 jingyuan 牢景 将军"
+  },
+  "刃": {
+    "id": "1205",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "刃 ren 牢刃"
+  },
+  "素裳": {
+    "id": "1206",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "素裳 sushang 李素赏 李大枕头"
+  },
+  "驭空": {
+    "id": "1207",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "驭空 yukong"
+  },
+  "符玄": {
+    "id": "1208",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "符玄 fuxuan"
+  },
+  "彦卿": {
+    "id": "1209",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "彦卿 yanqing"
+  },
+  "桂乃芬": {
+    "id": "1210",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "桂乃芬 guinaifen"
+  },
+  "白露": {
+    "id": "1211",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "白露 bailu"
+  },
+  "镜流": {
+    "id": "1212",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "镜流 jingliu 牢镜"
+  },
+  "丹恒•饮月": {
+    "id": "1213",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "丹恒•饮月 丹恒 饮月 danheng yinyue 龙丹 long"
+  },
+  "雪衣": {
+    "id": "1214",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "雪衣 xueyi"
+  },
+  "寒鸦": {
+    "id": "1215",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "寒鸦 hanya"
+  },
+  "藿藿": {
+    "id": "1217",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "藿藿 huohuo"
+  },
+  "椒丘": {
+    "id": "1218",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "椒丘 jiaoqiu"
+  },
+  "飞霄": {
+    "id": "1220",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "飞霄 大飞老师 feixiao 将军"
+  },
+  "云璃": {
+    "id": "1221",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "云璃 yunli"
+  },
+  "灵砂": {
+    "id": "1222",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "灵砂 lingsha"
+  },
+  "貊泽": {
+    "id": "1223",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "貊泽 moze"
+  },
+  "忘归人": {
+    "id": "1225",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "忘归人 wangguiren 王贵人 停云 tingyun"
+  },
+  "加拉赫": {
+    "id": "1301",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "加拉赫 jialehe"
+  },
+  "银枝": {
+    "id": "1302",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "银枝 yinzhi 纯美"
+  },
+  "阮•梅": {
+    "id": "1303",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "阮•梅 阮梅 ruanmei"
+  },
+  "砂金": {
+    "id": "1304",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "砂金 shajin"
+  },
+  "真理医生": {
+    "id": "1305",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "真理医生 zhenliyisheng 拉帝奥教授"
+  },
+  "花火": {
+    "id": "1306",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "花火 huahuo"
+  },
+  "黑天鹅": {
+    "id": "1307",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "黑天鹅 heitiane dot"
+  },
+  "黄泉": {
+    "id": "1308",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "黄泉 huangquan"
+  },
+  "知更鸟": {
+    "id": "1309",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "知更鸟 微笑的国度 底层逻辑 zhigengniao"
+  },
+  "流萤": {
+    "id": "1310",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "流萤 liuying"
+  },
+  "米沙": {
+    "id": "1312",
+    "rarity": 4,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "米沙 misha 米哈伊尔"
+  },
+  "星期日": {
+    "id": "1313",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "星期日 xingqiri 星期天 周天哥 牢日"
+  },
+  "翡翠": {
+    "id": "1314",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "翡翠 feicui"
+  },
+  "波提欧": {
+    "id": "1315",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "波提欧 botio bto"
+  },
+  "乱破": {
+    "id": "1317",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "乱破 luanpo"
+  },
+  "TrailBlazerPhysical": {
+    "id": "8002",
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "rarity": 5,
+    "nickname": "TrailBlazerPhysical PMC"
+  },
+  "TrailBlazerFire": {
+    "id": "8004",
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "rarity": 5,
+    "nickname": "TrailBlazerFire FMC"
+  },
+  "TrailBlazerImaginary": {
+    "id": "8006",
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "special": true,
+    "code": "im",
+    "rarity": 5,
+    "nickname": "IMC TrailBlazerImaginary HMC HamSandwich HarmonyMC Ham Sandwich"
+  },
+  "TrailBlazerIce": {
+    "id": "8008",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "code": "ic",
+    "nickname": "RMC Remembrance MC TrailblazerIce Mem"
+  }, 
+  "大黑塔": {
+    "id": "1401",
+    "rarity": 5,
+    "code": "th",
+    "point_costs": [10, 2, 4, 0, 0, 0, 2],
+    "nickname": "大黑塔 daheita 牢大"
+  },
+  "阿格莱雅": {
+    "id": "1402",
+    "rarity": 5,
+    "code": "xx",
+    "point_costs": [1, 1, 1, 1, 1, 1, 1],
+    "nickname": "agelaiya"
+  }
 }
