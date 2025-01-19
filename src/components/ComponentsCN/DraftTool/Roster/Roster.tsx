@@ -123,7 +123,7 @@ const Roster: Component<RosterProps> = (props) => {
               const characterImage = `/character_icons/${characterId}.webp`;
               const isSpecial = characterDetails.special == true && isEvent();
               if (turnOrder() == turn_order_bb) {
-                if (turnIndex() == turnOrder().length - 6) {
+                if (turnIndex() == turnOrder().length - 5) {
                   let match = false;
                   for (const pick of bluePicks()) {
                     if (pick.name == characterName) {
@@ -132,7 +132,7 @@ const Roster: Component<RosterProps> = (props) => {
                   }
                   if (!match) return;
                 }
-                if (turnIndex() == turnOrder().length - 5) {
+                if (turnIndex() == turnOrder().length - 6) {
                   let match = false;
                   for (const pick of redPicks()) {
                     if (pick.name == characterName) {
@@ -162,7 +162,7 @@ const Roster: Component<RosterProps> = (props) => {
                   if (
                     turnOrder() == turn_order_bb &&
                     turnIndex() > turnOrder().length - 7 &&
-                    turnIndex() < turnOrder().length - 5
+                    turnIndex() < turnOrder().length - 4
                   ) {
                     return true;
                   }
