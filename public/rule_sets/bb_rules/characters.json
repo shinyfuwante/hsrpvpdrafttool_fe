@@ -353,26 +353,26 @@
     "rarity": 5,
     "nickname": "开拓者 毁灭 kaituozhe huimie 物理爷"
   },
-  "TrailBlazerFire": {
+  "开拓者 存护": {
     "id": "8004",
     "point_costs": [0, 0, 0, 0, 0, 0, 0],
     "rarity": 5,
-    "nickname": "kaituozhe"
+    "nickname": "开拓者 存护 kaituozhe cunhu 火爷 火主角"
   },
-  "TrailBlazerImaginary": {
+  "开拓者 同谐": {
     "id": "8006",
     "point_costs": [0, 0, 0, 0, 0, 0, 0],
     "special": true,
     "code": "im",
     "rarity": 5,
-    "nickname": "kaituozhe"
+    "nickname": "开拓者 同谐 kaituozhe tongxie 虚数爷 虚数主角"
   },
-  "TrailBlazerIce": {
+  "开拓者 记忆": {
     "id": "8008",
     "rarity": 5,
     "point_costs": [0, 0, 0, 0, 0, 0, 0],
     "code": "ic",
-    "nickname": "kaituozhe"
+    "nickname": "开拓者 记忆 kaituozhe jiyi 冰爷 冰主角"
   }, 
   "大黑塔": {
     "id": "1401",
