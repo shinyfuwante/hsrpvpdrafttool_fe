@@ -339,7 +339,7 @@
   },
   "In the Night": {
     "id": "23001",
-    "point_costs": [1.6, 0.4, 0.4, 0.4, 0.4],
+    "point_costs": [1.6, 0.4, 0.6, 0.4, 0.4],
     "character": "Seele",
     "rarity": 5
   },
@@ -390,7 +390,7 @@
   },
   "The Unreachable Side": {
     "id": "23009",
-    "point_costs": [1, 0.2, 0.2, 0.2, 0.2],
+    "point_costs": [1.4, 0.2, 0.2, 0.2, 0.2],
     "character": "Blade",
     "rarity": 5
   },
@@ -535,7 +535,7 @@
   "Sailing Towards a Second Life": {
     "id": "23027",
     "rarity": 5,
-    "point_costs": [1, 0.6, 0.6, 0.6, 0.6],
+    "point_costs": [0.8, 0.6, 0.6, 0.6, 0.6],
     "character": "Boothill BH"
   },
   "After the Charmony Fall": {
@@ -565,7 +565,7 @@
   "Dance at Sunset": {
     "id": "23030",
     "rarity": 5,
-    "point_costs": [1.6, 0.4, 0.8, 0.6, 0.8, 0, 0],
+    "point_costs": [1.6, 0.6, 0.8, 0.6, 0.8, 0, 0],
     "character": "Yunli"
   },
   "Those Many Springs": {
@@ -605,13 +605,19 @@
   "Long Road Leads Home": {
     "id": "23035", 
     "rarity": 5,
-    "point_costs": [1.6, 0.4, 0.4, 0.2, 0.4, 0, 0],
+    "point_costs": [1.6, 0.6, 0.4, 0.2, 0.4, 0, 0],
     "character": "Fugue"
   },
   "A Grounded Ascent": {
     "id": "23034",
     "rarity": 5,
-    "point_costs": [2.2, 0.6, 0.6, 0.6, 0.6, 0.6, 0],
+    "point_costs": [3, 0.6, 0.6, 0.6, 0.6, 0.6, 0],
     "character": "Sunday"
+  },
+  "Into the Unreachable Veil": {
+    "id": "23037",
+    "rarity": 5,
+    "point_costs": [2.4, 0.4, 0.4, 0.4, 0.4],
+    "character": "The Herta Therta"
   }
 }
