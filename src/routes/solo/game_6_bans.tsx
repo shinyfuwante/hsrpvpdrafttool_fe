@@ -34,7 +34,8 @@ import {
   setApplyTimerPenalty,
   setCanDoublePickWithCost,
   turn_order_3_bans,
-  setTurnOrder
+  setTurnOrder,
+  setIsFFA
 } from "~/game/game_logic";
 
 // interface DraftToolProps {
@@ -133,6 +134,7 @@ const game: Component<{}> = (props) => {
     setApplyTimerPenalty(false);
     setTurnOrder(turn_order_3_bans);
     // setCanDoublePickWithCost(true);
+    setIsFFA(true);
   });
   return (
     <DraftTool
