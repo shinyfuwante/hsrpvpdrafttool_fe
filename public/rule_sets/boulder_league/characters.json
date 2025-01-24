@@ -55,7 +55,7 @@
   },
   "Bronya": {
     "id": "1101",
-    "point_costs": [5, 1, 1.8, 0, 0.8, 0, 1],
+    "point_costs": [5, 1.2, 1.8, 0, 0.8, 0, 1],
     "rarity": 5,
     "nickname": "Bronya Lebron Broner"
   },

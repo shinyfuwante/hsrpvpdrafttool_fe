@@ -466,7 +466,7 @@
   },
   "Earthly Escapade": {
     "id": "23021",
-    "point_costs": [1.5, 1.5, 2, 2, 2.5],
+    "point_costs": [1, 1, 1.5, 1.5, 2],
     "character": "Sparkle Hanabi",
     "rarity": 5
   },
@@ -659,7 +659,7 @@
   "Into the Unreachable Veil": {
     "id": "23037",
     "rarity": 5,
-    "point_costs": [1, 1, 1.5, 1.5, 2],
+    "point_costs": [1.5, 1.5, 2, 2, 2.5],
     "character": "The Herta Therta"
   }
 }
