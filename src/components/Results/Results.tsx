@@ -27,13 +27,16 @@ const Results: Component<{}> = (props) => {
   const [copied, setCopied] = createSignal(false);
   const [blueBonus, setBlueBonus] = createSignal(0);
   const [redBonus, setRedBonus] = createSignal(0);
+  const [blueModCost, setBlueModCost] = createSignal(0);
+  const [redModCost, setRedModCost] = createSignal(0);
 
-  createEffect(() => {
-    setBlueBonus(calculateBonusCycles(blueCost()));
-    setRedBonus(calculateBonusCycles(redCost()));
-  });
   let [blueOneCycles, blueTwoCycles, blueDeaths] = [0, 0, 0];
   let [redOneCycles, redTwoCycles, redDeaths] = [0, 0, 0];
+
+  createEffect(() => {
+    setBlueBonus(calculateBonusCycles(blueCost() + blueModCost()));
+    setRedBonus(calculateBonusCycles(redCost() + redModCost()));
+  });
 
   const penaltyCounter = () => {
     const diff = blueBonus() - redBonus();
@@ -51,12 +54,20 @@ const Results: Component<{}> = (props) => {
   };
   const calculateScores = () => {
     setBlueScore(
-      calculateScore(blueCost(), blueDeaths, blueOneCycles, blueTwoCycles) +
-        (applyTimerPenalty() ? blueTimePenalty() : 0)
+      calculateScore(
+        blueCost() + blueModCost(),
+        blueDeaths,
+        blueOneCycles,
+        blueTwoCycles
+      ) + (applyTimerPenalty() ? blueTimePenalty() : 0)
     );
     setRedScore(
-      calculateScore(redCost(), redDeaths, redOneCycles, redTwoCycles) +
-        (applyTimerPenalty() ? redTimePenalty() : 0)
+      calculateScore(
+        redCost() + redModCost(),
+        redDeaths,
+        redOneCycles,
+        redTwoCycles
+      ) + (applyTimerPenalty() ? redTimePenalty() : 0)
     );
     setScoreCalced(true);
     if (blueScore() == redScore()) {
@@ -80,21 +91,34 @@ const Results: Component<{}> = (props) => {
           <div class={styles.team_name}>{blueTeamName()}</div>
           <input
             placeholder={"Blue Player 1 Cycles"}
+            type="number"
             onChange={(e) => (blueOneCycles = Number(e.target.value))}
             class={styles.results_input}
           ></input>
           <input
             placeholder={"Blue Player 2 Cycles"}
+            type="number"
             onChange={(e) => (blueTwoCycles = Number(e.target.value))}
             class={styles.results_input}
           ></input>
           <input
             placeholder={"Blue Team Deaths"}
+            type="number"
             onChange={(e) => (blueDeaths = Number(e.target.value))}
             class={styles.results_input}
           >
             Blue Team Deaths:{" "}
           </input>
+          <Show when={ruleSet() != "pokke" && turnOrder() != turn_order_bb}>
+            <input
+              type="number"
+              placeholder={"Blue Team Modifier"}
+              onChange={(e) => setBlueModCost(Number(e.target.value))}
+              class={styles.results_input}
+            >
+              Blue Team Cost Modifier:{" "}
+            </input>
+          </Show>
         </div>
         <div class={styles.team_result}>
           <div class={styles.team_name}>{redTeamName()}</div>
@@ -122,6 +146,16 @@ const Results: Component<{}> = (props) => {
           >
             Red Team Deaths:{" "}
           </input>
+          <Show when={ruleSet() != "pokke" && turnOrder() != turn_order_bb}>
+            <input
+              type="number"
+              placeholder={"Red Team Modifier"}
+              onChange={(e) => setRedModCost(Number(e.target.value))}
+              class={styles.results_input}
+            >
+              Red Team Cost Modifier:{" "}
+            </input>
+          </Show>
         </div>
       </div>
       <Show when={ruleSet() != "pokke" && turnOrder() != turn_order_bb}>

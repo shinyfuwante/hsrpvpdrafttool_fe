@@ -382,7 +382,7 @@
   "Sunday": {
     "id": "1313",
     "rarity": 5,
-    "point_costs": [5, 2.5, 0.5, 0, 0, 0, 1.5],
+    "point_costs": [5, 2.5, 0.5, 0, 0, 0, 1],
     "code": "sy",
     "nickname": "Sunday"
   },
