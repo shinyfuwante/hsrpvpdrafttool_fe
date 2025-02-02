@@ -404,7 +404,7 @@
     "id": "1401",
     "rarity": 5,
     "code": "th",
-    "point_costs": [8.5, 4, 4, 0, 0, 0, 2],
+    "point_costs": [9, 4, 5.5, 0.5, 0, 0, 1.5],
     "nickname": "The Herta Therta"
   },
   "Aglaea": {
