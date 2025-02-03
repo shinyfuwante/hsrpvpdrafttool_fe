@@ -277,7 +277,7 @@
   },
   "Today Is Another Peaceful Day": {
     "id": "21034",
-    "point_costs": [0, 0, 0, 0, 0],
+    "point_costs": [0.2, 0.2, 0, 0.2, 0],
     "rarity": 4
   },
   "What Is Real?": {
@@ -396,7 +396,7 @@
   },
   "Before Dawn": {
     "id": "23010",
-    "point_costs": [1, 0.4, 0.4, 0.4, 0.4],
+    "point_costs": [1.4, 0.4, 0.4, 0.4, 0.4],
     "character": "Jing Yuan JY Jimmy Wong",
     "rarity": 5
   },
@@ -501,7 +501,7 @@
   },
   "Along the Passing Shore": {
     "id": "23204",
-    "point_costs": [1.6, 0.6, 0.8, 0.6, 0.6],
+    "point_costs": [1.6, 0.6, 0.6, 0.6, 0.6],
     "rarity": 5,
     "character": "Acheron"
   },
@@ -535,7 +535,7 @@
   "Sailing Towards a Second Life": {
     "id": "23027",
     "rarity": 5,
-    "point_costs": [0.8, 0.6, 0.6, 0.6, 0.6],
+    "point_costs": [1, 0.6, 0.6, 0.6, 0.6],
     "character": "Boothill BH"
   },
   "After the Charmony Fall": {
@@ -582,12 +582,12 @@
   "Shadowed by Night": {
     "id": "21047",
     "rarity": 4,
-    "point_costs": [0, 0, 0, 0, 0, 0, 0]
+    "point_costs": [0.4, 0, 0, 0, 0, 0, 0]
   },
   "I Venture Forth to Hunt": {
     "id": "23031",
     "rarity": 5,
-    "point_costs": [2.6, 0.4, 0.4, 0.4, 0.4, 0, 0],
+    "point_costs": [2.6, 0.4, 0.6, 0.4, 0.4, 0, 0],
     "character": "Feixiao Fei Xiao Fampter FX"
   },
   "Scent Alone Stays True": {
@@ -617,7 +617,7 @@
   "Into the Unreachable Veil": {
     "id": "23037",
     "rarity": 5,
-    "point_costs": [2.4, 0.4, 0.4, 0.4, 0.4],
+    "point_costs": [1, 0.4, 0.4, 0.4, 0.4],
     "character": "The Herta Therta"
   }
 }
