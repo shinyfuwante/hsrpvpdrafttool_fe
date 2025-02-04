@@ -654,7 +654,7 @@
   "Time Woven Into Gold": {
     "id": "23036",
     "rarity": 5,
-    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "point_costs": [2.5, 2.5, 3.5, 4, 4.5, 0, 0],
     "character": "Aglaea"
   },
   "Into the Unreachable Veil": {

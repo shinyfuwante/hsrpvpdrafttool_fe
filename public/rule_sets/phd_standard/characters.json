@@ -410,8 +410,8 @@
   "Aglaea": {
     "id": "1402",
     "rarity": 5,
-    "code": "xx",
-    "point_costs": [1, 1, 1, 1, 1, 1, 1],
+    "code": "ae",
+    "point_costs": [9, 5.5, 5, 0, 0, 0, 1.5],
     "nickname": "Aglaea"
   }
 }
