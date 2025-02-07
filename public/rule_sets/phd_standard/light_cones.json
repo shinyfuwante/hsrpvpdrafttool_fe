@@ -431,7 +431,7 @@
   },
   "Brighter Than the Sun": {
     "id": "23015",
-    "point_costs": [1.5, 1.5, 2, 2, 2.5],
+    "point_costs": [1, 1, 1.5, 1.5, 2],
     "character": "Dan Heng Imbibitor Lunae DHIL Daniel",
     "rarity": 5
   },
@@ -613,7 +613,7 @@
   "A Grounded Ascent": {
     "id": "23034",
     "rarity": 5,
-    "point_costs": [1.5, 1.5, 2, 2, 2.5, 0, 0],
+    "point_costs": [2, 2, 2.5, 2.5, 3, 0, 0],
     "character": "Sunday"
   },
   "Shadowburn": {
@@ -654,7 +654,7 @@
   "Time Woven Into Gold": {
     "id": "23036",
     "rarity": 5,
-    "point_costs": [2.5, 2.5, 3.5, 4, 4.5, 0, 0],
+    "point_costs": [1.5, 1.5, 2.5, 3, 3.5, 0, 0],
     "character": "Aglaea"
   },
   "Into the Unreachable Veil": {
