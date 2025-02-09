@@ -17,7 +17,8 @@
   "Amber": {
     "id": "20003",
     "point_costs": [0, 0, 0, 0, 0.5],
-    "rarity": 3
+    "rarity": 3,
+    "special": true
   },
   "Void": {
     "id": "20004",
@@ -107,7 +108,8 @@
   "Post-Op Conversation": {
     "id": "21000",
     "point_costs": [1, 0, 0, 1.5, 0],
-    "rarity": 4
+    "rarity": 4,
+    "special": true
   },
   "Good Night and Sleep Well": {
     "id": "21001",
@@ -117,7 +119,8 @@
   "Day One of My New Life": {
     "id": "21002",
     "point_costs": [1, 1, 1.5, 1.5, 1.5],
-    "rarity": 4
+    "rarity": 4,
+    "special": true
   },
   "Only Silence Remains": {
     "id": "21003",
@@ -152,7 +155,8 @@
   "Landau's Choice": {
     "id": "21009",
     "point_costs": [0.5, 0.5, 0.5, 1, 1],
-    "rarity": 4
+    "rarity": 4,
+    "special": true
   },
   "Swordplay": {
     "id": "21010",
@@ -259,7 +263,8 @@
   "This Is Me!": {
     "id": "21030",
     "point_costs": [0.5, 0.5, 1, 1, 1],
-    "rarity": 4
+    "rarity": 4,
+    "special": true
   },
   "Return to Darkness": {
     "id": "21031",
@@ -368,9 +373,7 @@
     "id": "23005",
     "point_costs": [2, 2, 3, 3, 4],
     "character": "Gepard",
-    "rarity": 5,
-    "free": true,
-    "standard": true
+    "rarity": 5
   },
   "Patience Is All You Need": {
     "id": "23006",
@@ -510,7 +513,8 @@
   "Concert for Two": {
     "id": "21043",
     "rarity": 4,
-    "point_costs": [1, 1, 1.5, 1.5, 1.5, 0, 0]
+    "point_costs": [1, 1, 1.5, 1.5, 1.5, 0, 0],
+    "special": true
   },
   "Inherently Unjust Destiny": {
     "id": "23023",

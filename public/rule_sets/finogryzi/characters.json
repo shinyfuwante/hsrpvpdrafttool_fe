@@ -290,7 +290,7 @@
     "id": "1304",
     "special": true,
     "rarity": 5,
-    "point_costs": [12, 1, 1, 0, 2.5, 1.5, 2],
+    "point_costs": [12, 1, 1, 0, 2.5, 1.5, 0],
     "nickname": "Aventurine"
   },
   "Robin": {
