@@ -219,7 +219,7 @@
   },
   "Huohuo": {
     "id": "1217",
-    "point_costs": [4.4, 0.6, 0.2, 0.2, 0, 0, 1.8],
+    "point_costs": [4.6, 0.6, 0.2, 0.2, 0, 0, 1.8],
     "rarity": 5,
     "nickname": "Huohuo HH Tail HweHwe"
   },
@@ -275,7 +275,7 @@
   "Acheron": {
     "id": "1308",
     "special": false,
-    "point_costs": [9.8, 1, 6.4, 0.2, 0.2, 0.2, 1],
+    "point_costs": [10.8, 5, 1.2, 0.2, 0.2, 0.2, 1.2],
     "rarity": 5,
     "nickname": "Acheron Acorn"
   },
@@ -361,7 +361,7 @@
   "Lingsha": {
     "id": "1222",
     "rarity": 5,
-    "point_costs": [5.2, 2.6, 1, 0.2, 1, 0, 4],
+    "point_costs": [5.2, 4.6, 1, 0.2, 1, 0, 4],
     "code": "ls",
     "nickname": "Lingsha"
   },
