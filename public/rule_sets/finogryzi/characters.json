@@ -189,7 +189,7 @@
   },
   "Bailu": {
     "id": "1211",
-    "point_costs": [1, 0, 0, 0, 0, 0, 0],
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
     "rarity": 5,
     "nickname": "Bailu"
   },
@@ -303,7 +303,7 @@
   },
   "TrailBlazerImaginary": {
     "id": "8006",
-    "point_costs": [4, 0, 0, 0, 0, 0, 0],
+    "point_costs": [8, 0, 0, 0, 0, 0, 0],
     "special": true,
     "code": "im",
     "rarity": 5,
@@ -389,7 +389,7 @@
   "Fugue": {
     "id": "1225",
     "rarity": 5,
-    "point_costs": [5.5, 4, 1, 0, 0, 0, 2.5],
+    "point_costs": [9.5, 2.5, 1, 0, 0, 0, 2.5],
     "code": "fg",
     "nickname": "Stingyun Fugue"
   },

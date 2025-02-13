@@ -422,9 +422,7 @@
     "id": "23013",
     "point_costs": [0.5, 0.5, 0.5, 1, 1],
     "character": "Bailu",
-    "rarity": 5,
-    "free": true,
-    "standard": true
+    "rarity": 5
   },
   "I Shall Be My Own Sword": {
     "id": "23014",
