@@ -29,12 +29,14 @@ import {
   turn_order_3_bans,
   turnOrder,
   turn_order_bb,
+  turn_order_3_bans_pokke,
 } from "~/game/game_logic";
 import Timer from "./Timer/Timer";
 
 import styles from "./DraftTool.module.css";
 import TimerPenalty from "./Timer/TimerPenalty/TimerPenalty";
 import TeamTimer from "./Timer/TeamTimer";
+import TeamWith3BansPokke from "./TeamWith3BansPokke/TeamWith3BansPokke";
 
 interface DraftToolProps {
   handlePick: (character: CharacterPick) => void;
@@ -142,6 +144,14 @@ const DraftTool: Component<DraftToolProps> = ({
                       handleSigEid={handleSigEid}
                     />
                   </Match>
+                  <Match when={turnOrder() == turn_order_3_bans_pokke}>
+                    <TeamWith3BansPokke
+                      bansSignal={blueBans}
+                      picksSignal={bluePicks}
+                      team={"blue_team"}
+                      handleSigEid={handleSigEid}
+                    />
+                  </Match>
                 </Switch>
               </div>
               <div class={styles.roster}>
@@ -173,6 +183,14 @@ const DraftTool: Component<DraftToolProps> = ({
                   </Match>
                   <Match when={turnOrder() == turn_order_bb}>
                     <TeamForBB
+                      bansSignal={redBans}
+                      picksSignal={redPicks}
+                      team={"red_team"}
+                      handleSigEid={handleSigEid}
+                    />
+                  </Match>
+                  <Match when={turnOrder() == turn_order_3_bans_pokke}>
+                    <TeamWith3BansPokke
                       bansSignal={redBans}
                       picksSignal={redPicks}
                       team={"red_team"}

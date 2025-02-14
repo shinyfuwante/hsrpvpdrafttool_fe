@@ -12,7 +12,11 @@ import {
   setPlayer1Roll,
   setPlayer2Roll,
   ruleSet,
-  isMeme
+  isMeme,
+  setTurnOrder,
+  turn_order_2_bans,
+  turn_order_3_bans_pokke,
+  resetGame,
 } from "~/game/game_logic";
 import styles from "./SoloSettings.module.css";
 
@@ -49,6 +53,19 @@ const SoloSettings: Component<{}> = (props) => {
       setRedTeamName(player1Name());
     }
   };
+  
+  const handleBanAmountSelection = (amt: number) => {
+    if (ruleSet() == "pokke") {
+      if (amt == 2) {
+        resetGame();
+        setTurnOrder(turn_order_2_bans);
+      }
+      if (amt == 3) {
+        resetGame();
+        setTurnOrder(turn_order_3_bans_pokke);
+      }
+    }
+  }
 
   return (
     <div class={styles.settings_menu}>
@@ -138,6 +155,12 @@ const SoloSettings: Component<{}> = (props) => {
               <div>Apply Timer Penalty (Applied for Ranked)</div>
             </label>
           </fieldset>
+        </div>
+        <div>
+          <select id="banAmount" onChange={(e) => handleBanAmountSelection(Number(e.target.value))} class={styles.bans_dropdown}>
+            <option value={2}>4 Bans (Default)</option>
+            <option value={3}>6 Bans</option>
+          </select>
         </div>
       </Show>
     </div>

@@ -15,6 +15,7 @@ import {
   isEvent,
   turnOrder,
   turn_order_bb,
+  turn_order_3_bans_pokke,
 } from "~/game/game_logic";
 import styles from "./Results.module.css";
 import { blueTeamName, redTeamName } from "~/game/game_logic";
@@ -175,7 +176,7 @@ const Results: Component<{}> = (props) => {
             <div class={styles.red_team}>{redScore().toFixed(4)}</div>
           </div>
         </div>
-        <Show fallback={null} when={ruleSet() == "pokke" && !isEvent()}>
+        <Show fallback={null} when={ruleSet() == "pokke" && !isEvent() && turnOrder() != turn_order_3_bans_pokke}>
           {" "}
           <button
             class={styles.results_button}

@@ -76,3 +76,11 @@ fieldset {
     color: #b8a5c6;
     cursor: not-allowed;
 }
+
+.bans_dropdown {
+    background-color: #614b78;
+    border: none;
+    margin: 0.1em;
+    padding: 0.5em;
+    color: #ffffff;
+}
