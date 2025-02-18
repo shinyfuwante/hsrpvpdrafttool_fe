@@ -16,7 +16,8 @@ import {
   testingTool,
   turnOrder,
   turn_order_bb,
-  formatDecimal
+  formatDecimal,
+  ruleSet
 } from "~/game/game_logic";
 
 import styles from "./CharacterCard.module.css";
@@ -55,6 +56,19 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
     cost() + editedCharCost() + editedLCCost()
   );
 
+  const exceededLCCap = () => {
+    if (ruleSet() != "pokke") {
+      return false;
+    }
+    let numSigs = 0;
+    props.signal().map( (pick) => {
+      if (pick.light_cone && lcJson()[pick.light_cone].rarity == 5) {
+        numSigs += 1;
+      }
+    })
+    return numSigs > 4;
+  }
+  
   let prevEid = character.eidolon;
   let prevLightCone = character.light_cone;
   let prevSuper = character.superimposition;
@@ -178,7 +192,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
           <div class={styles.light_cone_container}>
             <input
               list="light-cones"
-              class={styles.light_cone_input}
+              class={`${styles.light_cone_input} ${exceededLCCap() && lcJson()[lightCone()] && lcJson()[lightCone()].rarity == 5   ? styles.light_cone_input_warning : ''}`}
               value={props.signal()[id].light_cone}
               onBlur={(e) => {
                 if (e.target.value !== lightCone()) {

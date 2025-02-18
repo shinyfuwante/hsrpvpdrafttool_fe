@@ -66,7 +66,9 @@ input.light_cone_input {
 .light_cone_input::placeholder {
   color: #b8a5c6;
 }
-
+input.light_cone_input_warning {
+  color: rgb(234, 97, 97);
+}
 .light_cone_input:disabled {
   background-color: #48305f;
 }
