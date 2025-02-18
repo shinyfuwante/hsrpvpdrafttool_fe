@@ -17,6 +17,7 @@ import {
   turn_order_2_bans,
   turn_order_3_bans_pokke,
   resetGame,
+  turn_order_3_bans,
 } from "~/game/game_logic";
 import styles from "./SoloSettings.module.css";
 
@@ -55,16 +56,18 @@ const SoloSettings: Component<{}> = (props) => {
   };
   
   const handleBanAmountSelection = (amt: number) => {
-    if (ruleSet() == "pokke") {
       if (amt == 2) {
         resetGame();
         setTurnOrder(turn_order_2_bans);
       }
       if (amt == 3) {
         resetGame();
-        setTurnOrder(turn_order_3_bans_pokke);
+        if (ruleSet() == "pokke") {
+          setTurnOrder(turn_order_3_bans_pokke);
+        } else {
+          setTurnOrder(turn_order_3_bans);
+        }
       }
-    }
   }
 
   return (
@@ -141,7 +144,7 @@ const SoloSettings: Component<{}> = (props) => {
           </div>
         </div>
       </div>
-      <Show when={ruleSet() == "pokke"}>
+      <Show when={ruleSet() == "pokke" || ruleSet() == "phd_standard" || ruleSet() == "phd_moc_11"}>
         <div>
           <fieldset>
             <label class={`${styles.toggle_cycle_penalty}`}>

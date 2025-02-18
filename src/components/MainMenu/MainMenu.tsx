@@ -70,14 +70,14 @@ const MainMenu: Component<MainMenuProps> = (props: any) => {
               Create a game for Screen-Share drafting (e.g. Discord, etc)
             </div>
           </div>
-          <div onClick={() => soloGame6Bans()} class={styles.game_mode_select}>
+          {/* <div onClick={() => soloGame6Bans()} class={styles.game_mode_select}>
             <div>
               BETA: Create a game for Screen-Share drafting with 6 bans (e.g.
               Discord, etc)
             </div>
-          </div>
+          </div> */}
           <div onClick={() => joinGame()} class={styles.game_mode_select}>
-            <div>Create a game for multiplayer lobby-style drafting</div>
+            <div>Create a game for multiplayer lobby-style drafting (4 Bans PHD MoC 12 Only)</div>
           </div>
           <div onClick={() => testingTool()} class={styles.supp_mode_select}>
             <div>PHD Points Testing Tool</div>
