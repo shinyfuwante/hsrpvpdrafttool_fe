@@ -65,7 +65,7 @@ const SoloSettings: Component<{}> = (props) => {
         if (ruleSet() == "pokke") {
           setTurnOrder(turn_order_3_bans_pokke);
         } else {
-          setTurnOrder(turn_order_3_bans);
+          setTurnOrder(turn_order_3_bans_pokke);
         }
       }
   }
