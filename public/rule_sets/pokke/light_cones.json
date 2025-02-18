@@ -334,7 +334,7 @@
     "id": "23000",
     "point_costs": [0, 0, 0, 0, 0],
     "character": "Himeko",
-    "rarity": 5,
+    "rarity": 4,
     "free": true
   },
   "In the Night": {
@@ -347,25 +347,25 @@
     "id": "23002",
     "point_costs": [0, 0, 0, 0, 0],
     "character": "Clara",
-    "rarity": 5
+    "rarity": 4
   },
   "But the Battle Isn't Over": {
     "id": "23003",
     "point_costs": [0, 0, 0, 0, 0],
     "character": "Bronya",
-    "rarity": 5
+    "rarity": 4
   },
   "In the Name of the World": {
     "id": "23004",
     "point_costs": [0, 0, 0, 0, 0],
     "character": "Welt",
-    "rarity": 5
+    "rarity": 4
   },
   "Moment of Victory": {
     "id": "23005",
     "point_costs": [0, 0, 0, 0, 0],
     "character": "Gepard",
-    "rarity": 5,
+    "rarity": 4,
     "free": true
   },
   "Patience Is All You Need": {
@@ -408,13 +408,13 @@
     "id": "23012",
     "point_costs": [0, 0, 0, 0, 0],
     "character": "Yanqing YQ",
-    "rarity": 5
+    "rarity": 4
   },
   "Time Waits for No One": {
     "id": "23013",
     "point_costs": [0, 0, 0, 0, 0],
     "character": "Bailu",
-    "rarity": 5,
+    "rarity": 4,
     "free": true
   },
   "I Shall Be My Own Sword": {

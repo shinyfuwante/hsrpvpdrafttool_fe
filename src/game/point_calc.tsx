@@ -21,6 +21,8 @@ import {
   blueTimePenalty,
   redTimePenalty,
   isFFA,
+  turnOrder,
+  turn_order_2_bans,
 } from "./game_logic";
 import { Setter } from "solid-js";
 
@@ -121,6 +123,7 @@ export const encodeString = async (
   encodedString += String(blueCost()).padStart(2, "0");
   encodedString += String(redCost()).padStart(2, "0");
   encodedString += initiativeWinner() == "blue_team" ? "b" : "r";
+  encodedString += turnOrder() == turn_order_2_bans ? "4": "6";
   try {
     await navigator.clipboard.writeText(encodedString);
     setCopied(true);
