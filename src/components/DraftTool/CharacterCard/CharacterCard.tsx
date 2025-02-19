@@ -62,7 +62,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
     }
     let numSigs = 0;
     props.signal().map( (pick) => {
-      if (pick.light_cone && lcJson()[pick.light_cone].rarity == 5) {
+      if (pick.light_cone && && lcJson()[pick.light_cone] && lcJson()[pick.light_cone].rarity == 5) {
         numSigs += 1;
       }
     })
