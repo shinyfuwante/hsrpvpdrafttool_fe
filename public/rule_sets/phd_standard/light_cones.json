@@ -431,7 +431,7 @@
   },
   "Brighter Than the Sun": {
     "id": "23015",
-    "point_costs": [1, 1, 1.5, 1.5, 2],
+    "point_costs": [0.5, 0.5, 1, 1, 1.5],
     "character": "Dan Heng Imbibitor Lunae DHIL Daniel",
     "rarity": 5
   },
@@ -521,7 +521,7 @@
   "Flowing Nightglow": {
     "id": "23026",
     "rarity": 5,
-    "point_costs": [1.5, 1.5, 2, 2, 2.5],
+    "point_costs": [1, 1, 2, 2.5, 3],
     "character": "Robin"
   },
   "Tomorrow's Journey": {
@@ -601,7 +601,7 @@
   "Ninjutsu Inscription: Dazzling Evilbreaker": {
     "id": "23033",
     "rarity": 5,
-    "point_costs": [2.5, 2.5, 3, 3, 3.5, 0, 0],
+    "point_costs": [4, 4, 4.5, 4.5, 5, 0, 0],
     "character": "Rappa"
   },
   "Long Road Leads Home": {
@@ -654,7 +654,7 @@
   "Time Woven Into Gold": {
     "id": "23036",
     "rarity": 5,
-    "point_costs": [1.5, 1.5, 2.5, 3, 3.5, 0, 0],
+    "point_costs": [1, 1, 2, 2.5, 3, 0, 0],
     "character": "Aglaea"
   },
   "Into the Unreachable Veil": {
