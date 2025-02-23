@@ -163,7 +163,7 @@ const Roster: Component<RosterProps> = (props) => {
 
                 if (isSpecial || isFFA() || canDoublePickWithCost()) {
                   const pickSignal = currentTurn().team == "blue_team" ? bluePicks : redPicks;
-                  return pickSignal().filter((char) => char.name == characterName).length == 0;
+                  return pickSignal().filter((char) => char.name == characterName).length < 2;
                 } else {
                   return !selectedChars().includes(characterName);
                 }
