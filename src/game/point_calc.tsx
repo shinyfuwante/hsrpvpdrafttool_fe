@@ -120,8 +120,14 @@ export const encodeString = async (
   encodedString += String(Math.min(8, redDeaths));
   encodedString += String(blueTimePenalty()).padStart(2, "0");
   encodedString += String(redTimePenalty()).padStart(2, "0");
-  encodedString += String(blueCost()).padStart(2, "0");
-  encodedString += String(redCost()).padStart(2, "0");
+  if (ruleSet() == "pokke") {
+
+    encodedString += String(blueCost()).padStart(2, "0");
+    encodedString += String(redCost()).padStart(2, "0");
+  } else { 
+    encodedString += String(blueCost().toFixed(1)).padStart(5, "0");
+    encodedString += String(redCost().toFixed(1)).padStart(5, "0");
+  }
   encodedString += initiativeWinner() == "blue_team" ? "b" : "r";
   encodedString += turnOrder() == turn_order_2_bans ? "4": "6";
   try {

@@ -176,7 +176,7 @@ const Results: Component<{}> = (props) => {
             <div class={styles.red_team}>{redScore().toFixed(4)}</div>
           </div>
         </div>
-        <Show fallback={null} when={ruleSet() == "pokke" && !isEvent()}>
+        <Show fallback={null} when={!isEvent()}>
           {" "}
           <button
             class={styles.results_button}

@@ -33,6 +33,10 @@ import {
   redCostsMap,
   setApplyTimerPenalty,
   setCanDoublePickWithCost,
+  setBlueTeamReserveTime,
+  setRedTeamReserveTime,
+  setBlueTimePenalty,
+  setRedTimePenalty,
 } from "~/game/game_logic";
 
 // interface DraftToolProps {
@@ -97,6 +101,11 @@ const handleReset = () => {
   setPlayerTurn(turnOrder()[0].team);
   setBlueCostsMap(new Map());
   setRedCostsMap(new Map());
+  setBlueTimePenalty(0);
+  setRedTimePenalty(0);
+  setDraftOrder([]);
+  setBlueTeamReserveTime(570);
+  setRedTeamReserveTime(570);
 };
 const handleUndo = () => {
   if (turnIndex() <= 0) {
@@ -123,12 +132,15 @@ const handleUndo = () => {
       setRedCost(Math.max(redCost() - calcCost(char), 0));
     }
   }
+  const draftArray = [...draftOrder()];
+  draftArray.pop();
+  setDraftOrder(draftArray);
   return;
 };
 const game: Component<{}> = (props) => {
   onMount(async () => {
     setIsSinglePlayer(true);
-    setApplyTimerPenalty(false);
+    setApplyTimerPenalty(true);
     // setCanDoublePickWithCost(true);
   });
   return (
