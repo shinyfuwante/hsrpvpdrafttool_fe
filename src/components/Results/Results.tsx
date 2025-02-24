@@ -20,6 +20,8 @@ import {
 import styles from "./Results.module.css";
 import { blueTeamName, redTeamName } from "~/game/game_logic";
 
+export const [blueModCost, setBlueModCost] = createSignal(0);
+export const [redModCost, setRedModCost] = createSignal(0);
 const Results: Component<{}> = (props) => {
   const [blueScore, setBlueScore] = createSignal(0);
   const [redScore, setRedScore] = createSignal(0);
@@ -28,8 +30,6 @@ const Results: Component<{}> = (props) => {
   const [copied, setCopied] = createSignal(false);
   const [blueBonus, setBlueBonus] = createSignal(0);
   const [redBonus, setRedBonus] = createSignal(0);
-  const [blueModCost, setBlueModCost] = createSignal(0);
-  const [redModCost, setRedModCost] = createSignal(0);
 
   let [blueOneCycles, blueTwoCycles, blueDeaths] = [0, 0, 0];
   let [redOneCycles, redTwoCycles, redDeaths] = [0, 0, 0];

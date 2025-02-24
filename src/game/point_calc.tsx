@@ -25,6 +25,7 @@ import {
   turn_order_2_bans,
 } from "./game_logic";
 import { Setter } from "solid-js";
+import { blueModCost, redModCost } from "~/components/Results/Results";
 
 
 export const calculateBonusCycles = (points: number) => {
@@ -125,8 +126,10 @@ export const encodeString = async (
     encodedString += String(blueCost()).padStart(2, "0");
     encodedString += String(redCost()).padStart(2, "0");
   } else { 
-    encodedString += String(blueCost().toFixed(1)).padStart(5, "0");
-    encodedString += String(redCost().toFixed(1)).padStart(5, "0");
+    const trueBlueCost = Math.min(Math.max(0, blueCost() + blueModCost()), 999.5);
+    const trueRedCost = Math.min(Math.max(0, redCost() + redModCost()), 999.5);
+    encodedString += String(trueBlueCost.toFixed(1).padStart(5, "0"));
+    encodedString += String(trueRedCost.toFixed(1)).padStart(5, "0");
   }
   encodedString += initiativeWinner() == "blue_team" ? "b" : "r";
   encodedString += turnOrder() == turn_order_2_bans ? "4": "6";
