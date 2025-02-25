@@ -64,9 +64,9 @@ export default function GamePage() {
           <div>Select your rule set (If you were invited, this has no effect): </div>
           <select id="rule_select" onChange={(e) => setRuleSetSelection(e.target.value)} class={styles.bans_dropdown}>
             <option value={"phd_standard"}>PHD 4 Bans (Default)</option>
-            <option value={"phd_standard_6_bans"}>PHD 6 Bans</option>
+            {/* <option value={"phd_standard_6_bans"}>PHD 6 Bans</option> */}
             <option value={"pokke"}>Pokke</option>
-            <option value={"pokke_6_bans"}>Pokke 6 Bans</option>
+            {/* <option value={"pokke_6_bans"}>Pokke 6 Bans</option> */}
           </select>
           <button
             onClick={() => {
