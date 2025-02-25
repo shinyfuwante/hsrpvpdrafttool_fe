@@ -48,11 +48,17 @@ input {
   padding: 0.3em;
 }
 
+input::placeholder {
+  color: #b8a5c6;
+}
 .secret {
   color: white;
   line-height: 1.1;
   margin: 4rem auto;
   max-width: 90vw;
+}
+select {
+  border-radius: 0.3em;
 }
 
 @media (min-width: 480px) {

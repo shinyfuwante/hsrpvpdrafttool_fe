@@ -95,7 +95,7 @@ const DraftTool: Component<DraftToolProps> = ({
             <Show when={isSinglePlayer()}>
               <SoloSettings />
             </Show>
-            <Show when={!isSinglePlayer()}>
+            {/* <Show when={!isSinglePlayer()}>
               <div class={styles.team_notifier}>
                 You are{" "}
                 {ownTeam() == "blue_team"
@@ -104,7 +104,7 @@ const DraftTool: Component<DraftToolProps> = ({
                   ? "on the Red Team"
                   : "spectating"}
               </div>
-            </Show>
+            </Show> */}
             <div class={styles.timer_container}>
               <div></div>
               <div class={styles.timer_penalties}>

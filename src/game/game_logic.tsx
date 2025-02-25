@@ -276,6 +276,26 @@ const MessageEnum = {
   ERROR: "error",
   RECONNECT: "reconnect",
 };
+export const [ruleSetSelection, setRuleSetSelection] = createSignal("");
+export const handleRuleSetSelection = () => {
+  switch (ruleSetSelection()) {
+    case "pokke": {
+      setRuleSet("pokke");
+      setTotalCost(10);
+      break;
+    }
+    case "pokke_6_bans": {
+      setTurnOrder(turn_order_3_bans_pokke);
+      setTotalCost(10);
+    }
+    case "phd_standard_6_bans": {
+      setTurnOrder(turn_order_3_bans_pokke);
+      break;
+    }
+    default: 
+      setRuleSet("phd_standard");
+  }
+}
 export const handleMsg = (data: string) => {
   const msg = JSON.parse(data);
   setError("");
@@ -284,6 +304,7 @@ export const handleMsg = (data: string) => {
       setSessionId(msg.message.cid);
       setGamePhase(game_phases.SIDE_SELECTION);
       setRuleSet(msg.message.rule_set);
+      setRuleSetSelection(msg.message.rule_set_selection);
       //   setCharJson(msg.message.characters);
       //   setLcJson(msg.message.light_cones);
       setSideSelector(sessionId() == msg.message.selector);

@@ -1,5 +1,5 @@
 import { useParams } from "solid-start";
-import { onMount, Show, createSignal } from "solid-js";
+import { onMount, Show, createSignal, createEffect } from "solid-js";
 import {
   ruleSet,
   sideSelector,
@@ -13,6 +13,9 @@ import {
   error,
   setBlueCostsMap,
   setRedCostsMap,
+  setRuleSetSelection,
+  ruleSetSelection,
+  handleRuleSetSelection,
 } from "~/game/game_logic";
 import { w3cwebsocket as WebSocket } from "websocket";
 import MainApp from "~/components/MainApp/MainApp";
@@ -20,28 +23,35 @@ import styles from "./game.module.css";
 export default function GamePage() {
   const params = useParams();
   const game_id = params.game_id;
-  const ruleSetString = ruleSet();
-  const backendUrl = `wss://${ // TODO: Change back to WSS for prod, ws for testing
+  const [backendUrl, setBackendUrl] = createSignal(``);
+  createEffect( () => {
+    setBackendUrl(`wss://${ // TODO: Change back to WSS for prod, ws for testing
     import.meta.env.VITE_BACKEND_URL
-  }/ws/game/${game_id}?ruleSet=${ruleSetString}&cid=${getCID()}`;
-  console.log(backendUrl);
+  }/ws/game/${game_id}?ruleSet=${ruleSet()}&cid=${getCID()}&ruleSetSelection=${ruleSetSelection()}`)
+  })
+  console.log(backendUrl());
   let client: WebSocket; 
   const [copied, setCopied] = createSignal(false);
   const [teamName, setTeamName] = createSignal("");
   const [teamNameSet, setTeamNameSet] = createSignal(false);
   const joinGame = async () => {
-    client = new WebSocket(backendUrl);
+    client = new WebSocket(backendUrl());
+    console.log(ruleSet());
     client.onopen = () => {
       const message = {
         type: MessageEnum.INIT_GAME,
         team_name: teamName(),
       };
       client.send(JSON.stringify(message));
+      console.log(ruleSet());
     };
     client.onmessage = (message: any) => {
       handleMsg(message.data);
     };
   };
+  createEffect( () => {
+    handleRuleSetSelection();
+  });
   const initialMenu = () => {
     return (
       <div class={styles.loading_container}>
@@ -49,9 +59,17 @@ export default function GamePage() {
           <div>Set your team name: </div>
           <input
             type="text"
+            placeholder="Team Name Here"
             onInput={(e) => setTeamName(e.currentTarget.value)}
             class={styles.team_names_input}
           />
+          <div>Select your rule set (If you were invited, this has no effect): </div>
+          <select id="rule_select" onChange={(e) => setRuleSetSelection(e.target.value)} class={styles.bans_dropdown}>
+            <option value={"phd_standard"}>PHD 4 Bans (Default)</option>
+            <option value={"phd_standard_6_bans"}>PHD 6 Bans</option>
+            <option value={"pokke"}>Pokke</option>
+            <option value={"pokke_6_bans"}>Pokke 6 Bans</option>
+          </select>
           <button
             onClick={() => {
               setTeamNameSet(true);
