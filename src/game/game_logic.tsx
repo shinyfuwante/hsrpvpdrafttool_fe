@@ -276,7 +276,7 @@ const MessageEnum = {
   ERROR: "error",
   RECONNECT: "reconnect",
 };
-export const [ruleSetSelection, setRuleSetSelection] = createSignal("");
+export const [ruleSetSelection, setRuleSetSelection] = createSignal("phd_standard");
 export const handleRuleSetSelection = () => {
   switch (ruleSetSelection()) {
     case "pokke": {
@@ -285,10 +285,13 @@ export const handleRuleSetSelection = () => {
       break;
     }
     case "pokke_6_bans": {
+      setRuleSet("pokke");
       setTurnOrder(turn_order_3_bans_pokke);
       setTotalCost(10);
+      break;
     }
     case "phd_standard_6_bans": {
+      setRuleSet("phd_standard");
       setTurnOrder(turn_order_3_bans_pokke);
       break;
     }

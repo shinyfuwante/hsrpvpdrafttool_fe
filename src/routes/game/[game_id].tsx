@@ -36,14 +36,12 @@ export default function GamePage() {
   const [teamNameSet, setTeamNameSet] = createSignal(false);
   const joinGame = async () => {
     client = new WebSocket(backendUrl());
-    console.log(ruleSet());
     client.onopen = () => {
       const message = {
         type: MessageEnum.INIT_GAME,
         team_name: teamName(),
       };
       client.send(JSON.stringify(message));
-      console.log(ruleSet());
     };
     client.onmessage = (message: any) => {
       handleMsg(message.data);

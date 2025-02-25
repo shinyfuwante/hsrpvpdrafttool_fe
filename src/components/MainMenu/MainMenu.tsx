@@ -77,7 +77,7 @@ const MainMenu: Component<MainMenuProps> = (props: any) => {
             </div>
           </div> */}
           <div onClick={() => joinGame()} class={styles.game_mode_select}>
-            <div>Create a game for multiplayer lobby-style drafting (4 Bans PHD MoC 12 Only)</div>
+            <div>Create a game for multiplayer lobby-style drafting (Possibly buggy)</div>
           </div>
           <div onClick={() => testingTool()} class={styles.supp_mode_select}>
             <div>PHD Points Testing Tool</div>
