@@ -465,12 +465,14 @@
   "Tribbie": {
     "id": "1403",
     "rarity": 5,
+    "code": "tb",
     "point_costs": [0, 0, 0, 0, 0, 0, 0],
     "nickname": "Tribbie"
   },
   "Mydei": {
     "id": "1404",
     "rarity": 5,
+    "code": "xx",
     "point_costs": [0, 0, 0, 0, 0, 0, 0],
     "nickname": "Mydei"
   }
