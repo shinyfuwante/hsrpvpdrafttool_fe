@@ -818,5 +818,33 @@
             0
         ],
         "nickname": "Aglaea"
+    },
+    "Tribbie": {
+        "id": "1403",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "Tribbie"
+    },
+    "Mydei": {
+        "id": "1404",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "Mydei"
     }
 }

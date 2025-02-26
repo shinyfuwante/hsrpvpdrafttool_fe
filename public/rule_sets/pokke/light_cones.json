@@ -599,7 +599,7 @@
     "character": "Rappa"
   },
   "Long Road Leads Home": {
-    "id": "23035", 
+    "id": "23035",
     "rarity": 5,
     "point_costs": [0, 0, 0, 0, 0, 0, 0],
     "character": "Fugue"
@@ -610,123 +610,69 @@
     "point_costs": [0, 0, 0, 0, 0, 0, 0],
     "character": "Sunday"
   },
-"Shadowburn": {
+  "Shadowburn": {
     "id": "20021",
     "rarity": 3,
-    "point_costs": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ]
-},
-"Reminiscence": {
+    "point_costs": [0, 0, 0, 0, 0, 0, 0]
+  },
+  "Reminiscence": {
     "id": "20022",
     "rarity": 3,
-    "point_costs": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ]
-},
-"Dream's Montage": {
+    "point_costs": [0, 0, 0, 0, 0, 0, 0]
+  },
+  "Dream's Montage": {
     "id": "21048",
     "rarity": 4,
-    "point_costs": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ]
-},
-"Victory In a Blink": {
+    "point_costs": [0, 0, 0, 0, 0, 0, 0]
+  },
+  "Victory In a Blink": {
     "id": "21050",
     "rarity": 4,
-    "point_costs": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ]
-},
-"Geniuses' Greetings": {
+    "point_costs": [0, 0, 0, 0, 0, 0, 0]
+  },
+  "Geniuses' Greetings": {
     "id": "21051",
     "rarity": 4,
-    "point_costs": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ]
-},
-"Sweat Now, Cry Less": {
+    "point_costs": [0, 0, 0, 0, 0, 0, 0]
+  },
+  "Sweat Now, Cry Less": {
     "id": "21052",
     "rarity": 4,
-    "point_costs": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ]
-},
-"Ninja Record: Sound Hunt": {
+    "point_costs": [0, 0, 0, 0, 0, 0, 0]
+  },
+  "Ninja Record: Sound Hunt": {
     "id": "22003",
     "rarity": 4,
-    "point_costs": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ]
-},
-"Time Woven Into Gold": {
+    "point_costs": [0, 0, 0, 0, 0, 0, 0]
+  },
+  "Time Woven Into Gold": {
     "id": "23036",
     "rarity": 5,
-    "point_costs": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ],
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
     "character": "Aglaea"
-},
-"Into the Unreachable Veil": {
+  },
+  "Into the Unreachable Veil": {
     "id": "23037",
     "rarity": 5,
-    "point_costs": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ],
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
     "character": "The Herta Therta"
-}
+  },
+  "If Time Were a Flower": {
+    "id": "23038",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "If Time Were a Flower"
+  },
+  "Flame of Blood, Blaze My Path": {
+    "id": "23039",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "Flame of Blood, Blaze My Path"
+  },
+  "Memory's Curtain Never Falls": {
+    "id": "24005",
+    "rarity": 5,
+    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "nickname": "Memory's Curtain Never Falls"
+  }
 }

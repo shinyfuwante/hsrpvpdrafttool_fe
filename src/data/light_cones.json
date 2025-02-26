@@ -1610,5 +1610,47 @@
             0
         ],
         "nickname": "Into the Unreachable Veil"
+    },
+    "If Time Were a Flower": {
+        "id": "23038",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "If Time Were a Flower"
+    },
+    "Flame of Blood, Blaze My Path": {
+        "id": "23039",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "Flame of Blood, Blaze My Path"
+    },
+    "Memory's Curtain Never Falls": {
+        "id": "24005",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "Memory's Curtain Never Falls"
     }
 }
