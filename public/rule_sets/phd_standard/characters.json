@@ -361,7 +361,7 @@
     "id": "1315",
     "rarity": 5,
     "code": "bh",
-    "point_costs": [1, 2, 0.5, 0, 0, 0.5, 2],
+    "point_costs": [3.5, 1, 0.5, 0, 0, 0.5, 2],
     "nickname": "Boothill BH"
   },
   "Firefly": {
@@ -466,7 +466,7 @@
     "id": "1403",
     "rarity": 5,
     "code": "tb",
-    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "point_costs": [9, 6, 0.5, 0.5, 0, 0.5, 2],
     "nickname": "Tribbie"
   },
   "Mydei": {
