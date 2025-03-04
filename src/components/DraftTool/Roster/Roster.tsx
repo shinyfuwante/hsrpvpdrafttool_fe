@@ -98,7 +98,7 @@ const Roster: Component<RosterProps> = (props) => {
     if (turnOrder() == turn_order_bb) {
       return redPicks().length == 10 && blueBans().length == 4; 
     }
-    return redPicks().length == 8;
+    return redPicks().length == 8 && bluePicks().length == 8;
   }
   return (
     <div class={styles.roster_container}>

@@ -4,7 +4,7 @@ import { v4 } from "uuid";
 
 export const version = () => {
   // version of tool.version of game.subversion of game.subversion of rules
-  return "3.3.2.1";
+  return "3.3.2.2";
 };
 
 const POINTS_PER_SUPERIMPOSITION = 0.5;
@@ -166,26 +166,26 @@ export const turn_order_2_bans = [
 export const turn_order_3_bans = [
   { team: "blue_team", action: "ban", id: 0 },
   { team: "red_team", action: "ban", id: 0 },
-  { team: "blue_team", action: "ban", id: 1 },
-  { team: "red_team", action: "ban", id: 1 },
-  { team: "blue_team", action: "pick", id: 2 },
+  { team: "blue_team", action: "pick", id: 1 },
+  { team: "red_team", action: "pick", id: 1 },
   { team: "red_team", action: "pick", id: 2 },
-  { team: "red_team", action: "pick", id: 3 },
-  { team: "blue_team", action: "pick", id: 3 },
-  { team: "red_team", action: "ban", id: 4 },
-  { team: "blue_team", action: "ban", id: 4 },
-  { team: "red_team", action: "pick", id: 5 },
+  { team: "blue_team", action: "pick", id: 2 },
+  { team: "blue_team", action: "ban", id: 3 },
+  { team: "red_team", action: "ban", id: 3 },
+  { team: "red_team", action: "pick", id: 4 },
+  { team: "blue_team", action: "pick", id: 4 },
   { team: "blue_team", action: "pick", id: 5 },
-  { team: "blue_team", action: "pick", id: 6 },
-  { team: "red_team", action: "pick", id: 6 },
-  { team: "red_team", action: "pick", id: 7 },
+  { team: "red_team", action: "pick", id: 5 },
+  { team: "blue_team", action: "ban", id: 6 },
+  { team: "red_team", action: "ban", id: 6 },
   { team: "blue_team", action: "pick", id: 7 },
-  { team: "blue_team", action: "pick", id: 8 },
+  { team: "red_team", action: "pick", id: 7 },
   { team: "red_team", action: "pick", id: 8 },
-  { team: "red_team", action: "pick", id: 9 },
+  { team: "blue_team", action: "pick", id: 8 },
   { team: "blue_team", action: "pick", id: 9 },
-  { team: "blue_team", action: "pick", id: 10 },
+  { team: "red_team", action: "pick", id: 9 },
   { team: "red_team", action: "pick", id: 10 },
+  { team: "blue_team", action: "pick", id: 10 }
 ];
 export const turn_order_3_bans_pokke = [
   { team: "blue_team", action: "ban", id: 0 },
@@ -203,12 +203,12 @@ export const turn_order_3_bans_pokke = [
   { team: "blue_team", action: "ban", id: 6 },
   { team: "red_team", action: "ban", id: 6 },
   { team: "blue_team", action: "pick", id: 7 },
-  { team: "blue_team", action: "pick", id: 8 },
   { team: "red_team", action: "pick", id: 7 },
+  { team: "blue_team", action: "pick", id: 8 },
   { team: "red_team", action: "pick", id: 8 },
+  { team: "red_team", action: "pick", id: 9 },
   { team: "blue_team", action: "pick", id: 9 },
   { team: "blue_team", action: "pick", id: 10 },
-  { team: "red_team", action: "pick", id: 9 },
   { team: "red_team", action: "pick", id: 10 },
 ];
 export const turn_order_bb = [

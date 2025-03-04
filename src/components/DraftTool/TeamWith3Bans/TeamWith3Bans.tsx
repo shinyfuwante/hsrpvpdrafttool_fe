@@ -51,8 +51,8 @@ const TeamWith3Bans: Component<TeamProps> = (props) => {
       }
     }
   };
-  const blue_pick_index = [1, 3, 5, 8, 10, 12, 13, 16, 17, 20, 21];
-  const red_pick_index = [2, 4, 6, 7, 9, 11, 14, 15, 18, 19, 22];
+  const blue_pick_index = [1, 3, 6, 8, 10, 11, 13, 15, 18, 19, 22];
+  const red_pick_index = [2, 4, 5, 7, 9, 12, 14, 16, 17, 20, 21];
   const EmptyCharacterComponent = ({ id = 0, type = "" }) => {
     const order =
       team === "blue_team" ? blue_pick_index[id] : red_pick_index[id];
@@ -101,23 +101,15 @@ const TeamWith3Bans: Component<TeamProps> = (props) => {
             when={bansSignal()[0]}
             fallback={<EmptyCharacterComponent id={0} type={"ban"} />}
           >
-            <HalfBanCard character={bansSignal()[0]} />
+            <BanCard character={bansSignal()[0]} />
           </Show>
-        </div>
-        <div style={{ flex: 1 }}>
-        <Show
-          when={bansSignal()[1]}
-          fallback={<EmptyCharacterComponent id={1} type={"ban"} />}
-        >
-          <HalfBanCard character={bansSignal()[1]} />
-        </Show>
         </div>
       </div>
       <div class={styles.team_row}>
         <div style={{ flex: 1 }}>
           <Show
             when={picksSignal()[0]}
-            fallback={<EmptyCharacterComponent id={2} type={"pick"} />}
+            fallback={<EmptyCharacterComponent id={1} type={"pick"} />}
           >
             <CharacterCard
               id={0}
@@ -132,7 +124,7 @@ const TeamWith3Bans: Component<TeamProps> = (props) => {
         <div style={{ flex: 1 }}>
           <Show
             when={picksSignal()[1]}
-            fallback={<EmptyCharacterComponent id={3} type={"pick"} />}
+            fallback={<EmptyCharacterComponent id={2} type={"pick"} />}
           >
             <CharacterCard
               id={1}
@@ -145,19 +137,19 @@ const TeamWith3Bans: Component<TeamProps> = (props) => {
           </Show>
         </div>
       </div>
-      <div class={styles.ban_row}>
-        <Show
-          when={bansSignal()[2]}
-          fallback={<EmptyCharacterComponent id={4} type={"ban"} />}
-        >
-          <BanCard character={bansSignal()[2]} />
-        </Show>
+      <div class={styles.team_row}>
+          <Show
+            when={bansSignal()[1]}
+            fallback={<EmptyCharacterComponent id={3} type={"ban"} />}
+          >
+            <BanCard character={bansSignal()[1]} />
+          </Show>
       </div>
       <div class={styles.team_row}>
         <div style={{ flex: 1 }}>
           <Show
             when={picksSignal()[2]}
-            fallback={<EmptyCharacterComponent id={5} type={"pick"} />}
+            fallback={<EmptyCharacterComponent id={4} type={"pick"} />}
           >
             <CharacterCard
               id={2}
@@ -172,7 +164,7 @@ const TeamWith3Bans: Component<TeamProps> = (props) => {
         <div style={{ flex: 1 }}>
           <Show
             when={picksSignal()[3]}
-            fallback={<EmptyCharacterComponent id={6} type={"pick"} />}
+            fallback={<EmptyCharacterComponent id={5} type={"pick"} />}
           >
             <CharacterCard
               id={3}
@@ -184,6 +176,14 @@ const TeamWith3Bans: Component<TeamProps> = (props) => {
             />
           </Show>
         </div>
+      </div>
+      <div style={{ flex: 1 }}>
+        <Show
+          when={bansSignal()[2]}
+          fallback={<EmptyCharacterComponent id={6} type={"ban"} />}
+        >
+          <BanCard character={bansSignal()[2]} />
+        </Show>
       </div>
       <div class={styles.team_row}>
         <div style={{ flex: 1 }}>

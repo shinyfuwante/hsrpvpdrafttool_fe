@@ -51,8 +51,8 @@ const TeamWith3BansPokke: Component<TeamProps> = (props) => {
       }
     }
   };
-  const blue_pick_index = [1, 3, 6, 8, 10, 11, 13, 15, 16, 19, 20];
-  const red_pick_index = [2, 4, 5, 7, 9, 12, 14, 17, 18, 21, 22];
+  const blue_pick_index = [1, 3, 6, 8, 10, 11, 13, 15, 17, 20, 21];
+  const red_pick_index = [2, 4, 5, 7, 9, 12, 14, 16, 18, 19, 22];
   const EmptyCharacterComponent = ({ id = 0, type = "" }) => {
     const order =
       team === "blue_team" ? blue_pick_index[id] : red_pick_index[id];
