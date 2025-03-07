@@ -35,6 +35,7 @@ import {
   setCanDoublePickWithCost,
   setRuleSet,
   setIsFFA,
+  setIsEvent,
 } from "~/game/game_logic";
 
 // interface DraftToolProps {
@@ -132,7 +133,7 @@ const game: Component<{}> = (props) => {
     setIsSinglePlayer(true);
     setApplyTimerPenalty(false);
     setRuleSet("cat_cup");
-    setIsFFA(true);
+    setIsEvent(true);
     // setCanDoublePickWithCost(true);
   });
   setRuleSet("cat_cup");

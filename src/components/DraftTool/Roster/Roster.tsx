@@ -161,10 +161,15 @@ const Roster: Component<RosterProps> = (props) => {
                   }
                 }
 
-                if (isSpecial || isFFA() || canDoublePickWithCost()) {
+                if (isFFA() || canDoublePickWithCost()) {
                   const pickSignal = currentTurn().team == "blue_team" ? bluePicks : redPicks;
                   return pickSignal().filter((char) => char.name == characterName).length < 2;
-                } else {
+                } 
+                else if (isSpecial) {
+                  const pickSignal = currentTurn().team == "blue_team" ? bluePicks : redPicks;
+                  return pickSignal().filter((char) => char.name == characterName).length < 1;
+                }
+                else {
                   return !selectedChars().includes(characterName);
                 }
               };
@@ -174,7 +179,13 @@ const Roster: Component<RosterProps> = (props) => {
                   .toLowerCase()
                   .includes(searchTerm().toLowerCase());
 
+              const canBan = () => {
+                return !isSpecial;
+              }
               const canPick = () => {
+                if (currentTurn().action == "ban") {
+                  return canBan();
+                }
                 return !isBanned() && canSelect();
               }
 

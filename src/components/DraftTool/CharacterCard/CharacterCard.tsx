@@ -157,7 +157,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
             </div>
           </Show>
           <Show when={turnOrder() != turn_order_bb}>
-            <div class={styles.cost}>+{cost()}</div>
+            <div class={styles.cost}> {cost() < 0 ? '' : '+'}{cost()}</div>
           </Show>
           <Show when={testingTool()}>
             <div>
