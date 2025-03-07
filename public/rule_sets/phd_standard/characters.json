@@ -106,7 +106,7 @@
   },
   "Clara": {
     "id": "1107",
-    "point_costs": [0.5, 0, 1, 0, 0, 0, 0],
+    "point_costs": [0.5, 0, 1, 0, 0, 0, 0.5],
     "rarity": 5,
     "nickname": "Clara Svarog Barefeet Barefoot",
     "code": "cl"
@@ -178,7 +178,7 @@
   },
   "Blade": {
     "id": "1205",
-    "point_costs": [0.5, 1, 1, 0, 0.5, 0, 1],
+    "point_costs": [0.5, 0.5, 1, 0, 0.5, 0, 1],
     "rarity": 5,
     "nickname": "Blade Swift Dispatch Balde",
     "code": "bl"
@@ -337,7 +337,7 @@
     "id": "1304",
     "special": true,
     "rarity": 5,
-    "point_costs": [3, 0.5, 0.5, 0, 0, 0, 1],
+    "point_costs": [3, 0.5, 0.5, 0, 0, 0, 0.5],
     "nickname": "Aventurine",
     "code": "av"
   },
@@ -361,7 +361,7 @@
     "id": "1315",
     "rarity": 5,
     "code": "bh",
-    "point_costs": [3.5, 1, 0.5, 0, 0, 0.5, 2],
+    "point_costs": [3.5, 1, 0.5, 0, 0, 0.5, 2.5],
     "nickname": "Boothill BH"
   },
   "Firefly": {
@@ -437,7 +437,7 @@
   "Fugue": {
     "id": "1225",
     "rarity": 5,
-    "point_costs": [5, 2.5, 1, 0, 0, 0, 2.5],
+    "point_costs": [5, 2.5, 1, 0, 0, 0, 3],
     "code": "fg",
     "nickname": "Stingyun Fugue"
   },
