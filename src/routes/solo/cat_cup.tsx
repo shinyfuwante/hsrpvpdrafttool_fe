@@ -134,6 +134,7 @@ const game: Component<{}> = (props) => {
     setApplyTimerPenalty(false);
     setRuleSet("cat_cup");
     setIsEvent(true);
+    setApplyTimerPenalty(true);
     // setCanDoublePickWithCost(true);
   });
   setRuleSet("cat_cup");
