@@ -338,7 +338,7 @@
   },
   "Aventurine": {
     "id": "1304",
-    "special": true,
+    "special": false,
     "rarity": 5,
     "point_costs": [3, 0.5, 0.5, 0, 0, 0, 0.5],
     "nickname": "Aventurine",
@@ -347,7 +347,7 @@
   "Robin": {
     "id": "1309",
     "rarity": 5,
-    "special": true,
+    "special": false,
     "code": "rb",
     "point_costs": [5.5, 4.5, 1, 0, 0, 0, 2],
     "nickname": "Robin Birb"
@@ -355,7 +355,7 @@
   "TrailBlazerImaginary": {
     "id": "8006",
     "point_costs": [4, 0, 0, 0, 0, 0, 0],
-    "special": true,
+    "special": false,
     "code": "im",
     "rarity": 5,
     "nickname": "IMC TrailBlazerImaginary HMC HamSandwich HarmonyMC Ham Sandwich"

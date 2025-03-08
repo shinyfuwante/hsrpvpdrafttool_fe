@@ -180,7 +180,7 @@ const Roster: Component<RosterProps> = (props) => {
                   .includes(searchTerm().toLowerCase());
 
               const canBan = () => {
-                return !isSpecial;
+                return !isSpecial && !selectedChars().includes(characterName) && !bannedCharacters().includes(characterName);
               }
               const canPick = () => {
                 if (currentTurn().action == "ban") {
