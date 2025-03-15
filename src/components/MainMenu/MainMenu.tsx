@@ -60,6 +60,11 @@ const MainMenu: Component<MainMenuProps> = (props: any) => {
     const url = `/solo/costs`;
     window.location.href = url;
   };
+
+  const claireCup = () => {
+    const url = `/solo/claire_cup`;
+    window.location.href = url;
+  }
   return (
     <div>
       {props.children}
@@ -69,6 +74,9 @@ const MainMenu: Component<MainMenuProps> = (props: any) => {
             <div>
               Create a game for Screen-Share drafting (e.g. Discord, etc)
             </div>
+          </div>
+          <div onClick={() => claireCup()} class={styles.game_mode_select}>
+            <div>Claire Cup Screen Share Draft</div>
           </div>
           {/* <div onClick={() => soloGame6Bans()} class={styles.game_mode_select}>
             <div>
@@ -80,10 +88,10 @@ const MainMenu: Component<MainMenuProps> = (props: any) => {
             <div>Create a game for multiplayer lobby-style drafting (Possibly buggy)</div>
           </div>
           <div onClick={() => testingTool()} class={styles.supp_mode_select}>
-            <div>PHD Points Testing Tool</div>
+            <div>Points Testing Tool</div>
           </div>
           <div onClick={() => costs()} class={styles.supp_mode_select}>
-            <div>PHD Costs Table</div>
+            <div>Cost Tables</div>
           </div>
           {/* <div onClick={() => phd_11()} class={styles.game_mode_select}>
             <div>Create a Screen-Share draft for PHD's MoC 11 Balance</div>
