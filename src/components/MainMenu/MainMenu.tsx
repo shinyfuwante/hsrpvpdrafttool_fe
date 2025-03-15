@@ -120,7 +120,7 @@ const MainMenu: Component<MainMenuProps> = (props: any) => {
           </div> */}
         </div>
         <div class={styles.server_container}>
-        <div class={styles.other_formats}> Boulder League: </div>
+        {/* <div class={styles.other_formats}> Boulder League: </div> */}
           {/* <div onClick={() => boulder_league()} class={styles.game_mode_select}>
             <div>Boulder League 3.0 Tourney</div>
           </div>
