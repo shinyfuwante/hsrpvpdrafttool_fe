@@ -66,7 +66,6 @@ const testing: Component<{}> = (props) => {
       return;
     }
     setPicks([...picks(), character]);
-    console.log(picks());
   };
   const handleReset = () => {
     setPicks([]);
@@ -137,6 +136,20 @@ const testing: Component<{}> = (props) => {
             </div>
           </div>
           <div>
+            <label for="ruleSetSelection">Rule Set: </label>
+            <select
+              id="ruleSetSelection"
+              onChange={(e) => {
+                setRuleSet(e.target.value);
+                fetchData();
+              }}
+              class={styles.rule_set_dropdown}
+            >
+              <option value={"phd_standard"}>PHD MoC 12</option>
+              <option value={"claire_cup"}>Claire Cup</option>
+            </select>
+          </div>
+          <div>
             <label for="cycles">Clear Speed: </label>
             <input
               class={styles.clear_speed}
@@ -147,17 +160,17 @@ const testing: Component<{}> = (props) => {
           </div>
         </div>
         <div>
-            <label class={`${styles.edit_costs_toggle}`}>
-              <input
-                name="toggle_cycle_penalty"
-                type="checkbox"
-                role="switch"
-                onChange={() => setTestingTool(!testingTool())}
-                checked={false}
-              />
-              <div>Edit costs</div>
-            </label>
-          </div>
+          <label class={`${styles.edit_costs_toggle}`}>
+            <input
+              name="toggle_cycle_penalty"
+              type="checkbox"
+              role="switch"
+              onChange={() => setTestingTool(!testingTool())}
+              checked={false}
+            />
+            <div>Edit costs</div>
+          </label>
+        </div>
         <div class={styles.results}>
           <div> Cycles Taken: {cycles()}</div>
           <div> Cost: {cost()}</div>
@@ -175,7 +188,7 @@ const testing: Component<{}> = (props) => {
           </div>
           <div
             class={`${
-                adjustedEfficiency() > 6
+              adjustedEfficiency() > 6
                 ? styles.inefficient
                 : adjustedEfficiency() < 4
                 ? styles.too_efficient

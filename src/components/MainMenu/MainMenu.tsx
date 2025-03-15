@@ -85,12 +85,12 @@ const MainMenu: Component<MainMenuProps> = (props: any) => {
           <div onClick={() => costs()} class={styles.supp_mode_select}>
             <div>PHD Costs Table</div>
           </div>
-          <div onClick={() => phd_11()} class={styles.game_mode_select}>
+          {/* <div onClick={() => phd_11()} class={styles.game_mode_select}>
             <div>Create a Screen-Share draft for PHD's MoC 11 Balance</div>
           </div>
           <div onClick={() => phd_11_testing()} class={styles.supp_mode_select}>
             <div>PHD's MoC 11 Testing Tool</div>
-          </div>
+          </div> */}
           <a href="https://discord.gg/Rb4PKm5aWn" class={styles.discord_link}>
             <img src="/discord.svg" alt="Discord Logo" />
             <div>Join the HSR PvP Server!</div>
@@ -113,7 +113,7 @@ const MainMenu: Component<MainMenuProps> = (props: any) => {
         </div>
         <div class={styles.server_container}>
         <div class={styles.other_formats}> Boulder League: </div>
-          <div onClick={() => boulder_league()} class={styles.game_mode_select}>
+          {/* <div onClick={() => boulder_league()} class={styles.game_mode_select}>
             <div>Boulder League 3.0 Tourney</div>
           </div>
           <div
@@ -121,7 +121,7 @@ const MainMenu: Component<MainMenuProps> = (props: any) => {
             class={styles.supp_mode_select}
           >
             <div>Boulder League Testing Tool</div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

@@ -27,3 +27,11 @@ td {
     width: 75%;
     align-self: center;
 }
+
+.rule_set_dropdown {
+    background-color: #614b78;
+    border: none;
+    margin: 0.1em;
+    padding: 0.5em;
+    color: #ffffff;
+}

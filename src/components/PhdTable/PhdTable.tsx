@@ -6,6 +6,7 @@ import {
   lcJson,
   version,
   ruleSet,
+  setRuleSet,
 } from "~/game/game_logic";
 import styles from "./PhdTable.module.css";
 
@@ -95,7 +96,21 @@ const PhdTable: Component<{}> = (props) => {
   fetchData();
   return (
     <div class={styles.tables}>
-      <h1>PHD Costs Tables</h1>
+      <h1>Cost Tables</h1>
+      <div>
+            <label for="ruleSetSelection">Rule Set: </label>
+            <select
+              id="ruleSetSelection"
+              onChange={(e) => {
+                setRuleSet(e.target.value);
+                fetchData();
+              }}
+              class={styles.rule_set_dropdown}
+            >
+              <option value={"phd_standard"}>PHD MoC 12</option>
+              <option value={"claire_cup"}>Claire Cup</option>
+            </select>
+          </div>
       <h3> Characters </h3>
       {charTable()}
       <h3> Light Cones </h3>
