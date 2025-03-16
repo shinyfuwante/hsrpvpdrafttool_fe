@@ -51,8 +51,8 @@ const TeamWith3Bans: Component<TeamProps> = (props) => {
       }
     }
   };
-  const blue_pick_index = [1, 3, 6, 8, 10, 11, 13, 15, 18, 19, 22];
-  const red_pick_index = [2, 4, 5, 7, 9, 12, 14, 16, 17, 20, 21];
+  const blue_pick_index = [1, 3, 6, 7, 10, 11, 13, 15, 18, 19, 22];
+  const red_pick_index = [2, 4, 5, 8, 9, 12, 14, 16, 17, 20, 21];
   const EmptyCharacterComponent = ({ id = 0, type = "" }) => {
     const order =
       team === "blue_team" ? blue_pick_index[id] : red_pick_index[id];
