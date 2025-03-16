@@ -544,7 +544,7 @@
     "id": "21045",
     "rarity": 4,
     "point_costs": [0, 0, 0, 0, 0, 0, 0],
-    "nickname": "After the Charmony Fall"
+    "character": "After the Charmony Fall"
   },
   "Whereabouts Should Dreams Rest": {
     "id": "23025",
@@ -667,18 +667,18 @@
     "id": "23038",
     "rarity": 5,
     "point_costs": [1, 1, 1.5, 1.5, 2, 0, 0],
-    "nickname": "If Time Were a Flower Tribbie"
+    "character": "If Time Were a Flower Tribbie"
   },
   "Flame of Blood, Blaze My Path": {
     "id": "23039",
     "rarity": 5,
     "point_costs": [0, 0, 0, 0, 0, 0, 0],
-    "nickname": "Flame of Blood, Blaze My Path Mydei"
+    "character": "Flame of Blood, Blaze My Path Mydei"
   },
   "Memory's Curtain Never Falls": {
     "id": "24005",
     "rarity": 5,
     "point_costs": [0, 0, 0, 0, 0, 0, 0],
-    "nickname": "Memory's Curtain Never Falls"
+    "character": "Memory's Curtain Never Falls"
   }
 }

@@ -1259,7 +1259,7 @@
             0,
             0
         ],
-        "nickname": "Boundless Choreo"
+        "character": "Boundless Choreo"
     },
     "For Tomorrow's Journey": {
         "id": "22002",
@@ -1273,7 +1273,7 @@
             0,
             0
         ],
-        "nickname": "For Tomorrow's Journey"
+        "character": "For Tomorrow's Journey"
     },
     "Flowing Nightglow": {
         "id": "23026",
@@ -1287,7 +1287,7 @@
             0,
             0
         ],
-        "nickname": "Flowing Nightglow"
+        "character": "Flowing Nightglow"
     },
     "Sailing Towards a Second Life": {
         "id": "23027",
@@ -1301,7 +1301,7 @@
             0,
             0
         ],
-        "nickname": "Sailing Towards a Second Life"
+        "character": "Sailing Towards a Second Life"
     },
     "After the Charmony Fall": {
         "id": "21045",
@@ -1315,7 +1315,7 @@
             0,
             0
         ],
-        "nickname": "After the Charmony Fall"
+        "character": "After the Charmony Fall"
     },
     "Whereabouts Should Dreams Rest": {
         "id": "23025",
@@ -1329,7 +1329,7 @@
             0,
             0
         ],
-        "nickname": "Whereabouts Should Dreams Rest"
+        "character": "Whereabouts Should Dreams Rest"
     },
     "Yet Hope Is Priceless": {
         "id": "23028",
@@ -1343,7 +1343,7 @@
             0,
             0
         ],
-        "nickname": "Yet Hope Is Priceless"
+        "character": "Yet Hope Is Priceless"
     },
     "Eternal Calculus": {
         "id": "24004",
@@ -1357,7 +1357,7 @@
             0,
             0
         ],
-        "nickname": "Eternal Calculus"
+        "character": "Eternal Calculus"
     },
     "Poised to Bloom": {
         "id": "21046",
@@ -1371,7 +1371,7 @@
             0,
             0
         ],
-        "nickname": "Poised to Bloom"
+        "character": "Poised to Bloom"
     },
     "Shadowed by Night": {
         "id": "21047",
@@ -1385,7 +1385,7 @@
             0,
             0
         ],
-        "nickname": "Shadowed by Night"
+        "character": "Shadowed by Night"
     },
     "Those Many Springs": {
         "id": "23029",
@@ -1399,7 +1399,7 @@
             0,
             0
         ],
-        "nickname": "Those Many Springs"
+        "character": "Those Many Springs"
     },
     "Dance at Sunset": {
         "id": "23030",
@@ -1413,7 +1413,7 @@
             0,
             0
         ],
-        "nickname": "Dance at Sunset"
+        "character": "Dance at Sunset"
     },
     "I Venture Forth to Hunt": {
         "id": "23031",
@@ -1427,7 +1427,7 @@
             0,
             0
         ],
-        "nickname": "I Venture Forth to Hunt"
+        "character": "I Venture Forth to Hunt"
     },
     "Scent Alone Stays True": {
         "id": "23032",
@@ -1441,7 +1441,7 @@
             0,
             0
         ],
-        "nickname": "Scent Alone Stays True"
+        "character": "Scent Alone Stays True"
     },
     "Shadowburn": {
         "id": "20021",
@@ -1455,7 +1455,7 @@
             0,
             0
         ],
-        "nickname": "Shadowburn"
+        "character": "Shadowburn"
     },
     "Reminiscence": {
         "id": "20022",
@@ -1469,7 +1469,7 @@
             0,
             0
         ],
-        "nickname": "Reminiscence"
+        "character": "Reminiscence"
     },
     "Dream's Montage": {
         "id": "21048",
@@ -1483,7 +1483,7 @@
             0,
             0
         ],
-        "nickname": "Dream's Montage"
+        "character": "Dream's Montage"
     },
     "Victory In a Blink": {
         "id": "21050",
@@ -1497,7 +1497,7 @@
             0,
             0
         ],
-        "nickname": "Victory In a Blink"
+        "character": "Victory In a Blink"
     },
     "Geniuses' Greetings": {
         "id": "21051",
@@ -1511,7 +1511,7 @@
             0,
             0
         ],
-        "nickname": "Geniuses' Greetings"
+        "character": "Geniuses' Greetings"
     },
     "Sweat Now, Cry Less": {
         "id": "21052",
@@ -1525,7 +1525,7 @@
             0,
             0
         ],
-        "nickname": "Sweat Now, Cry Less"
+        "character": "Sweat Now, Cry Less"
     },
     "Ninja Record: Sound Hunt": {
         "id": "22003",
@@ -1539,7 +1539,7 @@
             0,
             0
         ],
-        "nickname": "Ninja Record: Sound Hunt"
+        "character": "Ninja Record: Sound Hunt"
     },
     "Ninjutsu Inscription: Dazzling Evilbreaker": {
         "id": "23033",
@@ -1553,7 +1553,7 @@
             0,
             0
         ],
-        "nickname": "Ninjutsu Inscription: Dazzling Evilbreaker"
+        "character": "Ninjutsu Inscription: Dazzling Evilbreaker"
     },
     "A Grounded Ascent": {
         "id": "23034",
@@ -1567,7 +1567,7 @@
             0,
             0
         ],
-        "nickname": "A Grounded Ascent"
+        "character": "A Grounded Ascent"
     },
     "Long Road Leads Home": {
         "id": "23035",
@@ -1581,7 +1581,7 @@
             0,
             0
         ],
-        "nickname": "Long Road Leads Home"
+        "character": "Long Road Leads Home"
     },
     "Time Woven Into Gold": {
         "id": "23036",
@@ -1595,7 +1595,7 @@
             0,
             0
         ],
-        "nickname": "Time Woven Into Gold"
+        "character": "Time Woven Into Gold"
     },
     "Into the Unreachable Veil": {
         "id": "23037",
@@ -1609,7 +1609,7 @@
             0,
             0
         ],
-        "nickname": "Into the Unreachable Veil"
+        "character": "Into the Unreachable Veil"
     },
     "If Time Were a Flower": {
         "id": "23038",
@@ -1623,7 +1623,7 @@
             0,
             0
         ],
-        "nickname": "If Time Were a Flower"
+        "character": "If Time Were a Flower"
     },
     "Flame of Blood, Blaze My Path": {
         "id": "23039",
@@ -1637,7 +1637,7 @@
             0,
             0
         ],
-        "nickname": "Flame of Blood, Blaze My Path"
+        "character": "Flame of Blood, Blaze My Path"
     },
     "Memory's Curtain Never Falls": {
         "id": "24005",
@@ -1651,6 +1651,6 @@
             0,
             0
         ],
-        "nickname": "Memory's Curtain Never Falls"
+        "character": "Memory's Curtain Never Falls"
     }
 }
