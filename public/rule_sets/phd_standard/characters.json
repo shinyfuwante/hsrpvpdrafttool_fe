@@ -50,21 +50,21 @@
   },
   "Asta": {
     "id": "1009",
-    "point_costs": [0.5, 0, 0, 0, 1, 0, 0.5],
+    "point_costs": [0.5, 0, 0, 0, 1.5, 0, 0.5],
     "rarity": 4,
     "nickname": "Asta",
     "code": "as"
   },
   "Herta": {
     "id": "1013",
-    "point_costs": [0.5, 0, 0, 0, 0, 0, 0],
+    "point_costs": [1.5, 0, 0, 0, 0, 0, 0],
     "rarity": 4,
     "nickname": "Herta",
     "code": "ht"
   },
   "Bronya": {
     "id": "1101",
-    "point_costs": [2.5, 0.5, 1, 0, 0, 0, 0.5],
+    "point_costs": [2.5, 0.5, 1, 0, 0, 0, 1],
     "rarity": 5,
     "nickname": "Bronya Lebron Broner",
     "code": "br"
@@ -99,14 +99,14 @@
   },
   "Pela": {
     "id": "1106",
-    "point_costs": [4, 0, 0, 0, 0, 0, 0],
+    "point_costs": [3.5, 0, 0, 0, 0, 0, 0],
     "rarity": 4,
     "nickname": "Pela Pelican",
     "code": "pl"
   },
   "Clara": {
     "id": "1107",
-    "point_costs": [0.5, 0, 1, 0, 0, 0, 0.5],
+    "point_costs": [0.5, 0, 0.5, 0, 0, 0, 0.5],
     "rarity": 5,
     "nickname": "Clara Svarog Barefeet Barefoot",
     "code": "cl"
@@ -141,7 +141,7 @@
   },
   "Topaz & Numby": {
     "id": "1112",
-    "point_costs": [1.5, 1.5, 0, 0, 0.5, 0, 1],
+    "point_costs": [1.5, 1, 0, 0, 0.5, 0, 1],
     "rarity": 5,
     "nickname": "Topaz & Numby Topass",
     "code": "tp"
@@ -171,14 +171,14 @@
   "Jing Yuan": {
     "id": "1204",
     "special": false,
-    "point_costs": [4, 1, 0, 0, 0, 0, 1],
+    "point_costs": [5, 1, 0, 0, 0, 0, 1],
     "rarity": 5,
     "nickname": "Jing Yuan Jimmy JY King Yuan Our General",
     "code": "jy"
   },
   "Blade": {
     "id": "1205",
-    "point_costs": [0.5, 0.5, 1, 0, 0.5, 0, 1],
+    "point_costs": [0.5, 0.5, 0.5, 0, 0.5, 0, 1],
     "rarity": 5,
     "nickname": "Blade Swift Dispatch Balde",
     "code": "bl"
@@ -199,7 +199,7 @@
   },
   "Fu Xuan": {
     "id": "1208",
-    "point_costs": [0.5, 1, 0, 0, 0.5, 0, 1.5],
+    "point_costs": [1, 0.5, 0, 0, 0.5, 0, 1.5],
     "rarity": 5,
     "nickname": "Fu Xuan FX",
     "code": "fx"
@@ -227,7 +227,7 @@
   },
   "Jingliu": {
     "id": "1212",
-    "point_costs": [0.5, 1, 0.5, 0, 0, 0.5, 1.5],
+    "point_costs": [0.5, 0.5, 0.5, 0, 0, 0.5, 1.5],
     "rarity": 5,
     "nickname": "Jingliu JL Jingles Jenny",
     "code": "jl"
@@ -262,21 +262,21 @@
   },
   "Argenti": {
     "id": "1302",
-    "point_costs": [2.5, 1, 0, 0, 0, 0, 1],
+    "point_costs": [3, 0, 0, 0, 0, 0, 1],
     "rarity": 5,
     "nickname": "Argenti Ourgenti Messi",
     "code": "ag"
   },
   "Ruan Mei": {
     "id": "1303",
-    "point_costs": [3, 4, 0, 0, 0, 0, 1.5],
+    "point_costs": [3, 4, 0, 0, 0, 0, 2],
     "rarity": 5,
     "nickname": "Ruan Mei RM Ramen",
     "code": "rm"
   },
   "Dr. Ratio": {
     "id": "1305",
-    "point_costs": [0.5, 1, 0.5, 0, 1.5, 0, 4],
+    "point_costs": [0.5, 0.5, 0.5, 0, 1.5, 0, 4],
     "rarity": 5,
     "nickname": "Dr. Ratio",
     "code": "dr"
@@ -284,14 +284,14 @@
   "Sparkle": {
     "id": "1306",
     "special": false,
-    "point_costs": [3, 1, 4, 0, 0, 0, 1.5],
+    "point_costs": [2.5, 0.5, 4, 0, 0, 0, 1],
     "rarity": 5,
     "nickname": "Sparkle Sprinkle Spork Hanabi 5'2",
     "code": "sk"
   },
   "Black Swan": {
     "id": "1307",
-    "point_costs": [2, 4.5, 0, 0, 0, 0, 0],
+    "point_costs": [1.5, 4, 0, 0, 0, 0, 0],
     "rarity": 5,
     "nickname": "Black Swan BS",
     "code": "bs"
@@ -320,7 +320,7 @@
   "Acheron": {
     "id": "1308",
     "special": false,
-    "point_costs": [5, 1, 3, 0, 0.5, 0, 2],
+    "point_costs": [4, 0.5, 4, 0, 0.5, 0, 2],
     "rarity": 5,
     "nickname": "Acheron Acorn",
     "code": "ac"
@@ -346,7 +346,7 @@
     "rarity": 5,
     "special": true,
     "code": "rb",
-    "point_costs": [5.5, 4.5, 1, 0, 0, 0, 2],
+    "point_costs": [5.5, 4.5, 1, 0.5, 0, 0, 4],
     "nickname": "Robin Birb"
   },
   "TrailBlazerImaginary": {
@@ -361,7 +361,7 @@
     "id": "1315",
     "rarity": 5,
     "code": "bh",
-    "point_costs": [3.5, 1, 0.5, 0, 0, 0.5, 2.5],
+    "point_costs": [3.5, 1, 0.5, 0, 0, 0.5, 1.5],
     "nickname": "Boothill BH"
   },
   "Firefly": {
@@ -374,14 +374,14 @@
   "Jade": {
     "id": "1314",
     "rarity": 5,
-    "point_costs": [5, 1.5, 1, 0, 0.5, 0, 1],
+    "point_costs": [6, 1.5, 0.5, 0, 1, 0, 1],
     "code": "jd",
     "nickname": "Jade"
   },
   "Yunli": {
     "id": "1221",
     "rarity": 5,
-    "point_costs": [1, 4, 1.5, 0, 0, 0, 2],
+    "point_costs": [0.5, 4, 1.5, 0, 0, 0, 2],
     "code": "yl",
     "nickname": "Yunli Barefeet Barefoot YL"
   },
@@ -395,14 +395,14 @@
   "March 7th Hunt": {
     "id": "1224",
     "rarity": 4,
-    "point_costs": [2, 0, 0, 0, 0, 0, 0],
+    "point_costs": [2.5, 0, 0, 0, 0, 0, 0],
     "code": "mh",
     "nickname": "March 7th M7 March 8th M8"
   },
   "Feixiao": {
     "id": "1220",
     "rarity": 5,
-    "point_costs": [1.5, 1, 4, 0.5, 0, 0, 2],
+    "point_costs": [1.5, 1, 4, 0.5, 0, 0, 3.5],
     "code": "fe",
     "nickname": "Feixiao Fampter FX"
   },
@@ -423,28 +423,28 @@
   "Rappa": {
     "id": "1317",
     "rarity": 5,
-    "point_costs": [4, 1.5, 0, 0, 0, 0, 1],
+    "point_costs": [4, 1, 0, 0, 0, 0, 1],
     "code": "rp",
     "nickname": "Rappa"
   },
   "Sunday": {
     "id": "1313",
     "rarity": 5,
-    "point_costs": [5.5, 2.5, 1, 0, 1, 0, 1.5],
+    "point_costs": [5.5, 2, 1, 0, 1, 0, 1.5],
     "code": "sy",
     "nickname": "Sunday"
   },
   "Fugue": {
     "id": "1225",
     "rarity": 5,
-    "point_costs": [5, 2.5, 1, 0, 0, 0, 3],
+    "point_costs": [5, 2, 1, 0, 1.5, 0, 4],
     "code": "fg",
     "nickname": "Stingyun Fugue"
   },
   "TrailBlazerIce": {
     "id": "8008",
     "rarity": 5,
-    "point_costs": [5.5, 0, 0, 0, 0, 0, 0],
+    "point_costs": [6, 0, 0, 0, 0, 0, 0],
     "code": "ic",
     "nickname": "RMC Remembrance MC TrailblazerIce Mem"
   },
@@ -452,28 +452,28 @@
     "id": "1401",
     "rarity": 5,
     "code": "th",
-    "point_costs": [9, 4, 4.5, 0.5, 0, 0, 1],
+    "point_costs": [10, 1.5, 4, 0.5, 0, 0, 0.5],
     "nickname": "The Herta Therta"
   },
   "Aglaea": {
     "id": "1402",
     "rarity": 5,
     "code": "ae",
-    "point_costs": [4, 6, 2, 0, 0.5, 0, 2],
+    "point_costs": [6, 8, 1, 0, 0, 0, 0.5],
     "nickname": "Aglaea"
   },
   "Tribbie": {
     "id": "1403",
     "rarity": 5,
     "code": "tb",
-    "point_costs": [8, 5, 0, 0.5, 2, 0.5, 3],
+    "point_costs": [8.5, 5, 0, 0.5, 2, 0.5, 3.5],
     "nickname": "Tribbie 3B"
   },
   "Mydei": {
     "id": "1404",
     "rarity": 5,
     "code": "xx",
-    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "point_costs": [3, 2, 1, 0.5, 0.5, 0, 6],
     "nickname": "Mydei"
   }
 }

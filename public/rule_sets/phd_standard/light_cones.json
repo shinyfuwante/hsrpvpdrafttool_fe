@@ -555,7 +555,7 @@
   "Yet Hope Is Priceless": {
     "id": "23028",
     "rarity": 5,
-    "point_costs": [1.5, 1.5, 2.5, 3, 3.5],
+    "point_costs": [1, 1, 2, 2.5, 3],
     "character": "Jade"
   },
   "Eternal Calculus": {
@@ -672,7 +672,7 @@
   "Flame of Blood, Blaze My Path": {
     "id": "23039",
     "rarity": 5,
-    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "point_costs": [3, 3, 3.5, 3.5, 4, 0, 0],
     "character": "Flame of Blood, Blaze My Path Mydei"
   },
   "Memory's Curtain Never Falls": {
