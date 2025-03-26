@@ -59,7 +59,7 @@
     "id": "1013",
     "point_costs": [1.5, 0, 0, 0, 0, 0, 0],
     "rarity": 4,
-    "nickname": "Herta",
+    "nickname": "Herta Puppet Smol Herta",
     "code": "ht"
   },
   "Bronya": {
@@ -430,7 +430,7 @@
   "Sunday": {
     "id": "1313",
     "rarity": 5,
-    "point_costs": [5.5, 2, 1, 0, 1, 0, 1.5],
+    "point_costs": [5.5, 2.5, 1, 0, 1, 0, 1.5],
     "code": "sy",
     "nickname": "Sunday"
   },
@@ -452,7 +452,7 @@
     "id": "1401",
     "rarity": 5,
     "code": "th",
-    "point_costs": [10, 1.5, 4, 0.5, 0, 0, 0.5],
+    "point_costs": [11, 1.5, 5.5, 0.5, 0, 0, 0.5],
     "nickname": "The Herta Therta"
   },
   "Aglaea": {
@@ -466,7 +466,7 @@
     "id": "1403",
     "rarity": 5,
     "code": "tb",
-    "point_costs": [8.5, 5, 0, 0.5, 2, 0.5, 3.5],
+    "point_costs": [9, 5.5, 0, 0.5, 2, 0.5, 3],
     "nickname": "Tribbie 3B"
   },
   "Mydei": {
