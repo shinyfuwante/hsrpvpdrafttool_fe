@@ -28,9 +28,8 @@ def read_csv_data(filename: str) -> tuple[Dict[str, List[float]], Dict[str, List
             # Skip header row with E0, E1, etc. or S1, S2, etc.
             if row[0] in ["Characters ID", "Lightcones ID"] or row[0] in ["E0", "S1"]:
                 continue
-            print(row[0])
-            # Handle rows with character names (like "Big Herta")
-            if row[1] == "Cycles":
+            
+            if row[0] == "STOP":
                 break
             else:
                 id_index = 0
