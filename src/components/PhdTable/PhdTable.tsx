@@ -87,7 +87,11 @@ const PhdTable: Component<{}> = (props) => {
             if (details.point_costs[0] == 0) {
               return;
             }
-            return <tr class={styles.body}>{lcCosts(lcName, details.point_costs)};</tr>;
+            return (
+              <tr class={styles.body}>
+                {lcCosts(lcName, details.point_costs)};
+              </tr>
+            );
           })}
         </tbody>
       </table>
@@ -98,19 +102,19 @@ const PhdTable: Component<{}> = (props) => {
     <div class={styles.tables}>
       <h1>Cost Tables</h1>
       <div>
-            <label for="ruleSetSelection">Rule Set: </label>
-            <select
-              id="ruleSetSelection"
-              onChange={(e) => {
-                setRuleSet(e.target.value);
-                fetchData();
-              }}
-              class={styles.rule_set_dropdown}
-            >
-              <option value={"phd_standard"}>PHD MoC 12</option>
-              <option value={"claire_cup"}>Claire Cup</option>
-            </select>
-          </div>
+        <label for="ruleSetSelection">Rule Set: </label>
+        <select
+          id="ruleSetSelection"
+          onChange={(e) => {
+            setRuleSet(e.target.value);
+            fetchData();
+          }}
+          class={styles.rule_set_dropdown}
+        >
+          <option value={"phd_standard"}>PHD MoC 12</option>
+          <option value={"claire_cup"}>Claire Cup</option>
+        </select>
+      </div>
       <h3> Characters </h3>
       {charTable()}
       <h3> Light Cones </h3>

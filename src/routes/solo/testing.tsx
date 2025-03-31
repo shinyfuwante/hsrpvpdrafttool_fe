@@ -147,6 +147,7 @@ const testing: Component<{}> = (props) => {
             >
               <option value={"phd_standard"}>PHD MoC 12</option>
               <option value={"claire_cup"}>Claire Cup</option>
+              <option value={"phd_standard_beta"}>Prospective MoC 12 Costs</option>
             </select>
           </div>
           <div>
