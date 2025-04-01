@@ -192,13 +192,7 @@ const testing: Component<{}> = (props) => {
             Team Efficiency: {efficiency().toPrecision(4)}
           </div>
           <div
-            class={`${
-              adjustedEfficiency() > 6
-                ? styles.inefficient
-                : adjustedEfficiency() < 4
-                ? styles.too_efficient
-                : styles.efficient
-            }`}
+            style={`color: ${efficiency() > 6 ? getRandomColorHex() : efficiency() < 4 ? getRandomColorHex() : getRandomColorHex()}`}
           >
             {" "}
             Adjusted Efficiency: {adjustedEfficiency().toPrecision(4)}
