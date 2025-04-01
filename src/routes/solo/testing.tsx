@@ -94,6 +94,9 @@ const testing: Component<{}> = (props) => {
     });
     SetCost(totalCost);
   };
+  const getRandomColorHex = () => {
+    return '#' + Math.floor(Math.random() * 16777215).toString(16);
+  };
   const handleSigEid = (character: CharacterPick) => {
     const setPicksSignal = setPicks;
     const picksArray = [...picks()];
@@ -128,12 +131,12 @@ const testing: Component<{}> = (props) => {
             <div class={styles.results}>(Cost / 6) + Clear Speed</div>
             Adjusted Efficiency is calculated as:
             <div class={styles.results}>Team Efficiency + (Cost - 15) / 4</div>
-            Teams are graded by efficiency as follows:
-            <div class={styles.results}>
+            Teams are balanced around the cycle thresholds in the balance sheet
+            {/* <div class={styles.results}>
               <div class={styles.too_efficient}>too efficient</div>
               <div class={styles.efficient}>efficient</div>
-              <div class={styles.inefficient}>inefficient</div>
-            </div>
+              <div class={styles.inefficient}>inefficient</div> 
+            </div> */}
           </div>
           <div>
             <label for="ruleSetSelection">Rule Set: </label>
@@ -176,13 +179,14 @@ const testing: Component<{}> = (props) => {
           <div> Cycles Taken: {cycles()}</div>
           <div> Cost: {cost()}</div>
           <div
-            class={`${
-              efficiency() > 6
-                ? styles.inefficient
-                : efficiency() < 4
-                ? styles.too_efficient
-                : styles.efficient
-            }`}
+            // class={`${
+            //   efficiency() > 6
+            //     ? styles.inefficient
+            //     : efficiency() < 4
+            //     ? styles.too_efficient
+            //     : styles.efficient
+            // }`}
+            style={`color: ${efficiency() > 6 ? getRandomColorHex() : efficiency() < 4 ? getRandomColorHex() : getRandomColorHex()}`}
           >
             {" "}
             Team Efficiency: {efficiency().toPrecision(4)}
