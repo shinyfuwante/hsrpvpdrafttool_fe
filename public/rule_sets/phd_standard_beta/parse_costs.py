@@ -34,7 +34,8 @@ def read_csv_data(filename: str) -> tuple[Dict[str, List[float]], Dict[str, List
             else:
                 id_index = 0
                 character_id = row[0]
-                costs = [float(cost) for cost in row[id_index + 2:-1] if cost]
+                end_index = -1 if current_type == "characters" else -3
+                costs = [float(cost) for cost in row[id_index + 2:end_index] if cost]
             
             # Only process if we have a valid ID and costs
             if character_id and costs:
