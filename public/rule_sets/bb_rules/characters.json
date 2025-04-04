@@ -387,5 +387,33 @@
     "code": "xx",
     "point_costs": [1, 1, 1, 1, 1, 1, 1],
     "nickname": "agelaiya"
+  },
+  "缇宝": {
+      "id": "1403",
+      "rarity": 5,
+      "point_costs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+      ],
+      "nickname": "缇宝 tibao"
+  },
+  "万敌": {
+      "id": "1404",
+      "rarity": 5,
+      "point_costs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+      ],
+      "nickname": "万敌 wandi"
   }
 }
