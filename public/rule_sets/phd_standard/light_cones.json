@@ -1270,11 +1270,11 @@
     "id": "23033",
     "rarity": 5,
     "point_costs": [
-      4.0,
-      4.0,
-      4.5,
-      4.5,
-      5.0
+      2.5,
+      2.5,
+      3.0,
+      3.0,
+      3.5
     ],
     "character": "Rappa"
   },
@@ -1421,11 +1421,11 @@
     "id": "23038",
     "rarity": 5,
     "point_costs": [
-      1.0,
-      1.0,
       1.5,
       1.5,
-      2.0
+      2.0,
+      2.0,
+      2.5
     ],
     "character": "If Time Were a Flower Tribbie"
   },
