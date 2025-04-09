@@ -1454,5 +1454,47 @@
       0
     ],
     "character": "Memory's Curtain Never Falls"
+  },
+  "The Great Cosmic Enterprise": {
+      "id": "22004",
+      "rarity": 4,
+      "point_costs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+      ],
+      "nickname": "The Great Cosmic Enterprise"
+  },
+  "Make Farewells More Beautiful": {
+      "id": "23040",
+      "rarity": 5,
+      "point_costs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+      ],
+      "nickname": "Make Farewells More Beautiful"
+  },
+  "Life Should Be Cast to Flames": {
+      "id": "23041",
+      "rarity": 5,
+      "point_costs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+      ],
+      "nickname": "Life Should Be Cast to Flames"
   }
 }

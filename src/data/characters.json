@@ -846,5 +846,33 @@
             0
         ],
         "nickname": "Mydei"
+    },
+    "Anaxa": {
+        "id": "1405",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "Anaxa"
+    },
+    "Castorice": {
+        "id": "1407",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "Castorice"
     }
 }
