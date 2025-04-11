@@ -1473,15 +1473,15 @@
     "id": "23040",
     "rarity": 5,
     "point_costs": [
-      0,
-      0,
-      0,
-      0,
-      0,
+      3,
+      3,
+      4,
+      4.5,
+      5,
       0,
       0
     ],
-    "nickname": "Make Farewells More Beautiful"
+    "nickname": "Make Farewells More Beautiful Castorice"
   },
   "Life Should Be Cast to Flames": {
     "id": "23041",

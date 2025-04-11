@@ -978,11 +978,11 @@
   "Baptism of Pure Thought": {
     "id": "23020",
     "point_costs": [
+      3.0,
+      3.0,
       4.0,
-      4.0,
-      5.0,
-      5.5,
-      6.0
+      4.5,
+      5.0
     ],
     "character": "Dr. Ratio",
     "rarity": 5
@@ -1246,11 +1246,11 @@
     "id": "23031",
     "rarity": 5,
     "point_costs": [
+      3.0,
+      3.0,
       4.0,
-      4.0,
-      5.0,
-      5.5,
-      6.0
+      4.5,
+      5.0
     ],
     "character": "Feixiao Fei Xiao Fampter FX"
   },
@@ -1456,45 +1456,43 @@
     "character": "Memory's Curtain Never Falls"
   },
   "The Great Cosmic Enterprise": {
-      "id": "22004",
-      "rarity": 4,
-      "point_costs": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-      ],
-      "nickname": "The Great Cosmic Enterprise"
+    "id": "22004",
+    "rarity": 4,
+    "point_costs": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "nickname": "The Great Cosmic Enterprise"
   },
   "Make Farewells More Beautiful": {
-      "id": "23040",
-      "rarity": 5,
-      "point_costs": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-      ],
-      "nickname": "Make Farewells More Beautiful"
+    "id": "23040",
+    "rarity": 5,
+    "point_costs": [
+      3.0,
+      3.0,
+      4.0,
+      4.5,
+      5.0
+    ],
+    "nickname": "Make Farewells More Beautiful"
   },
   "Life Should Be Cast to Flames": {
-      "id": "23041",
-      "rarity": 5,
-      "point_costs": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-      ],
-      "nickname": "Life Should Be Cast to Flames"
+    "id": "23041",
+    "rarity": 5,
+    "point_costs": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "nickname": "Life Should Be Cast to Flames"
   }
 }

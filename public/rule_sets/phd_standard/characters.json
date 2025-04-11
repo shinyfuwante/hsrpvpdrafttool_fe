@@ -64,7 +64,7 @@
   },
   "Bronya": {
     "id": "1101",
-    "point_costs": [2.5, 0.5, 1.0, 0.0, 0.0, 0.0, 1.0],
+    "point_costs": [2.5, 0.5, 2.0, 0.0, 0.0, 0.0, 1.0],
     "rarity": 5,
     "nickname": "Bronya Lebron Broner",
     "code": "br"
@@ -99,7 +99,7 @@
   },
   "Pela": {
     "id": "1106",
-    "point_costs": [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+    "point_costs": [3.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
     "rarity": 4,
     "nickname": "Pela Pelican",
     "code": "pl"
@@ -320,7 +320,7 @@
   "Acheron": {
     "id": "1308",
     "special": false,
-    "point_costs": [2.0, 0.5, 6.0, 0.0, 0.5, 0.0, 2.0],
+    "point_costs": [3.0, 0.5, 6.0, 0.0, 0.5, 0.0, 2.0],
     "rarity": 5,
     "nickname": "Acheron Acorn",
     "code": "ac"
@@ -395,14 +395,14 @@
   "March 7th Hunt": {
     "id": "1224",
     "rarity": 4,
-    "point_costs": [2.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+    "point_costs": [1.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
     "code": "mh",
     "nickname": "March 7th M7 March 8th M8"
   },
   "Feixiao": {
     "id": "1220",
     "rarity": 5,
-    "point_costs": [0.5, 1.0, 4.0, 0.5, 0.0, 0.0, 3.5],
+    "point_costs": [0.5, 1.5, 4.5, 0.5, 0.0, 0.0, 3.5],
     "code": "fe",
     "nickname": "Feixiao Fampter FX"
   },
@@ -459,7 +459,7 @@
     "id": "1402",
     "rarity": 5,
     "code": "ae",
-    "point_costs": [0.5, 8.0, 2.0, 0.0, 0.5, 0.0, 2.5],
+    "point_costs": [0.5, 8.0, 3.0, 0.5, 0.5, 0.0, 3.0],
     "nickname": "Aglaea"
   },
   "Tribbie": {
@@ -473,7 +473,7 @@
     "id": "1404",
     "rarity": 5,
     "code": "md",
-    "point_costs": [4.5, 2.5, 2.0, 0.5, 0.5, 0.0, 6.5],
+    "point_costs": [7.0, 2.0, 1.5, 0.5, 0.5, 0.0, 4.5],
     "nickname": "Mydei"
   },
   "Anaxa": {
@@ -487,7 +487,7 @@
     "id": "1407",
     "rarity": 5,
     "code": "cs",
-    "point_costs": [0, 0, 0, 0, 0, 0, 0],
+    "point_costs": [9.0, 2.5, 0.5, 0.0, 0.5, 0.0, 2.0],
     "nickname": "Castorice Soggy Cat"
   }
 }
