@@ -1154,7 +1154,7 @@
       0,
       0
     ],
-    "nickname": "After the Charmony Fall"
+    "character": "After the Charmony Fall"
   },
   "Whereabouts Should Dreams Rest": {
     "id": "23025",
@@ -1467,7 +1467,7 @@
       0,
       0
     ],
-    "nickname": "The Great Cosmic Enterprise"
+    "character": "The Great Cosmic Enterprise"
   },
   "Make Farewells More Beautiful": {
     "id": "23040",
@@ -1481,7 +1481,7 @@
       0,
       0
     ],
-    "nickname": "Make Farewells More Beautiful Castorice"
+    "character": "Make Farewells More Beautiful Castorice"
   },
   "Life Should Be Cast to Flames": {
     "id": "23041",
@@ -1495,6 +1495,6 @@
       0,
       0
     ],
-    "nickname": "Life Should Be Cast to Flames"
+    "character": "Life Should Be Cast to Flames"
   }
 }

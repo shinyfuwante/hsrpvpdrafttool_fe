@@ -685,18 +685,18 @@
     "id": "22004",
     "rarity": 4,
     "point_costs": [0, 0, 0, 0, 0, 0, 0],
-    "nickname": "The Great Cosmic Enterprise"
+    "character": "The Great Cosmic Enterprise"
   },
   "Make Farewells More Beautiful": {
     "id": "23040",
     "rarity": 5,
     "point_costs": [3.0, 3.0, 4.0, 4.5, 5.0],
-    "nickname": "Make Farewells More Beautiful Castorice"
+    "character": "Make Farewells More Beautiful Castorice"
   },
   "Life Should Be Cast to Flames": {
     "id": "23041",
     "rarity": 5,
     "point_costs": [0, 0, 0, 0, 0, 0, 0],
-    "nickname": "Life Should Be Cast to Flames"
+    "character": "Life Should Be Cast to Flames"
   }
 }
