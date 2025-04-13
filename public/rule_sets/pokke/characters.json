@@ -473,5 +473,19 @@
     "code": "md",
     "point_costs": [1, 1, 1, 1, 1, 1, 1],
     "nickname": "Mydei"
+  },
+  "Anaxa": {
+    "id": "1405",
+    "rarity": 5,
+    "code": "xx",
+    "point_costs": [1, 1, 1, 1, 1, 1, 1],
+    "nickname": "Anaxa"
+  },
+  "Castorice": {
+    "id": "1407",
+    "rarity": 5,
+    "code": "cs",
+    "point_costs": [1, 1, 1, 1, 1, 1, 1],
+    "nickname": "Castorice Soggy Cat"
   }
 }
