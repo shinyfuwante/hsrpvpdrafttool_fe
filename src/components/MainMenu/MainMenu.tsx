@@ -105,13 +105,13 @@ const MainMenu: Component<MainMenuProps> = (props: any) => {
           </a>
         </div>
         <div class={styles.server_container}>
-          {/* <div class={styles.other_formats}> Pokke PVP: </div>
+          <div class={styles.other_formats}> Pokke PVP: </div>
           <div onClick={() => pokkeGame()} class={styles.game_mode_select}>
             <div>Create a Screen-Share draft for Pokke's format</div>
           </div>
           <div onClick={() => pokkeSpecial()} class={styles.game_mode_select}>
             <div>Create a Screen-Share draft for Pokke's Special format</div>
-          </div> */}
+          </div>
           {/* <div onClick={() => mirrorCupGame()} class={styles.game_mode_select}>
             <div>Create a Screen-Share draft for the Mirror Cup format</div>
           </div>

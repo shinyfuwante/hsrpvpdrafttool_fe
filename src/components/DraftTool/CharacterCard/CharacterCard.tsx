@@ -192,7 +192,7 @@ export const CharacterCard: Component<CharacterCardProps> = (props) => {
           <div class={styles.light_cone_container}>
             <input
               list="light-cones"
-              class={`${styles.light_cone_input} ${exceededLCCap() && lcJson()[lightCone()] && lcJson()[lightCone()].rarity == 5   ? styles.light_cone_input_warning : ''}`}
+              class={`${styles.light_cone_input}`}
               value={props.signal()[id].light_cone}
               onBlur={(e) => {
                 if (e.target.value !== lightCone()) {
