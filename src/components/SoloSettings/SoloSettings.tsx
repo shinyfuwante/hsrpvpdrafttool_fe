@@ -18,6 +18,8 @@ import {
   turn_order_3_bans_pokke,
   resetGame,
   turn_order_3_bans,
+  setRuleSet,
+  handleRuleSetSelection,
 } from "~/game/game_logic";
 import styles from "./SoloSettings.module.css";
 
@@ -54,21 +56,25 @@ const SoloSettings: Component<{}> = (props) => {
       setRedTeamName(player1Name());
     }
   };
-  
+
   const handleBanAmountSelection = (amt: number) => {
-      if (amt == 2) {
-        resetGame();
-        setTurnOrder(turn_order_2_bans);
+    if (amt == 2) {
+      resetGame();
+      setTurnOrder(turn_order_2_bans);
+    }
+    if (amt == 3) {
+      resetGame();
+      if (ruleSet() == "pokke") {
+        setTurnOrder(turn_order_3_bans_pokke);
+      } else {
+        setTurnOrder(turn_order_3_bans);
       }
-      if (amt == 3) {
-        resetGame();
-        if (ruleSet() == "pokke") {
-          setTurnOrder(turn_order_3_bans_pokke);
-        } else {
-          setTurnOrder(turn_order_3_bans);
-        }
-      }
-  }
+    }
+  };
+
+  const handleRuleSelection = (ruleSet: string) => {
+    setRuleSet(ruleSet);
+  };
 
   return (
     <div class={styles.settings_menu}>
@@ -144,7 +150,14 @@ const SoloSettings: Component<{}> = (props) => {
           </div>
         </div>
       </div>
-      <Show when={ruleSet() == "pokke" || ruleSet() == "phd_standard" || ruleSet() == "phd_moc_11"}>
+      <Show
+        when={
+          ruleSet() == "pokke" ||
+          ruleSet() == "phd_standard" ||
+          ruleSet() == "phd_moc_11" ||
+          ruleSet() == "phd_standard_beta"
+        }
+      >
         <div>
           <fieldset>
             <label class={`${styles.toggle_cycle_penalty}`}>
@@ -160,11 +173,29 @@ const SoloSettings: Component<{}> = (props) => {
           </fieldset>
         </div>
         <div>
-          <select id="banAmount" onChange={(e) => handleBanAmountSelection(Number(e.target.value))} class={styles.bans_dropdown}>
+          <select
+            id="banAmount"
+            onChange={(e) => handleBanAmountSelection(Number(e.target.value))}
+            class={styles.bans_dropdown}
+          >
             <option value={2}>4 Bans (Default)</option>
             <option value={3}>6 Bans</option>
           </select>
         </div>
+        <Show
+          when={ruleSet() == "phd_standard" || ruleSet() == "phd_standard_beta"}
+        >
+          <div>
+            <select
+              id="phdRules"
+              onChange={(e) => handleRuleSelection(e.target.value)}
+              class={styles.bans_dropdown}
+            >
+              <option value={"phd_standard"}>Standard PHD MoC 12</option>
+              <option value={"phd_standard_beta"}>Prospective Costs</option>
+            </select>
+          </div>
+        </Show>
       </Show>
     </div>
   );

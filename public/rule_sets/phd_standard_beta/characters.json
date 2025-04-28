@@ -311,7 +311,7 @@
       1.0
     ],
     "rarity": 5,
-    "nickname": "Topaz & Numby Topass",
+    "nickname": "Topaz & Numby Topass Wife",
     "code": "tp"
   },
   "Qingque": {
@@ -583,7 +583,7 @@
       3.0
     ],
     "rarity": 5,
-    "nickname": "Ruan Mei RM Ramen",
+    "nickname": "Ruan Mei RM Ramen Wife",
     "code": "rm"
   },
   "Dr. Ratio": {
@@ -1011,5 +1011,35 @@
       4.0
     ],
     "nickname": "Mydei"
+  },
+  "Anaxa": {
+    "id": "1405",
+    "rarity": 5,
+    "code": "xx",
+    "point_costs": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "nickname": "Anaxa"
+  },
+  "Castorice": {
+    "id": "1407",
+    "rarity": 5,
+    "code": "cs",
+    "point_costs": [
+      8.5,
+      3.0,
+      4.0,
+      0.0,
+      0.5,
+      0.0,
+      3.0
+    ],
+    "nickname": "Castorice Soggy Cat"
   }
 }

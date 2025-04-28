@@ -5,6 +5,7 @@ import {
   Show,
   Match,
   Switch,
+  createEffect,
 } from "solid-js";
 import Team from "./Team/Team";
 import TeamWith3Bans from "./TeamWith3Bans/TeamWith3Bans";
@@ -86,6 +87,9 @@ const DraftTool: Component<DraftToolProps> = ({
     setLcJson(await response2.json());
     setReady(true);
   };
+  createEffect( () => {
+    fetchData();
+  }, ruleSet());
   fetchData();
   return (
     <>
