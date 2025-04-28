@@ -831,11 +831,11 @@
   "Echoes of the Coffin": {
     "id": "23008",
     "point_costs": [
-      0.5,
-      0.5,
-      0.5,
-      0.5,
-      0.5
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
     ],
     "character": "Luocha",
     "rarity": 5
@@ -843,11 +843,11 @@
   "The Unreachable Side": {
     "id": "23009",
     "point_costs": [
+      0.5,
+      0.5,
       1.0,
       1.0,
-      1.5,
-      1.5,
-      2.0
+      1.5
     ],
     "character": "Blade",
     "rarity": 5
@@ -978,11 +978,11 @@
   "Baptism of Pure Thought": {
     "id": "23020",
     "point_costs": [
+      3.0,
+      3.0,
       4.0,
-      4.0,
-      5.0,
-      5.5,
-      6.0
+      4.5,
+      5.0
     ],
     "character": "Dr. Ratio",
     "rarity": 5
@@ -1134,11 +1134,11 @@
     "id": "23027",
     "rarity": 5,
     "point_costs": [
+      1.5,
+      1.5,
       2.0,
       2.0,
-      2.5,
-      2.5,
-      3.0
+      2.5
     ],
     "character": "Boothill BH"
   },
@@ -1246,11 +1246,11 @@
     "id": "23031",
     "rarity": 5,
     "point_costs": [
+      3.0,
+      3.0,
       4.0,
-      4.0,
-      5.0,
-      5.5,
-      6.0
+      4.5,
+      5.0
     ],
     "character": "Feixiao Fei Xiao Fampter FX"
   },
@@ -1421,11 +1421,11 @@
     "id": "23038",
     "rarity": 5,
     "point_costs": [
-      1.0,
-      1.0,
-      1.5,
-      1.5,
-      2.0
+      2.0,
+      2.0,
+      2.5,
+      2.5,
+      3.0
     ],
     "character": "If Time Were a Flower Tribbie"
   },
