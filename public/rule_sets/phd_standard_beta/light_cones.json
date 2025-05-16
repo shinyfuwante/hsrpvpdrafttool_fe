@@ -743,11 +743,11 @@
   "In the Night": {
     "id": "23001",
     "point_costs": [
+      1.0,
+      1.0,
       1.5,
       1.5,
-      2.0,
-      2.0,
-      2.5
+      2.0
     ],
     "character": "Seele",
     "rarity": 5
@@ -1258,11 +1258,11 @@
     "id": "23032",
     "rarity": 5,
     "point_costs": [
-      0.5,
-      0.5,
       1.0,
       1.0,
-      1.5
+      1.5,
+      1.5,
+      2.0
     ],
     "character": "Lingsha"
   },
@@ -1473,11 +1473,11 @@
     "id": "23040",
     "rarity": 5,
     "point_costs": [
+      2.0,
+      2.0,
       3.0,
-      3.0,
-      4.0,
-      4.5,
-      5.0
+      3.5,
+      4.0
     ],
     "character": "Make Farewells More Beautiful Castorice"
   },
@@ -1485,13 +1485,11 @@
     "id": "23041",
     "rarity": 5,
     "point_costs": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
+      1.5,
+      1.5,
+      2.0,
+      2.0,
+      2.5
     ],
     "character": "Life Should Be Cast to Flames"
   }
