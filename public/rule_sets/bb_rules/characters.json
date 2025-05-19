@@ -415,5 +415,23 @@
           0
       ],
       "nickname": "万敌 wandi"
+  },
+  "那刻夏": {
+    "id": "1405",
+    "rarity": 5,
+    "code": "ax",
+    "point_costs": [
+      0,0,0,0,0,0,0
+    ],
+    "nickname": "那刻夏 nakexia nkx"
+  },
+  "遐蝶": {
+    "id": "1407",
+    "rarity": 5,
+    "code": "cs",
+    "point_costs": [
+      0,0,0,0,0,0,0
+    ],
+    "nickname": "遐蝶 xiadie"
   }
 }
