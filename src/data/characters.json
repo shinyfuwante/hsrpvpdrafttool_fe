@@ -874,5 +874,33 @@
             0
         ],
         "nickname": "Castorice"
+    },
+    "Cipher": {
+        "id": "1406",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "Cipher"
+    },
+    "Hyacine": {
+        "id": "1409",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "Hyacine"
     }
 }

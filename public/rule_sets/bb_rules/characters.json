@@ -433,5 +433,33 @@
       0,0,0,0,0,0,0
     ],
     "nickname": "遐蝶 xiadie"
-  }
+  },
+    "赛飞儿": {
+        "id": "1406",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "赛飞儿 saifeier 猫 mao"
+    },
+    "风堇": {
+        "id": "1409",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "风堇 fengjin"
+    }
 }

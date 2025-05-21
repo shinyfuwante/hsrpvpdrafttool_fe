@@ -1694,5 +1694,33 @@
             0
         ],
         "nickname": "Life Should Be Cast to Flames"
+    },
+    "Long May Rainbows Adorn the Sky": {
+        "id": "23042",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "Long May Rainbows Adorn the Sky"
+    },
+    "Lies Dance on the Breeze": {
+        "id": "23043",
+        "rarity": 5,
+        "point_costs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "nickname": "Lies Dance on the Breeze"
     }
 }
